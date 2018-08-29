@@ -102,7 +102,7 @@ function toggleFilter() {
             $('html, body').animate({
                     scrollTop: $(".filter-btn").offset().top
                 },
-                500);
+                100);
         })
 
 
@@ -183,15 +183,17 @@ $("#slider-range-price").slider({
 
 
 var header = $(".filter-section");
+var headerTwo = $('#main-fixed-nav')
 let card_content = $('.filter-btn');
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 200) {
         header.addClass("fixed");
+        headerTwo.addClass('styki')
 
     } else {
         header.removeClass("fixed");
-
+        headerTwo.removeClass('styki')
     }
 })
 
@@ -210,6 +212,7 @@ $('.btn-button-filter').click(function() {
         }
     });
 })
+
 $("label[data-id='ubicacion'] input[type=checkbox]").click(function() {
     checkUbicacion();
 });
@@ -224,11 +227,137 @@ function checkUbicacion() {
     });
 
     if (anyBoxesChecked == false) {
-        alert('Please select at least one checkbox');
+
         $('.btn-clear').css('display', 'none')
         return false;
     }
 }
+
+$("label[data-id='edad'] input[type=checkbox]").click(function() {
+    checkedad();
+});
+
+function checkedad() {
+    var anyBoxesChecked = false;
+    $('label[data-id="edad"] input[type=checkbox]').each(function() {
+        if ($(this).is(":checked")) {
+            anyBoxesChecked = true;
+            $('.btn-edad').css('display', 'block')
+        }
+    });
+
+    if (anyBoxesChecked == false) {
+
+        $('.btn-edad').css('display', 'none')
+        return false;
+    }
+}
+
+$("label[data-id='categoria'] input[type=checkbox]").click(function() {
+    checkcategoria();
+});
+
+function checkcategoria() {
+    var anyBoxesChecked = false;
+    $('label[data-id="categoria"] input[type=checkbox]').each(function() {
+        if ($(this).is(":checked")) {
+            anyBoxesChecked = true;
+            $('.btn-categoria').css('display', 'block')
+        }
+    });
+
+    if (anyBoxesChecked == false) {
+
+        $('.btn-categoria').css('display', 'none')
+        return false;
+    }
+}
+$("label[data-id='precios'] input[type=checkbox]").click(function() {
+    checkprecios();
+});
+
+function checkprecios() {
+    var anyBoxesChecked = false;
+    $('label[data-id="precios"] input[type=checkbox]').each(function() {
+        if ($(this).is(":checked")) {
+            anyBoxesChecked = true;
+            $('.btn-precios').css('display', 'block')
+        }
+    });
+
+    if (anyBoxesChecked == false) {
+
+        $('.btn-precios').css('display', 'none')
+        return false;
+    }
+}
+
+$("label[data-id='prover'] input[type=checkbox]").click(function() {
+    checkprover();
+});
+
+function checkprover() {
+    var anyBoxesChecked = false;
+    $('label[data-id="prover"] input[type=checkbox]').each(function() {
+        if ($(this).is(":checked")) {
+            anyBoxesChecked = true;
+            $('.btn-prover').css('display', 'block')
+        }
+    });
+
+    if (anyBoxesChecked == false) {
+
+        $('.btn-prover').css('display', 'none')
+        return false;
+    }
+}
+
+$("label[data-id='another'] input[type=checkbox]").click(function() {
+    checkanother();
+});
+
+function checkanother() {
+    var anyBoxesChecked = false;
+    $('label[data-id="another"] input[type=checkbox]').each(function() {
+        if ($(this).is(":checked")) {
+            anyBoxesChecked = true;
+            $('.btn-another').css('display', 'block')
+        }
+    });
+
+    if (anyBoxesChecked == false) {
+
+        $('.btn-another').css('display', 'none')
+        return false;
+    }
+}
+
+
+
+if ($(window).width() < 768) {
+    $('input[type=checkbox]').click(function() {
+        btnFilter()
+    })
+
+    function btnFilter() {
+        var isFalse = false
+        $('input[type=checkbox]').each(function() {
+            if ($(this).is(':checked')) {
+                isFalse = true
+                $('.btn-simple').css('display', 'block')
+                $('.btn-simple').addClass('btn-floating')
+            } else {
+
+            }
+        });
+        if (isFalse == false) {
+
+            $('.btn-simple').css('display', 'none')
+            $('.btn-simple').removeClass('btn-floating')
+        }
+    }
+}
+
 
 /*=========================================================================
    Preview Items
@@ -267,3 +396,45 @@ if ($('.name')) {
         myFunction();
     })
 }
+
+/*=========================================================================
+   User Avatar
+=========================================================================*/
+
+function chooseFile() {
+    document.getElementById("file").click();
+}
+
+
+if ($('#file').length) {
+    document.querySelector('#file')
+        .addEventListener("change", function(ev) {
+            let files = ev.target.files;
+            console.log(files);
+            let image = files[0];
+            let imageURL = URL.createObjectURL(image);
+            document.querySelector('.null-img')
+                .style.backgroundImage = "url('" + imageURL + "')";
+            document.getElementById('img-des').innerHTML = document.getElementById('file').files[0].name;
+        });
+}
+
+
+/*=========================================================================
+   Fixed nav
+=========================================================================*/
+
+
+
+
+/*=========================================================================
+   Btn filter active
+=========================================================================*/
+
+$('.btn-simple').click(function() {
+    if ($('.filter-btn').hasClass('active-filter')) {
+        $('.btn-button-filter').click()
+    } else {
+        alert('msg');
+    }
+})

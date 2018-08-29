@@ -121,176 +121,110 @@
                     </div>
                   </div>
                   <ul class="collapse radio-container">
-                    <li class="item-collapse">
-                      ubicación<i class="material-icons">keyboard_arrow_down</i></li>
+                    <li class="item-collapse">ubicación
+                      <div class="btn-clear">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
                     <div class="collapse-content">
                       <div class="d-flex flex-column">
-                        <div class="cell">
-                          <label for="Santiago Centro">
-                            <input type="radio" name="region" value="providencia" id="Santiago Centro" checked="checked"/><span class="circle"></span>Santiago Centro
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="Providencia">
-                            <input type="radio" name="region" value="providencia" id="Providencia" checked="checked"/><span class="circle"></span>Providencia
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="Vitacura">
-                            <input type="radio" name="region" value="providencia" id="Vitacura" checked="checked"/><span class="circle"></span>Vitacura
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="Las Condes">
-                            <input type="radio" name="region" value="providencia" id="Las Condes" checked="checked"/><span class="circle"></span>Las Condes
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="La Florida">
-                            <input type="radio" name="region" value="providencia" id="La Florida" checked="checked"/><span class="circle"></span>La Florida
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="Puente Alto">
-                            <input type="radio" name="region" value="providencia" id="Puente Alto" checked="checked"/><span class="circle"></span>Puente Alto
-                          </label>
-                        </div>
-                        <!--label.checkbox-container Santiago Centro
-                        input(type="checkbox").group1
-                        span.checkmark
-                        -->
-                        <!--label.checkbox-container Providencia
-                        input(type="checkbox").group1
-                        span.checkmark
-                        -->
-                        <!--label.checkbox-container Vitacura
-                        input(type="checkbox").group1
-                        span.checkmark
-                        -->
-                        <!--label.checkbox-container Las Condes
-                        input(type="checkbox").group1
-                        span.checkmark
-                        -->
-                        <!--label.checkbox-container La Florida
-                        input(type="checkbox").group1
-                        span.checkmark
-                        -->
-                        <!--label.checkbox-container Puente Alto
-                        input(type="checkbox").group1
-                        span.checkmark
+                        <label class="checkbox-container" data-id="ubicacion"> Santiago Centro
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion"> Providencia
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion"> Vitacura
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">Las Condes
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">La Florida
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">Puente Alto
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <!-- This is for radio input-->
+                        <!--.cell
+                        label(for="Santiago Centro")
+                          input(type="checkbox" name="region" value="providencia" id="Santiago Centro" )
+                          span.circle
+                          | Santiago Centro
+                        
                         
                         -->
                       </div>
                     </div>
-                    <li class="item-collapse">
-                      edad<i class="material-icons">keyboard_arrow_down</i></li>
+                    <li class="item-collapse">edad
+                      <div class="btn-edad">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
                     <div class="collapse-content">
                       <div class="d-flex flex-column">
-                        <div class="cell">
-                          <label for="0-6">
-                            <input type="radio" name="edad" value="" id="0-6"/><span class="circle"></span>0-6 Meses
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="6-12">
-                            <input type="radio" name="edad" value="" id="6-12"/><span class="circle"></span>6-12 Meses
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="12-18">
-                            <input type="radio" name="edad" value="" id="12-18"/><span class="circle"></span>12-18 Meses
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="18-24">
-                            <input type="radio" name="edad" value="" id="18-24"/><span class="circle"></span>18-24 Meses
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="2-3">
-                            <input type="radio" name="edad" value="" id="2-3"/><span class="circle"></span>2-3 Años
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="3-4">
-                            <input type="radio" name="edad" value="" id="3-4"/><span class="circle"></span>3-4 Años
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="4-5">
-                            <input type="radio" name="edad" value="" id="4-5"/><span class="circle"></span>4-5 Años
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="6-8">
-                            <input type="radio" name="edad" value="" id="6-8"/><span class="circle"></span>6-8 Años
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="12+">
-                            <input type="radio" name="edad" value="" id="12+"/><span class="circle"></span>12+ Años
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="Pre">
-                            <input type="radio" name="edad" value="" id="Pre"/><span class="circle"></span>Pre/Post Natal
-                          </label>
-                        </div>
+                        <label class="checkbox-container" data-id="edad">0-6 Meses
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">6-12 Meses
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">12-18 Meses
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">18-24 Meses
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">2-3 Años
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">3-4 Años
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">4-5 Años
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="edad">6-8 Años
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
                       </div>
                     </div>
-                    <li class="item-collapse">
-                      categorías<i class="material-icons">keyboard_arrow_down</i></li>
+                    <li class="item-collapse">categorías
+                      <div class="btn-categoria">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
                     <div class="collapse-content">
                       <div class="d-flex flex-column">
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
-                        <div class="cell">
-                          <label for="category">
-                            <input type="radio" name="categorias" value="" id="category"/><span class="circle"></span>Lorem
-                          </label>
-                        </div>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="categoria">Lorem
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
                       </div>
                     </div>
-                    <li class="item-collapse">
-                      precios<i class="material-icons">keyboard_arrow_down</i></li>
+                    <li class="item-collapse">precios
+                      <div class="btn-precios">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
                     <div class="collapse-content">
                       <div class="d-flex flex-column">
                         <div class="cell">
-                          <label for="free">
-                            <input type="radio" name="precio" value="" id="free"/><span class="circle"></span>Gratis
+                          <label class="checkbox-container" data-id="precios">Gratis
+                            <input class="group1" type="checkbox"/><span class="checkmark"></span>
                           </label>
                         </div>
                         <div id="amount" readonly="readonly" style="background:none;box-shadow: none;border:0; color:#f6931f; font-weight:bold;">
@@ -300,81 +234,81 @@
                         <div id="slider-range-price"></div>
                       </div>
                     </div>
-                    <li class="item-collapse">
-                      proveedores<i class="material-icons">keyboard_arrow_down</i></li>
-                    <div class="collapse-content"><input class="provider m-b-10 ghost-input" type="text" placeholder="Buscar">
+                    <li class="item-collapse">proveedores
+                      <div class="btn-prover">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
+                    <div class="collapse-content"><input class=" m-b-10 ghost-input" type="text" placeholder="Buscar">
                       <div class="group-btn">
-                        <button class="btn-one">TODO </button>
-                        <button class="btn-second">Favoritos</button>
+                        <button class="btn-one w50">TODO </button>
+                        <button class="btn-second w50">Favoritos</button>
                       </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
-                      <div class="cell">
-                        <label for="proveedores">
-                          <input type="radio" name="proveedores" value="" id="proveedores" checked="checked"/><span class="circle"></span>Proveedores
-                        </label>
-                      </div>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="prover">Proveedores
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <li class="item-collapse m-b-15" style="border-bottom: 1px solid #777777">Otros atributos
+                      <div class="btn-another">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                    </li>
+                    <div class="collapse-content">
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="another"> lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="plazas-view">
+                      <label class="checkbox-container">Mostrar plazas
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
                     </div>
                   </ul>
                 </div>
               </div>
-            </div>
-            <div class="col-md-9">
-              <div class="card-content">
-                <ul class="d-flex nav-day">
-                  <li class="to-prev"><span><i class="material-icons">keyboard_arrow_left</i></span></li>
-                  <li class="active-day day-content"><span>dom</span><span>17/6</span></li>
-                  <li class="day-content"><span>LUN</span><span>18/6</span></li>
-                  <li class="day-content"><span>mar</span><span>19/6</span></li>
-                  <li class="day-content"><span>mie</span><span>20/6</span></li>
-                  <li class="day-content"><span>jue</span><span>21/6</span></li>
-                  <li class="day-content"><span>vie</span><span>22/6</span></li>
-                  <li class="day-content"><span>sab</span><span>23/6</span></li>
-                  <li class="day-content"><span>dom</span><span>24/6</span></li>
-                  <li class="to-next"><span><i class="material-icons">keyboard_arrow_right</i></span></li>
-                </ul>
-                <div class="today">
-                  <div class="row no-margin">
-                    <div class="offset-md-4 col-sm-12 col-md-4 col-xs-12 day-header">
-                      <div class="title-main">Domingo, 17 de junio</div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 provider-input">
-                      <input class="provider" type="text" placeholder="Buscar por actividad o proveedor"/><img src="img/Search.svg" alt="" id="input_img"/>
-                    </div>
-                  </div>
-                </div>
-                <div class="map"></div>
-                <div class="footer-calendar">
-                  <div class="content-footer">
-                    <div class="title-footer">Para ver todas las actividades que Entrekids tiene para ti</div>
-                    <div class="btn-footer">Registrate</div>
-                  </div>
-                </div>
+              <div class="apply-change m-t-20">
+                <div class="btn-simple" style="width:100%;font-weight:100">Aplicar filtros</div>
               </div>
             </div>
+            <div class="col-md-9"><div id="gmap" style="with:300px;height:250px;"></div></div>
           </div>
         </div>
         <footer class="footer separator-to-body">
@@ -426,5 +360,7 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSY7p-B5a1oKXNwSp70kNnYM3TSnymTNY&amp;libraries=places" type="text/javascript"></script>
+  <script src="https://maplacejs.com/dist/maplace.min.js"></script>
+  <script src="js/maplace.js"></script>
 </html>
