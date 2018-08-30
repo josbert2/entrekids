@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index">
@@ -98,109 +99,106 @@
               </div>
             </div>
           </nav>
+          <div class="filter-section">
+            <div class="btn-button-filter">
+              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+            </div>
+            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
+          </div>
         </nav>
       </div>
-      <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
       <div class="wrapper-content">
         <div class="container">
-          <div class="row">
-            <div class="d-flex justify-content-end col-md-12 panel-block">
-              <div class="panel-user">
-                <ul>
-                  <li class="active-li"><i class="material-icons">assignment</i><a class="hidden-md" href="#">Datos</a></li>
-                  <li><i class="material-icons">face</i><a class="hidden-md" href="#">Niños</a></li>
-                  <li><i class="material-icons">supervised_user_circle</i><a class="hidden-md" href="#">Cuidadores</a></li>
-                  <li><i class="material-icons">credit_card</i><a class="hidden-md" href="#">Pagos</a></li>
-                  <li><i class="material-icons">notifications</i><a class="hidden-md" href="#">Noticaciones</a></li>
-                </ul>
-              </div>
+          <div class="d-flex">
+            <div class="d-flex">
+              <div class="toback"><i class="material-icons">arrow_back</i></div>
             </div>
+            <div class="panel-user ml-auto">
+              <ul>
+                <li><i class="material-icons">shopping_basket</i><a href="#">compras</a></li>
+                <li><i class="material-icons">local_activity</i><a href="#">créditos</a></li>
+                <li><i class="material-icons">bookmark</i><a href="#">Favoritos</a></li>
+                <li class="active-li"><i class="material-icons">thumbs_up_down</i><a href="#">Reseña</a></li>
+                <li><i class="material-icons">notifications</i><a href="#">notificaciones</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-md-12">
-              <div class="content-user m-t-30">
-                <div class="row">
-                  <div class="col-md-5">
-                    <div id="modal">
-                      <div id="main-cropper"></div><a class="button actionUpload"><span>Upload</span>
-                        <input id="upload" type="file" value="Choose Image" accept="image/*"/></a>
-                      <button class="actionDone">Done</button>
-                      <button class="actionCancel">Cancel</button>
-                    </div><div class="avatar-user d-flex justify-content-center m-b-30">
-<input type="file" id="file" name="photo">
-<label for="file" class="img-content null-img" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
-                    <div class="btn-upload only-bottom"> <i class="ion ion-md-camera"></i>Subir</div></label>
-</div>
-                    <div class="spinner-load">
-                      <svg class="chart" viewBox="0 0 36 36">
-                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
-                      </svg>
-                      <svg class="chart2" viewBox="0 0 36 36">
-                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
-                      </svg>
-                      <div class="porcentaje">75%</div>
+              <div class="content-compra m-t-15">
+                <div class="item-compra resenar">
+                  <div class="row no-margin">
+                    <div class="col-md-7">
+                      <div class="d-flex">
+                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text">
+                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Guardada el 15/6</p>
+                        </div>
+                      </div>
                     </div>
-                    <div class="progress flex-column m-t-30">
-                      <div>Completa tu perfil y obtén </div>
-                      <div>muchos beneficios.</div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
+                      <div class="br-theme-custom rating-js"><select id="example4">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                        <div class="no-agrree">califica esta actividad</div>
+                      </div>
+                      <button class="btn-resena">Escribir reseña</button>
                     </div>
                   </div>
-                  <div class="col-md-7">
-                    <button class="btn-edit right-p">Editar</button>
-                    <div class="title-user m-t-15 m-b-15 title-main-user">Información personal</div>
-                    <div class="form-user">
-                      <div class="datos">
-                        <div class="row no-margin">
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Nombres</div>
-                            <div class="data-user">María José Francisca</div>
-                          </div>
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Apellidos</div>
-                            <div class="data-user">Garmendia Meléndez</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="datos m-b-10">
-                        <div class="row no-margin datos">
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Email</div>
-                            <div class="data-user">mariajose_fergarmend@gmail.com</div>
-                          </div>
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">teléfono</div>
-                            <div class="data-user">+569 0333 1199</div>
-                          </div>
+                </div>
+                <div class="item-compra resenar">
+                  <div class="row no-margin">
+                    <div class="col-md-7">
+                      <div class="d-flex">
+                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text">
+                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Guardada el 15/6</p>
                         </div>
                       </div>
                     </div>
-                    <div class="title-user m-t-15 m-b-15 title-main-user">dirección Personal</div>
-                    <div class="form-user">
-                      <div class="datos">
-                        <div class="row no-margin">
-                          <div class="col-md-12 no-padding line-element">
-                            <div class="title-user">Dirección</div>
-                            <div class="data-user">Av. Lorem Ispsum 9334</div>
-                          </div>
-                        </div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
+                      <div class="br-theme-custom"><select id="example2">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
                       </div>
-                      <div class="datos">
-                        <div class="row no-margin datos">
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">Región</div>
-                            <div class="data-user">Metropolitana</div>
-                          </div>
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">ciudad</div>
-                            <div class="data-user">Santiago</div>
-                          </div>
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">país</div>
-                            <div class="data-user">Chile</div>
-                          </div>
+                      <button class="btn-resena">Ver reseña</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-compra resenar">
+                  <div class="row no-margin">
+                    <div class="col-md-7">
+                      <div class="d-flex">
+                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text">
+                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Guardada el 15/6</p>
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                      <div class="btn-white">Cambiar contraseña</div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
+                      <div class="br-theme-custom"><select id="example">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                      </div>
+                      <button class="btn-resena">Ver reseña</button>
                     </div>
                   </div>
                 </div>
@@ -259,6 +257,37 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/crop/croppie.min.js"></script>
-  <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
+  <script src="js/rating/rating.js"></script>
+  <script>
+    $(function() {
+      $('#example').barrating({
+       theme: 'fontawesome-stars',
+       initialRating: '2',
+       allowEmpty: null,
+       onSelect: function(value, text) {
+                 alert('Selected rating: ' + value);
+             }
+      });
+      $('#example2').barrating({
+       theme: 'fontawesome-stars',
+       initialRating: '3',
+       allowEmpty: null,
+       onSelect: function(value, text) {
+                 alert('Selected rating: ' + value);
+             }
+      });
+    
+    
+      $('#example4').barrating({
+       theme: 'fontawesome-stars',
+       initialRating: '0',
+       allowEmpty: null,
+       onSelect: function(value, text) {
+                 alert('Selected rating: ' + value);
+                 $('.rating-js .no-agrree').addClass('hidden');
+             },
+       
+      });
+    });
+  </script>
 </html>

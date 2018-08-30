@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/crop/croppie.css"/>
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index">
@@ -107,28 +108,18 @@
             <div class="d-flex justify-content-end col-md-12 panel-block">
               <div class="panel-user">
                 <ul>
-                  <li class="active-li"><i class="material-icons">assignment</i><a class="hidden-md" href="#">Datos</a></li>
+                  <li><i class="material-icons">assignment</i><a class="hidden-md" href="#">Datos</a></li>
                   <li><i class="material-icons">face</i><a class="hidden-md" href="#">Niños</a></li>
                   <li><i class="material-icons">supervised_user_circle</i><a class="hidden-md" href="#">Cuidadores</a></li>
                   <li><i class="material-icons">credit_card</i><a class="hidden-md" href="#">Pagos</a></li>
-                  <li><i class="material-icons">notifications</i><a class="hidden-md" href="#">Noticaciones</a></li>
+                  <li class="active-li"><i class="material-icons">notifications</i><a class="hidden-md" href="#">Noticaciones</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-12">
               <div class="content-user m-t-30">
-                <div class="row">
-                  <div class="col-md-5">
-                    <div id="modal">
-                      <div id="main-cropper"></div><a class="button actionUpload"><span>Upload</span>
-                        <input id="upload" type="file" value="Choose Image" accept="image/*"/></a>
-                      <button class="actionDone">Done</button>
-                      <button class="actionCancel">Cancel</button>
-                    </div><div class="avatar-user d-flex justify-content-center m-b-30">
-<input type="file" id="file" name="photo">
-<label for="file" class="img-content null-img" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
-                    <div class="btn-upload only-bottom"> <i class="ion ion-md-camera"></i>Subir</div></label>
-</div>
+                <div class="row no-margin">
+                  <div class="col-md-3">
                     <div class="spinner-load">
                       <svg class="chart" viewBox="0 0 36 36">
                         <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
@@ -143,64 +134,51 @@
                       <div>muchos beneficios.</div>
                     </div>
                   </div>
-                  <div class="col-md-7">
-                    <button class="btn-edit right-p">Editar</button>
-                    <div class="title-user m-t-15 m-b-15 title-main-user">Información personal</div>
-                    <div class="form-user">
-                      <div class="datos">
-                        <div class="row no-margin">
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Nombres</div>
-                            <div class="data-user">María José Francisca</div>
-                          </div>
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Apellidos</div>
-                            <div class="data-user">Garmendia Meléndez</div>
-                          </div>
+                  <div class="col-md-9">
+                    <div class="row no-margin">
+                      <div class="col-md-9 offset-md-3 content-notification">
+                        <div class="d-flex align-items-center switch-p"><label class="switch m-r-10" for="checkbox1">
+<input type="checkbox" id="checkbox1" />
+<div class="slider round"></div>
+</label><span>Mensajes de texto</span>
+                        </div>
+                        <div class="d-flex align-items-center switch-p"><label class="switch m-r-10" for="checkbox2">
+<input type="checkbox" id="checkbox2" />
+<div class="slider round"></div>
+</label><span>Recordatorio de reservas.</span>
+                        </div>
+                        <div class="d-flex align-items-center switch-p"><label class="switch m-r-10" for="checkbox3">
+<input type="checkbox" id="checkbox3" />
+<div class="slider round"></div>
+</label><span>Noticias.</span>
+                        </div>
+                        <div class="d-flex align-items-center switch-p"><label class="switch m-r-10" for="checkbox4">
+<input type="checkbox" id="checkbox4" />
+<div class="slider round"></div>
+</label><span>Email con promociones.</span>
+                        </div>
+                        <div class="d-flex align-items-center switch-p m-b-15"><label class="switch m-r-10" for="checkbox5">
+<input type="checkbox" id="checkbox5" />
+<div class="slider round"></div>
+</label><span>Lorem Ipsum</span>
                         </div>
                       </div>
-                      <div class="datos m-b-10">
-                        <div class="row no-margin datos">
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">Email</div>
-                            <div class="data-user">mariajose_fergarmend@gmail.com</div>
-                          </div>
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">teléfono</div>
-                            <div class="data-user">+569 0333 1199</div>
-                          </div>
-                        </div>
+                      <div class="col-md-9 offset-md-3 d-flex align-items-center select-custom m-b-10">
+                        <p class="m-r-10">¿Quién puede ver mi actividad?</p>
+                        <select>
+                          <option>Público</option>
+                        </select>
                       </div>
-                    </div>
-                    <div class="title-user m-t-15 m-b-15 title-main-user">dirección Personal</div>
-                    <div class="form-user">
-                      <div class="datos">
-                        <div class="row no-margin">
-                          <div class="col-md-12 no-padding line-element">
-                            <div class="title-user">Dirección</div>
-                            <div class="data-user">Av. Lorem Ispsum 9334</div>
-                          </div>
-                        </div>
+                      <div class="col-md-9 offset-md-3 d-flex align-items-center m-b-40">
+                        <div class="italy-font">Cras quis nulla commodo, aliquam lectus sed, blandit augue</div>
                       </div>
-                      <div class="datos">
-                        <div class="row no-margin datos">
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">Región</div>
-                            <div class="data-user">Metropolitana</div>
-                          </div>
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">ciudad</div>
-                            <div class="data-user">Santiago</div>
-                          </div>
-                          <div class="col-md-4 no-padding line-element">
-                            <div class="title-user">país</div>
-                            <div class="data-user">Chile</div>
-                          </div>
-                        </div>
+                      <div class="col-md-9 offset-md-3 d-flex align-items-center m-b-10"><div class="d-flex ">
+<div class="btn-white f-5">Eliminar suscripción</div>
+</div>
                       </div>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                      <div class="btn-white">Cambiar contraseña</div>
+                      <div class="col-md-9 offset-md-3 d-flex align-items-center">
+                        <div class="italy-font">Nam dapibus nisl vitae elit fringilla rutrum. Aenean soll.</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -259,6 +237,4 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/crop/croppie.min.js"></script>
-  <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
 </html>

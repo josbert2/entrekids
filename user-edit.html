@@ -118,13 +118,7 @@
             <div class="col-md-12">
               <div class="content-user m-t-30">
                 <div class="row">
-                  <div class="col-md-5">
-                    <div id="modal">
-                      <div id="main-cropper"></div><a class="button actionUpload"><span>Upload</span>
-                        <input id="upload" type="file" value="Choose Image" accept="image/*"/></a>
-                      <button class="actionDone">Done</button>
-                      <button class="actionCancel">Cancel</button>
-                    </div><div class="avatar-user d-flex justify-content-center m-b-30">
+                  <div class="col-md-5"><div class="avatar-user d-flex justify-content-center m-b-30">
 <input type="file" id="file" name="photo">
 <label for="file" class="img-content null-img" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
                     <div class="btn-upload only-bottom"> <i class="ion ion-md-camera"></i>Subir</div></label>
@@ -144,18 +138,22 @@
                     </div>
                   </div>
                   <div class="col-md-7">
-                    <button class="btn-edit right-p">Editar</button>
+                    <button class="btn-edit right-p">Guardar</button>
                     <div class="title-user m-t-15 m-b-15 title-main-user">Información personal</div>
-                    <div class="form-user">
+                    <div class="form-user edit-form">
                       <div class="datos">
                         <div class="row no-margin">
                           <div class="col-md-6 no-padding line-element">
                             <div class="title-user">Nombres</div>
-                            <div class="data-user">María José Francisca</div>
+                            <div class="data-user">
+                              <input class="input-user" type="text" placeholder="Nombres"/>
+                            </div>
                           </div>
                           <div class="col-md-6 no-padding line-element">
                             <div class="title-user">Apellidos</div>
-                            <div class="data-user">Garmendia Meléndez</div>
+                            <div class="data-user">
+                              <input class="input-user" type="text" placeholder="Apellidos"/>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -163,22 +161,28 @@
                         <div class="row no-margin datos">
                           <div class="col-md-6 no-padding line-element">
                             <div class="title-user">Email</div>
-                            <div class="data-user">mariajose_fergarmend@gmail.com</div>
+                            <div class="data-user">
+                              <input class="input-user" type="text" placeholder="Email"/>
+                            </div>
                           </div>
                           <div class="col-md-6 no-padding line-element">
                             <div class="title-user">teléfono</div>
-                            <div class="data-user">+569 0333 1199</div>
+                            <div class="data-user">
+                              <input class="input-user" type="text" placeholder="Teléfono"/>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="title-user m-t-15 m-b-15 title-main-user">dirección Personal</div>
-                    <div class="form-user">
+                    <div class="form-user edit-form">
                       <div class="datos">
                         <div class="row no-margin">
                           <div class="col-md-12 no-padding line-element">
                             <div class="title-user">Dirección</div>
-                            <div class="data-user">Av. Lorem Ispsum 9334</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="text" placeholder="Dirección"/>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -186,21 +190,55 @@
                         <div class="row no-margin datos">
                           <div class="col-md-4 no-padding line-element">
                             <div class="title-user">Región</div>
-                            <div class="data-user">Metropolitana</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="text" placeholder="Región"/>
+                            </div>
                           </div>
                           <div class="col-md-4 no-padding line-element">
                             <div class="title-user">ciudad</div>
-                            <div class="data-user">Santiago</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="text" placeholder="Ciudad"/>
+                            </div>
                           </div>
                           <div class="col-md-4 no-padding line-element">
                             <div class="title-user">país</div>
-                            <div class="data-user">Chile</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="text" placeholder="Chile"/>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="d-flex justify-content-center">
                       <div class="btn-white">Cambiar contraseña</div>
+                    </div>
+                    <div class="form-user edit-form m-t-40" style="margin-top: 0">
+                      <div class="datos">
+                        <div class="row no-margin">
+                          <div class="col-md-12 no-padding line-element">
+                            <div class="title-user">Contraseña actual</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="text" placeholder="Tu contraseña actual"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="datos">
+                        <div class="row no-margin datos">
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user">Nueva contraseña</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="Nueva contraseña" placeholder="Región"/>
+                            </div>
+                          </div>
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user">Confirma tu Contraseña</div>
+                            <div class="data-user"> 
+                              <input class="input-user" type="password" placeholder="Tip: no pongas una contraseña como :”1234”"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -259,6 +297,4 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/crop/croppie.min.js"></script>
-  <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
 </html>
