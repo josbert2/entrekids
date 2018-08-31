@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index">
@@ -24,27 +23,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-20 d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -90,109 +87,70 @@
               </div>
             </div>
           </nav>
-          <div class="filter-section">
-            <div class="btn-button-filter">
-              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-            </div>
-            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-          </div>
         </nav>
       </div>
+      <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
       <div class="wrapper-content">
         <div class="container">
-          <div class="d-flex">
-            <div class="d-flex">
-              <div class="toback"><i class="material-icons">arrow_back</i></div>
-            </div>
-            <div class="panel-user ml-auto">
-              <ul>
-                <li><i class="material-icons">shopping_basket</i><a href="#">compras</a></li>
-                <li><i class="material-icons">local_activity</i><a href="#">créditos</a></li>
-                <li><i class="material-icons">bookmark</i><a href="#">Favoritos</a></li>
-                <li class="active-li"><i class="material-icons">thumbs_up_down</i><a href="#">Reseña</a></li>
-                <li><i class="material-icons">notifications</i><a href="#">notificaciones</a></li>
-              </ul>
-            </div>
-          </div>
           <div class="row">
+            <div class="d-flex justify-content-end col-md-12 panel-block">
+              <div class="panel-user">
+                <ul>
+                  <li><i class="material-icons">assignment</i><a class="hidden-md" href="#">Datos</a></li>
+                  <li><i class="material-icons">face</i><a class="hidden-md" href="#">Niños</a></li>
+                  <li><i class="material-icons">supervised_user_circle</i><a class="hidden-md" href="#">Cuidadores</a></li>
+                  <li class="active-li"><i class="material-icons">credit_card</i><a class="hidden-md" href="#">Pagos</a></li>
+                  <li><img src="img/Out.png" alt=""/><a class="hidden-md" href="#">Noticaciones</a></li>
+                </ul>
+              </div>
+            </div>
             <div class="col-md-12">
-              <div class="content-compra m-t-15">
-                <div class="item-compra resenar">
-                  <div class="row no-margin">
-                    <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
+              <div class="content-user m-t-30 btn-user-editar">
+                <div class="row">
+                  <div class="col-md-5 d-flex justify-content-start flex-column align-items-center content-avatar">
+                    <div class="d-flex justify-content-start flex-column align-items-center progress-user">
+                      <div class="spinner-load">
+                        <svg class="chart" viewBox="0 0 36 36">
+                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
+                        </svg>
+                        <svg class="chart2" viewBox="0 0 36 36">
+                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
+                        </svg>
+                        <div class="porcentaje">75%</div>
+                      </div>
+                      <div class="progress flex-column m-t-30">
+                        <div>Completa tu perfil y obtén </div>
+                        <div>muchos beneficios.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-7 btn-user-editar">
+                    <div class="title-user m-t-15 title-main-user">Medios de pago</div>
+                    <button class="btn-edit right-p">Guardar</button>
+                    <div class="form-user edit-form">
+                      <div class="datos">
+                        <div class="row no-margin">
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user"> </div>
+                            <div class="data-user">
+                              <div class="title-user">Empresa</div>
+                              <input class="input-user" type="text" placeholder="Empresa"/>
+                            </div>
+                          </div>
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user">N° de tarjeta</div>
+                            <div class="data-user">
+                              <input class="input-user" type="text" placeholder="XXXX-XXXX-XXXX-XXXX"/>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom rating-js"><select id="example4">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-</select>
-                        <div class="no-agrree">califica esta actividad</div>
-                      </div>
-                      <button class="btn-resena">Escribir reseña</button>
-                    </div>
                   </div>
-                </div>
-                <div class="item-compra resenar">
-                  <div class="row no-margin">
-                    <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom"><select id="example2">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-</select>
-                      </div>
-                      <button class="btn-resena">Ver reseña</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="item-compra resenar">
-                  <div class="row no-margin">
-                    <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom"><select id="example">
-<option value="1">1</option>
-<option value="2">2</option>
-<option value="3">3</option>
-<option value="4">4</option>
-<option value="5">5</option>
-</select>
-                      </div>
-                      <button class="btn-resena">Ver reseña</button>
-                    </div>
-                  </div>
-                </div>
+                </div><ul class="breadcrumbs">
+<li><a href="">Ajustes</a></li>
+<li><a href="">Pago</a></li>  
+</ul>
               </div>
             </div>
           </div>
@@ -249,37 +207,4 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/rating/rating.js"></script>
-  <script>
-    $(function() {
-      $('#example').barrating({
-       theme: 'fontawesome-stars',
-       initialRating: '2',
-       allowEmpty: null,
-       onSelect: function(value, text) {
-                 alert('Selected rating: ' + value);
-             }
-      });
-      $('#example2').barrating({
-       theme: 'fontawesome-stars',
-       initialRating: '3',
-       allowEmpty: null,
-       onSelect: function(value, text) {
-                 alert('Selected rating: ' + value);
-             }
-      });
-    
-    
-      $('#example4').barrating({
-       theme: 'fontawesome-stars',
-       initialRating: '0',
-       allowEmpty: null,
-       onSelect: function(value, text) {
-                 alert('Selected rating: ' + value);
-                 $('.rating-js .no-agrree').addClass('hidden');
-             },
-       
-      });
-    });
-  </script>
 </html>

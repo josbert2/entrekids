@@ -49,10 +49,10 @@ $(document).ready(function() {
 =========================================================================*/
 $("#slider-range").slider({
     range: true,
-    min: 360,
-    max: 1200,
+    min: 480,
+    max: 1380,
     step: 15,
-    values: [360, 1200],
+    values: [480, 1380],
     slide: function(e, ui) {
         var hours1 = Math.floor(ui.values[0] / 60);
         var minutes1 = ui.values[0] - (hours1 * 60);
@@ -136,6 +136,17 @@ clsMenu.addEventListener("click", toggleClassMenu, false);
 /*=========================================================================
    Btn Filter
 =========================================================================*/
+if (document.querySelector('.btn-button-filter')) {
+    var myFilter = document.querySelector('.btn-button-filter');
+    var filterBtn = document.querySelector('.filter-btn');
+    var icon_filter = document.querySelector('.btn-button-filter');
+    myFilter.addEventListener("click", toggleFilter, false);
+
+} else {
+
+}
+
+
 function toggleFilter() {
     if (!filterBtn.classList.contains("active-filter")) {
         filterBtn.classList.add("active-filter");
@@ -154,11 +165,9 @@ function toggleFilter() {
         icon_filter.classList.remove('rotate-icon');
     }
 }
-var myFilter = document.querySelector('.btn-button-filter');
-var filterBtn = document.querySelector('.filter-btn');
-var icon_filter = document.querySelector('.btn-button-filter');
 
-myFilter.addEventListener("click", toggleFilter, false);
+
+
 
 
 /*=========================================================================
@@ -480,3 +489,60 @@ $('.btn-simple').click(function() {
         alert('msg');
     }
 })
+
+/*=========================================================================
+   Input counter
+=========================================================================*/
+$(document).ready(function() {
+    $('.minus').click(function() {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.plus').click(function() {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+    });
+});
+
+
+
+/*=========================================================================
+   Collapse cambiar contraseña
+=========================================================================*/
+
+$('.toggleCollapse').click(function() {
+    $('.contrasena-toggle').toggleClass('hide');
+})
+
+
+/*=========================================================================
+   
+=========================================================================*/
+
+function addFields() {
+    // Number of inputs to create
+    var number = document.getElementById("member").value;
+    // Container <div> where dynamic content will be placed
+    var container = document.getElementById("preciii");
+    // Clear previous contents of the container
+    while (container.hasChildNodes()) {
+        container.removeChild(container.lastChild);
+    }
+    for (i = 0; i < number; i++) {
+        // Append a node with a random text
+        container.appendChild(document.createTextNode("Member " + (i + 1)));
+        // Create an <input> element, set its type and name attributes
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "member" + i;
+        container.appendChild(input);
+        // Append a line break 
+        container.appendChild(document.createElement("br"));
+    }
+}

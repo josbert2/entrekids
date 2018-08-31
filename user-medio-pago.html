@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <link rel="stylesheet" href="js/crop/croppie.css"/>
   </head>
   <body class="app-js"> 
-    <div class="page-wrapper index">
+    <div class="page-wrapper index datos-usuario">
       <div id="main-fixed-nav">
         <nav class="main-nav">
           <nav class="main-nav">
@@ -24,27 +23,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -59,7 +56,8 @@
               <div class="menu">
                 <div class="app-menu">
                   <div class="header-mobile">
-                    <div class="name-usuario"><li class="badge d-flex align-items-center">(3)</li>
+                    <div class="name-usuario">
+                      <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
 <li class="name d-flex align-items-center ">María José
 </li>
                     </div>
@@ -67,33 +65,23 @@
                   </div>
                   <!--.separator-mobile(style="margin-bottom: 0")-->
                   <div class="content-mobile">
-                    <div class="content-mobile-item nav justify-content-start">
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
                       <div class="coin">
-                        <ul class="d-flex align-items-center">
-                          <li class="icon-coin"><img src="img/coin-01.svg" alt=""/></li>
-                          <li>
-                            <ul class="puntos d-flex flex-column">
-                              <li class="coin-points">999999</li>
-                              <li class="thumb-point justify-content-end d-flex">puntos</li>
-                            </ul>
-                          </li>
+                        <ul class="d-flex align-items-start puntos d-flex flex-column">
+                          <li class="coin-points">999999</li>
+                          <li class="thumb-point justify-content-end d-flex">puntos</li>
                         </ul>
                       </div>
                     </div>
-                    <div class="content-mobile-item nav justify-content-start">
-                      <li class="m-r-15 d-flex align-items-center btn-hidden"></li><i class="material-icons color-primary f-2 ">shopping_cart</i>
-                    </div>
-                    <div class="content-mobile-item nav justify-content-start">
-                      <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
-                    </div>
-                    <div class="content-mobile-item nav justify-content-start">
-                      <ul class="user-mobile">
-                        <li>Mis compras</li>
-                        <li>Ajustes</li>
-                        <li>Salir</li>
-                        <li> <a href="#"> </a><img src="img/regalo.svg" alt=""/></li>
-                      </ul>
-                    </div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                    <div class="line-nav"></div>
                   </div>
                 </div>
               </div>
@@ -112,63 +100,52 @@
                   <li><i class="material-icons">face</i><a class="hidden-md" href="#">Niños</a></li>
                   <li><i class="material-icons">supervised_user_circle</i><a class="hidden-md" href="#">Cuidadores</a></li>
                   <li class="active-li"><i class="material-icons">credit_card</i><a class="hidden-md" href="#">Pagos</a></li>
-                  <li><i class="material-icons">notifications</i><a class="hidden-md" href="#">Noticaciones</a></li>
+                  <li><img src="img/Out.png" alt=""/><a class="hidden-md" href="#">Noticaciones</a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-12">
-              <div class="content-user m-t-30">
-                <div class="row no-margin">
-                  <div class="col-md-3">
-                    <div class="spinner-load">
-                      <svg class="chart" viewBox="0 0 36 36">
-                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
-                      </svg>
-                      <svg class="chart2" viewBox="0 0 36 36">
-                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
-                      </svg>
-                      <div class="porcentaje">75%</div>
-                    </div>
-                    <div class="progress flex-column m-t-30">
-                      <div>Completa tu perfil y obtén </div>
-                      <div>muchos beneficios.</div>
+              <div class="content-user m-t-30"><ul class="breadcrumbs">
+<li><a href="">Ajustes</a></li>
+<li><a href="">Pagos</a></li>  
+</ul>
+                <div class="row">
+                  <div class="col-md-3 d-flex justify-content-start flex-column align-items-center content-avatar spacing-top">
+                    <div class="d-flex justify-content-start flex-column align-items-center progress-user">
+                      <div class="spinner-load">
+                        <svg class="chart" viewBox="0 0 36 36">
+                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
+                        </svg>
+                        <svg class="chart2" viewBox="0 0 36 36">
+                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
+                        </svg>
+                        <div class="porcentaje">75%</div>
+                      </div>
+                      <div class="progress flex-column m-t-30">
+                        <div>Completa tu perfil y obtén </div>
+                        <div>muchos beneficios.</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-9">
-                    <div class="row no-margin">
-                      <div class="col-md-10 offset-md-2">
-                        <button class="btn-edit right-p">Editar</button>
-                        <div class="title-user m-t-15 m-b-15 title-main-user title-boys">tarjetas Agregadas</div>
-                      </div>
-                      <div class="col-md-12">
+                  <div class="col-md-7 offset-md-2 btn-user-editar">
+                    <button class="btn-edit right-p">Editar</button>
+                    <div class="title-user m-t-15 title-main-user">Medios de pago</div>
+                    <div class="form-user">
+                      <div class="datos">
                         <div class="row no-margin">
-                          <div class="col-md-2"></div>
-                          <div class="col-md-10">
-                            <div class="row no-margin">
-                              <div class="col-md-12 m-b-15">
-                                <div class="row">
-                                  <div class="col-md-3 d-flex align-items-center">
-                                    <div class="d-flex flex-column">
-                                      <div class="title-kid">Empresa</div>
-                                      <div class="kid-name">Mastercard </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-9 d-flex align-items-center">
-                                    <div class="d-flex flex-column">
-                                      <div class="title-kid">Nº</div>
-                                      <div class="kid-name">XXXX XXXX XXXX XX04</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user">EMPRESA</div>
+                            <div class="data-user">Mastercard</div>
+                          </div>
+                          <div class="col-md-6 no-padding line-element">
+                            <div class="title-user">Nº</div>
+                            <div class="data-user">XXXX XXXX XXXX XX04</div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-12 m-t-30 m-b-30"><div class="d-flex justify-content-center">
-<div class="btn-white f-5">Agregar tarjeta</div>
-</div>
-                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <div class="btn-white">Agregar tarjeta</div>
                     </div>
                   </div>
                 </div>
@@ -226,5 +203,8 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/crop/croppie.min.js"></script>
+  <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
 </html>

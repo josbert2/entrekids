@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
   </head>
   <body class="app-js dash-board">
     <div class="page-wrapper index d-flex">
@@ -20,6 +21,7 @@
           <ul>
             <li><i class="material-icons">dashboard</i><span>Panel</span></li>
             <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
           </ul>
           <div class="title-line m-b-20">Actividades</div>
           <ul>
@@ -73,7 +75,7 @@
                   <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim</p>
                 </div>
                 <div class="col-md-8 d-flex align-items-end">
-                  <input type="text" placeholder="Sábados de montaña"/>
+                  <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="60"/>
                 </div>
               </div>
               <div class="row no-margin item-dash">
@@ -82,33 +84,316 @@
                   <p>Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four lo</p>
                 </div>
                 <div class="col-md-8 d-flex align-items-end">
-                  <input type="text" placeholder="Sábados de montaña"/>
+                  <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="3000"/>
                 </div>
               </div>
               <div class="row no-margin item-dash">
                 <div class="col-md-4">
-                  <div class="title-block">Calendario</div>
-                  <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. </p>
-                </div>
-                <div class="col-md-8 d-flex flex-column align-items-center">
-                  <p class="title-ex has-text-centered">Calendario programado semanal cada Martes, Jueves y Viernes, comenzando en 17/08/2018 y terminando el 10/10/18</p>
-                  <button class="btn-white w190">Editar calendario</button>
-                </div>
-              </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">¿Cuándo es la actividad?</div>
+                  <div class="title-block">¿Cuantos cupos totales tiene la actividad?</div>
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
                 </div>
-                <div class="col-md-8"></div>
+                <div class="col-md-8">
+                  <div class="spinner d-flex m-l-35" id="spinner" data-trigger="spinner">
+                    <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
+                    <div class="d-flex align-items-center m-l-15">Cupos</div>
+                    <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
+                  </div>
+                </div>
               </div>
               <div class="row no-margin item-dash">
                 <div class="col-md-4">
-                  <div class="title-block">¿Debe ser visible este evento?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward)</p>
-                  <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would  </p>
+                  <div class="title-block" onclick="addFields()">Tipo de precio</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from   </p>
                 </div>
-                <div class="col-md-8"></div>
+                <div class="col-md-8 d-flex flex-column" id="preciii">
+                  <input class="m-b-15" type="text" placeholder="Precio 1" style="width:300px!important"/>
+                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;">Agregar precio</button>
+                </div>
+                <div class="row no-margin m-t-30">
+                  <div class="col-md-4">
+                    <div class="title-block">Configuración de cupos, precios y descuentos</div>
+                    <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. </p>
+                  </div>
+                  <div class="col-md-8 d-flex flex-column align-items-start">
+                    <button class="btn-white">Configuración</button>
+                  </div>
+                </div>
+                <div class="row no-margin m-t-30">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Debe ser visible este evento?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward)</p>
+                    <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would   </p>
+                  </div>
+                  <div class="col-md-8 d-flex flex-column">
+                    <div class="d-flex"><label class="switch m-b-10 m-r-10" for="checkbox1">
+<input type="checkbox" id="checkbox1">
+<div class="slider switch-red round"></div>
+</label>
+                      <p class="m-b-15">La actividad será visible cuando hagas click en "crear"</p>
+                    </div>
+                    <div class="d-flex">
+                      <p>Pon una fecha y horario para <strong>publicar </strong>esta actividad</p>
+                    </div>
+                    <div class="d-flex">
+                      <input class="m-r-10" type="text" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
+                      <input type="text" placeholder="ej. 7:30 am" style="width: 84px !important"/>
+                    </div>
+                    <div class="d-flex">
+                      <p class="itality">Déjalo en blanco si quieres publicar manualmente</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-margin m-t-30">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Hasta qué fecha aceptas reservas?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking   </p>
+                  </div>
+                  <div class="col-md-8 d-flex flex-column">
+                    <div class="d-flex"><label class="switch m-b-15 " for="checkbox2">
+<input type="checkbox" id="checkbox2">
+<div class="slider switch-red round"></div>
+</label>
+                    </div>
+                    <div class="d-flex">
+                      <input class="m-r-10" type="text" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
+                      <input type="text" placeholder="ej. 7:30 am" style="width: 84px !important"/>
+                    </div>
+                    <div class="d-flex">
+                      <p class="itality">Selecciona una fecha para ocultar el evento</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">¿Son necesarios acompañantes?</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking    </p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="title-ghost m-b-20">Niños</div>
+                  <div class="d-flex m-b-25">
+                    <div class="control-group">
+<label class="control control-radio">Acompañante requerido<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                  <div class="d-flex m-b-25">
+                    <div class="control-group">
+<label class="control control-radio">Acompañante opcional<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                  <div class="d-flex m-b-25">
+                    <div class="control-group">
+<label class="control control-radio">Acompañante no permitido<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Rango de edad de los niños</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking     </p>
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex">
+                    <div class="spinner d-flex" id="spinner" data-trigger="spinner">
+                      <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
+                      <div class="d-flex align-items-center m-l-15">Años</div>
+                      <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
+                    </div>
+                    <div class="spinner d-flex m-l-35" id="spinner" data-trigger="spinner">
+                      <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
+                      <div class="d-flex align-items-center m-l-15">Años</div>
+                      <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
+                    </div>
+                  </div>
+                  <div class="d-flex m-t-40">
+                    <div class="control-group">
+                      <label class="control control-checkbox">Todas las edades
+                        <input type="checkbox" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Dirección de la actividad</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
+                </div>
+                <div class="col-md-8">
+                  <input type="text" placeholder="Buscar una dirección en google"/>
+                  <div class="title-ghost m-b-20">¿Alguna referencia para llegar?
+                    <input class="inputMAX" type="text" placeholder="Ejemplo: &quot;Portón naranjo con dijubo mural&quot;" style="height:80px;" maxlength="300"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">¿Es indoor, outdoor, o ambas?</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-sc</p>
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex"><label class="switch m-r-10" for="checkbox4">
+<input type="checkbox" id="checkbox4">
+<div class="slider switch-red round"></div>
+</label>
+                      <p class="m-b-15">Outdoor</p>
+                    </div>
+                    <div class="d-flex"><label class="switch m-r-10" for="checkbox5">
+<input type="checkbox" id="checkbox5">
+<div class="slider switch-red round"></div>
+</label>
+                      <p class="m-b-15">Indoor</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">¿Quién es el líder de la actividad?</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking </p>
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex flex-column">
+                    <div class="control-group m-b-20">
+                      <label class="control control-radio">Yo
+                        <input type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="control-group m-b-20">
+                      <label class="control control-radio">A determinarse
+                        <input type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="control-group">
+                      <label class="control control-radio">Otros intructores
+                        <input type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Fotos                  </div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
+                </div>
+                <div class="col-md-8">
+                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;">Agregar fotos</button>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Tags                  </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+                <div class="col-md-8"><input class="" type="text" name="tags" placeholder="Excribe palabras al azar" style="width: 180 !important"> 
+                  <div class="control-group m-t-20 tagscheck">
+                    <label class="control control-checkbox">Sin Tags
+                      <input type="checkbox"/>
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Categorías                </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+                <div class="col-md-8 radio-container">
+                  <div class="row">
+                    <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Actividades acuáticas
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Animales
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Atracciones y lugares de interés
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Café stay and play
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Cafetería y Heladería
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Cine
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Cultura
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Diversión y juegos
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Entretención y deporte
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+                    </div>
+                    <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Naturaleza y vida silvestre
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Parques
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Plazas
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Restoranes
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Talleres y clases
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Trekking y paseos en bicicleta
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Arriendo y cumpleaños
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Cultura
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Guardería infantil
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+<label class="checkbox-container" data-id="ubicacion"> Peluquería
+<input class="group1" type="checkbox"><span class="checkmark"></span>
+</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Sitio web de la actividad               </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+                <div class="col-md-8"><input  type="text" placeholder="Pega el link de acceso al sitio web" ></div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">¿Se puede cancelar esta actividad?               </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">¿Algunas instrucciones especiales?               </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -118,5 +403,29 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="js/index.js"></script>
+  <!-- Contador de caracteres-->
+  <script src="js/inputMax/maxinput.js"></script>
+  <script src="js/inputMax/jquery.spinner.js"></script>
+  <script src="js/inputMax/jQuery.tagify.min.js"></script>
+  <script>
+     $( function(){
+    
+     $( ".inputMAX" ).accessibleCharCount();
+     $(".spinner").spinner();
+    
+     
+    
+    
+    
+     })
+    var myInput = $('[name=tags]').tagify();
+    
+     $('.tagscheck').click(function(){
+    
+       myInput.removeAllTags();
+    
+     })
+  </script>
 </html>
