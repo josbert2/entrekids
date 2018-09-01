@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index">
@@ -116,8 +117,8 @@
                     button.actionDone Done
                     button.actionCancel Cancel
                     --><div class="avatar-user d-flex  m-b-30">
-<input type="file" id="file" name="photo">
-<label for="file" class="img-content null-img" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
+<input type="file" id="files" name="photo">
+<label for="files" id="results" class="img-content null-img" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
                     <div class="btn-upload only-bottom"> <i class="ion ion-md-camera"></i>Subir</div></label>
 </div>
                     <div class="d-flex justify-content-start flex-column align-items-center progress-user">
@@ -299,5 +300,19 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index.js"></script><script src="js/croppie/iEdit.js"></script>
+  <script>
+    $(document).ready(function(){
+    $("#files").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results").css("background-image", "url(" + res + ")" );      
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    });
+  </script>
 </html>

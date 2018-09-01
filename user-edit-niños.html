@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <link rel="stylesheet" href="js/crop/croppie.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.css"/>
   </head>
   <body class="app-js"> 
@@ -139,7 +139,10 @@
                         <div class="row no-margin kids-option">
                           <div class="col-md-2 no-padding">
                             <div class="kids justify-content-md-center d-flex">
-                              <div class="oval"><i class="material-icons">camera_alt</i><span>Subir</span></div>
+                              <div class="avatar-user d-flex">
+                                <input id="files" type="file" name="photo"/>
+                                <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover;border-radius: 50%; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-md-3 m-r-15 no-padding d-flex align-items-center no-margin-md">
@@ -161,7 +164,10 @@
                         <div class="row no-margin kids-option">
                           <div class="col-md-2 no-padding">
                             <div class="kids justify-content-md-center d-flex">
-                              <div class="oval"><i class="material-icons">camera_alt</i><span>Subir</span></div>
+                              <div class="avatar-user d-flex">
+                                <input id="files2" type="file" name="photo"/>
+                                <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover;border-radius: 50%; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-md-3 m-r-15 no-padding d-flex align-items-center no-margin-md">
@@ -183,7 +189,10 @@
                         <div class="row no-margin kids-option">
                           <div class="col-md-2 no-padding">
                             <div class="kids justify-content-md-center d-flex">
-                              <div class="oval"><i class="material-icons">camera_alt</i><span>Subir</span></div>
+                              <div class="avatar-user d-flex">
+                                <input id="files3" type="file" name="photo"/>
+                                <label class="img-content null-img oval" id="results3" for="files3" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover;border-radius: 50%; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-md-3 m-r-15 no-padding d-flex align-items-center no-margin-md">
@@ -273,5 +282,42 @@
   <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/i18n/datepicker.ca-ES.js"></script>
-  <script>$('[data-toggle="datepicker"]').datepicker();</script>
+  <script>$('[data-toggle="datepicker"]').datepicker();</script><script src="js/croppie/iEdit.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#files").change(function(e){
+        var img = e.target.files[0];
+    
+        if(!iEdit.open(img, true, function(res){
+          $("#results").css("background-image", "url(" + res + ")" ); 
+          $('#results').html('');     
+        })){
+          alert("Whoops! That is not an image!");
+        }
+    
+      });
+      $("#files2").change(function(e){
+        var img = e.target.files[0];
+    
+        if(!iEdit.open(img, true, function(res){
+          $("#results2").css("background-image", "url(" + res + ")" );  
+          $('#results2').html('');    
+        })){
+          alert("Whoops! That is not an image!");
+        }
+    
+      });
+      $("#files3").change(function(e){
+        var img = e.target.files[0];
+    
+        if(!iEdit.open(img, true, function(res){
+          $("#results3").css("background-image", "url(" + res + ")" );  
+          $('#results3').html('');    
+        })){
+          alert("Whoops! That is not an image!");
+        }
+    
+      });
+    });
+  </script>
 </html>

@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/crop/croppie.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.css"/>
   </head>
   <body class="app-js"> 
-    <div class="page-wrapper index">
+    <div class="page-wrapper index ninos edit-nino">
       <div id="main-fixed-nav">
         <nav class="main-nav">
           <nav class="main-nav">
@@ -105,42 +107,48 @@
               </div>
             </div>
             <div class="col-md-12">
-              <div class="content-user m-t-30 btn-user-editar">
-                <div class="row">
-                  <div class="col-md-5 d-flex justify-content-start flex-column align-items-center content-avatar">
-                    <div class="d-flex justify-content-start flex-column align-items-center progress-user">
-                      <div class="spinner-load">
-                        <svg class="chart" viewBox="0 0 36 36">
-                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
-                        </svg>
-                        <svg class="chart2" viewBox="0 0 36 36">
-                          <path d="M18 2.0845                          a 15.9155 15.9155 0 0 1 0 31.831                          a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
-                        </svg>
-                        <div class="porcentaje">75%</div>
-                      </div>
-                      <div class="progress flex-column m-t-30">
-                        <div>Completa tu perfil y obtén </div>
-                        <div>muchos beneficios.</div>
+              <div class="content-user m-t-30">
+                <button class="btn-edit right-pp z-index100">Guardar</button>
+                <div class="row no-margin">
+                  <div class="col-md-12">
+                    <div class="row">
+                      <div class="col-md-3"></div>
+                      <div class="col-md-7 offset-md-2 no-padding betweem-md">
+                        <div class="title-user title-main-user title-boys w100 title-absolute">Información medios de pago</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-7 btn-user-editar">
-                    <div class="title-user m-t-15 title-main-user">Medios de pago</div>
-                    <button class="btn-edit right-p">Guardar</button>
-                    <div class="form-user edit-form">
-                      <div class="datos">
-                        <div class="row no-margin">
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user"> </div>
-                            <div class="data-user">
-                              <div class="title-user">Empresa</div>
-                              <input class="input-user" type="text" placeholder="Empresa"/>
-                            </div>
-                          </div>
-                          <div class="col-md-6 no-padding line-element">
-                            <div class="title-user">N° de tarjeta</div>
-                            <div class="data-user">
-                              <input class="input-user" type="text" placeholder="XXXX-XXXX-XXXX-XXXX"/>
+                  <div class="col-md-3 svg-align fix-svg-margin">
+                    <div class="spinner-load">
+                      <svg class="chart" viewBox="0 0 36 36">
+                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#19C6B7" ;="" stroke-width="1" stroke-dasharray="75, 100"></path>
+                      </svg>
+                      <svg class="chart2" viewBox="0 0 36 36">
+                        <path d="M18 2.0845                        a 15.9155 15.9155 0 0 1 0 31.831                        a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#d2d0d0" ;="" stroke-width="1" stroke-dasharray="100, 100"></path>
+                      </svg>
+                      <div class="porcentaje">75%</div>
+                    </div>
+                    <div class="progress flex-column m-t-30">
+                      <div>Completa tu perfil y obtén </div>
+                      <div>muchos beneficios.</div>
+                    </div>
+                  </div>
+                  <div class="col-md-7 offset-md-2 no-padding">
+                    <div class="row no-margin align-with-panel">
+                      <div class="col-md-12 no-padding">
+                        <div class="row no-margin kids-option">
+                          <div class="col-md-12 no-padding">
+                            <div class="row no-margin">
+                              <div class="col-md-6 no-padding d-flex align-items-center no-margin-md m-t-10">
+                                <div class="d-flex flex-column line-element"><div class="title-user">Empresa</div>
+<input class="input-user" type="text" placeholder="Empresa">
+                                </div>
+                              </div>
+                              <div class="col-md-6 d-flex align-items-center no-padding no-margin-md m-b-10">
+                                <div class="d-flex flex-column line-element"><div class="title-user">N° de tarjeta</div>
+<input class="input-user" type="text" placeholder="XXXX-XXXX-XXXX-XXXXX">
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

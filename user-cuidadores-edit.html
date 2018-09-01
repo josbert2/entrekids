@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <link rel="stylesheet" href="js/crop/croppie.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.css"/>
   </head>
   <body class="app-js"> 
@@ -139,7 +139,10 @@
                         <div class="row no-margin">
                           <div class="col-md-2">
                             <div class="kids">
-                              <div class="oval-cuidadores"><i class="material-icons">camera_alt</i><span>Subir</span></div>
+                              <div class="avatar-user d-flex">
+                                <input id="files" type="file" name="photo"/>
+                                <label class="img-content null-img oval-cuidadores" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;height: 103px;width: 103px;background-size: cover;border-radius: 50%; cursor: pointer;"><i class="ion ion-md-camera"></i>subirr</label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-md-5 no-padding d-flex align-items-center no-margin-md">
@@ -175,7 +178,10 @@
                         <div class="row no-margin">
                           <div class="col-md-2">
                             <div class="kids">
-                              <div class="oval-cuidadores"><i class="material-icons">camera_alt</i><span>Subir</span></div>
+                              <div class="avatar-user d-flex">
+                                <input id="files2" type="file" name="photo"/>
+                                <label class="img-content null-img oval-cuidadores" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;height: 103px;width: 103px;background-size: cover;border-radius: 50%; cursor: pointer;"><i class="ion ion-md-camera"></i>subirr</label>
+                              </div>
                             </div>
                           </div>
                           <div class="col-md-5 no-padding d-flex align-items-center no-margin-md">
@@ -272,7 +278,32 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/crop/croppie.min.js"></script>
-  <script src="http://leanmodal.finelysliced.com.au/js/jquery.leanModal.min.js"></script>
+  <script src="js/index.js"></script><script src="js/croppie/iEdit.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#files").change(function(e){
+        var img = e.target.files[0];
+    
+        if(!iEdit.open(img, true, function(res){
+          $("#results").css("background-image", "url(" + res + ")" ); 
+          $('#results').html('');     
+        })){
+          alert("Whoops! That is not an image!");
+        }
+    
+      });
+      $("#files2").change(function(e){
+        var img = e.target.files[0];
+    
+        if(!iEdit.open(img, true, function(res){
+          $("#results2").css("background-image", "url(" + res + ")" );  
+          $('#results2').html('');    
+        })){
+          alert("Whoops! That is not an image!");
+        }
+    
+      });
+      
+    });
+  </script>
 </html>
