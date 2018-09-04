@@ -23,27 +23,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-20 d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -89,27 +87,23 @@
               </div>
             </div>
           </nav>
-          <div class="filter-section">
-            <div class="btn-button-filter">
-              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-            </div>
-            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-          </div>
         </nav>
       </div>
       <div class="wrapper-content">
         <div class="container">
           <div class="d-flex">
-            <div class="d-flex">
-              <div class="toback"><i class="material-icons">arrow_back</i></div>
-            </div>
-            <div class="panel-user ml-auto">
+            <!--.d-flex
+            .toback
+              <i class="material-icons">arrow_back</i>
+            
+            -->
+            <div class="panel-user ml-auto disable-mg-md w100-md">
               <ul>
-                <li><i class="material-icons">shopping_basket</i><a href="#">compras</a></li>
-                <li><i class="material-icons">local_activity</i><a href="#">créditos</a></li>
-                <li><i class="material-icons">bookmark</i><a href="#">Favoritos</a></li>
-                <li><i class="material-icons">thumbs_up_down</i><a href="#">Reseña</a></li>
-                <li class="active-li"><i class="material-icons">notifications</i><a href="#">notificaciones</a></li>
+                <li><i class="material-icons">shopping_basket</i><a class="hidden-md" href="#">compras</a></li>
+                <li><i class="material-icons">local_activity</i><a class="hidden-md" href="#">créditos</a></li>
+                <li><i class="material-icons">bookmark</i><a class="hidden-md" href="#">Favoritos</a></li>
+                <li><i class="material-icons">thumbs_up_down</i><a class="hidden-md" href="#">Reseña</a></li>
+                <li class="active-li"><i class="material-icons">notifications</i><a class="hidden-md" href="#">notificaciones</a></li>
               </ul>
             </div>
           </div>
@@ -120,12 +114,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="categories-ovel-green m-r-10"></div>
-                        <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
-                        <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        <div class="d-flex">
+                          <div class="categories-ovel-green m-r-10"></div>
+                        </div>
+                        <div class="d-flex flex-direction-md-column">
+                          <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
+                          <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end justify-content-end-md p48-left-md">
                       <div class="date-notify m-r-10">El 10/6 a las 22:30 PM</div>
                       <button class="btn-notify">Ver</button>
                     </div>
@@ -135,12 +133,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="categories-ovel-red m-r-10"></div>
-                        <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
-                        <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        <div class="d-flex">
+                          <div class="categories-ovel-blue m-r-10"></div>
+                        </div>
+                        <div class="d-flex flex-direction-md-column">
+                          <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
+                          <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end justify-content-end-md p48-left-md">
                       <div class="date-notify m-r-10">El 10/6 a las 22:30 PM</div>
                       <button class="btn-notify">Ver</button>
                     </div>
@@ -150,12 +152,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="categories-ovel-blue m-r-10"></div>
-                        <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
-                        <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        <div class="d-flex">
+                          <div class="categories-ovel-red m-r-10"></div>
+                        </div>
+                        <div class="d-flex flex-direction-md-column">
+                          <div class="notify m-r-10"> Reservaste 1 lugar para la actividad </div>
+                          <div class="text-blue">Vestibulum rutrum quam vitae fringilla ti (19/6 9:00 AM)</div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end justify-content-end-md p48-left-md">
                       <div class="date-notify m-r-10">El 10/6 a las 22:30 PM</div>
                       <button class="btn-notify">Ver</button>
                     </div>

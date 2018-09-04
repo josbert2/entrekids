@@ -1,0 +1,356 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="page-wrapper index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul>
+            <li><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">store_mall_directory</i><span>Informacion</span></li>
+            <ul class="expand-dash">
+              <li class="expand-active"><a href="#1">Perfil</a></li>
+              <li class="item-li"><a href="#2">Cuentas</a></li>
+              <li class="item-li"><a href="#3">Staff</a></li>
+              <li>Permisiones</li>
+              <li>Configuración</li>
+            </ul>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash">
+        <div class="nav-top">
+          <ul class="center-right-nav">
+            <li>Completa tu perfil de Proveedor</li>
+            <li><i class="material-icons">arrow_back</i></li>
+          </ul>
+        </div>
+        <div class="content-dashboard">
+          <div class="row no-margin">
+            <div class="col-md-12">
+              <p class="m-b-35" style="padding:10px;text-align: center;display:block;background:rgba(238,241,244,0.75)">INTRODUCCION AL PERFIL, et lacinia sapien. Mauris accumsan eros eget libero posuere vulputate. Etiam elit elit, elementum sed varius at, adipiscing vitae est. Sed nec felis pellentesque, lacinia dui sed, ultricies sapien. Pellentesque orci lectus, consectetur vel posuere posuere, rutrum eu ipsum. Aliquam eget odio sed ligula iaculis consequat at eget orci. Mauris molestie sit amet metus mattis varius.   </p>
+            </div>
+            <div class="col-md-12">
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Tipo de negocio</div>
+                  <p>Are you the sole representative of the business or is this on behalf of a larger organization?</p>
+                </div>
+                <div class="col-md-8 d-flex align-items-end">
+                  <div class="d-flex m-r-25">
+                    <div class="control-group">
+<label class="control control-radio">Persona Jurídica<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="control-group">
+<label class="control control-radio">Persona Natural<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Detalles del Negocio</div>
+                  <p>This should be the info for a person authorized on the bank account below. Note that we do not store your social security number.</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Nombre de fantasía</div>
+                      <input type="text" placeholder="Nombre de fantasía"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Razón social</div>
+                      <input type="text" placeholder="Razón social"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">rut</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Sitio web</div>
+                      <input type="text" placeholder="Sitio web"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Email</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Teléfono</div>
+                      <input type="text" placeholder="Teléfono"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-12">
+                      <div class="title-input">Descripción</div>
+                      <textarea class="texting" placeholder="Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-sc"></textarea>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-4">
+                      <div class="title-input">FACEBOOK</div>
+                      <input type="text" placeholder="web.facebook.com/perfil"/>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="title-input">TWITTER</div>
+                      <input type="text" placeholder="twitter.com/perfil"/>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="title-input">INSTAGRAM</div>
+                      <input type="text" placeholder="www.instagram.com/perfil"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Dirección del Negocio </div>
+                  <p>The address used to verify your account.</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Dirección</div>
+                      <input type="text" placeholder="Dirección"/>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="title-input">Número</div>
+                      <input type="text" placeholder="Número"/>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="title-input">Oficina</div>
+                      <input type="text" placeholder="Oficina"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Comuna</div>
+                      <input type="text" placeholder="Comuna"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Región</div>
+                      <input type="text" placeholder="Región"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Logo</div>
+                  <p>This should be the info for a person authorized on the bank account below. Note that we do not store your social security number.</p>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
+                  <div class="avatar-user d-flex m-b-30">
+                    <input id="preview" type="file" name="photo"/>
+                    <label class="img-content null-img" id="result-preview" for="preview" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
+                      <div class="btn-upload only-bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                          <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path><span>Subir</span>
+                        </svg>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Administrador de cuenta</div>
+                  <p>This should be the info for a person authorized on the bank account below. Note that we do not store your social security number.</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Nombre</div>
+                      <input type="text" placeholder="Nombre"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Apellido</div>
+                      <input type="text" placeholder="Apellido"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Email</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Rut</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-12">
+                      <div class="title-input">Fecha de nacimiento</div>
+                      <input type="text" placeholder="Fecha de nacimiento" data-toggle="datepicker"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Teléfono fijo</div>
+                      <input type="text" placeholder="Teléfono fijo"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Teléfono celular</div>
+                      <input type="text" placeholder="Teléfono celular"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Dirección administrador</div>
+                  <p>The address used to verify your account.</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Dirección</div>
+                      <input type="text" placeholder="Dirección"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Número</div>
+                      <input type="text" placeholder="Número"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Comuna</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Región</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Fotografía de identidad</div>
+                  <p>Por favor subir una foto de la licencia de conducir o CI. Utilizaremos esta foto solo para verificar su identidad.</p>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
+                  <div class="avatar-user d-flex m-b-30">
+                    <input id="preview2" type="file" name="photo"/>
+                    <label class="img-content null-img2" id="result-preview2" for="preview2" style="background: url('img/placeholder.png'); background-size: cover;background-position: center;background-repeat: no-repeat;    background-position-y: -20px;cursor: pointer;">
+                      <div class="btn-upload only-bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                          <path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path><span>Subir</span>
+                        </svg>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Cambiar contraseña</div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center flex-column">
+                  <button class="btn-white" id="change-contrasena">Cambiar contraseña</button>
+                  <div class="form" id="hide-contrasena">
+                    <input class="m-b-10 m-t-20" type="password" placeholder="Nueva contraseña"/>
+                    <input type="password" placeholder="Repetir contraseña"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin w100 m-t-35 dfaje">
+                <button class="save-btn">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/index.js"></script>
+  <!-- Contador de caracteres-->
+  <script src="js/inputMax/maxinput.js"></script>
+  <script src="js/inputMax/jquery.spinner.js"></script>
+  <script src="js/inputMax/jQuery.tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/i18n/datepicker.ca-ES.js"></script>
+  <script src="js/modal/remodal.js"></script><script src="js/croppie/iEdit.js"></script>
+  <script>
+    $( function(){
+      $('[data-toggle="datepicker"]').datepicker();
+    })
+     function chooseFile() {
+        document.getElementById("file").click();
+    }
+    
+    
+    
+      document.querySelector('#preview')
+        .addEventListener("change", function(ev){
+            let files = ev.target.files;
+            console.log(files);
+            let image = files[0];
+            let imageURL = URL.createObjectURL(image);
+            document.querySelector('.null-img')
+                .style.backgroundImage = "url('"+ imageURL +"')";
+            document.getElementById('img-des').innerHTML = document.getElementById('file').files[0].name;
+        });
+    
+        document.querySelector('#preview2')
+        .addEventListener("change", function(ev){
+            let files = ev.target.files;
+            console.log(files);
+            let image = files[0];
+            let imageURL = URL.createObjectURL(image);
+            document.querySelector('.null-img2')
+                .style.backgroundImage = "url('"+ imageURL +"')";
+            document.getElementById('img-des2').innerHTML = document.getElementById('file').files[0].name;
+        });
+  </script>
+</html>

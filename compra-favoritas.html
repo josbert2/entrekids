@@ -23,27 +23,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-20 d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -89,27 +87,18 @@
               </div>
             </div>
           </nav>
-          <div class="filter-section">
-            <div class="btn-button-filter">
-              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-            </div>
-            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-          </div>
         </nav>
       </div>
       <div class="wrapper-content">
         <div class="container">
           <div class="d-flex">
-            <div class="d-flex">
-              <div class="toback"><i class="material-icons">arrow_back</i></div>
-            </div>
-            <div class="panel-user ml-auto">
+            <div class="panel-user ml-auto disable-mg-md w100-md">
               <ul>
-                <li><i class="material-icons">shopping_basket</i><a href="#">compras</a></li>
-                <li><i class="material-icons">local_activity</i><a href="#">créditos</a></li>
-                <li class="active-li"><i class="material-icons">bookmark</i><a href="#">Favoritos</a></li>
-                <li><i class="material-icons">thumbs_up_down</i><a href="#">Reseña</a></li>
-                <li><i class="material-icons">notifications</i><a href="#">notificaciones</a></li>
+                <li><i class="material-icons">shopping_basket</i><a class="hidden-md" href="#">compras</a></li>
+                <li><i class="material-icons">local_activity</i><a class="hidden-md" href="#">créditos</a></li>
+                <li class="active-li"><i class="material-icons">bookmark</i><a class="hidden-md" href="#">Favoritos</a></li>
+                <li><i class="material-icons">thumbs_up_down</i><a class="hidden-md" href="#">Reseña</a></li>
+                <li><i class="material-icons">notifications</i><a class="hidden-md" href="#">notificaciones</a></li>
               </ul>
             </div>
           </div>
@@ -120,16 +109,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text m-l-15-md">
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Proveedor</p>
+                          <p>Edad</p>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-5 d-flex align-items-center justify-content-end">
-                      <button class="btn-favorites">Eliminar</button>
+                      <button class="btn-favorites w100-md">Eliminar</button>
                     </div>
                   </div>
                 </div>
@@ -137,16 +126,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text m-l-15-md">
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Proveedor</p>
+                          <p>Edad</p>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-5 d-flex align-items-center justify-content-end">
-                      <button class="btn-favorites">Eliminar</button>
+                      <button class="btn-favorites w100-md">Eliminar</button>
                     </div>
                   </div>
                 </div>
@@ -154,16 +143,16 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text m-l-15-md">
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Proveedor</p>
+                          <p>Edad</p>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-5 d-flex align-items-center justify-content-end">
-                      <button class="btn-favorites">Eliminar</button>
+                      <button class="btn-favorites w100-md">Eliminar</button>
                     </div>
                   </div>
                 </div>
@@ -171,16 +160,33 @@
                   <div class="row no-margin">
                     <div class="col-md-7">
                       <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
-                        <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                          <p>Av. Lorem Ipsum 33450, Providencia.</p>
-                          <p>Guardada el 15/6</p>
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text m-l-15-md">
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Proveedor</p>
+                          <p>Edad</p>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-5 d-flex align-items-center justify-content-end">
-                      <button class="btn-favorites">Eliminar</button>
+                      <button class="btn-favorites w100-md">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-compra">
+                  <div class="row no-margin">
+                    <div class="col-md-7">
+                      <div class="d-flex">
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="compra-text m-l-15-md">
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <p>Proveedor</p>
+                          <p>Edad</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-5 d-flex align-items-center justify-content-end">
+                      <button class="btn-favorites w100-md">Eliminar</button>
                     </div>
                   </div>
                 </div>

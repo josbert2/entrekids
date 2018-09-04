@@ -1,0 +1,157 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="page-wrapper index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Administrador</p>
+          <p>Entrekids</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Actividades</span></li>
+          </ul>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">store_mall_directory</i><span>Autorizaciones</span></li>
+            <ul class="expand-dash">
+              <li><a href="#1">Proveedor</a></li>
+              <li class="item-li expand-active"><a href="#2">Actividad</a></li>
+              <li class="item-li"><a href="#3">tag</a></li>
+            </ul>
+          </ul>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">store_mall_directory</i><span>Usuario</span></li>
+            <ul class="expand-dash">
+              <li class="expand-active"><a href="#1">Proveedor</a></li>
+              <li class="item-li"><a href="#2">Usuarios</a></li>
+            </ul>
+          </ul>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">store_mall_directory</i><span>Usuario</span></li>
+            <ul class="expand-dash">
+              <li class="expand-active"><a href="#1">Balance EK</a></li>
+              <li class="item-li"><a href="#2">Transacciones</a></li>
+              <li class="item-li"><a href="#2">Nomina de pago</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Staff</span></li>
+            <li><i class="material-icons">local_offer</i><span>Permisiones</span></li>
+            <li><i class="material-icons">local_offer</i><span>Promociones</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash full-width">
+        <div class="full-width">
+          <div class="nav-top">
+            <ul class="d-flex justify-content-end align-items-center">
+              <li class="mr-auto"><i class="material-icons">arrow_back</i></li>
+              <li class="title-dashboard m-r-20">Alta de Actividad</li>
+              <li class="nav-opcion d-flex align-items-center">
+                <input class="input-nav" type="text" placeholder="Buscar proveedor"/>
+                <div class="search-input-nav"><i class="material-icons">search</i></div>
+                <ul class="group-btn-nav m-l-10">
+                  <li><i class="material-icons">store_mall_directory</i></li>
+                  <li class="active-li"><i class="material-icons">event</i></li>
+                  <li><i class="material-icons">local_offer</i></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="div bg-white" style="    padding-bottom: 5px;background: #fff;">
+            <table class="super-admin-dash">
+              <thead>
+                <th>Actividad</th>
+                <th>Fecha de Publicación</th>
+                <th>Proveedor</th>
+                <th>Precio</th>
+                <th>% Cobro</th>
+                <th>Descuento</th>
+                <th>Aceptar</th>
+                <th>Eliminar</th>
+                <th>Mensaje</th>
+              </thead>
+              <tbody>
+                <tr class="border_bottom">
+                  <td>Proveedor 1</td>
+                  <td>17/08/2018</td>
+                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
+                  <td>rodsepmartinez@gmail.com</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                  <td>
+                     <label class="switch" for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                  </td>
+                  <td class="d-flex justify-content-center"><i class="material-icons">delete_outline</i></td>
+                  <td class="d-flex justify-content-center"><i class="material-icons">mail_outline</i></td>
+                </tr>
+                <tr class="border_bottom">
+                  <td>Proveedor 1</td>
+                  <td>17/08/2018</td>
+                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
+                  <td>rodsepmartinez@gmail.com</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                  <td>
+                     <label class="switch" for="checkbox2" >
+<input type="checkbox" id="checkbox2" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                  </td>
+                  <td class="d-flex justify-content-center"><i class="material-icons">delete_outline</i></td>
+                </tr>
+                <tr class="border_bottom">
+                  <td>Proveedor 1</td>
+                  <td>17/08/2018</td>
+                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
+                  <td>rodsepmartinez@gmail.com</td>
+                  <td>70%</td>
+                  <td>70%</td>
+                  <td>
+                     <label class="switch" for="checkbox3" >
+<input type="checkbox" id="checkbox3" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                  </td>
+                  <td class="d-flex justify-content-center"><i class="material-icons">delete_outline</i></td>
+                </tr>
+              </tbody>
+            </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
+<li>
+<div class="road-to-back">&lt;</div>
+</li>
+<li class="pagi">Página 1 de 10</li>
+<li>
+<div class="road-to-next"> &gt;</div>
+</li>
+</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/index.js"></script>
+  <!-- Contador de caracteres-->
+</html>

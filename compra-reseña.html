@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
     <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
   </head>
-  <body class="app-js"> 
+  <body class="app-js master-modal">
     <div class="page-wrapper index">
       <div id="main-fixed-nav">
         <nav class="main-nav">
@@ -24,27 +26,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-20 d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -90,47 +90,44 @@
               </div>
             </div>
           </nav>
-          <div class="filter-section">
-            <div class="btn-button-filter">
-              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-            </div>
-            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-          </div>
         </nav>
       </div>
       <div class="wrapper-content">
         <div class="container">
           <div class="d-flex">
-            <div class="d-flex">
-              <div class="toback"><i class="material-icons">arrow_back</i></div>
-            </div>
-            <div class="panel-user ml-auto">
+            <!--.d-flex
+            .toback
+              <i class="material-icons">arrow_back</i>
+            
+            -->
+            <div class="panel-user ml-auto disable-mg-md w100-md">
               <ul>
-                <li><i class="material-icons">shopping_basket</i><a href="#">compras</a></li>
-                <li><i class="material-icons">local_activity</i><a href="#">créditos</a></li>
-                <li><i class="material-icons">bookmark</i><a href="#">Favoritos</a></li>
-                <li class="active-li"><i class="material-icons">thumbs_up_down</i><a href="#">Reseña</a></li>
-                <li><i class="material-icons">notifications</i><a href="#">notificaciones</a></li>
+                <li><i class="material-icons">shopping_basket</i><a class="hidden-md" href="#">compras</a></li>
+                <li><i class="material-icons">local_activity</i><a class="hidden-md" href="#">créditos</a></li>
+                <li><i class="material-icons">bookmark</i><a class="hidden-md" href="#">Favoritos</a></li>
+                <li class="active-li"><i class="material-icons">thumbs_up_down</i><a class="hidden-md" href="#">Reseña</a></li>
+                <li><i class="material-icons">notifications</i><a class="hidden-md" href="#">notificaciones</a></li>
               </ul>
             </div>
           </div>
           <div class="row">
             <div class="col-md-12">
-              <div class="content-compra m-t-15">
+              <div class="content-compra m-t-15 comprar-resena">
                 <div class="item-compra resenar">
                   <div class="row no-margin">
                     <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="d-flex flex-direction-md-column">
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                         <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
                           <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Proveedor</p>
                           <p>Guardada el 15/6</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom rating-js"><select id="example4">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center justify-content-center-md">
+                      <div class="br-theme-custom"><select class="empty">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -139,59 +136,107 @@
 </select>
                         <div class="no-agrree">califica esta actividad</div>
                       </div>
-                      <button class="btn-resena">Escribir reseña</button>
+                      <button class="btn-resena btn-favorites-pa t165" data-remodal-target="escribir-reseña">Escribir reseña</button>
                     </div>
                   </div>
                 </div>
                 <div class="item-compra resenar">
                   <div class="row no-margin">
                     <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="d-flex flex-direction-md-column">
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                         <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
                           <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Proveedor</p>
                           <p>Guardada el 15/6</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom"><select id="example2">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center justify-content-center-md">
+                      <div class="br-theme-custom"><select class="start">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
 <option value="5">5</option>
 </select>
+                        <div class="no-agrree">califica esta actividad</div>
                       </div>
-                      <button class="btn-resena">Ver reseña</button>
+                      <button class="btn-resena btn-favorites-pa t165">Escribir reseña</button>
                     </div>
                   </div>
                 </div>
                 <div class="item-compra resenar">
                   <div class="row no-margin">
                     <div class="col-md-7">
-                      <div class="d-flex">
-                        <div class="item-compra-favorites"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="d-flex flex-direction-md-column">
+                        <div class="item-compra-favorites m-b-15-md"><img class="h100" src="https://images.pexels.com/photos/346796/pexels-photo-346796.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                         <div class="compra-text">
-                          <div class="title-compra m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                          <div class="title-compra m-b-5 line-h-2-md">Vestibulum rutrum quam vitae fringilla ti</div>
                           <p>Av. Lorem Ipsum 33450, Providencia.</p>
+                          <p>Proveedor</p>
                           <p>Guardada el 15/6</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center">
-                      <div class="br-theme-custom"><select id="example">
+                    <div class="col-md-5 d-flex align-items-center justify-content-end align-items-center justify-content-center-md">
+                      <div class="br-theme-custom"><select class="start">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
 <option value="4">4</option>
 <option value="5">5</option>
 </select>
+                        <div class="no-agrree">califica esta actividad</div>
                       </div>
-                      <button class="btn-resena">Ver reseña</button>
+                      <button class="btn-resena btn-favorites-pa t165">Escribir reseña</button>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="remodal" data-remodal-id="escribir-reseña">
+              <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+              <div class="title-modal d-flex justify-content-center m-b-20">Escribe tu reseña</div>
+              <p>Califica esta reseña</p>
+              <div class="rese-modal m-b-20">
+                <select class="empty">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="resena-title m-b-25">Vestibulum rutrum quam vitae fringilla t</div>
+              <div class="row no-margin">
+                <div class="col-md-12">
+                  <textarea class="text-area"></textarea>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center m-t-20">
+                  <button class="btn-send-resena">Enviar reseña</button>
+                </div>
+              </div>
+              <div class="d-flex align-content-center m-t-25 justify-content-center feed-back-column">
+                <p class="feedback d-flex">Comparte un feedback privado con Entrekids</p>
+                <div class="fl flex-direction-md-column">
+                  <div class="d-flex justify-content-center-md icon-feed"><a class="link-toggle m-l-10 m-r-5" href="">Aquí</a><i class="material-icons">arrow_back_ios</i></div>
+                </div>
+              </div>
+              <div class="row no-margin visible m-t-20">
+                <div class="col-md-12">
+                  <textarea class="text-area"></textarea>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center m-t-20">
+                  <button class="btn-send-resena">Enviar feedback</button>
+                </div>
+                <div class="svg_check animated-check">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                    <circle class="path circle" fill="none" stroke="#19C6B7" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"></circle>
+                    <polyline class="path check" fill="none" stroke="#71d084" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "></polyline>
+                  </svg>
+                  <p class="feedback m-15">Su reseña se ha enviado exitosamente</p>
                 </div>
               </div>
             </div>
@@ -250,6 +295,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/rating/rating.js"></script>
+  <script src="js/modal/remodal.js"></script>
   <script>
     $(function() {
       $('#example').barrating({
@@ -260,24 +306,20 @@
                  alert('Selected rating: ' + value);
              }
       });
-      $('#example2').barrating({
-       theme: 'fontawesome-stars',
-       initialRating: '3',
-       allowEmpty: null,
-       onSelect: function(value, text) {
-                 alert('Selected rating: ' + value);
-             }
-      });
-    
-    
-      $('#example4').barrating({
+      $('.empty').barrating({
        theme: 'fontawesome-stars',
        initialRating: '0',
        allowEmpty: null,
        onSelect: function(value, text) {
-                 alert('Selected rating: ' + value);
                  $('.rating-js .no-agrree').addClass('hidden');
-             },
+             }
+      });
+    
+    
+      $('.start').barrating({
+       theme: 'fontawesome-stars',
+       initialRating: '3',
+       allowEmpty: null
        
       });
     });

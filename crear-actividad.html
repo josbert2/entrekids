@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
     <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
   </head>
   <body class="app-js dash-board">
     <div class="page-wrapper index d-flex">
@@ -24,21 +30,21 @@
             <li><i class="material-icons">assignment</i><span>Actividades</span></li>
           </ul>
           <div class="title-line m-b-20">Actividades</div>
-          <ul>
+          <ul class="navigation">
             <li class="active-dash"><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
             <ul class="expand-dash">
-              <li class="expand-active">Titulo</li>
-              <li>Descripción</li>
-              <li>Calendario</li>
-              <li>Cupos</li>
-              <li>Participantes</li>
-              <li>Precios</li>
-              <li>Ubicación</li>
-              <li>Intructores</li>
-              <li>Fotos</li>
-              <li>Tags</li>
-              <li>Links</li>
-              <li>Instrucciones</li>
+              <li class="expand-active"><a href="#1">Descripción</a></li>
+              <li class="item-li"><a href="#2">Configuración</a></li>
+              <li class="item-li"><a href="#3">Calendario</a></li>
+              <li class="item-li"><a href="#4">Cupos</a></li>
+              <li class="item-li"><a href="#5">Participantes</a></li>
+              <li class="item-li"><a href="#6">Precios</a></li>
+              <li class="item-li"><a href="#7">Ubicación</a></li>
+              <li class="item-li"><a href="#8">Intructores</a></li>
+              <li class="item-li"><a href="#9">Fotos</a></li>
+              <li class="item-li"><a href="#10">Tags</a></li>
+              <li class="item-li"><a href="#11">Links</a></li>
+              <li class="item-li"><a href="#12">Instrucciones</a></li>
             </ul>
           </ul>
           <ul>
@@ -69,7 +75,7 @@
               <p class="m-b-35">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into </p>
             </div>
             <div class="col-md-12">
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="1">
                 <div class="col-md-4">
                   <div class="title-block">Título</div>
                   <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim</p>
@@ -78,7 +84,7 @@
                   <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="60"/>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="2">
                 <div class="col-md-4">
                   <div class="title-block">De qué se trata</div>
                   <p>Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four lo</p>
@@ -87,35 +93,29 @@
                   <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="3000"/>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="4">
                 <div class="col-md-4">
                   <div class="title-block">¿Cuantos cupos totales tiene la actividad?</div>
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
                 </div>
-                <div class="col-md-8">
-                  <div class="spinner d-flex m-l-35" id="spinner" data-trigger="spinner">
-                    <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
-                    <div class="d-flex align-items-center m-l-15">Cupos</div>
-                    <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
-                  </div>
-                </div>
+                <div class="col-md-8"><input  name="value" class="spinner-ui" placeholder="1"></div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="6">
                 <div class="col-md-4">
                   <div class="title-block" onclick="addFields()">Tipo de precio</div>
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from   </p>
                 </div>
                 <div class="col-md-8 d-flex flex-column" id="preciii">
                   <input class="m-b-15" type="text" placeholder="Precio 1" style="width:300px!important"/>
-                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;">Agregar precio</button>
+                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;order: 1;" id="more-price">Agregar precio</button>
                 </div>
-                <div class="row no-margin m-t-30">
+                <div class="row no-margin m-t-30" id="3">
                   <div class="col-md-4">
                     <div class="title-block">Configuración de cupos, precios y descuentos</div>
                     <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. </p>
                   </div>
                   <div class="col-md-8 d-flex flex-column align-items-start">
-                    <button class="btn-white">Configuración</button>
+                    <button class="btn-white" data-remodal-target="calendario-config">Configuración</button>
                   </div>
                 </div>
                 <div class="row no-margin m-t-30">
@@ -125,21 +125,23 @@
                     <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would   </p>
                   </div>
                   <div class="col-md-8 d-flex flex-column">
-                    <div class="d-flex"><label class="switch m-b-10 m-r-10" for="checkbox1">
-<input type="checkbox" id="checkbox1">
+                    <div class="d-flex"><label class="switch m-b-10 m-r-10" for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event">
 <div class="slider switch-red round"></div>
 </label>
                       <p class="m-b-15">La actividad será visible cuando hagas click en "crear"</p>
                     </div>
-                    <div class="d-flex">
-                      <p>Pon una fecha y horario para <strong>publicar </strong>esta actividad</p>
-                    </div>
-                    <div class="d-flex">
-                      <input class="m-r-10" type="text" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
-                      <input type="text" placeholder="ej. 7:30 am" style="width: 84px !important"/>
-                    </div>
-                    <div class="d-flex">
-                      <p class="itality">Déjalo en blanco si quieres publicar manualmente</p>
+                    <div class="div" id="input-visible">
+                      <div class="d-flex">
+                        <p>Pon una fecha y horario para <strong>publicar </strong>esta actividad</p>
+                      </div>
+                      <div class="d-flex">
+                        <input class="m-r-10" type="text" data-toggle="datepicker" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
+                        <input type="text" placeholder="ej. 7:30 am" style="width: 98px !important" id="time"/>
+                      </div>
+                      <div class="d-flex">
+                        <p class="itality">Déjalo en blanco si quieres publicar manualmente</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -150,27 +152,29 @@
                   </div>
                   <div class="col-md-8 d-flex flex-column">
                     <div class="d-flex"><label class="switch m-b-15 " for="checkbox2">
-<input type="checkbox" id="checkbox2">
+<input type="checkbox" id="checkbox2" class="reservation-visible">
 <div class="slider switch-red round"></div>
 </label>
                     </div>
-                    <div class="d-flex">
-                      <input class="m-r-10" type="text" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
-                      <input type="text" placeholder="ej. 7:30 am" style="width: 84px !important"/>
-                    </div>
-                    <div class="d-flex">
-                      <p class="itality">Selecciona una fecha para ocultar el evento</p>
+                    <div class="div" id="hide-reservation" style="display: none">
+                      <div class="d-flex">
+                        <input class="m-r-10" type="text" data-toggle="datepicker" placeholder="ej. Viernes 13, Julio (2018)" style="width: 180 !important"/>
+                        <input type="text" id="time2" placeholder="ej. 7:30 am" style="width: 98px !important"/>
+                      </div>
+                      <div class="d-flex">
+                        <p class="itality">Selecciona una fecha en el que dejas de recibir reservas     </p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="5">
                 <div class="col-md-4">
                   <div class="title-block">¿Son necesarios acompañantes?</div>
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking    </p>
                 </div>
                 <div class="col-md-8 d-flex flex-column">
-                  <div class="title-ghost m-b-20">Niños</div>
+                  <div class="title-ghost m-b-20">Acompañantes</div>
                   <div class="d-flex m-b-25">
                     <div class="control-group">
 <label class="control control-radio">Acompañante requerido<input type="radio" name="radio" checked="checked" />
@@ -200,17 +204,8 @@
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking     </p>
                 </div>
                 <div class="col-md-8">
-                  <div class="d-flex">
-                    <div class="spinner d-flex" id="spinner" data-trigger="spinner">
-                      <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
-                      <div class="d-flex align-items-center m-l-15">Años</div>
-                      <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
-                    </div>
-                    <div class="spinner d-flex m-l-35" id="spinner" data-trigger="spinner">
-                      <input type="text" value="1" data-rule="quantity" style=" width: 112px !important;"/>
-                      <div class="d-flex align-items-center m-l-15">Años</div>
-                      <div class="d-flex flex-column justify-content-center m-l-15"><a class="data-change" href="javascript:;" data-spin="up">▲</a><a class="data-change" href="javascript:;" data-spin="down">▼</a></div>
-                    </div>
+                  <div class="d-flex"><input  name="value" class="spinner-ui" placeholder="100">
+<input  name="value" class="spinner-ui" placeholder="100">
                   </div>
                   <div class="d-flex m-t-40">
                     <div class="control-group">
@@ -222,15 +217,91 @@
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="8">
+                <div class="col-md-4">
+                  <div class="title-block">¿Quién es el líder de la actividad?</div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking </p>
+                </div>
+                <div class="col-md-8">
+                  <div class="d-flex flex-column">
+                    <div class="control-group m-b-20">
+                      <label class="control control-radio">Yo
+                        <input class="check-2" type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="control-group m-b-20">
+                      <label class="control control-radio">A determinarse
+                        <input class="check-2" type="radio" name="radio2"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="control-group">
+                      <label class="control control-radio">Otros intructores
+                        <input class="show-tags" type="radio" name="radio2"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="hide-tags" style="display: none"><input name='tags' class='tagify--outside' placeholder='write some tags'></div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash" id="7">
                 <div class="col-md-4">
                   <div class="title-block">Dirección de la actividad</div>
                   <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
                 </div>
                 <div class="col-md-8">
                   <input type="text" placeholder="Buscar una dirección en google"/>
+                  <div class="m-t-10 m-b-10" id="map" style="background:#777777;width:100%;height:450px"></div>
                   <div class="title-ghost m-b-20">¿Alguna referencia para llegar?
                     <input class="inputMAX" type="text" placeholder="Ejemplo: &quot;Portón naranjo con dijubo mural&quot;" style="height:80px;" maxlength="300"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash" id="9">
+                <div class="col-md-4">
+                  <div class="title-block">Fotos                  </div>
+                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
+                </div>
+                <div class="col-md-8 d-flex">
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files2" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files3" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results3" for="files3" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files4" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results4" for="files4" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files5" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results5" for="files5" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files6" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results6" for="files6" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash" id="10">
+                <div class="col-md-4">
+                  <div class="title-block">Tags                  </div>
+                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+                <div class="col-md-8"><input class="" type="text" name="tags" placeholder="Excribe palabras al azar" style="width: 180 !important"> 
+                  <div class="control-group m-t-20 tagscheck">
+                    <label class="control control-checkbox">Sin Tags
+                      <input type="checkbox" id="tags-check"/>
+                      <div class="control_indicator"></div>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -253,57 +324,6 @@
 </label>
                       <p class="m-b-15">Indoor</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">¿Quién es el líder de la actividad?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking </p>
-                </div>
-                <div class="col-md-8">
-                  <div class="d-flex flex-column">
-                    <div class="control-group m-b-20">
-                      <label class="control control-radio">Yo
-                        <input type="radio" name="radio2" checked="checked"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div class="control-group m-b-20">
-                      <label class="control control-radio">A determinarse
-                        <input type="radio" name="radio2" checked="checked"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div class="control-group">
-                      <label class="control control-radio">Otros intructores
-                        <input type="radio" name="radio2" checked="checked"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">Fotos                  </div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
-                </div>
-                <div class="col-md-8">
-                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;">Agregar fotos</button>
-                </div>
-              </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">Tags                  </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
-                </div>
-                <div class="col-md-8"><input class="" type="text" name="tags" placeholder="Excribe palabras al azar" style="width: 180 !important"> 
-                  <div class="control-group m-t-20 tagscheck">
-                    <label class="control control-checkbox">Sin Tags
-                      <input type="checkbox"/>
-                      <div class="control_indicator"></div>
-                    </label>
                   </div>
                 </div>
               </div>
@@ -376,7 +396,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="11">
                 <div class="col-md-4">
                   <div class="title-block">Sitio web de la actividad               </div>
                   <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
@@ -388,11 +408,238 @@
                   <div class="title-block">¿Se puede cancelar esta actividad?               </div>
                   <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
                 </div>
+                <div class="col-md-8">
+                  <div class="d-flex align-items-center"><label class="switch  m-r-10" for="checkbox10" >
+<input type="checkbox" id="checkbox10" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                    <select style="height: 42px; width: 112px; border: 1px solid rgba(163,163,163,0.45); border-radius: 3px;">
+                      <option>12 hora</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div class="row no-margin item-dash">
+              <div class="row no-margin item-dash" id="12">
                 <div class="col-md-4">
                   <div class="title-block">¿Algunas instrucciones especiales?               </div>
                   <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                </div>
+                <div class="col-md-8">
+                  <textarea style="height: 154px;width: 100%;" placeholder="Ejemplo: 'Venir con ropa cómoda'"></textarea>
+                </div>
+              </div>
+              <div class="d-flex m-t-30 d-flex justify-content-end">
+                <div class="make-activity d-flex justify-content-center align-items-center">CREAR ACTIVIDAD</div>
+              </div>
+              <div class="remodal" data-remodal-id="calendario-config">
+                <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+                <div class="modal-popup">Fecha de la Actividad</div>
+                <div class="row no-margin padding-section-modal">
+                  <div class="col-md-6 d-flex flex-column">
+                    <div class="d-flex m-b-15">
+                      <p class="modal-input-title m-r-5">Fecha inicio</p>
+                      <input class="modal-input" type="text" data-toggle="datepicker-2" placeholder="ej. 20/09/18"/>
+                    </div>
+                    <div class="d-flex">
+                      <p class="modal-input-title m-r-5">Fecha término</p>
+                      <div class="d-flex flex-column">
+                        <div class="d-flex">
+                          <div class="control-group m-r-5">
+<label class="control control-radio">En<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                          <input class="modal-input" type="text" data-toggle="datepicker" placeholder="ej. 20/09/18"/>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="control-group m-r-5">
+<label class="control control-radio">Después de<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                          <input class="modal-input" type="text" placeholder="- -" style="    width: 36px !important;padding:0 10px"/>
+                          <p class="fix-day">Día</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-flex flex-column">
+                    <div class="d-flex">
+                      <p class="modal-input-title">Omisiones</p>
+                      <div class="d-flex justify-content-center align-items-center m-r-10">
+                        <div class="control-group m-r-30">
+<label class="control control-radio">Simple<input type="radio" name="modal-3" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                        <label for="omisiones-date"><i class="material-icons m-r-10"  style="cursor: pointer">date_range</i></label>
+                        <input type="text" data-toggle="datepicker" style="display:none" id="omisiones-date"/><span>sin omisiones</span>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <p class="modal-input-title"></p><div class="control-group m-r-10">
+<label class="control control-radio">Avanzado<input type="radio" name="modal-3" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                      <div class="d-flex flex-column" id="omisiones">
+                        <input class="modal-input m-b-5" type="text" data-toggle="datepicker-2" placeholder="20/09/18"/>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <p class="modal-input-title"></p>
+                      <p class="more-input-date" style="    margin-left: 125px;">+ agregar otra</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-margin padding-section-modal">
+                  <div class="modal-popup d-flex justify-content-center w100">Horario y Precios de la Actividad</div>
+                  <div class="row no-margin w100 m-b-25" id="calendar">
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10 m-l-40">
+                        <p class="m-b-15">Hora inicio</p>
+                        <input class="modal-time modal-input" type="text" placeholder="ej. 10:00 am"/>
+                      </div>
+                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10">
+                        <p class="m-b-15">Hora término</p>
+                        <input class="modal-time modal-input" type="text" placeholder="ej. 11:00 pm"/>
+                      </div>
+                      <div class="d-flex align-items-end m-b-10"><div class="control-group m-r-5" style="    margin-top: 33px;">
+<label class="control control-checkbox"> Sin restricción horario
+<input type="checkbox">
+<div class="control_indicator" style="margin-top: 3px;"></div>
+</label>
+</div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <p class="m-b-15">Días</p>
+                      <div class="d-flex justify-content-center"><div class="control-group m-r-5">
+<label class="control control-checkbox"> L 
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> M 
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> M
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> J 
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> V 
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> S 
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> D
+<input type="checkbox" >
+<div class="control_indicator"></div>
+</label>
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25 dfaj">
+                    <button class="btn-white w150" style="padding: 0.875rem 1.5rem;" id="more-calendar">Agregar horario</button>
+                  </div>
+                  <div class="row no-margin w100 m-t-35 dfaje">
+                    <div class="save-btn">Guardar</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -409,23 +656,167 @@
   <script src="js/inputMax/maxinput.js"></script>
   <script src="js/inputMax/jquery.spinner.js"></script>
   <script src="js/inputMax/jQuery.tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/i18n/datepicker.ca-ES.js"></script>
+  <script src="js/modal/remodal.js"></script><script src="js/croppie/iEdit.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-     $( function(){
+    $('.make-activity').click( function() {
+       $('tag').each(function(){
+          alert($(this).val())
+       })
+    });
+  </script>
+  <script>
+    $( function(){
+     var spinner = $( ".spinner-ui" ).spinner();
     
-     $( ".inputMAX" ).accessibleCharCount();
-     $(".spinner").spinner();
+     // Get spinnner Value
+     /*
+     $( "#getvalue" ).on( "click", function() {
+      alert( spinner.spinner( "value" ) );
+    });
+    */
     
-     
+    $( ".inputMAX" ).accessibleCharCount();
+    $(".spinner").spinner();
+    $('#time').timepicker();
+    $('#time2').timepicker();
+    $('.modal-time').timepicker();
+    $('[data-toggle="datepicker"]').datepicker({
+      dateFormat: 'yy-mm-dd',
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true,
+      defaultDate: +0,
+      showAnim: "fold"
+    });
+    $('[data-toggle="datepicker-2"]').datepicker({
+        autoHide: true,
+        zIndex: 10000,
+        dateFormat: 'yy-mm-dd',
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true,
+      defaultDate: +0,
+      showAnim: "fold"
+      });
+    
+    $("#files").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results").css("background-image", "url(" + res + ")" ); 
+        $('#results').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $("#files2").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results2").css("background-image", "url(" + res + ")" ); 
+        $('#results2').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $("#files3").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results3").css("background-image", "url(" + res + ")" ); 
+        $('#results3').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $("#files4").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results4").css("background-image", "url(" + res + ")" ); 
+        $('#results4').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $("#files5").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results5").css("background-image", "url(" + res + ")" ); 
+        $('#results5').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $("#files6").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results6").css("background-image", "url(" + res + ")" ); 
+        $('#results6').html('');     
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
     
     
     
-     })
-    var myInput = $('[name=tags]').tagify();
     
-     $('.tagscheck').click(function(){
     
-       myInput.removeAllTags();
+    })
+      var tags = new Array();
+      var $input = $('input[name=tags]')
+      .tagify()
+        .on('add', function(e, tagName){
+            tags.push(tagName);
+            console.log('JQEURY EVENT: ', 'added', tagName)
+            console.log(tags) // Obtainer get data de tags
+        })
+        .on("duplicate", function(e, tagName) {
+            console.log('JQEURY EVENT: ',"duplicate", e, ' ', tagName);
+        });
     
-     })
+    
+      var jqTagify = $input.data('tagify');
+    
+      $('.tagscheck').click(function(){
+          if ($('#tags-check').is(':checked')) {
+            $( ".tagify__input" ).prop( "checked", true );
+          }else{
+             $( ".tagify__input" ).prop( "checked", false );
+          }
+      })
+      
+      $('.show-tags').click(function(){
+        $('.hide-tags').toggle()
+      })
+    
+      $('.check-2').click(function(){
+         $('.hide-tags').css('display', 'none')
+      })
+      $('.tagscheck').on('click', jqTagify.removeAllTags.bind(jqTagify))
+    
+      var input = document.querySelector('input[name=tags-outside]'),
+      // init Tagify script on the above inputs
+      tagify = new Tagify(input);
+    
+      // add a class to Tagify's input element
+      tagify.DOM.input.classList.add('tagify__input--outside');
+    
+      // re-place Tagify's input element outside of the  element (tagify.DOM.scope), just before it
+      tagify.DOM.scope.parentNode.insertBefore(tagify.DOM.input, tagify.DOM.scope);
+    
+      
   </script>
 </html>

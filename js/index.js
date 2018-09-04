@@ -102,27 +102,33 @@ $("#slider-range").slider({
 /*=========================================================================
    Mobile Menu
 =========================================================================*/
-function toggleClassMenu() {
-    myMenu.classList.add("menu--animatable");
-    if (!myMenu.classList.contains("menu--visible")) {
-        myMenu.classList.add("menu--visible");
-        document.querySelector(".ham").classList.remove('active')
+if (document.querySelector(".menu")) {
+    var myMenu = document.querySelector(".menu");
+    var clsMenu = document.querySelector(".header-mobile");
+    var oppMenu = document.querySelector(".ham");
 
-    } else {
-        myMenu.classList.remove('menu--visible');
+    function toggleClassMenu() {
+        myMenu.classList.add("menu--animatable");
+        if (!myMenu.classList.contains("menu--visible")) {
+            myMenu.classList.add("menu--visible");
+            document.querySelector(".ham").classList.remove('active')
+
+        } else {
+            myMenu.classList.remove('menu--visible');
+        }
     }
+
+    function OnTransitionEnd() {
+        myMenu.classList.remove("menu--animatable");
+    }
+
+
+
+    oppMenu.addEventListener("click", toggleClassMenu, false);
+    clsMenu.addEventListener("click", toggleClassMenu, false);
+} else {
+
 }
-
-function OnTransitionEnd() {
-    myMenu.classList.remove("menu--animatable");
-}
-
-var myMenu = document.querySelector(".menu");
-var clsMenu = document.querySelector(".header-mobile");
-var oppMenu = document.querySelector(".ham");
-
-oppMenu.addEventListener("click", toggleClassMenu, false);
-clsMenu.addEventListener("click", toggleClassMenu, false);
 
 
 /*=========================================================================
@@ -516,31 +522,233 @@ $('.toggleCollapse').click(function() {
 /*=========================================================================
    
 =========================================================================*/
+var i = 2;
+$("#more-price").click(function(e) {
+    //Append a new row of code to the "#items" div
+    $("#preciii").append('<div class="d-flex align-items-center m-b-10 m-r-10"><input class="" name="precio[]" type="text" style="position:relative; width:300px!important" placeholder="Precio ' + i + '"/><button style="    background: none;" class="delete absolute-ps"><img src="img/close-svg.svg" alt=""></button></div>');
+    i++;
+});
+$("body").on("click", ".delete", function(e) {
+    $(this).parent("div").remove();
+    i--;
+});
 
-function addFields() {
-    // Number of inputs to create
-    var number = document.getElementById("member").value;
-    // Container <div> where dynamic content will be placed
-    var container = document.getElementById("preciii");
-    // Clear previous contents of the container
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    }
-    for (i = 0; i < number; i++) {
-        // Append a node with a random text
-        container.appendChild(document.createTextNode("Member " + (i + 1)));
-        // Create an <input> element, set its type and name attributes
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "member" + i;
-        container.appendChild(input);
-        // Append a line break 
-        container.appendChild(document.createElement("br"));
-    }
-}
+$(document).ready(function() {
+    $('.more-input-date').click(function() {
+
+        $("#omisiones").append(`<div class="d-flex align-items-center">
+    <input 
+    class="modal-input modal-input m-b-5 m-r-5 datepicker-dinamyc" 
+    type="text" name="omisiones[]"
+    
+    placeholder="20/09/18" >
+    <button class="dele-omisiones"><img src="img/close-svg.svg" alt="" class="m-b-5"></button>
+     </div>`)
+    })
+    $('body').on('focus', ".datepicker-dinamyc", function() {
+        $(this).datepicker({
+            dateFormat: 'yy-mm-dd',
+            showButtonPanel: true,
+            changeMonth: true,
+            changeYear: true,
+            defaultDate: +0,
+            showAnim: "fold"
+
+        });
+
+    });
+
+})
+
+
+$("body").on("click", ".dele-omisiones", function(e) {
+    $(this).parent("div").remove();
+    i--;
+});
+
+
+
+
+$('#more-calendar').click(function() {
+    let html = `<div class="row no-margin w100 m-b-10" id="calendar" style="    position: relative;">
+                    <div class="col-md-7 d-flex">
+                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10 m-l-40">
+                        <p class="m-b-15">Hora inicio</p>
+                        <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 10:00 am" autocomplete="off">
+                      </div>
+                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10">
+                        <p class="m-b-15">Hora término</p>
+                        <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 11:00 pm" autocomplete="off">
+                      </div>
+                      <div class="d-flex align-items-end m-b-10"><div class="control-group m-r-5" style="    margin-top: 33px;">
+<label class="control control-checkbox"> Sin restricción horario
+<input type="checkbox">
+<div class="control_indicator" style="margin-top: 3px;"></div>
+</label>
+</div>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <p class="m-b-15">Días</p>
+                      <div class="d-flex justify-content-center"><div class="control-group m-r-5">
+<label class="control control-checkbox"> L 
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> M 
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> M
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> J 
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> V 
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> S 
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+<div class="control-group m-r-5">
+<label class="control control-checkbox"> D
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+
+                      </div>
+                    </div>
+                    <button class="delete-calendar" style="    position: absolute;
+    right: -5px;
+    top: 33px;
+    background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                  </div>`;
+
+    $('#calendar').append(html)
+
+})
+
+
+$("body").on("click", ".delete-calendar", function(e) {
+    $(this).parent("div").remove();
+
+});
+$('body').on('focus', ".timepick", function() {
+    $(this).timepicker();
+})
+/*=========================================================================
+  Visible evento   
+=========================================================================*/
+$('.link-toggle').click(function(e) {
+    e.preventDefault();
+    $('.visible').toggle("slow", function() {
+        // Animation complete.
+    });
+})
+
+
+$('.visible-event').click(function() {
+    $('#input-visible').toggle("slow", function() {
+        // Animation complete.
+    });
+})
+
+$('.reservation-visible').click(function() {
+    $('#hide-reservation').toggle("slow", function() {
+        // Animation complete.
+    });
+})
+
+
+/*=========================================================================
+   Input file js
+=========================================================================*/
+var inputs = document.querySelectorAll('.inputfile');
+Array.prototype.forEach.call(inputs, function(input) {
+    var label = input.nextElementSibling,
+        labelVal = label.innerHTML;
+
+    input.addEventListener('change', function(e) {
+        var fileName = '';
+        if (this.files && this.files.length > 1)
+            fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+        else
+            fileName = e.target.value.split('\\').pop();
+
+        if (fileName)
+            label.querySelector('span').innerHTML = fileName;
+        else
+            label.innerHTML = labelVal;
+    });
+});
+
+/*=========================================================================
+   Smooth Scroll A menu dash
+=========================================================================*/
+
+$(document).ready(function() {
+    $('.item-li a[href^="#"]').bind('click', function(e) {
+        e.preventDefault(); // prevent hard jump, the default behavior
+
+        var target = $(this).attr("href"); // Set the target as variable
+
+        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 600, function() {
+            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+        });
+
+        return false;
+    });
+});
+
+$(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop();
+
+    // Show/hide menu on scroll
+    //if (scrollDistance >= 850) {
+    //    $('nav').fadeIn("fast");
+    //} else {
+    //    $('nav').fadeOut("fast");
+    //}
+
+    // Assign active class to nav links while scolling
+    $('.page-section').each(function(i) {
+        if ($(this).position().top <= scrollDistance) {
+            $('.navigation .expand-dash li.expand-active').removeClass('expand-active');
+            $('.navigation .expand-dash li').eq(i).addClass('expand-active');
+        }
+    });
+}).scroll();
+
 
 
 
 /*=========================================================================
-   
+   Form contrasena
 =========================================================================*/
+
+$('#change-contrasena').click(function() {
+
+    $('#hide-contrasena').toggle("slow", function() {
+        // Animation complete.
+    });
+})
