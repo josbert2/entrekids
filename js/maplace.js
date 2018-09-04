@@ -1,22 +1,33 @@
 var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"poi","elementType":"labels", "stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}];
 var sites = [
 	
-	['Hindley Street', -33.49003, -70.618009, 1,  
-	`<div> 
+	['Nombre', -33.49003, -70.618009, 1,  
+	`<div style="    width: 175px;"> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
-	<h2 style="font-size: 12px; color: #1EB2E8; line-height:16px;">Actividad nombre</h2></div>
-	<p style=" font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Actividad dirección, <br> Actividad numero de dirección</p><br>
-	<p style=" font-size: 9px; color: #000000; letter-spacing:0.18px;">Actividad descripcion</p><br>`, 
-	'Hindley Street, a pub dedicated street.'],
-	['Hindley Street', -33.440031, -70.632159
+	<h2 style="border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">Subaquatic Parks
+	</h2>
+	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Av Lorem Ipsum, Santiago, 9999, <br> +5622334455</p>
+	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Ut pretium pretium tempor. Ut eget imperdiet neque pretium </p>
+	</div>`,
+	'Info.'],
+
+	['Nombre', -33.440031, -70.632159
 , 1,  
-	`<div> 
+	`<div style="    width: 175px;"> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
-	<h2 style="font-size: 12px; color: #1EB2E8; line-height:16px;">Actividad nombre</h2></div>
-	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Actividad dirección, <br> Actividad numero de dirección</p>
-	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Actividad descripcion</p>`, 
-	'Hindley Street, a pub dedicated street.']
+	<h2 style="border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">Subaquatic Parks
+</h2></div>
+	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Av Lorem Ipsum, Santiago, 9999, <br> +5622334455</p>
+	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Ut pretium pretium tempor. Ut eget imperdiet neque pretium </p>`, 
+	'Info']
 ];
+
+
+
+ 
+
+
+
 var image = 'https://s3.invisionapp-cdn.com/storage.invisionapp.com/assets/files/158619720?response-cache-control=max-age%3D2419200&x-amz-meta-av=1&response-content-type=image%2Fsvg%2Bxml&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1538352000&Signature=nQKUqbKpn%2BuaB1nowpH45m%2Fs2rA%3D';
 var infowindow = null;
 	
@@ -34,7 +45,8 @@ function initialize() {
 	
 	
 	infowindow = new google.maps.InfoWindow({
-		content: "Loading..."
+		content: "Loading...",
+		 maxWidth: 175
 	});
 	mapCenter = map.getCenter();
 	map.setOptions({
