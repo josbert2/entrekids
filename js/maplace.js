@@ -13,8 +13,8 @@ var sites = [
 	`<div> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
 	<h2 style="font-size: 12px; color: #1EB2E8; line-height:16px;">Actividad nombre</h2></div>
-	<p style=" font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Actividad dirección, <br> Actividad numero de dirección</p><br>
-	<p style=" font-size: 9px; color: #000000; letter-spacing:0.18px;">Actividad descripcion</p><br>`, 
+	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Actividad dirección, <br> Actividad numero de dirección</p>
+	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Actividad descripcion</p>`, 
 	'Hindley Street, a pub dedicated street.']
 ];
 var image = 'https://s3.invisionapp-cdn.com/storage.invisionapp.com/assets/files/158619720?response-cache-control=max-age%3D2419200&x-amz-meta-av=1&response-content-type=image%2Fsvg%2Bxml&AWSAccessKeyId=AKIAJFUMDU3L6GTLUDYA&Expires=1538352000&Signature=nQKUqbKpn%2BuaB1nowpH45m%2Fs2rA%3D';

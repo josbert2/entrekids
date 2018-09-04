@@ -23,27 +23,25 @@
                   <button class="search"> <i class="ion ion-md-search"></i></button>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden"><a href="#"> <img src="img/regalo.svg" alt=""/></a></li>
-                  <li class="m-r-20 d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
-                  <div class="coin btn-hidden">
-                    <ul class="d-flex align-items-center">
-                      <li class="icon-coin d-flex"><img src="img/coin-01.svg" alt=""/></li>
-                      <li>
-                        <ul class="puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
                   <div class="user btn-hidden">
-                    <ul class="d-flex">
+                    <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
                       <li class="name d-flex align-items-center dropbtn">María José<span>
                            <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
-                      <li><a href="#">Mis Compras </a></li>
-                      <li><a href="#">Ajustes</a></li>
-                      <li><a href="#">Salir</a></li></div>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                     </ul>
                   </div>
                 </li>
@@ -89,19 +87,9 @@
               </div>
             </div>
           </nav>
-          <div class="filter-section">
-            <div class="btn-button-filter">
-              <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-            </div>
-            <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-          </div>
         </nav>
       </div>
       <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
-      <div class="filter-section">
-        <div class="btn-button-filter">
-          <i class="material-icons">filter_list</i>Filters</div>
-      </div>
       <div class="wrapper-content">
         <div class="container">
           <div class="row">
@@ -308,7 +296,7 @@
                 <div class="btn-simple" style="width:100%;font-weight:100">Aplicar filtros</div>
               </div>
             </div>
-            <div class="col-md-9"><div id="gmap" style="width:800px;height:750px;"></div></div>
+            <div class="col-md-9"><div id="gmap" style="width:100%;height:750px;"></div></div>
           </div>
         </div>
         <footer class="footer separator-to-body">
