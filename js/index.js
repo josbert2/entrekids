@@ -534,6 +534,14 @@ $("body").on("click", ".delete", function(e) {
 });
 
 $(document).ready(function() {
+    $("#omisiones-date").datepicker({
+        onSelect: function(date) {
+            $("#omisiones-input").find("span").text(date);
+        }
+    });
+
+
+
     $('.more-input-date').click(function() {
 
         $("#omisiones").append(`<div class="d-flex align-items-center">
@@ -552,7 +560,7 @@ $(document).ready(function() {
             changeMonth: true,
             changeYear: true,
             defaultDate: +0,
-            showAnim: "fold"
+
 
         });
 
@@ -568,19 +576,23 @@ $("body").on("click", ".dele-omisiones", function(e) {
 
 
 
-
+var calendario_count = 1;
 $('#more-calendar').click(function() {
-    let html = `<div class="row no-margin w100 m-b-10" id="calendar" style="    position: relative;">
+    let html = `
+<div style="position:relative;margin-bottom: 10px;">
+  <div class="row no-margin padding-section-modal" id="letmet">
+                  <div class="modal-popup d-flex justify-content-center w100">Horario y Precios de la Actividad (${calendario_count})</div>
+                  <div class="row no-margin w100 m-b-25" id="calendar">
                     <div class="col-md-7 d-flex">
-                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10 m-l-40">
-                        <p class="m-b-15">Hora inicio</p>
-                        <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 10:00 am" autocomplete="off">
-                      </div>
-                      <div class="d-flex flex-column align-items-center m-b-10 m-r-10">
-                        <p class="m-b-15">Hora término</p>
-                        <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 11:00 pm" autocomplete="off">
-                      </div>
-                      <div class="d-flex align-items-end m-b-10"><div class="control-group m-r-5" style="    margin-top: 33px;">
+                       <div class="d-flex flex-column align-items-center m-b-10 m-r-10 m-l-40">
+    <p class="m-b-15">Hora inicio</p>
+    <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 10:00 am" autocomplete="off">
+  </div>
+  <div class="d-flex flex-column align-items-center m-b-10 m-r-10">
+    <p class="m-b-15">Hora término</p>
+    <input class="modal-time modal-input timepick ui-timepicker-input" type="text" placeholder="ej. 11:00 pm" autocomplete="off">
+  </div>
+                      <div class="d-flex align-items-end m-b-10" style="    margin-left: 35px;"><div class="control-group m-r-5" style="    margin-top: 33px;">
 <label class="control control-checkbox"> Sin restricción horario
 <input type="checkbox">
 <div class="control_indicator" style="margin-top: 3px;"></div>
@@ -632,16 +644,94 @@ $('#more-calendar').click(function() {
 <div class="control_indicator"></div>
 </label>
 </div>
-
                       </div>
                     </div>
-                    <button class="delete-calendar" style="    position: absolute;
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="10,00" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="10,00" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-margin w100 m-b-25">
+                    <div class="col-md-3">
+                      <div class="d-flex align-items-center m-b-10 justify-content-center flex-column">
+                        <p class="m-b-15">Entrada</p>
+                        <p class="m-t-10">Precio 1</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-flex">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Cupos</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Precio normal</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="100" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-15">Descuento</p><span class="ui-spinner ui-corner-all ui-widget ui-widget-content"><input name="value" class="spinner-ui ui-spinner-input" placeholder="10,00" autocomplete="off" role="spinbutton"><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-up ui-corner-tr ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-n"></span><span class="ui-button-icon-space"> </span></a><a tabindex="-1" aria-hidden="true" class="ui-button ui-widget ui-spinner-button ui-spinner-down ui-corner-br ui-button-icon-only" role="button"><span class="ui-button-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-icon-space"> </span></a></span>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
+                        <p class="m-b-10">Precio Publicación</p>
+                        <p class="m-t-10">$99999</p>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div><button class="delete-calendar" style="    position: absolute;
     right: -5px;
     top: 33px;
     background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                  </div>
                   </div>`;
 
-    $('#calendar').append(html)
+    $('#calendar').append(html);
+    calendario_count++;
 
 })
 
@@ -704,42 +794,43 @@ Array.prototype.forEach.call(inputs, function(input) {
 =========================================================================*/
 
 $(document).ready(function() {
-    $('.item-li a[href^="#"]').bind('click', function(e) {
-        e.preventDefault(); // prevent hard jump, the default behavior
+    $(document).on("scroll", onScroll);
 
-        var target = $(this).attr("href"); // Set the target as variable
+    //smoothscroll
+    $('.item-li a[href^="#"]').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
 
-        // perform animated scrolling by getting top-position of target-element and set it as scroll target
+        $('.item-li a').each(function() {
+            $(this).removeClass('expand-active');
+        })
+        $(this).addClass('expand-active');
+
+        var target = this.hash,
+            menu = target;
+        var $target = $(target);
         $('html, body').stop().animate({
-            scrollTop: $(target).offset().top
-        }, 600, function() {
-            location.hash = target; //attach the hash (#jumptarget) to the pageurl
+            'scrollTop': $target.offset().top + 2
+        }, 500, 'swing', function() {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
         });
-
-        return false;
     });
 });
 
-$(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop();
-
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //    $('nav').fadeIn("fast");
-    //} else {
-    //    $('nav').fadeOut("fast");
-    //}
-
-    // Assign active class to nav links while scolling
-    $('.page-section').each(function(i) {
-        if ($(this).position().top <= scrollDistance) {
-            $('.navigation .expand-dash li.expand-active').removeClass('expand-active');
-            $('.navigation .expand-dash li').eq(i).addClass('expand-active');
+function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $('.expand-dash .item-li a').each(function() {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('.expand-dash li a').removeClass("expand-active");
+            currLink.addClass("expand-active");
+        } else {
+            currLink.removeClass("expand-active");
         }
     });
-}).scroll();
-
-
+}
 
 
 /*=========================================================================
@@ -751,4 +842,26 @@ $('#change-contrasena').click(function() {
     $('#hide-contrasena').toggle("slow", function() {
         // Animation complete.
     });
+})
+
+/*=========================================================================
+   Validación
+=========================================================================*/
+
+$(".omisiones-control input:radio").click(function() {
+
+    if ($(this).val() == "simple") {
+        $("#avanzado").prop('disabled', true);
+        $("#omilabel").prop('disabled', false);
+        $('.more-input-date').prop('disabled', true);
+        $('#avanzado').val('')
+    }
+    if ($(this).val() == "avanzado") {
+        $("#avanzado").prop('disabled', false);
+        $("#omilabel").prop('disabled', true);
+        $('.more-input-date').prop('disabled', false);
+        $('#omisiones-text').text('sin omisiones');
+    }
+
+
 })

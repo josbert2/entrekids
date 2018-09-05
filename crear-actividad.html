@@ -15,6 +15,22 @@
     <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
   </head>
   <body class="app-js dash-board">
+    <div class="super-fixed">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <div class="page-wrapper index d-flex">
       <div class="sidebar">
         <div class="app-name">
@@ -33,18 +49,14 @@
           <ul class="navigation">
             <li class="active-dash"><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
             <ul class="expand-dash">
-              <li class="expand-active"><a href="#1">Descripción</a></li>
-              <li class="item-li"><a href="#2">Configuración</a></li>
-              <li class="item-li"><a href="#3">Calendario</a></li>
-              <li class="item-li"><a href="#4">Cupos</a></li>
-              <li class="item-li"><a href="#5">Participantes</a></li>
-              <li class="item-li"><a href="#6">Precios</a></li>
-              <li class="item-li"><a href="#7">Ubicación</a></li>
-              <li class="item-li"><a href="#8">Intructores</a></li>
-              <li class="item-li"><a href="#9">Fotos</a></li>
-              <li class="item-li"><a href="#10">Tags</a></li>
-              <li class="item-li"><a href="#11">Links</a></li>
-              <li class="item-li"><a href="#12">Instrucciones</a></li>
+              <li class="item-li"><a class="expand-active" href="#descripcion">Descripción</a></li>
+              <li class="item-li"><a href="#configuracion">Configuración</a></li>
+              <li class="item-li"><a href="#direccion">Dirección de la actividad</a></li>
+              <li class="item-li"><a href="#fotos">Fotos</a></li>
+              <li class="item-li"><a href="#tags">Tags</a></li>
+              <li class="item-li"><a href="#idoor">Indoor, outdoor, o ambas</a></li>
+              <li class="item-li"><a href="#categorias">Categorías</a></li>
+              <li class="item-li"><a href="#web">Web</a></li>
             </ul>
           </ul>
           <ul>
@@ -75,41 +87,46 @@
               <p class="m-b-35">So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into </p>
             </div>
             <div class="col-md-12">
-              <div class="row no-margin item-dash" id="1">
-                <div class="col-md-4">
-                  <div class="title-block">Título</div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim</p>
+              <div class="page-section" id="descripcion">
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Título</div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim</p>
+                  </div>
+                  <div class="col-md-8 d-flex align-items-end">
+                    <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="60"/>
+                  </div>
                 </div>
-                <div class="col-md-8 d-flex align-items-end">
-                  <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="60"/>
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">De qué se trata</div>
+                    <p>Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four lo</p>
+                  </div>
+                  <div class="col-md-8 d-flex align-items-end">
+                    <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="3000"/>
+                  </div>
+                </div>
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Cuantos cupos totales tiene la actividad?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
+                  </div>
+                  <div class="col-md-8"><input  name="value" class="spinner-ui" placeholder="1"></div>
+                </div>
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block" onclick="addFields()">Tipo de precio</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from   </p>
+                  </div>
+                  <div class="col-md-8 d-flex flex-column" id="preciii">
+                    <input class="m-b-15" type="text" placeholder="Precio 1" style="width:300px!important"/>
+                    <button class="btn-white w150" style="padding: 0.875rem 1.5rem;order: 1;" id="more-price">Agregar precio</button>
+                  </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash" id="2">
-                <div class="col-md-4">
-                  <div class="title-block">De qué se trata</div>
-                  <p>Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch. DIY pickled four lo</p>
-                </div>
-                <div class="col-md-8 d-flex align-items-end">
-                  <input class="inputMAX" type="text" placeholder="Sábados de montaña" maxlength="3000"/>
-                </div>
-              </div>
-              <div class="row no-margin item-dash" id="4">
-                <div class="col-md-4">
-                  <div class="title-block">¿Cuantos cupos totales tiene la actividad?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
-                </div>
-                <div class="col-md-8"><input  name="value" class="spinner-ui" placeholder="1"></div>
-              </div>
-              <div class="row no-margin item-dash" id="6">
-                <div class="col-md-4">
-                  <div class="title-block" onclick="addFields()">Tipo de precio</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from   </p>
-                </div>
-                <div class="col-md-8 d-flex flex-column" id="preciii">
-                  <input class="m-b-15" type="text" placeholder="Precio 1" style="width:300px!important"/>
-                  <button class="btn-white w150" style="padding: 0.875rem 1.5rem;order: 1;" id="more-price">Agregar precio</button>
-                </div>
-                <div class="row no-margin m-t-30" id="3">
+              <div class="page-section" id="configuracion">
+                <!--Confi-->
+                <div class="row no-margin item-dash">
                   <div class="col-md-4">
                     <div class="title-block">Configuración de cupos, precios y descuentos</div>
                     <p>I have hinted that I would often jerk poor Queequeg from between the whale and the ship—where he would occasionally fall, from the incessant rolling and swaying of both. </p>
@@ -118,7 +135,8 @@
                     <button class="btn-white" data-remodal-target="calendario-config">Configuración</button>
                   </div>
                 </div>
-                <div class="row no-margin m-t-30">
+                <!--Visible-->
+                <div class="row no-margin item-dash">
                   <div class="col-md-4">
                     <div class="title-block">¿Debe ser visible este evento?</div>
                     <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward)</p>
@@ -145,7 +163,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="row no-margin m-t-30">
+                <!--Hasta que fecha-->
+                <div class="row no-margin item-dash">
                   <div class="col-md-4">
                     <div class="title-block">¿Hasta qué fecha aceptas reservas?</div>
                     <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking   </p>
@@ -162,179 +181,223 @@
                         <input type="text" id="time2" placeholder="ej. 7:30 am" style="width: 98px !important"/>
                       </div>
                       <div class="d-flex">
-                        <p class="itality">Selecciona una fecha en el que dejas de recibir reservas     </p>
+                        <p class="itality">Selecciona una fecha en el que dejas de recibir reservas        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Acompañantes-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Son necesarios acompañantes?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking    </p>
+                  </div>
+                  <div class="col-md-8 d-flex flex-column">
+                    <div class="title-ghost m-b-20">Acompañantes</div>
+                    <div class="d-flex m-b-25">
+                      <div class="control-group">
+<label class="control control-radio">Acompañante requerido<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                    </div>
+                    <div class="d-flex m-b-25">
+                      <div class="control-group">
+<label class="control control-radio">Acompañante opcional<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                    </div>
+                    <div class="d-flex m-b-25">
+                      <div class="control-group">
+<label class="control control-radio">Acompañante no permitido<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                    </div>
+                  </div>
+                </div>
+                <!--Rango-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Rango de edad de los niños</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking     </p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="d-flex">
+                      <div class="d-flex flex-column"><input  name="value" class="spinner-ui " placeholder="100"><small>Min:</small></div>
+                      <div class="d-flex flex-column"><input  name="value" class="spinner-ui m-l-10" placeholder="100"><small class="m-l-10">Max:</small></div>
+                    </div>
+                    <div class="d-flex m-t-40">
+                      <div class="control-group">
+                        <label class="control control-checkbox">Todas las edades
+                          <input type="checkbox" checked="checked"/>
+                          <div class="control_indicator"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--Lider-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Quién es el líder de la actividad?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking </p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="d-flex flex-column">
+                      <div class="control-group m-b-20">
+                        <label class="control control-radio">Yo
+                          <input class="check-2" type="radio" name="radio2" checked="checked"/>
+                          <div class="control_indicator"></div>
+                        </label>
+                      </div>
+                      <div class="control-group m-b-20">
+                        <label class="control control-radio">A determinarse
+                          <input class="check-2" type="radio" name="radio2"/>
+                          <div class="control_indicator"></div>
+                        </label>
+                      </div>
+                      <div class="control-group">
+                        <label class="control control-radio">Otros intructores
+                          <input class="show-tags" type="radio" name="radio2"/>
+                          <div class="control_indicator"></div>
+                        </label>
+                      </div>
+                      <div class="hide-tags" style="display: none">
+                        <select>
+                          <opction>Instructores 1</opction>
+                          <opction>Instructores 2</opction>
+                          <opction>Instructores 3</opction>
+                        </select>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash" id="5">
-                <div class="col-md-4">
-                  <div class="title-block">¿Son necesarios acompañantes?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking    </p>
-                </div>
-                <div class="col-md-8 d-flex flex-column">
-                  <div class="title-ghost m-b-20">Acompañantes</div>
-                  <div class="d-flex m-b-25">
-                    <div class="control-group">
-<label class="control control-radio">Acompañante requerido<input type="radio" name="radio" checked="checked" />
-<div class="control_indicator"></div>
-</label>
-</div>
+              <div class="page-section" id="direccion"> 
+                <!--Direccion-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Dirección de la actividad</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
                   </div>
-                  <div class="d-flex m-b-25">
-                    <div class="control-group">
-<label class="control control-radio">Acompañante opcional<input type="radio" name="radio" checked="checked" />
-<div class="control_indicator"></div>
-</label>
-</div>
-                  </div>
-                  <div class="d-flex m-b-25">
-                    <div class="control-group">
-<label class="control control-radio">Acompañante no permitido<input type="radio" name="radio" checked="checked" />
-<div class="control_indicator"></div>
-</label>
-</div>
+                  <div class="col-md-8">
+                    <div class="d-flex">
+                      <input type="text" placeholder="Buscar una dirección en google"/>
+                      <div class="icon-innter"><i class="material-icons">search</i></div>
+                    </div>
+                    <div class="m-t-10 m-b-10" id="map" style="background:#777777;width:100%;height:450px"></div>
+                    <div class="title-ghost m-b-20">¿Alguna referencia para llegar?
+                      <input class="inputMAX" type="text" placeholder="Ejemplo: &quot;Portón naranjo con dijubo mural&quot;" style="height:80px;" maxlength="300"/>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">Rango de edad de los niños</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking     </p>
-                </div>
-                <div class="col-md-8">
-                  <div class="d-flex"><input  name="value" class="spinner-ui" placeholder="100">
-<input  name="value" class="spinner-ui" placeholder="100">
+              <div class="page-section" id="fotos">
+                <!--Fotos-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Fotos                  </div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
                   </div>
-                  <div class="d-flex m-t-40">
-                    <div class="control-group">
-                      <label class="control control-checkbox">Todas las edades
-                        <input type="checkbox" checked="checked"/>
+                  <div class="col-md-8 d-flex">
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content1"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo1" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-1"/>
+                      </label>
+                    </div>
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files2" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content2"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo2" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-2"/>
+                      </label>
+                    </div>
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files3" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results3" for="files3" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content3"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo3" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-3"/>
+                      </label>
+                    </div>
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files4" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results4" for="files4" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content4"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo4" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-4"/>
+                      </label>
+                    </div>
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files5" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results5" for="files5" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content5"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo5" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-5"/>
+                      </label>
+                    </div>
+                    <div class="avatar-user d-flex m-r-15">
+                      <input id="files6" type="file" name="photo"/>
+                      <label class="img-content null-img oval" id="results6" for="files6" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
+                        <div class="div-content6"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo6" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                        <input type="hidden" name="photo-img[]" id="photo-6"/>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-section" id="tags">
+                <!--tags-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Tags                  </div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                  </div>
+                  <div class="col-md-8"><input class="" type="text" name="tags" placeholder="Excribe palabras al azar" style="width: 180 !important"> 
+                    <div class="control-group m-t-20 tagscheck">
+                      <label class="control control-checkbox">Sin Tags
+                        <input type="checkbox" id="tags-check"/>
                         <div class="control_indicator"></div>
                       </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash" id="8">
-                <div class="col-md-4">
-                  <div class="title-block">¿Quién es el líder de la actividad?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking </p>
-                </div>
-                <div class="col-md-8">
-                  <div class="d-flex flex-column">
-                    <div class="control-group m-b-20">
-                      <label class="control control-radio">Yo
-                        <input class="check-2" type="radio" name="radio2" checked="checked"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div class="control-group m-b-20">
-                      <label class="control control-radio">A determinarse
-                        <input class="check-2" type="radio" name="radio2"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div class="control-group">
-                      <label class="control control-radio">Otros intructores
-                        <input class="show-tags" type="radio" name="radio2"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div class="hide-tags" style="display: none"><input name='tags' class='tagify--outside' placeholder='write some tags'></div>
+              <div class="page-section" id="idoor">
+                <!--IDoor-->
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Es indoor, outdoor, o ambas?</div>
+                    <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-sc</p>
                   </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash" id="7">
-                <div class="col-md-4">
-                  <div class="title-block">Dirección de la actividad</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from </p>
-                </div>
-                <div class="col-md-8">
-                  <input type="text" placeholder="Buscar una dirección en google"/>
-                  <div class="m-t-10 m-b-10" id="map" style="background:#777777;width:100%;height:450px"></div>
-                  <div class="title-ghost m-b-20">¿Alguna referencia para llegar?
-                    <input class="inputMAX" type="text" placeholder="Ejemplo: &quot;Portón naranjo con dijubo mural&quot;" style="height:80px;" maxlength="300"/>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash" id="9">
-                <div class="col-md-4">
-                  <div class="title-block">Fotos                  </div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
-                </div>
-                <div class="col-md-8 d-flex">
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files2" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files3" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results3" for="files3" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files4" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results4" for="files4" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files5" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results5" for="files5" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                  <div class="avatar-user d-flex m-r-15">
-                    <input id="files6" type="file" name="photo"/>
-                    <label class="img-content null-img oval" id="results6" for="files6" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;"><i class="ion ion-md-camera"></i>subir</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash" id="10">
-                <div class="col-md-4">
-                  <div class="title-block">Tags                  </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
-                </div>
-                <div class="col-md-8"><input class="" type="text" name="tags" placeholder="Excribe palabras al azar" style="width: 180 !important"> 
-                  <div class="control-group m-t-20 tagscheck">
-                    <label class="control control-checkbox">Sin Tags
-                      <input type="checkbox" id="tags-check"/>
-                      <div class="control_indicator"></div>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">¿Es indoor, outdoor, o ambas?</div>
-                  <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-sc</p>
-                </div>
-                <div class="col-md-8">
-                  <div class="d-flex flex-column">
-                    <div class="d-flex"><label class="switch m-r-10" for="checkbox4">
+                  <div class="col-md-8">
+                    <div class="d-flex flex-column">
+                      <div class="d-flex"><label class="switch m-r-10" for="checkbox4">
 <input type="checkbox" id="checkbox4">
 <div class="slider switch-red round"></div>
 </label>
-                      <p class="m-b-15">Outdoor</p>
-                    </div>
-                    <div class="d-flex"><label class="switch m-r-10" for="checkbox5">
+                        <p class="m-b-15">Outdoor</p>
+                      </div>
+                      <div class="d-flex"><label class="switch m-r-10" for="checkbox5">
 <input type="checkbox" id="checkbox5">
 <div class="slider switch-red round"></div>
 </label>
-                      <p class="m-b-15">Indoor</p>
+                        <p class="m-b-15">Indoor</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">Categorías                </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
-                </div>
-                <div class="col-md-8 radio-container">
-                  <div class="row">
-                    <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Actividades acuáticas
+              <div class="page-section" id="categorias">
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Categorías                </div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                  </div>
+                  <div class="col-md-8 radio-container">
+                    <div class="row">
+                      <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Actividades acuáticas
 <input class="group1" type="checkbox"><span class="checkmark"></span>
 </label>
 <label class="checkbox-container" data-id="ubicacion"> Animales
@@ -361,8 +424,8 @@
 <label class="checkbox-container" data-id="ubicacion"> Entretención y deporte
 <input class="group1" type="checkbox"><span class="checkmark"></span>
 </label>
-                    </div>
-                    <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Naturaleza y vida silvestre
+                      </div>
+                      <div class="col-md-6"><label class="checkbox-container" data-id="ubicacion"> Naturaleza y vida silvestre
 <input class="group1" type="checkbox"><span class="checkmark"></span>
 </label>
 <label class="checkbox-container" data-id="ubicacion"> Parques
@@ -392,44 +455,51 @@
 <label class="checkbox-container" data-id="ubicacion"> Peluquería
 <input class="group1" type="checkbox"><span class="checkmark"></span>
 </label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash" id="11">
-                <div class="col-md-4">
-                  <div class="title-block">Sitio web de la actividad               </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+              <div class="page-section" id="web">
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">Sitio web de la actividad               </div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                  </div>
+                  <div class="col-md-8"><input  type="text" placeholder="Pega el link de acceso al sitio web" ></div>
                 </div>
-                <div class="col-md-8"><input  type="text" placeholder="Pega el link de acceso al sitio web" ></div>
               </div>
-              <div class="row no-margin item-dash">
-                <div class="col-md-4">
-                  <div class="title-block">¿Se puede cancelar esta actividad?               </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
-                </div>
-                <div class="col-md-8">
-                  <div class="d-flex align-items-center"><label class="switch  m-r-10" for="checkbox10" >
+              <div class="page-section" id="cancelar">
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Se puede cancelar esta actividad?               </div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="d-flex align-items-center"><label class="switch  m-r-10" for="checkbox10" >
 <input type="checkbox" id="checkbox10" class="visible-event">
 <div class="slider switch-red round"></div>
 </label>
-                    <select style="height: 42px; width: 112px; border: 1px solid rgba(163,163,163,0.45); border-radius: 3px;">
-                      <option>12 hora</option>
-                    </select>
+                      <select style="height: 42px; width: 112px; border: 1px solid rgba(163,163,163,0.45); border-radius: 3px;">
+                        <option>12 hora</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="row no-margin item-dash" id="12">
-                <div class="col-md-4">
-                  <div class="title-block">¿Algunas instrucciones especiales?               </div>
-                  <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
-                </div>
-                <div class="col-md-8">
-                  <textarea style="height: 154px;width: 100%;" placeholder="Ejemplo: 'Venir con ropa cómoda'"></textarea>
+              <div class="page-section" id="instrucciones">
+                <div class="row no-margin item-dash">
+                  <div class="col-md-4">
+                    <div class="title-block">¿Algunas instrucciones especiales?               </div>
+                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim,.</p>
+                  </div>
+                  <div class="col-md-8">
+                    <textarea style="height: 154px;width: 100%;" placeholder="Ejemplo: 'Venir con ropa cómoda'"></textarea>
+                  </div>
                 </div>
               </div>
               <div class="d-flex m-t-30 d-flex justify-content-end">
-                <div class="make-activity d-flex justify-content-center align-items-center">CREAR ACTIVIDAD</div>
+                <button class="make-activity d-flex justify-content-center align-items-center">CREAR ACTIVIDAD</button>
               </div>
               <div class="remodal" data-remodal-id="calendario-config">
                 <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
@@ -463,27 +533,27 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6 d-flex flex-column">
+                  <div class="col-md-6 d-flex flex-column omisiones-control">
                     <div class="d-flex">
                       <p class="modal-input-title">Omisiones</p>
-                      <div class="d-flex justify-content-center align-items-center m-r-10">
+                      <div class="d-flex justify-content-center align-items-center m-r-10 omisiones-control">
                         <div class="control-group m-r-30">
-<label class="control control-radio">Simple<input type="radio" name="modal-3" checked="checked" />
+<label class="control control-radio">Simple<input type="radio" name="modal-3" value="simple"  id="simple" />
 <div class="control_indicator"></div>
 </label>
 </div>
-                        <label for="omisiones-date"><i class="material-icons m-r-10"  style="cursor: pointer">date_range</i></label>
-                        <input type="text" data-toggle="datepicker" style="display:none" id="omisiones-date"/><span>sin omisiones</span>
+                        <label class="d-flex align-items-center" for="omilabel" style="cursor:pointer"><i class="material-icons m-r-10"  style="cursor: pointer">date_range</i><span id="omisiones-text">sin omisiones</span></label>
+                        <input type="text" name="omisiones" checked="checked" data-toggle="datepicker-4" style="height:0;border:0;padding:0;width:0;" id="omilabel"/>
                       </div>
                     </div>
                     <div class="d-flex">
                       <p class="modal-input-title"></p><div class="control-group m-r-10">
-<label class="control control-radio">Avanzado<input type="radio" name="modal-3" checked="checked" />
+<label class="control control-radio">Avanzado<input type="radio" name="modal-3" value="avanzado"  />
 <div class="control_indicator"></div>
 </label>
 </div>
                       <div class="d-flex flex-column" id="omisiones">
-                        <input class="modal-input m-b-5" type="text" data-toggle="datepicker-2" placeholder="20/09/18"/>
+                        <input class="modal-input m-b-5" type="text" data-toggle="datepicker-2" id="avanzado" placeholder="20/09/18"/>
                       </div>
                     </div>
                     <div class="d-flex">
@@ -494,7 +564,7 @@
                 </div>
                 <div class="row no-margin padding-section-modal">
                   <div class="modal-popup d-flex justify-content-center w100">Horario y Precios de la Actividad</div>
-                  <div class="row no-margin w100 m-b-25" id="calendar">
+                  <div class="row no-margin w100 m-b-25">
                     <div class="col-md-7 d-flex">
                       <div class="d-flex flex-column align-items-center m-b-10 m-r-10 m-l-40">
                         <p class="m-b-15">Hora inicio</p>
@@ -504,7 +574,7 @@
                         <p class="m-b-15">Hora término</p>
                         <input class="modal-time modal-input" type="text" placeholder="ej. 11:00 pm"/>
                       </div>
-                      <div class="d-flex align-items-end m-b-10"><div class="control-group m-r-5" style="    margin-top: 33px;">
+                      <div class="d-flex align-items-end m-b-10" style="margin-left: 49px;"><div class="control-group m-r-5" style="    margin-top: 33px;">
 <label class="control control-checkbox"> Sin restricción horario
 <input type="checkbox">
 <div class="control_indicator" style="margin-top: 3px;"></div>
@@ -555,7 +625,7 @@
 <input type="checkbox" >
 <div class="control_indicator"></div>
 </label>
-</div>
+</div>                 
                       </div>
                     </div>
                   </div>
@@ -574,7 +644,7 @@
                         <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
                       </div>
                       <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
-                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="10,00">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -599,7 +669,7 @@
                         <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
                       </div>
                       <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
-                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="10,00">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -624,7 +694,7 @@
                         <p class="m-b-15">Precio normal</p><input  name="value" class="spinner-ui" placeholder="100">
                       </div>
                       <div class="dfaj flex-column align-items-center m-b-10 m-r-35">
-                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="100">
+                        <p class="m-b-15">Descuento</p><input  name="value" class="spinner-ui" placeholder="10,00">
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -634,6 +704,7 @@
                       </div>
                     </div>
                   </div>
+                  <div id="calendar" style="position: relative;"></div>
                   <div class="row no-margin w100 m-b-25 dfaj">
                     <button class="btn-white w150" style="padding: 0.875rem 1.5rem;" id="more-calendar">Agregar horario</button>
                   </div>
@@ -669,6 +740,9 @@
     });
   </script>
   <script>
+    $('.make-activity').click(function(){
+      $('.super-fixed').toggleClass('show-opa');
+    })
     $( function(){
      var spinner = $( ".spinner-ui" ).spinner();
     
@@ -690,7 +764,7 @@
       changeMonth: true,
       changeYear: true,
       defaultDate: +0,
-      showAnim: "fold"
+    
     });
     $('[data-toggle="datepicker-2"]').datepicker({
         autoHide: true,
@@ -700,7 +774,22 @@
       changeMonth: true,
       changeYear: true,
       defaultDate: +0,
-      showAnim: "fold"
+      
+      });
+    
+      $('[data-toggle="datepicker-4"]').datepicker({
+        autoHide: true,
+        zIndex: 10000,
+        dateFormat: 'yy-mm-dd',
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true,
+      defaultDate: +0,
+      onSelect: function(date) {
+            $('#omisiones-text').text(date);
+        },
+    
+      
       });
     
     $("#files").change(function(e){
@@ -708,18 +797,58 @@
     
       if(!iEdit.open(img, true, function(res){
         $("#results").css("background-image", "url(" + res + ")" ); 
-        $('#results').html('');     
+        $('.div-content1').css('display', 'none'); 
+        $('.delete-photo1').css('display', 'block');
+        $('#photo-1').val(res)
       })){
         alert("Whoops! That is not an image!");
       }
     
     });
+    $('.delete-photo1').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results").css("background-image", "url('')"); 
+      $('#photo-1').val("")
+    })
+    $('.delete-photo2').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results2").css("background-image", "url('')"); 
+      $('#photo-2').val("")
+    })
+    $('.delete-photo3').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results3").css("background-image", "url('')"); 
+      $('#photo-3').val("")
+    })
+    $('.delete-photo4').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results4").css("background-image", "url('')"); 
+      $('#photo-4').val("")
+    })
+    $('.delete-photo5').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results5").css("background-image", "url('')"); 
+      $('#photo-5').val("")
+    })
+    $('.delete-photo6').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results6").css("background-image", "url('')"); 
+      $('#photo-6').val("")
+    })
     $("#files2").change(function(e){
       var img = e.target.files[0];
     
       if(!iEdit.open(img, true, function(res){
         $("#results2").css("background-image", "url(" + res + ")" ); 
-        $('#results2').html('');     
+        $('.div-content2').css('display', 'none'); 
+        $('.delete-photo2').css('display', 'block');
+        $('#photo-2').val(res)    
       })){
         alert("Whoops! That is not an image!");
       }
@@ -730,7 +859,10 @@
     
       if(!iEdit.open(img, true, function(res){
         $("#results3").css("background-image", "url(" + res + ")" ); 
-        $('#results3').html('');     
+        $('.div-content3').css('display', 'none'); 
+        $('.delete-photo3').css('display', 'block');  
+        $('#photo-3').val(res)
+    
       })){
         alert("Whoops! That is not an image!");
       }
@@ -741,7 +873,9 @@
     
       if(!iEdit.open(img, true, function(res){
         $("#results4").css("background-image", "url(" + res + ")" ); 
-        $('#results4').html('');     
+        $('.div-content4').css('display', 'none');
+        $('.delete-photo4').css('display', 'block'); 
+        $('#photo-4').val(res)     
       })){
         alert("Whoops! That is not an image!");
       }
@@ -752,7 +886,9 @@
     
       if(!iEdit.open(img, true, function(res){
         $("#results5").css("background-image", "url(" + res + ")" ); 
-        $('#results5').html('');     
+        $('.div-content5').css('display', 'none');
+        $('.delete-photo5').css('display', 'block'); 
+        $('#photo-5').val(res)     
       })){
         alert("Whoops! That is not an image!");
       }
@@ -763,12 +899,17 @@
     
       if(!iEdit.open(img, true, function(res){
         $("#results6").css("background-image", "url(" + res + ")" ); 
-        $('#results6').html('');     
+        $('.div-content6').css('display', 'none'); 
+        $('.delete-photo6').css('display', 'block');
+        $('#photo-6').val(res)     
       })){
         alert("Whoops! That is not an image!");
       }
     
+    
     });
+    
+    
     
     
     

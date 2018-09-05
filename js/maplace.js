@@ -1,18 +1,23 @@
 var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#c0e8e8"}]},{"featureType":"poi","elementType":"labels", "stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#7dcdcd"}]}];
 var sites = [
 	
-	['Nombre', -33.49003, -70.618009, 1,  
+	['../img/pointer/acuaticas.svg', -33.49003, -70.618009, 1,  
 	`<div style="    width: 175px;"> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
-	<h2 style="border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">Subaquatic Parks
+	<h2 style="margin: 1px 0 4px; border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">
+	Subaquatic Parks
 	</h2>
-	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Av Lorem Ipsum, Santiago, 9999, <br> +5622334455</p>
-	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Ut pretium pretium tempor. Ut eget imperdiet neque pretium </p>
+	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">
+	Proveedor 
+	</p>
+	<p style="display:block; font-size: 11px; color: #000000; letter-spacing:0.18px;">
+	Precio </p>
 	</div>`,
 	'Info.'],
 
-	['Nombre', -33.440031, -70.632159
-, 1,  
+	['../img/pointer/afterschool.svg',
+	 -33.440031, -70.632159,
+	  1,  
 	`<div style="    width: 175px;"> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
 	<h2 style="border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">Subaquatic Parks
@@ -21,10 +26,26 @@ var sites = [
 	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Ut pretium pretium tempor. Ut eget imperdiet neque pretium </p>`, 
 	'Info']
 ];
+//Lista de iconos para el mapa
+/* '../img/pointer/acuaticas.svg' */
+/* '../img/pointer/atracciones.svg' */
+/* '../img/pointer/animales.svg' */
+/* '../img/pointer/cine.svg' */
+/* '../img/pointer/cultura.svg' */
+/* '../img/pointer/cumpleaños.svg' */
+/* '../img/pointer/deporte.svg' */
+/* '../img/pointer/diversion.svg' */
+/* '../img/pointer/guardería.svg' */
+/* '../img/pointer/heladeria.svg' */
+/* '../img/pointer/naturaleza.svg' */
+/* '../img/pointer/parques.svg' */
+/* '../img/pointer/peluqueria.svg' */
+/* '../img/pointer/plazas.svg' */
+/* '../img/pointer/restoranes.svg' */
+/* '../img/pointer/stayandplay.svg' */
+/* '../img/pointer/talleres.svg' */
+/* '../img/pointer/trekking.svg' */
 
-
-
- 
 
 
 
@@ -67,7 +88,7 @@ function setMarkers(map, markers) {
 			title: site[0],
 			zIndex: site[3],
 			html: site[4],
-			icon: image,
+			icon: site[0],
 			// Markers drop on the map
 			animation: google.maps.Animation.DROP
 		});
