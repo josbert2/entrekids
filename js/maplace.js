@@ -14,17 +14,19 @@ var sites = [
 	Precio </p>
 	</div>`,
 	'Info.'],
-
-	['../img/pointer/afterschool.svg',
-	 -33.440031, -70.632159,
-	  1,  
+	['../img/pointer/acuaticas.svg', -33.396108, -70.690063, 1,  
 	`<div style="    width: 175px;"> 
 	<img style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
-	<h2 style="border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">Subaquatic Parks
-</h2></div>
-	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">Av Lorem Ipsum, Santiago, 9999, <br> +5622334455</p>
-	<p style="display:block; font-size: 9px; color: #000000; letter-spacing:0.18px;">Ut pretium pretium tempor. Ut eget imperdiet neque pretium </p>`, 
-	'Info']
+	<h2 style="margin: 1px 0 4px; border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">
+	Subaquatic Parks
+	</h2>
+	<p style="display:block; font-size: 9px; color: #000000; line-height:12px; letter-spacing:0.18px;">
+	Proveedor 
+	</p>
+	<p style="display:block; font-size: 11px; color: #000000; letter-spacing:0.18px;">
+	Precio </p>
+	</div>`,
+	'Info.']
 ];
 //Lista de iconos para el mapa
 /* '../img/pointer/acuaticas.svg' */
