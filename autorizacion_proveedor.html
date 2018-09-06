@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="js/modal/remodal.css"/>
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
   </head>
-  <body class="app-js dash-board">
-    <div class="page-wrapper index d-flex">
+  <body class="app-js dash-board pop-up-top master-modal">
+    <div class="page-wrapper index d-flex autorization">
       <div class="sidebar">
         <div class="app-name">
           <p>Administrador</p>
@@ -75,90 +75,118 @@
             </ul>
           </div>
           <div class="div bg-white" style="    padding-bottom: 5px;background: #fff;">
-            <table class="super-admin-dash">
+            <table class="super-admin-dash" style="    table-layout: fixed;">
               <thead>
+                <!--th Proveedor-->
+                <!--th Fecha de registro-->
+                <!--th Administrador-->
+                <!--th Contacto-->
+                <!--th Completitud -->
+                <!--th % cobro-->
+                <!--th Cobro fijo-->
+                <!--th Plan-->
+                <!--th Aceptar-->
+                <!--th Eliminar-->
                 <th>Proveedor</th>
                 <th>Fecha de registro</th>
-                <th>Administrador</th>
-                <th>Contaco</th>
-                <th>% Costo</th>
                 <th>Completitud </th>
+                <th>Configuración</th>
                 <th>Aceptar</th>
                 <th>Eliminar</th>
-                <th>Plan</th>
               </thead>
               <tbody>
                 <tr class="border_bottom">
-                  <td>Proveedor 1</td>
-                  <td>17/08/2018</td>
-                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
-                  <td>rodsepmartinez@gmail.com</td>
-                  <td> 
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Provedores Provedores </div>
                   </td>
-                  <td>70%</td>
-                  <td>
+                  <td class="text-c">17/08/2018</td>
+                  <!--td.text-l .truncate RODRIGO ANTONIO SEPULVEDA MARTINEZ
+                  -->
+                  <!--td.text-c 
+                  a(href="#" style="color: #A3A3A3")
+                    <i class="material-icons tippy-click" title="rodsepmartinez@gmail.com">contact_mail</i>
+                  -->
+                  <td class="text-c">70%</td>
+                  <td class="configuracion text-c"><a href="#" data-remodal-target="configuracion"><i class="material-icons">settings</i></a></td>
+                  <!--td.text-c input(type="text" value="45%" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-cinput(type="text" value="$999" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-c
+                  select 
+                    option Plan 1
+                    option Plan 2
+                    option Plan 3
+                  -->
+                  <td class="text-c">
                      <label class="switch" for="checkbox1" >
-<input type="checkbox" id="checkbox1" class="visible-event">
+<input type="checkbox" id="checkbox1" class="visible-event aceptar-proveedor">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td class="d-flex justify-content-center" style="    margin-top: 36px;"><i class="material-icons">delete_outline</i></td>
-                  <td>
-                    <select> 
-                      <option>Plan 1</option>
-                      <option>Plan 2</option>
-                      <option>Plan 3</option>
-                    </select>
-                  </td>
+                  <td style="text-align:  center;"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
                 </tr>
                 <tr class="border_bottom">
-                  <td>Proveedor 1</td>
-                  <td>17/08/2018</td>
-                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
-                  <td>rodsepmartinez@gmail.com</td>
-                  <td>
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Provedores Provedores </div>
                   </td>
-                  <td>70%</td>
-                  <td>
-                     <label class="switch" for="checkbox2" >
-<input type="checkbox" id="checkbox2" class="visible-event">
+                  <td class="text-c">17/08/2018</td>
+                  <!--td.text-l .truncate RODRIGO ANTONIO SEPULVEDA MARTINEZ
+                  -->
+                  <!--td.text-c 
+                  a(href="#" style="color: #A3A3A3")
+                    <i class="material-icons tippy-click" title="rodsepmartinez@gmail.com">contact_mail</i>
+                  -->
+                  <td class="text-c">70%</td>
+                  <td class="configuracion text-c"><a href="#" data-remodal-target="configuracion"><i class="material-icons">settings</i></a></td>
+                  <!--td.text-c input(type="text" value="45%" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-cinput(type="text" value="$999" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-c
+                  select 
+                    option Plan 1
+                    option Plan 2
+                    option Plan 3
+                  -->
+                  <td class="text-c">
+                     <label class="switch" for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event aceptar-proveedor">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td class="d-flex justify-content-center" style="    margin-top: 36px;"><i class="material-icons">delete_outline</i></td>
-                  <td>
-                    <select> 
-                      <option>Plan 1</option>
-                      <option>Plan 2</option>
-                      <option>Plan 3</option>
-                    </select>
-                  </td>
+                  <td style="text-align:  center;"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
                 </tr>
                 <tr class="border_bottom">
-                  <td>Proveedor 1</td>
-                  <td>17/08/2018</td>
-                  <td>RODRIGO ANTONIO SEPULVEDA MARTINEZ</td>
-                  <td>rodsepmartinez@gmail.com</td>
-                  <td> 
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Provedores Provedores </div>
                   </td>
-                  <td>70%</td>
-                  <td>
-                     <label class="switch" for="checkbox3" >
-<input type="checkbox" id="checkbox3" class="visible-event">
+                  <td class="text-c">17/08/2018</td>
+                  <!--td.text-l .truncate RODRIGO ANTONIO SEPULVEDA MARTINEZ
+                  -->
+                  <!--td.text-c 
+                  a(href="#" style="color: #A3A3A3")
+                    <i class="material-icons tippy-click" title="rodsepmartinez@gmail.com">contact_mail</i>
+                  -->
+                  <td class="text-c">70%</td>
+                  <td class="configuracion text-c"><a href="#" data-remodal-target="configuracion"><i class="material-icons">settings</i></a></td>
+                  <!--td.text-c input(type="text" value="45%" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-cinput(type="text" value="$999" placeholder="Cobro" style="width:50px")
+                  -->
+                  <!--td.text-c
+                  select 
+                    option Plan 1
+                    option Plan 2
+                    option Plan 3
+                  -->
+                  <td class="text-c">
+                     <label class="switch" for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event aceptar-proveedor">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td class="d-flex justify-content-center" style="    margin-top: 36px"><i class="material-icons">delete_outline</i></td>
-                  <td>
-                    <select> 
-                      <option>Plan 1</option>
-                      <option>Plan 2</option>
-                      <option>Plan 3</option>
-                    </select>
-                  </td>
+                  <td style="text-align:  center;"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
                 </tr>
               </tbody>
             </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
@@ -174,10 +202,102 @@
         </div>
       </div>
     </div>
+    <div class="remodal" data-remodal-id="configuracion">
+      <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+      <div class="title-modal m-b-20"> Configuración</div>
+      <div class="row no-margin">
+        <div class="col-md-6" style="border-right: 1px solid #C8C8C8;">
+          <div class="item-autorizacion m-b-15" style="    margin-right: 85px;"><i class="material-icons m-r-10">person</i><span>Administrador</span></div>
+          <div class="item-autorizacion m-b-15" style="    margin-right: 85px;"><i class="material-icons m-r-10">smartphone</i><span>Teléfono</span></div>
+          <div class="item-autorizacion" style="    margin-right: 85px;"><i class="material-icons m-r-10">mail_outline</i><span class="message">Email</span></div>
+        </div>
+        <div class="col-md-6" style="padding: 0 38px;">
+          <div class="item-autorizacion m-b-15" style="width:250;justify-content: space-between !important;">
+            <div class="m-r-15">% Cobro variable</div>
+            <input type="text" value="45%" placeholder="Cobro" style="width:68px"/>
+          </div>
+          <div class="item-autorizacion m-b-15" style="width:250;justify-content: space-between !important;">
+            <div class="m-r-15">$ Cobro fijo</div>
+            <input type="text" value="45.000" placeholder="Cobro" style="width:68px"/>
+          </div>
+          <div class="item-autorizacion m-b-15" style="width:250;justify-content: space-between !important;">
+            <div class="m-r-15"> Plan</div>
+            <select> 
+              <option>Plan 1</option>
+              <option>Plan 2</option>
+              <option>Plan 3</option>
+            </select>
+          </div>
+          <div class="item-autorizacion m-b-15" style="width:250;justify-content: space-between !important;">
+            <div class="d-flex align-items-center"><i class="material-icons m-r-10">group</i>
+              <div class="m-r-15"> Staff responsable</div>
+            </div>
+            <select> 
+              <option>Staff 1</option>
+              <option>Staff 2</option>
+              <option>Staff 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row no-margin w100 m-t-35 d-flex justify-content-center">
+            <button class="save-btn">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
-  <!-- Contador de caracteres-->
+  <script src="js/modal/remodal.js"></script>
+  <script>
+    tippy('.tippy-click',  { trigger: 'click' })
+    setTimeout(function(){  tippy('.toolpitruncate')}, 1000); 
+    /*=========================================================================
+       Sweet Alert
+    =========================================================================*/ 
+    $('.aceptar-proveedor').change(function(){
+        if($('.aceptar-proveedor').is(':checked')){
+           swal({
+            title: "Esta seguro que desea aceptar",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Los cambios se han guardado correctamente", {
+                icon: "success",
+              });
+            } else {
+              swal("No se realizo ningún cambio");
+            }
+          });
+        }
+    })
+     
+    $('.delete-proveedor').click(function(){
+       swal({
+            title: "Esta seguro que desea eliminar?",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Se ha eliminado correctamente", {
+                icon: "success",
+              });
+            } else {
+              swal("Se ha cancelado");
+            }
+          });
+    })
+  </script>
 </html>

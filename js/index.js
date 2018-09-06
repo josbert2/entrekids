@@ -39,65 +39,68 @@ $('.actionDone').on('click', function(){
 /*=========================================================================
    Range Slider
 =========================================================================*/
-$("#slider-range").slider({
-    range: true,
-    min: 480,
-    max: 1380,
-    step: 15,
-    values: [480, 1380],
-    slide: function(e, ui) {
-        var hours1 = Math.floor(ui.values[0] / 60);
-        var minutes1 = ui.values[0] - (hours1 * 60);
+if ($("#slider-range").length) {
+    $("#slider-range").slider({
+        range: true,
+        min: 480,
+        max: 1380,
+        step: 15,
+        values: [480, 1380],
+        slide: function(e, ui) {
+            var hours1 = Math.floor(ui.values[0] / 60);
+            var minutes1 = ui.values[0] - (hours1 * 60);
 
-        if (hours1.length == 1) hours1 = '0' + hours1;
-        if (minutes1.length == 1) minutes1 = '0' + minutes1;
-        if (minutes1 == 0) minutes1 = '00';
-        if (hours1 >= 12) {
-            if (hours1 == 12) {
+            if (hours1.length == 1) hours1 = '0' + hours1;
+            if (minutes1.length == 1) minutes1 = '0' + minutes1;
+            if (minutes1 == 0) minutes1 = '00';
+            if (hours1 >= 12) {
+                if (hours1 == 12) {
+                    hours1 = hours1;
+                    minutes1 = minutes1 + " PM";
+                } else {
+                    hours1 = hours1 - 12;
+                    minutes1 = minutes1 + " PM";
+                }
+            } else {
                 hours1 = hours1;
-                minutes1 = minutes1 + " PM";
-            } else {
-                hours1 = hours1 - 12;
-                minutes1 = minutes1 + " PM";
+                minutes1 = minutes1 + " AM";
             }
-        } else {
-            hours1 = hours1;
-            minutes1 = minutes1 + " AM";
-        }
-        if (hours1 == 0) {
-            hours1 = 12;
-            minutes1 = minutes1;
-        }
+            if (hours1 == 0) {
+                hours1 = 12;
+                minutes1 = minutes1;
+            }
 
 
 
-        $('.slider-time').html(hours1 + ':' + minutes1);
+            $('.slider-time').html(hours1 + ':' + minutes1);
 
-        var hours2 = Math.floor(ui.values[1] / 60);
-        var minutes2 = ui.values[1] - (hours2 * 60);
+            var hours2 = Math.floor(ui.values[1] / 60);
+            var minutes2 = ui.values[1] - (hours2 * 60);
 
-        if (hours2.length == 1) hours2 = '0' + hours2;
-        if (minutes2.length == 1) minutes2 = '0' + minutes2;
-        if (minutes2 == 0) minutes2 = '00';
-        if (hours2 >= 12) {
-            if (hours2 == 12) {
+            if (hours2.length == 1) hours2 = '0' + hours2;
+            if (minutes2.length == 1) minutes2 = '0' + minutes2;
+            if (minutes2 == 0) minutes2 = '00';
+            if (hours2 >= 12) {
+                if (hours2 == 12) {
+                    hours2 = hours2;
+                    minutes2 = minutes2 + " PM";
+                } else if (hours2 == 24) {
+                    hours2 = 11;
+                    minutes2 = "59 PM";
+                } else {
+                    hours2 = hours2 - 12;
+                    minutes2 = minutes2 + " PM";
+                }
+            } else {
                 hours2 = hours2;
-                minutes2 = minutes2 + " PM";
-            } else if (hours2 == 24) {
-                hours2 = 11;
-                minutes2 = "59 PM";
-            } else {
-                hours2 = hours2 - 12;
-                minutes2 = minutes2 + " PM";
+                minutes2 = minutes2 + " AM";
             }
-        } else {
-            hours2 = hours2;
-            minutes2 = minutes2 + " AM";
-        }
 
-        $('.slider-time2').html(hours2 + ':' + minutes2);
-    }
-});
+            $('.slider-time2').html(hours2 + ':' + minutes2);
+        }
+    });
+}
+
 
 /*=========================================================================
    Mobile Menu
@@ -106,6 +109,7 @@ if (document.querySelector(".menu")) {
     var myMenu = document.querySelector(".menu");
     var clsMenu = document.querySelector(".header-mobile");
     var oppMenu = document.querySelector(".ham");
+    var fixedrop = document.querySelector('.active-fixed');
 
     function toggleClassMenu() {
         myMenu.classList.add("menu--animatable");
@@ -123,7 +127,7 @@ if (document.querySelector(".menu")) {
     }
 
 
-
+    fixedrop.addEventListener("click", toggleClassMenu, false);
     oppMenu.addEventListener("click", toggleClassMenu, false);
     clsMenu.addEventListener("click", toggleClassMenu, false);
 } else {
@@ -210,16 +214,18 @@ $(function() {
 /*=========================================================================
    Slider Price
 =========================================================================*/
-$("#slider-range-price").slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [0, 99999],
-    slide: function(event, ui) {
-        $("#amount .price-one").val("$" + ui.values[0]);
-        $("#amount .second-one").val("$" + ui.values[1]);
-    }
-});
+if ($("#slider-range-price").length) {
+    $("#slider-range-price").slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [0, 99999],
+        slide: function(event, ui) {
+            $("#amount .price-one").val("$" + ui.values[0]);
+            $("#amount .second-one").val("$" + ui.values[1]);
+        }
+    });
+}
 
 /*=========================================================================
    Modal
@@ -232,17 +238,20 @@ $("#slider-range-price").slider({
 
 
 var header = $(".filter-section");
-var headerTwo = $('#main-fixed-nav')
+var headerTwo = $('#main-fixed-nav-nav');
+var drop = $('#myDropdown');
 let card_content = $('.filter-btn');
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 200) {
         header.addClass("fixed");
-        headerTwo.addClass('styki')
+        drop.addClass("fixed-drop");
+        headerTwo.addClass('is-hidden-nav')
 
     } else {
         header.removeClass("fixed");
-        headerTwo.removeClass('styki')
+        drop.removeClass("fixed-drop");
+        headerTwo.removeClass('is-hidden-nav')
     }
 })
 
@@ -446,6 +455,19 @@ if ($('.name')) {
     })
 }
 
+
+if ($('.cart-btn')) {
+
+    function myFunction() {
+        document.getElementById("cart-drop").classList.toggle("show");
+    }
+
+
+    $('.cart-btn').click(function() {
+        myFunction();
+    })
+}
+
 /*=========================================================================
    User Avatar
 =========================================================================*/
@@ -534,11 +556,14 @@ $("body").on("click", ".delete", function(e) {
 });
 
 $(document).ready(function() {
-    $("#omisiones-date").datepicker({
-        onSelect: function(date) {
-            $("#omisiones-input").find("span").text(date);
-        }
-    });
+    if ($("#omisiones-date").length) {
+        $("#omisiones-date").datepicker({
+            onSelect: function(date) {
+                $("#omisiones-input").find("span").text(date);
+            }
+        });
+    }
+
 
 
 
@@ -865,3 +890,55 @@ $(".omisiones-control input:radio").click(function() {
 
 
 })
+
+
+/*=========================================================================
+   Truncate text
+=========================================================================*/
+$(document).ready(function() {
+    (function() {
+        var showChar = 10;
+        var ellipsestext = "<div title>...</div>";
+
+        $(".truncate").each(function() {
+            var content = $(this).html();
+            if (content.length > showChar) {
+                var c = content.substr(0, showChar);
+                var h = content;
+                console.log(content)
+                var html =
+                    '<div class="truncate-text" style=" display:flex;">' +
+                    c +
+                    '<span class="moreellipses">' +
+                    '<div class="toolpitruncate" title="' + content + '" style="cursor: pointer">...</div>' +
+                    '</span></div>';
+
+                $(this).html(html);
+            }
+        });
+
+        $(".moreless").click(function() {
+            var thisEl = $(this);
+            var cT = thisEl.closest(".truncate-text");
+            var tX = ".truncate-text";
+
+            if (thisEl.hasClass("less")) {
+                cT.prev(tX).toggle();
+                cT.slideToggle();
+            } else {
+                cT.toggle();
+                cT.next(tX).fadeToggle();
+            }
+            return false;
+        });
+        /* end iffe */
+    })();
+
+    /* end ready */
+});
+
+//setTimeout(function(){  tippy('.toolpitruncate-click',  { trigger: 'click' }) }, 1000);
+
+/*=========================================================================
+   Read more
+=========================================================================*/

@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="js/modal/remodal.css"/>
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
   </head>
-  <body class="app-js dash-board">
-    <div class="page-wrapper index d-flex">
+  <body class="app-js dash-board alta-actividad">
+    <div class="page-wrapper index d-flex pop-up-top master-modal">
       <div class="sidebar">
         <div class="app-name">
           <p>Administrador</p>
@@ -64,7 +64,7 @@
               <li class="mr-auto"><i class="material-icons">arrow_back</i></li>
               <li class="title-dashboard m-r-20">Alta de Actividad</li>
               <li class="nav-opcion d-flex align-items-center">
-                <input class="input-nav" type="text" placeholder="Buscar proveedor"/>
+                <input class="input-nav" type="text" placeholder="Buscar actividad"/>
                 <div class="search-input-nav"><i class="material-icons">search</i></div>
                 <ul class="group-btn-nav m-l-10">
                   <li><i class="material-icons">store_mall_directory</i></li>
@@ -75,72 +75,81 @@
             </ul>
           </div>
           <div class="div bg-white" style="    padding-bottom: 5px;background: #fff;">
-            <table class="super-admin-dash">
+            <table class="super-admin-dash" style="    table-layout: fixed;">
               <thead>
                 <th>Actividad</th>
                 <th>Fecha de Publicación</th>
                 <th>Proveedor</th>
-                <th>Precio</th>
+                <th>Valor esperado</th>
+                <th style="text-align: center">Descuento promedio</th>
                 <th>% Cobro</th>
-                <th>Descuento</th>
                 <th>Aceptar</th>
                 <th>Eliminar</th>
                 <th>Mensaje</th>
               </thead>
               <tbody>
                 <tr class="border_bottom">
-                  <td> <a class="link" href="#" style="color: #1EB2E8">Nombre actividad 1</a></td>
+                  <td> <a class="link truncate" href="#" style="color: #1EB2E8">Nombre actividad 1</a></td>
                   <td>17/08/2018</td>
-                  <td>Proveedor 1</td>
-                  <td>999999</td>
-                  <td>
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Proveedor 1</div>
                   </td>
-                  <td>70%</td>
-                  <td>
-                     <label class="switch" for="checkbox1" >
-<input type="checkbox" id="checkbox1" class="visible-event">
+                  <td class="text-c">999999</td>
+                  <td class="text-c" style="text-align: center">70%</td>
+                  <td class="text-c d-flex input-more" style="margin-top: 7.5px;">
+                    <div class="change-to-input">45%</div>
+                    <!--input(type="text" value="45%" placeholder="Cobro" style="width:50px").m-r-10 --><a class="active-inputicon" href="#">
+                       <i class="material-icons edit f-4">edit</i></a>
+                  </td>
+                  <td class="text-c"><label class="switch" for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event aceptar-actividad-1">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td><i class="material-icons">delete_outline</i></td>
-                  <td><i class="material-icons">mail_outline</i></td>
+                  <td class="text-c"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
+                  <td class="text-c"><a href="#" data-remodal-target="message"><i class="material-icons">mail_outline</i></a></td>
                 </tr>
                 <tr class="border_bottom">
-                  <td><a class="link" href="#" style="color: #1EB2E8">Nombre actividad 1</a></td>
+                  <td> <a class="link truncate" href="#" style="color: #1EB2E8">Nombre actividad 1</a></td>
                   <td>17/08/2018</td>
-                  <td>Proveedor 1</td>
-                  <td>999999</td>
-                  <td> 
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Proveedor 1</div>
                   </td>
-                  <td>70%</td>
-                  <td>
-                     <label class="switch" for="checkbox1" >
-<input type="checkbox" id="checkbox1" class="visible-event">
+                  <td class="text-c">999999</td>
+                  <td class="text-c" style="text-align: center">70%</td>
+                  <td class="text-c d-flex input-more" style="margin-top: 7.5px;">
+                    <div class="change-to-input">45%</div>
+                    <!--input(type="text" value="45%" placeholder="Cobro" style="width:50px").m-r-10 --><a class="active-inputicon" href="#">
+                       <i class="material-icons edit f-4">edit</i></a>
+                  </td>
+                  <td class="text-c"><label class="switch" for="checkbox2" >
+<input type="checkbox" id="checkbox2" class="visible-event aceptar-actividad-1">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td><i class="material-icons">delete_outline</i></td>
-                  <td><i class="material-icons">mail_outline</i></td>
+                  <td class="text-c"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
+                  <td class="text-c"><a href="#" data-remodal-target="message"><i class="material-icons">mail_outline</i></a></td>
                 </tr>
                 <tr class="border_bottom">
-                  <td><a class="link" href="#" style="color:#1EB2E8">Nombre actividad 1</a></td>
+                  <td> <a class="link truncate" href="#" style="color: #1EB2E8">Nombre actividad 1</a></td>
                   <td>17/08/2018</td>
-                  <td>Proveedor 1</td>
-                  <td>999999</td>
-                  <td> 
-                    <input type="text" value="45%" placeholder="Cobro"/>
+                  <td class="text-c"> 
+                    <div class="truncate">Proveedor 1</div>
                   </td>
-                  <td>70%</td>
-                  <td>
-                     <label class="switch" for="checkbox1" >
-<input type="checkbox" id="checkbox1" class="visible-event">
+                  <td class="text-c">999999</td>
+                  <td class="text-c" style="text-align: center">70%</td>
+                  <td class="text-c d-flex input-more" style="margin-top: 7.5px;">
+                    <div class="change-to-input">45%</div>
+                    <!--input(type="text" value="45%" placeholder="Cobro" style="width:50px").m-r-10 --><a class="active-inputicon" href="#">
+                       <i class="material-icons edit f-4">edit</i></a>
+                  </td>
+                  <td class="text-c"><label class="switch" for="checkbox3" >
+<input type="checkbox" id="checkbox3" class="visible-event aceptar-actividad-1">
 <div class="slider switch-red round"></div>
 </label>
                   </td>
-                  <td><a href="#"><i class="material-icons">delete_outline</i></a></td>
-                  <td><a href="#"><i class="material-icons">mail_outline</i></a></td>
+                  <td class="text-c"><a class="delete-proveedor" href="#"><i class="material-icons">delete_outline</i></a></td>
+                  <td class="text-c"><a href="#" data-remodal-target="message"><i class="material-icons">mail_outline</i></a></td>
                 </tr>
               </tbody>
             </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
@@ -156,10 +165,100 @@
         </div>
       </div>
     </div>
+    <div class="remodal" data-remodal-id="message">
+      <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+      <div class="title-modal d-flex justify-content-center m-b-20" style="    font-size: 22px;">Escribe un mensaje para "proveedor"</div>
+      <div class="row no-margin">
+        <div class="col-md-12" style="text-align:left">
+          <div class="resena-title m-b-10 f-5">Para: Mail@mail.com</div>
+          <div class="resena-title m-b-15 f-5">Asunto: Tienes un nuevo comentario de "Actividad"</div>
+        </div>
+        <div class="col-md-12">
+          <textarea class="text-area" style="    width: 100%;height: 83px;border: 1px solid rgba(163, 163, 163, 0.45);border-radius: 3px;background-color: #FFFFFF;"></textarea>
+        </div>
+        <div class="col-md-12"><div class="row no-margin w100 m-t-35 d-flex justify-content-center">
+<button class="save-btn">Enviar</button>
+</div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+  <script>
+    tippy('.tippy-click',  { trigger: 'click' })
+    setTimeout(function(){  tippy('.toolpitruncate')}, 1000); 
+    var editmode = false;
+    
+    $('.active-inputicon ').on('click', function () {
+        if (editmode) {
+            $('.change-to-input').replaceWith(function () {
+                return $("<div>", {
+                    "class": this.className,
+                    text: this.value
+                });
+                
+            });
+            editmode = false;
+            $('.active-inputicon').html('<i class="material-icons f-4">edit</i>')
+        } else {
+            $('.change-to-input').replaceWith(function () {
+                return $("<input>", {
+                    value: this.innerText,
+                        "class": this.className
+                });
+                
+            });
+            editmode = true;
+            $('.active-inputicon').html('<i class="material-icons f-4">close</i>')
+        }
+    
+    });
+     $('.aceptar-actividad-1').change(function(){
+        if($('.aceptar-actividad-1').is(':checked')){
+           swal({
+            title: "Esta seguro que desea aceptar",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Los cambios se han guardado correctamente", {
+                icon: "success",
+              });
+            } else {
+              swal("Tu información no se ha enviado");
+              $('.aceptar-actividad-1').click();
+            }
+          });
+        }
+    })
+    
+     $('.delete-proveedor').click(function(){
+       swal({
+            title: "Esta seguro que desea eliminar?",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Se ha eliminado correctamente", {
+                icon: "success",
+              });
+            } else {
+              swal("Se ha cancelado");
+            }
+          });
+    })
+  </script>
   <!-- Contador de caracteres-->
 </html>
