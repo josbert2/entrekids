@@ -109,7 +109,6 @@ if (document.querySelector(".menu")) {
     var myMenu = document.querySelector(".menu");
     var clsMenu = document.querySelector(".header-mobile");
     var oppMenu = document.querySelector(".ham");
-    var fixedrop = document.querySelector('.active-fixed');
 
     function toggleClassMenu() {
         myMenu.classList.add("menu--animatable");
@@ -127,7 +126,6 @@ if (document.querySelector(".menu")) {
     }
 
 
-    fixedrop.addEventListener("click", toggleClassMenu, false);
     oppMenu.addEventListener("click", toggleClassMenu, false);
     clsMenu.addEventListener("click", toggleClassMenu, false);
 } else {
@@ -942,3 +940,527 @@ $(document).ready(function() {
 /*=========================================================================
    Read more
 =========================================================================*/
+
+
+
+
+/*=========================================================================
+   Custom Select
+=========================================================================*/
+
+
+
+
+
+
+/*=========================================================================
+   Script upload Croppie  1
+=========================================================================*/
+
+
+$(document).ready(function() {
+    $(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo').addClass('ready');
+                $('#cropImagePop').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" ); 
+            $('#cropImagePop').modal('hide');
+            $('.div-content1').css('display', 'none');
+            $('.img-val').val(resp)
+            $('.carabin1').append('<button class="del1" onclick="delete_photo1()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+})
+
+
+/*=========================================================================
+   Script upload Croppie  2
+=========================================================================*/
+
+
+$(document).ready(function() {
+
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo2').addClass('ready');
+                $('#cropImagePop2').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo2').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop2').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img2').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn2').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn2').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output2').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" ); 
+            $('#cropImagePop2').modal('hide');
+            $('.div-content2').css('display', 'none');
+            $('.img-val2').val(resp)
+            $('.carabin2').append('<button class="del2" onclick="delete_photo2()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+
+})
+
+
+/*=========================================================================
+   Script upload Croppie  3
+=========================================================================*/
+
+
+$(document).ready(function() {
+
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo3').addClass('ready');
+                $('#cropImagePop3').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo3').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop3').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img3').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn3').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn3').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output3').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" );  
+            $('#cropImagePop3').modal('hide');
+            $('.div-content3').css('display', 'none');
+            $('.img-val3').val(resp)
+            $('.carabin3').append('<button class="del3" onclick="delete_photo3()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+
+})
+
+/*=========================================================================
+   Script upload Croppie 4
+=========================================================================*/
+
+
+$(document).ready(function() {
+
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo4').addClass('ready');
+                $('#cropImagePop4').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo4').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop4').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img4').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn4').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn4').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output4').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" ); 
+            $('#cropImagePop4').modal('hide');
+            $('.div-content4').css('display', 'none');
+            $('.img-val4').val(resp)
+            $('.carabin4').append('<button class="del4" onclick="delete_photo1()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+
+})
+
+
+/*=========================================================================
+   Script upload Croppie 5
+=========================================================================*/
+
+
+$(document).ready(function() {
+
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo5').addClass('ready');
+                $('#cropImagePop5').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo5').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop5').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img5').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn5').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn5').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output5').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" );  
+            $('#cropImagePop5').modal('hide');
+            $('.div-content5').css('display', 'none');
+            $('.img-val5').val(resp)
+            $('.carabin5').append('<button class="del5" onclick="delete_photo5()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+
+})
+
+
+/*=========================================================================
+   Script upload Croppie 6
+=========================================================================*/
+
+
+$(document).ready(function() {
+
+    var $uploadCrop,
+        tempFilename,
+        rawImg,
+        imageId;
+
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('.upload-demo6').addClass('ready');
+                $('#cropImagePop6').modal('show');
+                rawImg = e.target.result;
+            }
+            reader.readAsDataURL(input.files[0]);
+        } else {
+            swal("Sorry - you're browser doesn't support the FileReader API");
+        }
+    }
+
+    $uploadCrop = $('#upload-demo6').croppie({
+        viewport: {
+            width: 150,
+            height: 100,
+        },
+        enforceBoundary: false,
+        enableExif: true
+    });
+    $('#cropImagePop6').on('shown.bs.modal', function() {
+        // alert('Shown pop');
+        $uploadCrop.croppie('bind', {
+            url: rawImg
+        }).then(function() {
+            console.log('jQuery bind complete');
+        });
+    });
+
+    $('.item-img6').on('change', function() {
+        imageId = $(this).data('id');
+        tempFilename = $(this).val();
+        $('#cancelCropBtn6').data('id', imageId);
+        readFile(this);
+    });
+    $('#cropImageBtn6').on('click', function(ev) {
+        $uploadCrop.croppie('result', {
+            type: 'base64',
+            format: 'jpeg',
+            size: {
+                width: 150,
+                height: 200
+            }
+        }).then(function(resp) {
+            $('#item-img-output6').attr('src', resp);
+            //$('#item-img-output').css("background-image", "url(" + resp + ")" );  
+            $('#cropImagePop6').modal('hide');
+            $('.div-content6').css('display', 'none');
+            $('.img-val6').val(resp)
+            $('.carabin6').append('<button class="del6" onclick="delete_photo6()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+        });
+    });
+
+
+})
+
+
+
+
+/*=========================================================================
+   Delete photo
+=========================================================================*/
+
+
+
+
+function delete_photo1() {
+    $('.div-content1').css('display', 'block');
+    $('.div-content1').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin1').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del1').remove()
+    }, 300)
+    $('img-val').val('')
+
+}
+
+function delete_photo2() {
+    $('.div-content2').css('display', 'block');
+    $('.div-content2').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin2').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del2').remove()
+    }, 300)
+    $('img-val2').val('')
+}
+
+function delete_photo3() {
+    $('.div-content3').css('display', 'block');
+    $('.div-content3').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin3').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del3').remove()
+    }, 300)
+    $('img-val3').val('')
+}
+
+function delete_photo4() {
+    $('.div-content4').css('display', 'block');
+    $('.div-content4').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin4').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del4').remove()
+    }, 300)
+    $('img-val4').val('')
+}
+
+function delete_photo5() {
+    $('.div-content5').css('display', 'block');
+    $('.div-content5').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin5').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del5').remove()
+    }, 300)
+    $('img-val5').val('')
+}
+
+function delete_photo6() {
+    $('.div-content6').css('display', 'block');
+    $('.div-content6').css({
+        'top': '31px',
+        'left': '41px'
+    })
+    $('.carabin6').find(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+    setTimeout(function() {
+        $('.del6').remove()
+    }, 300)
+    $('img-val6').val('')
+}

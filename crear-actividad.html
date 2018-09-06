@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="js/inputMax/tagify.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
-    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
+    <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css"/>
+    <!--link(rel="stylesheet", href="js/croppie/iEdit.css")-->
     <link rel="stylesheet" href="js/modal/remodal.css"/>
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
     <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
+    <link rel="stylesheet" href="js/modal/bootstrap.css"/>
   </head>
   <body class="app-js dash-board">
     <div class="super-fixed">
@@ -320,47 +322,53 @@
                     <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking</p>
                   </div>
                   <div class="col-md-8 d-flex">
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content1"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo1" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-1"/>
-                      </label>
-                    </div>
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files2" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content2"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo2" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-2"/>
-                      </label>
-                    </div>
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files3" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results3" for="files3" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content3"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo3" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-3"/>
-                      </label>
-                    </div>
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files4" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results4" for="files4" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content4"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo4" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-4"/>
-                      </label>
-                    </div>
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files5" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results5" for="files5" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content5"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo5" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-5"/>
-                      </label>
-                    </div>
-                    <div class="avatar-user d-flex m-r-15">
-                      <input id="files6" type="file" name="photo"/>
-                      <label class="img-content null-img oval" id="results6" for="files6" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 79.15px; width: 79.15px;  background-size: cover; cursor: pointer;">
-                        <div class="div-content6"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo6" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
-                        <input type="hidden" name="photo-img[]" id="photo-6"/>
-                      </label>
+                    <div class="row no-margin">
+                      <div class="col-md-12 d-flex justify-content-center m-b-20">
+                        <label class="carabin1 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content1" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val" type="hidden" name="photo-crop[]"/>
+                        </label>
+                        <label class="carabin2 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output2" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content2" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img2 file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val2" type="hidden" name="photo-crop[]"/>
+                        </label>
+                        <label class="carabin3 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output3" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content3" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img3 file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val3" type="hidden" name="photo-crop[]"/>
+                        </label>
+                      </div>
+                      <div class="col-md-12 d-flex justify-content-center">
+                        <label class="carabin4 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output4" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content4" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img4 file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val4" type="hidden" name="photo-crop[]"/>
+                        </label>
+                        <label class="carabin5 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output5" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content5" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img5 file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val5" type="hidden" name="photo-crop[]"/>
+                        </label>
+                        <label class="carabin6 cabinet m-r-25" style="height: 80px;width: 120px;">
+                          <div style="height: 80px;width: 120px;"><img class="gambar img-responsive img-thumbnail" id="item-img-output6" src="http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg" style="height: 80px;width: 120px;"/>
+                            <div class="div-content6" style="height: 80px;width: 120px;display: flex;align-items: center;justify-content: center;"><i class="ion ion-md-camera"></i>subir</div>
+                          </div>
+                          <input class="item-img6 file center-block" type="file" name="file_photo" style="display: none;"/>
+                          <input class="img-val6" type="hidden" name="photo-crop[]"/>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -479,6 +487,119 @@
                 </div>
               </div>
               <div class="page-section" id="web">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-xs-2"></div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel2">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo2"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn2" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel3">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo3"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn3" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel64">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo4"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn4" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel5">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo5"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn5" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal fade" id="cropImagePop6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" style="display: block; position: absolute; right: 6px;top: 3px; background: no-repeat;"><span aria-hidden="true"> </span><img src="img/close-svg.svg" alt=""/></button>
+                        <h4 class="modal-title" id="myModalLabel6">
+                          <!-- ?=multiLanguage( "Edit Foto" , "Edit Photo" )?-->
+                        </h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="center-block" id="upload-demo6"></div>
+                      </div>
+                      <div class="modal-footer d-flex justify-content-end">
+                        <button class="save-btn" id="cropImageBtn6" type="button">Guardar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="row no-margin item-dash">
                   <div class="col-md-4">
                     <div class="title-block">Sitio web de la actividad               </div>
@@ -732,8 +853,10 @@
   <script src="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/i18n/datepicker.ca-ES.js"></script>
-  <script src="js/modal/remodal.js"></script><script src="js/croppie/iEdit.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/modal/remodal.js"></script>
+  <script src="https://foliotek.github.io/Croppie/croppie.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<script src="js/croppie/iEdit.js"></script>--><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $('.make-activity').click( function() {
        $('tag').each(function(){
@@ -793,123 +916,6 @@
     
       
       });
-    
-    $("#files").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results").css("background-image", "url(" + res + ")" ); 
-        $('.div-content1').css('display', 'none'); 
-        $('.delete-photo1').css('display', 'block');
-        $('#photo-1').val(res)
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    });
-    $('.delete-photo1').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results").css("background-image", "url('')"); 
-      $('#photo-1').val("")
-    })
-    $('.delete-photo2').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results2").css("background-image", "url('')"); 
-      $('#photo-2').val("")
-    })
-    $('.delete-photo3').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results3").css("background-image", "url('')"); 
-      $('#photo-3').val("")
-    })
-    $('.delete-photo4').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results4").css("background-image", "url('')"); 
-      $('#photo-4').val("")
-    })
-    $('.delete-photo5').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results5").css("background-image", "url('')"); 
-      $('#photo-5').val("")
-    })
-    $('.delete-photo6').click(function(){
-      $(this).prev().css('display', 'block');
-      $(this).css('display', 'none');
-      $("#results6").css("background-image", "url('')"); 
-      $('#photo-6').val("")
-    })
-    $("#files2").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results2").css("background-image", "url(" + res + ")" ); 
-        $('.div-content2').css('display', 'none'); 
-        $('.delete-photo2').css('display', 'block');
-        $('#photo-2').val(res)    
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    });
-    $("#files3").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results3").css("background-image", "url(" + res + ")" ); 
-        $('.div-content3').css('display', 'none'); 
-        $('.delete-photo3').css('display', 'block');  
-        $('#photo-3').val(res)
-    
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    });
-    $("#files4").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results4").css("background-image", "url(" + res + ")" ); 
-        $('.div-content4').css('display', 'none');
-        $('.delete-photo4').css('display', 'block'); 
-        $('#photo-4').val(res)     
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    });
-    $("#files5").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results5").css("background-image", "url(" + res + ")" ); 
-        $('.div-content5').css('display', 'none');
-        $('.delete-photo5').css('display', 'block'); 
-        $('#photo-5').val(res)     
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    });
-    $("#files6").change(function(e){
-      var img = e.target.files[0];
-    
-      if(!iEdit.open(img, true, function(res){
-        $("#results6").css("background-image", "url(" + res + ")" ); 
-        $('.div-content6').css('display', 'none'); 
-        $('.delete-photo6').css('display', 'block');
-        $('#photo-6').val(res)     
-      })){
-        alert("Whoops! That is not an image!");
-      }
-    
-    
-    });
     
     
     

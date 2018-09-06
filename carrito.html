@@ -1,0 +1,220 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  </head>
+  <body class="app-js"> 
+    <div class="page-wrapper index actividad-view">
+      <div id="main-fixed-nav">
+        <nav class="main-nav">
+          <nav class="main-nav">
+            <div class="container">
+              <ul class="nav">
+                <li class="logo">
+                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                </li>
+                <li class="d-flex btn-hidden">
+                  <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
+                  <input class="inner-input f-6" type="text" placeholder="Ubicación"/>
+                  <button class="search"> <i class="ion ion-md-search"></i></button>
+                </li>
+                <li class="ml-auto d-flex btn-hidden">
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><img src="img/cart.svg" alt=""/></a></li>
+                  <div class="user btn-hidden">
+                    <ul class="d-flex" style="position: relative">
+                      <li class="badge d-flex align-items-center">(3)</li>
+                      <li class="name d-flex align-items-center dropbtn">María José<span>
+                           <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-mobile">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
+                </li>
+              </ul>
+              <div class="menu">
+                <div class="app-menu">
+                  <div class="header-mobile">
+                    <div class="name-usuario">
+                      <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+<li class="name d-flex align-items-center ">María José
+</li>
+                    </div>
+                    <div class="close-btn"><span></span><span></span></div>
+                  </div>
+                  <!--.separator-mobile(style="margin-bottom: 0")-->
+                  <div class="content-mobile">
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                      <div class="coin">
+                        <ul class="d-flex align-items-start puntos d-flex flex-column">
+                          <li class="coin-points">999999</li>
+                          <li class="thumb-point justify-content-end d-flex">puntos</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                    <div class="line-nav"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </nav>
+      </div>
+      <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
+      <div class="wrapper-content-m-t-30">
+        <div class="container m-t-40">
+          <div class="content-wrapper bg-fff" style="border-radius:4px">
+            <div class="spacing-items">
+              <div class="title-shop m-t-55">Carro de Compras</div>
+              <div class="d-flex">
+                <div class="notification-shop m-t-45 m-b-15">MARÍA JOSÉ, TIENES 3 ACTIVIDADES EN TU CARRO</div><a class="more-activity" href="#">+ AGREGA MÁS ACTIVIDADES </a>
+              </div>
+            </div>
+            <div class="content-shop">
+              <div class="items-shop spacing-items">
+                <div class="row no-margin">    
+                  <div class="col-md-8 d-flex">
+                    <div class="shop-img m-r-15"><img src="https://images.pexels.com/photos/61129/pexels-photo-61129.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                    <div class="align-content-items">
+                      <div class="shop-title">Nombre Actividad Número Uno
+                        <div class="date-shop m-l-15">16:30 pm - 18:00 pm</div>
+                      </div>
+                      <div class="shop-description m-t-5">Av. Lorem Ipsum 33450, Providencia.</div>
+                      <div class="shop-description m-t-10">Seleccionar niños/as que asistirán:</div>
+                      <div class="d-flex m-t-5">
+                        <div class="bg-checkmark m-r-5"><label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;"> Nombre Niño/a 1
+<input class="group1" type="checkbox"><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+</label>
+                        </div>
+                        <div class="bg-checkmark m-r-5"><label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;"> Nombre Niño/a 1
+<input class="group1" type="checkbox"><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+</label>
+                        </div>
+                        <div class="bg-checkmark m-r-5"><label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;"> Nombre Niño/a 1
+<input class="group1" type="checkbox"><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+</label>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <div class="persona-retiro m-t-10 m-r-10">Persona para retiro:</div><div class="select m-t-10">
+<select>
+<option>--Select--</option>
+<option>Hello 1</option>
+<option>Hello 2</option>
+<option>Hello 3</option>
+<option>Hello 4</option>
+</select>
+<div class="select_arrow">
+</div>
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 delete-shop">
+                    <div class="btn-actions-shop">
+                      <div class="delete-button-shop heigth-items"><a class="m-r-20" href="#"><i class="material-icons">delete</i></a></div>
+                      <div class="counter-shop heigth-items d-flex justify-content flex-column align-items-center">
+                        <div class="counter-text m-b-10">Cantidad</div><div class="number d-flex align-items-center  m-l-25  m-r-25">
+<span class="minus">-</span>
+<input type="text" value="0">
+<span class="plus">+</span>
+</div>
+                      </div>
+                      <div class="price-shop d-flex flex-column align-items-center m-l-20">
+                        <p>Subtotal</p>
+                        <div class="price-sub-total">$19.999</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer separator-to-body">
+          <div class="footer-content">
+            <div class="container p-l-60 p-r-60">
+              <div class="row no-margin">
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
+                  <div class="text-footer">Entrekids</div>
+                  <ul>
+                    <li>Sobre Nosotros</li>
+                    <li>Nuestro Equipo</li>
+                    <li>Mapa del Sitio</li>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Privacidad</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Proveedores</div>
+                  <ul>
+                    <li>Ser Proveedor</li>
+                    <li>Ayuda Proveedores</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Contacto</div>
+                  <ul>
+                    <li>contacto@entrekids.cl</li>
+                    <li>Formulario de Contacto</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Síguenos</div>
+                  <ul class="d-flex icon-social">
+                    <li> <i class="ion ion-logo-facebook"></i></li>
+                    <li> <i class="ion ion-logo-twitter"></i></li>
+                    <li> <i class="ion ion-logo-instagram"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-footer">
+            <div class="container p-l-60 p-r-60">
+              <div class="content-sub">2018 ENTREKIDS ® TODOS LOS DERECHOS RESERVADOS</div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+</html>
