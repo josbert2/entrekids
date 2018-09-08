@@ -12,22 +12,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
   </head>
-  <body class="app-js"> 
-    <div class="page-wrapper index home-proveedor">
-      <div id="main-fixed-nav">
+  <body class="app-js">
+    <div class="page-wrapper index home-proveedor home-only">
+      <div class="main-nav-sub fixered-nav" id="main-fixed-nav-nav">
         <nav class="main-nav">
           <nav class="main-nav">
             <div class="container">
               <ul class="nav form-log ml-auto-to-md">
                 <li class="logo">
-                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
                 </li>
                 <li class="ml-auto d-flex ml-auto-none-md">
                   <li class="m-r-15 d-flex align-items-center btn-hidden">
-                    <div class="btn-log" data-remodal-target="login">Ingreso</div>
+                    <div class="btn-log" data-remodal-target="login_proveedor">Ingreso</div>
                   </li>
                   <li class="d-flex align-items-center btn-hidden">
-                    <div class="btn-register" data-remodal-target="register">Registro</div>
+                    <div class="btn-register" data-remodal-target="">Registro</div>
                   </li>
                 </li>
                 <li class="nav-mobile">
@@ -58,98 +58,41 @@
               </div>
             </div>
           </nav>
-          <div class="remodal" data-remodal-id="login">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">ingresa a entrekids</div>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3">
-                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
-                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
-                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
-                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
-                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-5">
-                  <input class="input-modal" type="text" placeholder="entrekids@entrekids.cl"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-modal" type="password" placeholder="*********"/>
-                </div>
-                <div class="form m-b-5 d-flex justify-content-center">
-                  <div class="control-group form-custom" style="width:241px">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <label class="control control-checkbox" style="padding-top: 4.2px;">Recordar cuenta
-                        <input type="checkbox"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">ingresa</div>
-                </div>
-                <div class="form m-b-20 d-flex justify-content-start"><a href="" style="width: 241px !important;margin: 0 auto;"> 
-                    <p class="lost-pass has-text-centered">Olvidaste tu contraseña? </p></a></div>
-                <div class="form">
-                  <p class="register-p">Si no tienes cuenta Entrekids, <a class="link" href="#">regístrate acá.</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="remodal" data-remodal-id="register">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">Registrate en entrekids</div>
-            <div class="sub-modal m-b-10">Accede a miles de actividades a un click</div>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3">
-                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
-                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
-                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
-                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
-                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Nombre"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Apellido"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Email"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Celular"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register m-b-10" type="text" placeholder="Contraseña"/>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center m-b-10">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">REGÍSTRATE</div>
-                </div>
-                <div class="form">
-                  <p class="register-p" style="    width: 240px;text-align: center; margin: 0 auto;">Haciendo clic en “REGÍSTRATE” estas aceptando nuestros <a class="link" href="#">Términos y Condiciones </a>y nuestra <a class="link" href="#">Política de Privacidad.           </a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="remodal" data-remodal-id="contrasena">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">Recuperar CONTRASEÑA</div>
-            <p>Ingrese su email para reiniciar su contraseña</p>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3"><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-10">
-                  <input class="input-register" type="text" placeholder="Email"/>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center m-b-10">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">Enviar</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </nav>
+      </div>
+      <div class="remodal" data-remodal-id="login_proveedor">
+        <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+        <div class="proveedor-title m-b-25">Ingresa a tu cuenta <br> Proveedor EntreKids</div>
+        <div class="row no-margin">
+          <div class="col-md-6 offset-md-3">             
+            <div class="form m-b-5"><input class="input-register" type="text" placeholder="Ingresa tu mail"></div>
+            <div class="form m-b-5"><input class="input-register" type="text" placeholder="Ingresa tu contraseña"></div>
+            <div class="form m-b-5 d-flex justify-content-center">
+              <div class="control-group form-custom" style="width:241px">
+                <div class="d-flex align-items-center justify-content-center">
+                  <label class="control control-checkbox" style="padding-top: 4.2px;">Recordar cuenta
+                    <input type="checkbox"/>
+                    <div class="control_indicator"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form d-flex align-items-center justify-content-center">
+              <div class="btn-submit-login d-flex align-items-center justify-content-center">ingresa</div>
+            </div>
+            <div class="form m-b-20 d-flex justify-content-start"><a href="" style="width: 241px !important;margin: 0 auto;"> 
+                <p class="lost-pass has-text-centered">Olvidaste tu contraseña? </p></a></div>
+            <div class="form">
+              <p class="register-p">Si no tienes cuenta Entrekids, <a class="link" href="#">regístrate acá.</a></p>
+            </div>
+          </div>
+        </div>
       </div><div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
       <div class="hero-image d-ifflex flex-column align-content-center" style="background-image: url(img/proveedor.jpg)">
-        <div class="title-hero" style="text-transform: uppercase">gana nuevos clientes con entrekids</div>
-        <div class="title-hero-sub m-t-20">Da más visibilidad a tu marca y atrae nuevos consumidores a tu negocio. Entrekids te ayudará a gestionar tu negocio con un software simple de usar y que te permitirá gastar menos tiempo administrando y más tiempo haciendo lo que realmente te apasiona</div>
+        <div class="container">
+          <div class="title-hero" style="text-transform: uppercase">gana nuevos clientes con entrekids</div>
+          <div class="title-hero-sub m-t-20">Da más visibilidad a tu marca y atrae nuevos consumidores a tu negocio. Entrekids te ayudará a gestionar tu negocio con un software simple de usar y que te permitirá gastar menos tiempo administrando y más tiempo haciendo lo que realmente te apasiona</div>
+        </div>
         <div class="d-flex justify-content-center m-t-45 btn-landing-pages">
           <div class="btn-hero-social is-red m-r-20">REGÍSTRATE GRATIS</div>
         </div>
@@ -163,15 +106,19 @@
           <div class="row no-margin justify-content-center">
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-1.svg" alt=""/>
               <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
+              <p class="description-proveedor m-t-20">Muestra tus clases, espacios y equipo.Alcanza miles de padres y potenciales clientes siendo miembro de EK Marketplace.</p>
             </div>
-            <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-2.svg" alt=""/>
-              <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
+            <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-20" src="img/pro-2.svg" alt=""/>
+              <div class="title-provedor-items">Llena tus espacios vacíos e incrementa tus ingresos</div>
+              <p class="description-proveedor m-t-20">Te ayudamos a utilizar los espacios que no usas. Recibe reservas y pagos con un solo click.</p>
             </div>
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-3.svg" alt=""/>
-              <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
+              <div class="title-provedor-items">Administra tu negocio desde cualquier lugar</div>
+              <p class="description-proveedor m-t-20">EK ayuda a miles de padres a encontrar y reservar las mejores actividades para sus hijos.</p>
             </div>
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-4.svg" alt=""/>
               <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
+              <p class="description-proveedor m-t-20">Tendrás el completo control de tu negocio a un click. Disponibilidad, precios, reglas y todo desde cualquier dispositivo y lugar.</p>
             </div>
           </div>
         </div>
@@ -184,8 +131,58 @@
       </section>
       <section class="section-secondary" style="background-color:#fff">
         <div class="container">
-          <div class="width-text-03">
+          <div class="width-text-04">
             <div class="title-landing m-b-40" style=" color: #333333;">trabajamos con los principales proveedores de entrenimiento para niños</div>
+            <div class="categories-proveedor">
+              <div class="row no-margin">
+                <div class="col-md-4">
+                  <div class="content-catego">
+                    <div class="d-flex align-items-center">
+                      <div class="svg-img m-10-r"><img src="img/categorias/acuaticas.svg"/>
+                      </div>
+                      <div class="categories-text">Actividades acuáticas</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="content-catego">
+                    <div class="d-flex align-items-center">
+                      <div class="svg-img"><img src="img/categorias/acuaticas.svg"/>
+                      </div>
+                      <div class="categories-text">Actividades acuáticas</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="content-catego">
+                    <div class="d-flex align-items-center">
+                      <div class="svg-img"><img src="img/categorias/acuaticas.svg"/>
+                      </div>
+                      <div class="categories-text">Actividades acuáticas</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  
+              +icon('img/categorias/afterschool.svg')
+              +icon('img/categorias/animales.svg')
+              +icon('img/categorias/atracciones.svg')
+              +icon('img/categorias/cine.svg')
+              +icon('img/categorias/cultura.svg')
+              +icon('img/categorias/cumpleaños.svg')
+              +icon('img/categorias/deporte.svg')
+              +icon('img/categorias/diversion.svg')
+              +icon('img/categorias/heladeria.svg')
+              +icon('img/categorias/naturaleza.svg')
+              +icon('img/categorias/parques.svg')
+              +icon('img/categorias/peluqueria.svg')
+              +icon('img/categorias/plazas.svg')
+              +icon('img/categorias/restoranes.svg')
+              +icon('img/categorias/stayandplay.svg')
+              +icon('img/categorias/talleres.svg')
+              +icon('img/categorias/trekking.svg')
+              -->
+            </div>
           </div>
         </div>
       </section>
@@ -195,7 +192,16 @@
             <div class="title-landing m-b-40" style=" color: #333333;">Aprende más sobre como entrekids puede ayudar a tu negocio</div>
             <div class="title-form">Completa el formulario y nuestro equipo te contactará en las próximas 24 horas.</div>
             <div class="form-box">
-              <div class="input-register"></div>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Nombre Negocio"/>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Email"/>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Teléfono"/>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Código Postal"/>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Sitio Web"/>
+              <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Nombre"/>
+              <input class="input-register" style="width:100%;padding:8px" placeholder="Apellido"/>
+              <div class="d-flex justify-content-center m-t-10 m-b-10"> 
+                <div class="register-proveedor">REGÍSTRATE</div>
+              </div>
             </div>
           </div>
         </div>

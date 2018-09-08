@@ -2,8 +2,8 @@ var styles = [{"featureType":"landscape.natural","elementType":"geometry.fill","
 var sites = [
 	
 	['../img/pointer/acuaticas.svg', -33.49003, -70.618009, 1,  
-	`<div style="    width: 175px;"> 
-	<img class="img-map" style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
+	`<div style="    width: 150px;"> 
+	<img class="img-map" style="width:150px; height: 100px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
 	<h2 style="margin: 1px 0 4px; border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">
 	Subaquatic Parks
 	</h2>
@@ -15,8 +15,8 @@ var sites = [
 	</div>`,
 	'Info.'],
 	['../img/pointer/acuaticas.svg', -33.396108, -70.690063, 1,  
-	`<div style="    width: 175px;"> 
-	<img class="img-map" style="width:175px; height: 95px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
+	`<div style="    width: 150px;"> 
+	<img class="img-map" style="width:150px; height: 100px;"src="https://curico.cl/sitio/wp-content/uploads/2016/11/tenis-kids.jpg">
 	<h2 style="margin: 1px 0 4px; border:none;text-align: left;font-size: 12px; color: #1EB2E8; line-height:16px;">
 	Subaquatic Parks
 	</h2>

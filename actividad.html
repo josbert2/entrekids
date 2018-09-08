@@ -5,18 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
-    <style></style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index"></div>
-    <div id="main-fixed-nav">
+    <div class="main-nav-sub fixered-nav" id="main-fixed-nav-nav">
       <nav class="main-nav">
         <nav class="main-nav">
           <div class="container">
             <ul class="nav">
               <li class="logo">
-                <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
               </li>
               <li class="d-flex btn-hidden">
                 <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
@@ -25,7 +24,26 @@
               </li>
               <li class="ml-auto d-flex btn-hidden">
                 <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
-                <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><img src="img/cart.svg" alt=""/></a></li>
+                <li class="d-flex align-items-center btn-hidden btn-cart"><a class="cart-dropdowm" href="#">
+                    <div class="center-flex" style="position: relative;"><img src="img/cart.svg" alt=""/>
+                      <div class="pointer-active-cart"></div>
+                    </div></a></li><div id="myCart" class="dropdown-content cart-content-drop right-drop">
+                <ul>
+                  <li class="list-cart"><a href="#">
+                      <div class="d-flex">
+                        <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="texting-cart">
+                          <div class="cart-activity">Curabitur Cobortis convallis </div>
+                        </div>
+                      </div></a></li>
+                  <li class="list-cart"><a href="#">
+                      <div class="d-flex">
+                        <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                        <div class="texting-cart">
+                          <div class="cart-activity">Curabitur Cobortis convallis </div>
+                        </div>
+                      </div></a></li>
+                </ul></div>
                 <div class="user btn-hidden">
                   <ul class="d-flex" style="position: relative">
                     <li class="badge d-flex align-items-center">(3)</li>
@@ -40,7 +58,7 @@
                       </div>
                     </li>
                     <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
-                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></li>
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
                     <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
                     <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
                   </ul>
@@ -53,50 +71,50 @@
                   <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
                 </svg>
               </li>
-            </ul>
-            <div class="menu">
-              <div class="app-menu">
-                <div class="header-mobile">
-                  <div class="name-usuario">
-                    <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+              <div class="menu">
+                <div class="app-menu">
+                  <div class="header-mobile">
+                    <div class="name-usuario">
+                      <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
 <li class="name d-flex align-items-center ">María José
 </li>
-                  </div>
-                  <div class="close-btn"><span></span><span></span></div>
-                </div>
-                <!--.separator-mobile(style="margin-bottom: 0")-->
-                <div class="content-mobile">
-                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
-                    <div class="coin">
-                      <ul class="d-flex align-items-start puntos d-flex flex-column">
-                        <li class="coin-points">999999</li>
-                        <li class="thumb-point justify-content-end d-flex">puntos</li>
-                      </ul>
                     </div>
+                    <div class="close-btn"><span></span><span></span></div>
                   </div>
-                  <div class="line-nav"></div>
-                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
-                  <div class="line-nav"></div>
-                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></div>
-                  <div class="line-nav"></div>
-                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
-                  <div class="line-nav"></div>
-                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
-                  <div class="line-nav"></div>
+                  <!--.separator-mobile(style="margin-bottom: 0")-->
+                  <div class="content-mobile">
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                      <div class="coin">
+                        <ul class="d-flex align-items-start puntos d-flex flex-column">
+                          <li class="coin-points">999999</li>
+                          <li class="thumb-point justify-content-end d-flex">puntos</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                    <div class="line-nav"></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ul>
           </div>
         </nav>
       </nav>
-    </div>
-    <div class="filter-section">
-      <div class="btn-button-filter">
-        <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+      <div class="filter-section">
+        <div class="btn-button-filter">
+          <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+        </div>
+        <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
       </div>
-      <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
     </div>
-    <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
+    <div class="alert-success">Regístrate y obtén un 10% de descuento en tu primera compra</div>
     <div class="wrapper-content">
       <div class="container">
         <div class="row">
@@ -116,40 +134,39 @@
                   </div>
                 </div>
                 <ul class="collapse radio-container">
-                  <li class="item-collapse">ubicación
+                  <li>
+                    <div class="item-collapse">ubicación</div>
+                    <div class="collapse-content">
+                      <div class="d-flex flex-column">
+                        <label class="checkbox-container" data-id="ubicacion"> Santiago Centro
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion"> Providencia
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion"> Vitacura
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">Las Condes
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">La Florida
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" data-id="ubicacion">Puente Alto
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                        <!-- This is for radio input-->
+                        <!--.cell
+                        label(for="Santiago Centro")
+                          input(type="checkbox" name="region" value="providencia" id="Santiago Centro" )
+                          span.circle
+                          | Santiago Centro
+                        -->
+                      </div>
+                    </div>
                     <div class="btn-clear">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
                   </li>
-                  <div class="collapse-content">
-                    <div class="d-flex flex-column">
-                      <label class="checkbox-container" data-id="ubicacion"> Santiago Centro
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <label class="checkbox-container" data-id="ubicacion"> Providencia
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <label class="checkbox-container" data-id="ubicacion"> Vitacura
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <label class="checkbox-container" data-id="ubicacion">Las Condes
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <label class="checkbox-container" data-id="ubicacion">La Florida
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <label class="checkbox-container" data-id="ubicacion">Puente Alto
-                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
-                      </label>
-                      <!-- This is for radio input-->
-                      <!--.cell
-                      label(for="Santiago Centro")
-                        input(type="checkbox" name="region" value="providencia" id="Santiago Centro" )
-                        span.circle
-                        | Santiago Centro
-                      
-                      
-                      -->
-                    </div>
-                  </div>
                   <li class="item-collapse">edad
                     <div class="btn-edad">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
                   </li>
@@ -328,10 +345,15 @@
               </div>
               <div class="content-calendar">
                 <div class="row items-container">
-                  <div class="col-md-3 col-xs-4 no-padding img-div">
-                    <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
-                      <div class="shop-online">Paga online</div>
+                  <div class="col-md-3 col-xs-4 no-padding">
+                    <div class="slick-img">
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                     </div>
+                    <div class="shop-online">Paga online</div>
                   </div>
                   <div class="col-md-9 col-xs-8 items-content">
                     <div class="row no-margin">
@@ -374,10 +396,15 @@
                 </div>
                 <div class="hr-items">         </div>
                 <div class="row items-container">
-                  <div class="col-md-3 col-xs-4 no-padding img-div">
-                    <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
-                      <div class="shop-online">Paga online</div>
+                  <div class="col-md-3 col-xs-4 no-padding">
+                    <div class="slick-img">
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                     </div>
+                    <div class="shop-online">Paga online</div>
                   </div>
                   <div class="col-md-9 col-xs-8 items-content">
                     <div class="row no-margin">
@@ -395,8 +422,8 @@
                           <div class="data-item">
                             <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
                             <div class="d-flex flex-column price-card"><small class="price"> 
-                                <div>Precio entrekids: </div>$99999</small><small class="price-normal">
-                                <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                                <div> </div>$99999</small><small class="price-normal">
+                                <div class="price-normal"> </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
                           </div>
                         </div>
                       </div>
@@ -420,10 +447,15 @@
                 </div>
                 <div class="hr-items">       </div>
                 <div class="row items-container">
-                  <div class="col-md-3 col-xs-4 no-padding img-div">
-                    <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
-                      <div class="shop-online">Paga online</div>
+                  <div class="col-md-3 col-xs-4 no-padding">
+                    <div class="slick-img">
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                     </div>
+                    <div class="shop-online">Paga online</div>
                   </div>
                   <div class="col-md-9 col-xs-8 items-content">
                     <div class="row no-margin">
@@ -441,8 +473,8 @@
                           <div class="data-item">
                             <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
                             <div class="d-flex flex-column price-card"><small class="price"> 
-                                <div>Precio entrekids: </div>$99999</small><small class="price-normal">
-                                <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                                <div> </div>$99999</small><small class="price-normal">
+                                <div class="price-normal"> </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
                           </div>
                         </div>
                       </div>
@@ -466,10 +498,15 @@
                 </div>
                 <div class="hr-items">       </div>
                 <div class="row items-container">
-                  <div class="col-md-3 col-xs-4 no-padding img-div">
-                    <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
-                      <div class="shop-online">Paga online</div>
+                  <div class="col-md-3 col-xs-4 no-padding">
+                    <div class="slick-img">
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                      <div class="img-div"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
                     </div>
+                    <div class="shop-online">Paga online</div>
                   </div>
                   <div class="col-md-9 col-xs-8 items-content">
                     <div class="row no-margin">
@@ -487,8 +524,8 @@
                           <div class="data-item">
                             <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
                             <div class="d-flex flex-column price-card"><small class="price"> 
-                                <div>Precio entrekids: </div>$99999</small><small class="price-normal">
-                                <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                                <div> </div>$99999</small><small class="price-normal">
+                                <div class="price-normal"> </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
                           </div>
                         </div>
                       </div>
@@ -574,5 +611,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/texttruncate.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/index.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slick-img').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: "<img class='pointer-cursor show-on-hover' src='img/back.png'>",
+        nextArrow: "<img class='p-r-a pointer-cursor show-on-hover' src='img/next.png'>"
+      });
+    });
+  </script>
 </html>

@@ -1,0 +1,392 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <style></style>
+  </head>
+  <body class="app-js"> 
+    <div class="page-wrapper index"></div>
+    <div id="main-fixed-nav">
+      <nav class="main-nav">
+        <nav class="main-nav">
+          <div class="container">
+            <ul class="nav">
+              <li class="logo">
+                <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+              </li>
+              <li class="d-flex btn-hidden">
+                <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
+                <input class="inner-input f-6" type="text" placeholder="Ubicación"/>
+                <button class="search"> <i class="ion ion-md-search"></i></button>
+              </li>
+              <li class="ml-auto d-flex btn-hidden">
+                <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><img src="img/cart.svg" alt=""/></a></li>
+                <div class="user btn-hidden">
+                  <ul class="d-flex" style="position: relative">
+                    <li class="badge d-flex align-items-center">(3)</li>
+                    <li class="name d-flex align-items-center dropbtn">María José<span>
+                         <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                      <div class="coin">
+                        <ul class="d-flex align-items-start puntos d-flex flex-column">
+                          <div class="coin-points">999999</div>
+                          <div class="thumb-point justify-content-end d-flex">puntos</div>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></li>
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                    <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-mobile">
+                <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                  <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                  <path class="line middle" d="m 30,50 h 40"></path>
+                  <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                </svg>
+              </li>
+            </ul>
+            <div class="menu">
+              <div class="app-menu">
+                <div class="header-mobile">
+                  <div class="name-usuario">
+                    <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+<li class="name d-flex align-items-center ">María José
+</li>
+                  </div>
+                  <div class="close-btn"><span></span><span></span></div>
+                </div>
+                <!--.separator-mobile(style="margin-bottom: 0")-->
+                <div class="content-mobile">
+                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                    <div class="coin">
+                      <ul class="d-flex align-items-start puntos d-flex flex-column">
+                        <li class="coin-points">999999</li>
+                        <li class="thumb-point justify-content-end d-flex">puntos</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="line-nav"></div>
+                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                  <div class="line-nav"></div>
+                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></div>
+                  <div class="line-nav"></div>
+                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                  <div class="line-nav"></div>
+                  <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                  <div class="line-nav"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </nav>
+    </div>
+    <div class="filter-section">
+      <div class="btn-button-filter">
+        <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+      </div>
+      <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
+    </div>
+    <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
+    <div class="wrapper-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 filter-btn">
+            <div class="card-content">
+              <ul class="tabs">
+                <li class="active-tabs">Calendario</li>
+                <li>Lista</li>
+                <li>Mapa</li>
+              </ul>
+              <div class="wrapper-card">
+                <div id="time-range">
+                  <div class="text-range"><span class="slider-time">6:00 AM</span><span class="slider-time2">8:00 PM</span></div>
+                  <p></p>
+                  <div class="sliders_step1">
+                    <div id="slider-range"></div>
+                  </div>
+                </div>
+                <ul class="collapse radio-container">
+                  <li class="item-collapse">ubicación
+                    <div class="btn-clear">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content">
+                    <div class="d-flex flex-column">
+                      <label class="checkbox-container" data-id="ubicacion"> Santiago Centro
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="ubicacion"> Providencia
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="ubicacion"> Vitacura
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="ubicacion">Las Condes
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="ubicacion">La Florida
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="ubicacion">Puente Alto
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <!-- This is for radio input-->
+                      <!--.cell
+                      label(for="Santiago Centro")
+                        input(type="checkbox" name="region" value="providencia" id="Santiago Centro" )
+                        span.circle
+                        | Santiago Centro
+                      
+                      
+                      -->
+                    </div>
+                  </div>
+                  <li class="item-collapse">edad
+                    <div class="btn-edad">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content">
+                    <div class="d-flex flex-column">
+                      <label class="checkbox-container" data-id="edad">0-6 Meses
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">6-12 Meses
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">12-18 Meses
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">18-24 Meses
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">2-3 Años
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">3-4 Años
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">4-5 Años
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="edad">6-8 Años
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <li class="item-collapse">categorías
+                    <div class="btn-categoria">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content">
+                    <div class="d-flex flex-column">
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                      <label class="checkbox-container" data-id="categoria">Lorem
+                        <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <li class="item-collapse">precios
+                    <div class="btn-precios">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content">
+                    <div class="d-flex flex-column">
+                      <div class="cell">
+                        <label class="checkbox-container" data-id="precios">Gratis
+                          <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                        </label>
+                      </div>
+                      <div id="amount" readonly="readonly" style="background:none;box-shadow: none;border:0; color:#f6931f; font-weight:bold;">
+                        <input class="price-one" type="text"/>
+                        <input class="second-one" type="text"/>
+                      </div>
+                      <div id="slider-range-price"></div>
+                    </div>
+                  </div>
+                  <li class="item-collapse">proveedores
+                    <div class="btn-prover">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content"><input class=" m-b-10 ghost-input" type="text" placeholder="Buscar">
+                    <div class="group-btn">
+                      <button class="btn-one w50">TODO </button>
+                      <button class="btn-second w50">Favoritos</button>
+                    </div>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="prover">Proveedores
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <li class="item-collapse m-b-15" style="border-bottom: 1px solid #777777">Otros atributos
+                    <div class="btn-another">Borrar todo</div><i class="material-icons">keyboard_arrow_down</i>
+                  </li>
+                  <div class="collapse-content">
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                    <label class="checkbox-container" data-id="another"> lorem
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <div class="plazas-view">
+                    <label class="checkbox-container">Mostrar plazas
+                      <input class="group1" type="checkbox"/><span class="checkmark"></span>
+                    </label>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="apply-change m-t-20">
+              <div class="btn-simple" style="width:100%;font-weight:100">Aplicar filtros</div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="card-content">
+              <ul class="d-flex nav-day">
+                <li class="to-prev"><span><i class="material-icons">keyboard_arrow_left</i></span></li>
+                <li class="active-day day-content"><span>dom</span><span>17/6</span></li>
+                <li class="day-content"><span>LUN</span><span>18/6</span></li>
+                <li class="day-content"><span>mar</span><span>19/6</span></li>
+                <li class="day-content"><span>mie</span><span>20/6</span></li>
+                <li class="day-content"><span>jue</span><span>21/6</span></li>
+                <li class="day-content"><span>vie</span><span>22/6</span></li>
+                <li class="day-content"><span>sab</span><span>23/6</span></li>
+                <li class="to-next"><span><i class="material-icons">keyboard_arrow_right</i></span></li>
+              </ul>
+              <div class="today">
+                <div class="row no-margin title-m">
+                  <div class="offset-md-4 col-sm-12 col-md-4 col-xs-12 day-header">
+                    <div class="title-main">Domingo, 17 de junio</div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 provider-input"><div class="input-search input-today">
+                    <input class="provider" type="text" placeholder="Buscar por actividad o proveedor"/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-calendar">
+                <div class="empty-result">
+                  <div class="empty-text m-b-5">Lo lamentamos, no hay resultados</div>
+                  <div class="empty-text-sub">Intenta borrando tus filtros o busca en las <br> actividades de mañana para ver más resultados</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer separator-to-body">
+        <div class="footer-content">
+          <div class="container p-l-60 p-r-60">
+            <div class="row no-margin">
+              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
+                <div class="text-footer">Entrekids</div>
+                <ul>
+                  <li>Sobre Nosotros</li>
+                  <li>Nuestro Equipo</li>
+                  <li>Mapa del Sitio</li>
+                  <li>Preguntas Frecuentes</li>
+                  <li>Privacidad</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                <div class="text-footer">Proveedores</div>
+                <ul>
+                  <li>Ser Proveedor</li>
+                  <li>Ayuda Proveedores</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                <div class="text-footer">Contacto</div>
+                <ul>
+                  <li>contacto@entrekids.cl</li>
+                  <li>Formulario de Contacto</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                <div class="text-footer">Síguenos</div>
+                <ul class="d-flex icon-social">
+                  <li> <i class="ion ion-logo-facebook"></i></li>
+                  <li> <i class="ion ion-logo-twitter"></i></li>
+                  <li> <i class="ion ion-logo-instagram"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sub-footer">
+          <div class="container p-l-60 p-r-60">
+            <div class="content-sub">2018 ENTREKIDS ® TODOS LOS DERECHOS RESERVADOS</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+</html>

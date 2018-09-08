@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <style></style>
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index">
@@ -15,7 +16,7 @@
             <div class="container">
               <ul class="nav">
                 <li class="logo">
-                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
+                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
                 </li>
                 <li class="d-flex btn-hidden">
                   <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
@@ -121,9 +122,9 @@
             <div class="col-md-3 filter-btn">
               <div class="card-content">
                 <ul class="tabs">
-                  <li>Calendario</li>
+                  <li class="active-tabs">Calendario</li>
                   <li>Lista</li>
-                  <li class="active-tabs">Mapa</li>
+                  <li>Mapa</li>
                 </ul>
                 <div class="wrapper-card">
                   <div id="time-range">
@@ -310,7 +311,7 @@
                       </label>
                     </div>
                     <div class="plazas-view">
-                      <label class="checkbox-container" style="text-transform:inherit !important">Mostrar todas las actividades
+                      <label class="checkbox-container">Mostrar plazas
                         <input class="group1" type="checkbox"/><span class="checkmark"></span>
                       </label>
                     </div>
@@ -334,65 +335,253 @@
                   <li class="day-content"><span>sab</span><span>23/6</span></li>
                   <li class="to-next"><span><i class="material-icons">keyboard_arrow_right</i></span></li>
                 </ul>
-                <div class="today" style="padding: 0.875rem 15px;border-bottom:0;">
+                <div class="today">
                   <div class="row no-margin title-m">
-                    <div class="col-md-4 d-flex align-items-center justify-content-center-md betwwen-md" style="padding-left:0;"><a class="d-flex align-items-center" href="#" style="color: #8d8d8d"><i class="material-icons m-r-10">event</i><span>Hoy</span></a><label class="checkbox-container none-md" data-id="edad"> Mostrar todo
-<input class=actividad" type="checkbox"><span class="checkmark"></span>
-</label>
+                    <div class="offset-md-4 col-sm-12 col-md-4 col-xs-12 day-header">
+                      <div class="title-main">Domingo, 17 de junio</div>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-xs-12 day-header">
-                      <div class="title-main btn-hidden">Domingo, 17 de junio</div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 provider-input" style="padding-right:0;"><div class="input-search input-today">
-                      <input class="provider" type="text" placeholder="Buscar"/></div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 provider-input"><div class="input-search input-today">
+                      <input class="provider" type="text" placeholder="Buscar por actividad o proveedor"/></div>
                     </div>
                   </div>
                 </div>
-                <div style="background: #fff;padding: 0 15px 15px 15px;"><div id="gmap" style="width:100%;height:550px;"></div></div>
+                <div class="content-calendar">
+                  <div class="row items-container">
+                    <div class="col-md-3 col-xs-4 no-padding img-div">
+                      <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
+                        <div class="shop-online">Paga online</div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-xs-8 items-content">
+                      <div class="row no-margin">
+                        <div class="col-md-6 col-xs-12 no-padding primary-description">
+                          <div class="d-flex description-item flex-column">
+                            <div class="item-title">Curabitur Cobortis convallis </div>
+                            <p class="description-item">Suspendisse fermentum sem sagittis ante veni</p>
+                            <p class="description-item">Edad: 8 - 12 años</p>
+                            <div class="text-muted m-b-10">Providencia</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 no-padding secondary-description">
+                          <div class="d-flex icon-align">
+                            <div class="icon-item"><i class="material-icons">dashboard</i></div>
+                            <div class="data-item">
+                              <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
+                              <div class="d-flex flex-column price-card"><small class="price"> 
+                                  <div> </div>$99999</small><small class="price-normal">
+                                  <div class="price-normal"> </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 btn-hidden no-padding d-flex flex-column">
+                          <div class="btn-actions btn-full d-flex justify-content-center">
+                            <button class="btn-full">ver</button>
+                          </div><small class="cupos">9 Cupos</small>
+                        </div>
+                      </div>
+                      <div class="change-btn">
+                        <div class="col-md-12 no-padding order-2">
+                          <div class="bg-reservation">Reservaciones cerradas el 17/6 a las 8:00 AM</div>
+                        </div>
+                        <div class="col-md-12 no-padding mobile-btn">
+                          <div class="btn-actions btn-full">
+                            <button class="btn-full">ver</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hr-items">         </div>
+                  <div class="row items-container">
+                    <div class="col-md-3 col-xs-4 no-padding img-div">
+                      <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
+                        <div class="shop-online">Paga online</div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-xs-8 items-content">
+                      <div class="row no-margin">
+                        <div class="col-md-6 col-xs-12 no-padding primary-description">
+                          <div class="d-flex description-item flex-column">
+                            <div class="item-title">Curabitur Cobortis convallis </div>
+                            <p class="description-item">Suspendisse fermentum sem sagittis ante veni</p>
+                            <p class="description-item">Edad: 8 - 12 años</p>
+                            <div class="text-muted m-b-10">Providencia</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 no-padding secondary-description">
+                          <div class="d-flex icon-align">
+                            <div class="icon-item"><i class="material-icons">dashboard</i></div>
+                            <div class="data-item">
+                              <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
+                              <div class="d-flex flex-column price-card"><small class="price"> 
+                                  <div>Precio entrekids: </div>$99999</small><small class="price-normal">
+                                  <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 btn-hidden no-padding d-flex flex-column">
+                          <div class="btn-actions btn-full d-flex justify-content-center">
+                            <button class="btn-full">ver</button>
+                          </div><small class="cupos">9 Cupos</small>
+                        </div>
+                      </div>
+                      <div class="change-btn">
+                        <div class="col-md-12 no-padding order-2">
+                          <div class="bg-reservation">Reservaciones cerradas el 17/6 a las 8:00 AM</div>
+                        </div>
+                        <div class="col-md-12 no-padding mobile-btn">
+                          <div class="btn-actions btn-full">
+                            <button class="btn-full">ver</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hr-items">       </div>
+                  <div class="row items-container">
+                    <div class="col-md-3 col-xs-4 no-padding img-div">
+                      <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
+                        <div class="shop-online">Paga online</div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-xs-8 items-content">
+                      <div class="row no-margin">
+                        <div class="col-md-6 col-xs-12 no-padding primary-description">
+                          <div class="d-flex description-item flex-column">
+                            <div class="item-title">Curabitur Cobortis convallis </div>
+                            <p class="description-item">Suspendisse fermentum sem sagittis ante veni</p>
+                            <p class="description-item">Edad: 8 - 12 años</p>
+                            <div class="text-muted m-b-10">Providencia</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 no-padding secondary-description">
+                          <div class="d-flex icon-align">
+                            <div class="icon-item"><i class="material-icons">dashboard</i></div>
+                            <div class="data-item">
+                              <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
+                              <div class="d-flex flex-column price-card"><small class="price"> 
+                                  <div>Precio entrekids: </div>$99999</small><small class="price-normal">
+                                  <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 btn-hidden no-padding d-flex flex-column">
+                          <div class="btn-actions btn-full d-flex justify-content-center">
+                            <button class="btn-full">ver</button>
+                          </div><small class="cupos">9 Cupos</small>
+                        </div>
+                      </div>
+                      <div class="change-btn">
+                        <div class="col-md-12 no-padding order-2">
+                          <div class="bg-reservation">Reservaciones cerradas el 17/6 a las 8:00 AM</div>
+                        </div>
+                        <div class="col-md-12 no-padding mobile-btn">
+                          <div class="btn-actions btn-full">
+                            <button class="btn-full">ver</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hr-items">       </div>
+                  <div class="row items-container">
+                    <div class="col-md-3 col-xs-4 no-padding img-div">
+                      <div class="bg" style="background-image: url(https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)">
+                        <div class="shop-online">Paga online</div>
+                      </div>
+                    </div>
+                    <div class="col-md-9 col-xs-8 items-content">
+                      <div class="row no-margin">
+                        <div class="col-md-6 col-xs-12 no-padding primary-description">
+                          <div class="d-flex description-item flex-column">
+                            <div class="item-title">Curabitur Cobortis convallis </div>
+                            <p class="description-item">Suspendisse fermentum sem sagittis ante veni</p>
+                            <p class="description-item">Edad: 8 - 12 años</p>
+                            <div class="text-muted m-b-10">Providencia</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 no-padding secondary-description">
+                          <div class="d-flex icon-align">
+                            <div class="icon-item"><i class="material-icons">dashboard</i></div>
+                            <div class="data-item">
+                              <div class="d-flex time-r"><span>10:00 AM</span><small>99 min</small></div>
+                              <div class="d-flex flex-column price-card"><small class="price"> 
+                                  <div>Precio entrekids: </div>$99999</small><small class="price-normal">
+                                  <div class="price-normal"> Precio Normal: </div>$99999</small><small class="price-normal cupos-mobile" style="    text-decoration: blink;">9 Cupos</small></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 btn-hidden no-padding d-flex flex-column">
+                          <div class="btn-actions btn-full d-flex justify-content-center">
+                            <button class="btn-full">ver</button>
+                          </div><small class="cupos">9 Cupos</small>
+                        </div>
+                      </div>
+                      <div class="change-btn">
+                        <div class="col-md-12 no-padding order-2">
+                          <div class="bg-reservation">Reservaciones cerradas el 17/6 a las 8:00 AM</div>
+                        </div>
+                        <div class="col-md-12 no-padding mobile-btn">
+                          <div class="btn-actions btn-full">
+                            <button class="btn-full">ver</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hr-items">       </div>
+                </div>
+                <div class="footer-calendar">
+                  <div class="content-footer">
+                    <div class="title-footer">Para ver todas las actividades que entrekids tiene para ti</div>
+                    <div class="btn-footer">Registrate</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <footer class="footer separator-to-body">
           <div class="footer-content">
-            <div class="container"></div>
-            <div class="row no-margin">
-              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
-                <div class="text-footer">EntreKids</div>
-                <ul>
-                  <li>Sobre Nosotros</li>
-                  <li>Nuestro Equipo</li>
-                  <li>Mapa del Sitio</li>
-                  <li>Preguntas Frecuentes</li>
-                  <li>Privacidad</li>
-                </ul>
-              </div>
-              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
-                <div class="text-footer">Para Negocios</div>
-                <ul>
-                  <li>Ser Proveedor</li>
-                  <li>Ayuda Proveedores</li>
-                </ul>
-              </div>
-              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
-                <div class="text-footer">Contacto</div>
-                <ul>
-                  <li>contacto@entrekids.cl</li>
-                  <li>Formulario de Contacto</li>
-                </ul>
-              </div>
-              <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
-                <div class="text-footer">Síguenos</div>
-                <ul class="d-flex icon-social">
-                  <li> <i class="ion ion-logo-facebook"></i></li>
-                  <li> <i class="ion ion-logo-twitter"></i></li>
-                  <li> <i class="ion ion-logo-instagram"></i></li>
-                </ul>
+            <div class="container p-l-60 p-r-60">
+              <div class="row no-margin">
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
+                  <div class="text-footer">Entrekids</div>
+                  <ul>
+                    <li>Sobre Nosotros</li>
+                    <li>Nuestro Equipo</li>
+                    <li>Mapa del Sitio</li>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Privacidad</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Proveedores</div>
+                  <ul>
+                    <li>Ser Proveedor</li>
+                    <li>Ayuda Proveedores</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Contacto</div>
+                  <ul>
+                    <li>contacto@entrekids.cl</li>
+                    <li>Formulario de Contacto</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Síguenos</div>
+                  <ul class="d-flex icon-social">
+                    <li> <i class="ion ion-logo-facebook"></i></li>
+                    <li> <i class="ion ion-logo-twitter"></i></li>
+                    <li> <i class="ion ion-logo-instagram"></i></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           <div class="sub-footer">
-            <div class="container">
+            <div class="container p-l-60 p-r-60">
               <div class="content-sub">2018 ENTREKIDS ® TODOS LOS DERECHOS RESERVADOS</div>
             </div>
           </div>
@@ -405,7 +594,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/texttruncate.js"></script>
-  <script src="js/index.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSY7p-B5a1oKXNwSp70kNnYM3TSnymTNY&amp;libraries=places" type="text/javascript"></script>
-  <script src="https://maplacejs.com/dist/maplace.min.js"></script>
-  <script src="js/maplace.js"></script>
+  <script src="js/index.js"></script>
 </html>

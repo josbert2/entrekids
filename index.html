@@ -14,21 +14,60 @@
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index landing-pages-home">
-      <div id="main-fixed-nav">
+      <div class="main-nav-sub fixered-nav" id="main-fixed-nav-nav">
         <nav class="main-nav">
           <nav class="main-nav">
             <div class="container">
-              <ul class="nav form-log ml-auto-to-md">
+              <ul class="nav">
                 <li class="logo">
-                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
                 </li>
-                <li class="ml-auto d-flex ml-auto-none-md">
-                  <li class="m-r-15 d-flex align-items-center btn-hidden">
-                    <div class="btn-log" data-remodal-target="login">Ingreso</div>
-                  </li>
-                  <li class="d-flex align-items-center btn-hidden">
-                    <div class="btn-register" data-remodal-target="register">Registro</div>
-                  </li>
+                <li class="d-flex btn-hidden">
+                  <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
+                  <input class="inner-input f-6" type="text" placeholder="Ubicación"/>
+                  <button class="search"> <i class="ion ion-md-search"></i></button>
+                </li>
+                <li class="ml-auto d-flex btn-hidden">
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a class="cart-dropdowm" href="#">
+                      <div class="center-flex" style="position: relative;"><img src="img/cart.svg" alt=""/>
+                        <div class="pointer-active-cart"></div>
+                      </div></a></li><div id="myCart" class="dropdown-content cart-content-drop right-drop">
+                  <ul>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                  </ul></div>
+                  <div class="user btn-hidden">
+                    <ul class="d-flex" style="position: relative">
+                      <li class="badge d-flex align-items-center">(3)</li>
+                      <li class="name d-flex align-items-center dropbtn">María José<span>
+                           <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav-mobile">
                   <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
@@ -37,115 +76,48 @@
                     <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
                   </svg>
                 </li>
-              </ul>
-              <div class="menu">
-                <div class="app-menu">
-                  <div class="header-mobile">
-                    <div class="close-btn"><span></span><span></span></div>
-                  </div>
-                  <!--.separator-mobile(style="margin-bottom: 0")-->
-                  <div class="content-mobile">
-                    <div class="content-mobile-item nav justify-content-start">
-                      <div class="btn-log" data-remodal-target="login">Ingreso</div>
+                <div class="menu">
+                  <div class="app-menu">
+                    <div class="header-mobile">
+                      <div class="name-usuario">
+                        <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+<li class="name d-flex align-items-center ">María José
+</li>
+                      </div>
+                      <div class="close-btn"><span></span><span></span></div>
                     </div>
-                    <div class="line-nav"></div>
-                    <div class="content-mobile-item nav justify-content-start">
-                      <div class="btn-register" data-remodal-target="register">Registro</div>
+                    <!--.separator-mobile(style="margin-bottom: 0")-->
+                    <div class="content-mobile">
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <li class="coin-points">999999</li>
+                            <li class="thumb-point justify-content-end d-flex">puntos</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                      <div class="line-nav"></div>
                     </div>
-                    <div class="line-nav"></div>
                   </div>
                 </div>
-              </div>
+              </ul>
             </div>
           </nav>
-          <div class="remodal" data-remodal-id="login">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">ingresa a entrekids</div>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3">
-                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
-                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
-                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
-                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
-                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-5">
-                  <input class="input-modal" type="text" placeholder="entrekids@entrekids.cl"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-modal" type="password" placeholder="*********"/>
-                </div>
-                <div class="form m-b-5 d-flex justify-content-center">
-                  <div class="control-group form-custom" style="width:241px">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <label class="control control-checkbox" style="padding-top: 4.2px;">Recordar cuenta
-                        <input type="checkbox"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">ingresa</div>
-                </div>
-                <div class="form m-b-20 d-flex justify-content-start"><a href="" style="width: 241px !important;margin: 0 auto;"> 
-                    <p class="lost-pass has-text-centered">Olvidaste tu contraseña? </p></a></div>
-                <div class="form">
-                  <p class="register-p">Si no tienes cuenta Entrekids, <a class="link" href="#">regístrate acá.</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="remodal" data-remodal-id="register">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">Registrate en entrekids</div>
-            <div class="sub-modal m-b-10">Accede a miles de actividades a un click</div>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3">
-                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
-                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
-                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
-                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
-                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Nombre"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Apellido"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Email"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register" type="text" placeholder="Celular"/>
-                </div>
-                <div class="form m-b-5">
-                  <input class="input-register m-b-10" type="text" placeholder="Contraseña"/>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center m-b-10">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">REGÍSTRATE</div>
-                </div>
-                <div class="form">
-                  <p class="register-p" style="    width: 240px;text-align: center; margin: 0 auto;">Haciendo clic en “REGÍSTRATE” estas aceptando nuestros <a class="link" href="#">Términos y Condiciones </a>y nuestra <a class="link" href="#">Política de Privacidad.           </a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="remodal" data-remodal-id="contrasena">
-            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-            <div class="title-modal">Recuperar CONTRASEÑA</div>
-            <p>Ingrese su email para reiniciar su contraseña</p>
-            <div class="row no-margin">
-              <div class="col-md-6 offset-md-3"><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
-                <div class="form m-b-10">
-                  <input class="input-register" type="text" placeholder="Email"/>
-                </div>
-                <div class="form d-flex align-items-center justify-content-center m-b-10">
-                  <div class="btn-submit-login d-flex align-items-center justify-content-center">Enviar</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </nav>
+        <div class="filter-section">
+          <div class="btn-button-filter">
+            <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+          </div>
+          <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
+        </div>
       </div><div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
       <div class="hero-image d-ifflex flex-column align-content-center" style="background-image: url(img/stock.jpg)">
         <div class="title-hero">Descubre y reserva experiencias a un click</div>
@@ -172,17 +144,17 @@
         <div class="container">
           <div class="title-landing m-b-30 has-text-centered">¿COMO FUNCIONA?</div>
           <div class="grid-home">
-            <div> 
+            <div class="item-grid"> 
               <div class="icon-svg"><img src="img/Binocular.svg" alt=""/></div>
               <div class="title-work m-b-15">DESCUBRE</div>
               <p class="description-about">Busca actividades, y panoramas según edad, ubicación y categorías con los mejores proveedores.</p>
             </div>
-            <div> 
+            <div class="item-grid"> 
               <div class="icon-svg"><img src="img/calendario.svg" alt=""/></div>
               <div class="title-work m-b-15">RESERVA Y PAGA</div>
               <p class="description-about">Encuentra diferentes precios según el horario. Reserva y paga en un click el que más te acomode.</p>
             </div>
-            <div> 
+            <div class="item-grid"> 
               <div class="icon-svg fixed-ml"><img src="img/globo.svg" alt=""/></div>
               <div class="title-work m-b-15">DISFRUTA</div>
               <p class="description-about">Vive tu experiencia y acumula puntos Entrekids para tu próxima aventura.</p>

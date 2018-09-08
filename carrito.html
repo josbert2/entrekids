@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
   </head>
   <body class="app-js"> 
-    <div class="page-wrapper index actividad-view">
+    <div class="page-wrapper index actividad-view carrito-modal">
       <div id="main-fixed-nav">
         <nav class="main-nav">
           <nav class="main-nav">
@@ -247,6 +250,147 @@
                 </div>
               </div>
             </div>
+            <div class="content-shop">
+              <div class="items-shop spacing-items">
+                <div class="row no-margin">    
+                  <div class="col-md-6 no-padding-md border-right-md">
+                    <div class="d-flex justify-content-center flex-column">
+                      <div class="code-promocion">
+                        <div class="m-b-10 d-flex flex-column"> <a class="d-flex promo" href="#">
+                            Agrega un código promocional:<i class="material-icons m-l-auto-md">add</i> </a>
+                          <div class="toggle-input" style="display: none">
+                            <div class="d-flex m-t-10">
+                              <input class="input-promocional" type="text"/>
+                              <div class="btn-validar">Validar</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center flex-column">
+                      <div class="code-promocion">
+                        <div class="m-b-10 d-flex flex-column"><a class="d-flex promo" href="#">
+                            Agregar Gift Card:<i class="material-icons m-l-auto-md">add</i> </a>
+                          <div class="toggle-input" style="display: none">
+                            <div class="d-flex align-items-center">
+                              <input class="input-promocional m-t-10" type="text"/>
+                              <div class="btn-validar m-t-10">Validar</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <div class="code-promocion"><a class="promo d-flex align-items-center" href="#">
+                          Utiliza tus puntos entrekids<i class="material-icons m-l-auto-md">add</i> </a>
+                        <div class="toggle-input m-t-10">
+                          <div class="d-flex align-items-center"><input  name="value" class="spinner-ui " placeholder="100">
+                            <div class="btn-validar">Canjear </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex m-t-5">
+                      <p class="italyc">Tus puntos no se descontarán hasta ejecutar el pago</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 no-padding-md">
+                    <div class="d-flex flex-column align-items-center pay-confirm-box">
+                      <div class="d-flex w100 justify-content-between m-b-15">
+                        <p class="m-r-5 font-pay">Total:</p>
+                        <div class="fix-price d-flex justify-content-end">
+                          <p class="price-font fix-signo">$</p>
+                          <p class="price-font fix-wi">72.000</p>
+                        </div>
+                      </div>
+                      <div class="d-flex w100 justify-content-between m-b-15">
+                        <p class="m-r-5 font-pay">Descuentos:</p>
+                        <div class="fix-price d-flex justify-content-end">
+                          <p class="price-font fix-signo dex">$</p>
+                          <p class="price-font fix-wi">-72.000</p>
+                        </div>
+                      </div>
+                      <div class="d-flex w100 justify-content-between">
+                        <p class="m-r-5 font-pay">A Pagar:</p>
+                        <div class="fix-price d-flex justify-content-end">
+                          <p class="price-font fix-signo">$</p>
+                          <p class="price-font fix-wi">1.720.000</p>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center m-t-20 w100 border-top-md">
+                        <div class="m-t-20 center-md"><a class="m-r-10 more-activity-2 " href="#">+ AGREGA MÁS ACTIVIDADES </a>
+                          <button class="btn-pagar" data-remodal-target="payment">Pagar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 m-t-35 no-padding-md">
+                    <div class="d-flex justify-content-center text-align-center-md">
+                      <div class="text-italyc m-t-10 d-flex flex-column-md"><a class="link" href="#">María José, </a> Con esta compra obtienes x x 
+                        <div class="br-flex">puntos entrekids</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="remodal" data-remodal-id="payment">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="title-shop m-b-20"> Checkout</div>
+            <div class="row no-margin">
+              <div class="col-md-6 order-md-custom-4 mt-75">
+                <div class="payment-text text-l">Detalle de compra</div>
+              </div>
+              <div class="col-md-6 order-md-custom-1 m-t-10-md">
+                <div class="payment-text text-l">Total a pagar</div>
+                <p class="total-pagar m-b-20">$ 129.000</p>
+              </div>
+              <div class="col-md-6 order-md-custom-5 border-right-md pg">
+                <div class="item-check-box">
+                  <div class="d-flex">
+                    <div class="photo-product"><img src="https://images.pexels.com/photos/61129/pexels-photo-61129.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                    <div class="d-flex flex-column">
+                      <div class="item-check">Nombre Actividad Número Uno </div>
+                      <div class="cantidad">Cantidad: 2</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-check-box">
+                  <div class="d-flex">
+                    <div class="photo-product"><img src="https://images.pexels.com/photos/61129/pexels-photo-61129.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                    <div class="d-flex flex-column">
+                      <div class="item-check">Nombre Actividad Número Uno </div>
+                      <div class="cantidad">Cantidad: 2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 order-md-custom-2">
+                <div class="payment-text text-l m-b-5-md">Medios de pagos</div>
+                <div class="content-pago">
+                  <div class="d-flex justify-content-between"><div class="control-group m-b-20">
+<label class="control control-radio"> Débito / Crédito
+<input class="check-2" type="radio" name="radio2" checked="checked">
+<div class="control_indicator blue-check"></div>
+</label>
+</div>
+                    <div class="metodo-pago m-l-20"><img src="img/webpay.png" alt=""/></div>
+                  </div>
+                  <div class="d-flex justify-content-between"><div class="control-group m-b-20">
+<label class="control control-radio"> OneClick
+<input class="check-2" type="radio" name="radio2" checked="checked">
+<div class="control_indicator blue-check"></div>
+</label>
+</div>
+                    <div class="metodo-pago-2 m-r-30"><img src="img/webpayoneclic.png" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 order-md-custom-3 d-flex justify-content-center m-t-10-md m-t-20">
+                <button class="btn-payment d-flex justify-content-center align-items-center">Finalizar compra</button>
+              </div>
+            </div>
           </div>
         </div>
         <footer class="footer separator-to-body">
@@ -303,4 +447,20 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/rating/rating.js"></script>
+  <script src="js/modal/remodal.js">
+    <script src="js/inputMax/jquery.spinner.js"></script>
+  </script>
+  <script>
+    $(document).ready(function(){
+     var spinner = $( ".spinner-ui" ).spinner();
+    $('.promo').click(function(e){
+    
+      e.preventDefault()
+      $(this).next('.toggle-input').toggle( "slow", function() {
+    // Animation complete.
+      });
+    })
+    })
+  </script>
 </html>

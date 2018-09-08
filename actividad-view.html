@@ -1,7 +1,7 @@
 
 <html lang="es">
   <head> 
-    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
@@ -12,13 +12,13 @@
   </head>
   <body class="app-js"> 
     <div class="page-wrapper index actividad-view">
-      <div id="main-fixed-nav">
+      <div class="main-nav-sub fixered-nav" id="main-fixed-nav-nav">
         <nav class="main-nav">
           <nav class="main-nav">
             <div class="container">
               <ul class="nav">
                 <li class="logo">
-                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
                 </li>
                 <li class="d-flex btn-hidden">
                   <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
@@ -27,7 +27,26 @@
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
                   <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
-                  <li class="d-flex align-items-center btn-hidden btn-cart"><a href="#"><i class="material-icons color-primary f-2 ">shopping_cart</i></a></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a class="cart-dropdowm" href="#">
+                      <div class="center-flex" style="position: relative;"><img src="img/cart.svg" alt=""/>
+                        <div class="pointer-active-cart"></div>
+                      </div></a></li><div id="myCart" class="dropdown-content cart-content-drop right-drop">
+                  <ul>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                  </ul></div>
                   <div class="user btn-hidden">
                     <ul class="d-flex" style="position: relative">
                       <li class="badge d-flex align-items-center">(3)</li>
@@ -55,42 +74,48 @@
                     <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
                   </svg>
                 </li>
-              </ul>
-              <div class="menu">
-                <div class="app-menu">
-                  <div class="header-mobile">
-                    <div class="name-usuario">
-                      <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+                <div class="menu">
+                  <div class="app-menu">
+                    <div class="header-mobile">
+                      <div class="name-usuario">
+                        <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
 <li class="name d-flex align-items-center ">María José
 </li>
-                    </div>
-                    <div class="close-btn"><span></span><span></span></div>
-                  </div>
-                  <!--.separator-mobile(style="margin-bottom: 0")-->
-                  <div class="content-mobile">
-                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
-                      <div class="coin">
-                        <ul class="d-flex align-items-start puntos d-flex flex-column">
-                          <li class="coin-points">999999</li>
-                          <li class="thumb-point justify-content-end d-flex">puntos</li>
-                        </ul>
                       </div>
+                      <div class="close-btn"><span></span><span></span></div>
                     </div>
-                    <div class="line-nav"></div>
-                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
-                    <div class="line-nav"></div>
-                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></div>
-                    <div class="line-nav"></div>
-                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
-                    <div class="line-nav"></div>
-                    <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
-                    <div class="line-nav"></div>
+                    <!--.separator-mobile(style="margin-bottom: 0")-->
+                    <div class="content-mobile">
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <li class="coin-points">999999</li>
+                            <li class="thumb-point justify-content-end d-flex">puntos</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                      <div class="line-nav"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ul>
             </div>
           </nav>
         </nav>
+        <div class="filter-section">
+          <div class="btn-button-filter">
+            <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+          </div>
+          <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
+        </div>
       </div>
       <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
       <div class="wrapper-content-m-t-30">
@@ -419,9 +444,7 @@
                 </div>
               </div>
             </div>
-            <div class="content-view bg-fff">
-              <h1>Mapa en progreso</h1>
-            </div>
+            <div class="content-view bg-fff"><div id="gmap" style="width:100%;height:550px;"></div></div>
           </div>
         </div>
         <footer class="footer separator-to-body">
@@ -474,10 +497,14 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/rating/rating.js"></script>
+  <script src="js/rating/rating.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSY7p-B5a1oKXNwSp70kNnYM3TSnymTNY&amp;libraries=places" type="text/javascript"></script>
+  <script src="https://maplacejs.com/dist/maplace.min.js"></script>
+  <script src="js/maplace.js"></script>
   <script>
     $(document).ready(function(){
       $(".owl-carousel").owlCarousel({
