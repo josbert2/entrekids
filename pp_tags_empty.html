@@ -1,0 +1,112 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul class="navigation">
+            <li><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul>
+            <li><i class="material-icons">store_mall_directory</i><span>Información</span></li>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li class="active-dash"><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
+            <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center w100">
+              <input class="input-nav w100" type="text" placeholder="Buscar tags"/>
+              <div class="search-input-nav m-r-35"><i class="material-icons">search</i></div>
+            </li>
+          </ul>
+        </div>
+        <div class="content-dashboard">
+          <div class="row no-margin">
+            <div class="col-md-12"></div>
+            <div class="col-md-12">
+              <div class="page-section">
+                <div class="row no-margin">
+                  <div class="col-md-4">
+                    <div class="title-block">tag  </div>
+                    <p>Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage. Chillwave craft beer tote bag stumptown quinoa hashtag. Dreamcatcher locavore </p>
+                  </div>
+                  <div class="col-md-8 d-flex align-items-end justify-content-center">
+                    <div class="row justify-content-center">
+                      <div class="col-md-12 d-flex justify-content-center m-b-40 m-t-45">
+                        <p class="text-muteado">Actualmente no tienes tags</p>
+                      </div>
+                      <div class="col-md-12 m-b-20 m-t-30 d-flex justify-content-center">
+                        <button class="btn-white w150" data-remodal-target="agregar-tag" style="padding: 0.875rem 1.5rem;order: 1;" id="more-price">Agregar tags</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="remodal tags-content-modal" data-remodal-id="agregar-tag">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="new-title-modal d-flex justify-content-center m-b-20">Agrega un nuevo tag</div>
+            <div class="row no-magin">
+              <div class="col-md-12 m-t-20">
+                <div class="title-input text-l">título</div>
+                <input class="input-for-modal-text m-b-15" type="text" placeholder="Nombre del tag"/>
+              </div>
+              <div class="col-md-12">
+                <div class="title-input text-l">descripción</div>
+                <textarea class="w100 input-for-modal" placeholder="Una breve descripción de tu etiqueta"></textarea>
+              </div>
+              <div class="col-md-12 d-flex justify-content-center m-t-20">
+                <button class="btn-danger-tags">Crear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+</html>

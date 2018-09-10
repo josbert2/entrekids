@@ -1,0 +1,172 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/start.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul class="navigation">
+            <li><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
+          </ul>
+          <ul>
+            <li class="active-dash"><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul>
+            <li><i class="material-icons">store_mall_directory</i><span>Información</span></li>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
+            <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center w100">
+              <input class="input-nav" type="text" placeholder="Buscar reseña" style=" width: 100%;"/>
+              <div class="search-input-nav"><i class="material-icons">search</i></div>
+            </li>
+          </ul>
+        </div>
+        <div class="fix-content-dash"> 
+          <table class="pp-resena-table">
+            <thead>
+              <th>Reseñado por</th>
+              <th>Comentario</th>
+              <th>Respondido</th>
+              <th>Mensaje</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Usuario1</td>
+                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
+                <td style="vertical-align:top;display: flex;justify-content: center;"><div class="control-group" style="margin-right: 17px;">
+<label class="control control-checkbox">
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+                </td>
+                <td><a class="m-l-15" href="#"><i class="material-icons">mail_outline</i></a></td>
+              </tr>
+              <tr>
+                <td>Usuario1</td>
+                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
+                <td style="vertical-align:top;display: flex;justify-content: center;"><div class="control-group" style="margin-right: 17px;">
+<label class="control control-checkbox">
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+                </td>
+                <td><a class="m-l-15" href="#"><i class="material-icons">mail_outline</i></a></td>
+              </tr>
+              <tr>
+                <td>Usuario1</td>
+                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
+                <td style="vertical-align:top;display: flex;justify-content: center;"><div class="control-group" style="margin-right: 17px;">
+<label class="control control-checkbox">
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+                </td>
+                <td><a class="m-l-15" href="#"><i class="material-icons">mail_outline</i></a></td>
+              </tr>
+              <tr>
+                <td>Usuario1</td>
+                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
+                <td style="vertical-align:top;display: flex;justify-content: center;"><div class="control-group" style="margin-right: 17px;">
+<label class="control control-checkbox">
+<input type="checkbox">
+<div class="control_indicator"></div>
+</label>
+</div>
+                </td>
+                <td><a class="m-l-15" href="#" data-remodal-target="msg-resena"><i class="material-icons">mail_outline</i></a></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="remodal" data-remodal-id="msg-resena">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="new-title-modal d-flex justify-content-center m-b-20">Reseña</div>
+            <div class="rese-modal m-b-20"></div>
+            <div class="w742">
+              <div class="row no-margin">
+                <div class="col-md-12">
+                  <div class="d-flex">
+                    <div class="name-pp m-r-10">Macarena Z.</div>
+                    <select class="empty">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                    <p class="m-l-10">22 de Mayo, 2018</p>
+                  </div>
+                  <div class="expend-title m-b-20">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bi.</div>
+                </div>
+                <div class="col-md-12">
+                  <textarea class="input-for-modal"></textarea>
+                </div>
+                <div class="col-md-12 d-flex justify-content-center m-t-20">
+                  <button class="btn-send-pp">Enviar</button>
+                </div>
+              </div>
+              <div class="d-flex align-content-center m-t-25 justify-content-center feed-back-column"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+  <script src="js/rating/rating.js"></script>
+  <script>
+    $('.empty').barrating({
+      theme: 'fontawesome-stars',
+      initialRating: '0',
+      allowEmpty: null,
+      onSelect: function(value, text) {
+                $('.rating-js .no-agrree').addClass('hidden');
+            }
+     });
+  </script>
+</html>
