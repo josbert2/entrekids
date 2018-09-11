@@ -43,8 +43,10 @@
           </ul>
           <div class="title-line m-b-20">General</div>
           <ul>
-            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
             <li class="active-dash"><i class="material-icons">local_offer</i><span>Tags</span></li>
+            <li><i class="material-icons">confirmation_number</i><span>Quemador de ticket</span></li>
+            <li><i class="material-icons">notifications</i><span>Notificaciones</span></li>
           </ul>
         </div>
       </div>
@@ -52,9 +54,12 @@
         <div class="nav-top d-flex">
           <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
             <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
-            <li class="nav-opcion d-flex align-items-center w100">
+            <li class="nav-opcion d-flex align-items-center w100 m-r-20">
               <input class="input-nav" type="text" placeholder="Buscar reseña" style=" width: 100%;"/>
               <div class="search-input-nav"><i class="material-icons">search</i></div>
+            </li>
+            <li>
+              <div class="top-btn">Creación de tags</div>
             </li>
           </ul>
         </div>
@@ -62,16 +67,38 @@
           <table class="pp-resena-table">
             <thead>
               <th>Nombre</th>
-              <th>Sobre el tag</th>
+              <th>Actividades</th>
+              <th>Descripción</th>
               <th class="text-c">N° de usos </th>
               <th>Visible</th>
-              <th></th>
-              <th></th>
+              <th>Editar</th>
+              <th>Elimiminar</th>
             </thead>
             <tbody>
               <tr>
                 <td>Casa</td>
-                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
+                <td style="width: 350px;">
+                  <div class="d-flex m-t-5 flex-wrap">
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                </td>
                 <td class="text-c">0</td>
                 <td>
                   <label class="switch" for="checkbox2">
@@ -79,43 +106,110 @@
                     <div class="slider switch-red round"></div>
                   </label>
                 </td>
-                <td><a href="#"><i class="material-icons">edit</i></a><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
+                <td><a href="#"><i class="material-icons">edit</i></a></td>
+                <td><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
               </tr>
               <tr>
-                <td>Usuario1</td>
-                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
-                <td class="text-c">4</td>
+                <td>Casa</td>
+                <td style="width: 350px;">
+                  <div class="d-flex m-t-5 flex-wrap">
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                </td>
+                <td class="text-c">0</td>
                 <td>
                   <label class="switch" for="checkbox2">
                     <input class="reservation-visible" id="checkbox2" type="checkbox"/>
                     <div class="slider switch-red round"></div>
                   </label>
                 </td>
-                <td><a href="#"><i class="material-icons">edit</i></a><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
+                <td><a href="#"><i class="material-icons">edit</i></a></td>
+                <td><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
               </tr>
               <tr>
-                <td>Usuario1</td>
-                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
-                <td class="text-c">3</td>
+                <td>Casa</td>
+                <td style="width: 350px;">
+                  <div class="d-flex m-t-5 flex-wrap">
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                </td>
+                <td class="text-c">0</td>
                 <td>
                   <label class="switch" for="checkbox2">
                     <input class="reservation-visible" id="checkbox2" type="checkbox"/>
                     <div class="slider switch-red round"></div>
                   </label>
                 </td>
-                <td><a href="#"><i class="material-icons">edit</i></a><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
+                <td><a href="#"><i class="material-icons">edit</i></a></td>
+                <td><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
               </tr>
               <tr>
-                <td>Usuario1</td>
-                <td>Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
-                <td class="text-c">2</td>
+                <td>Casa</td>
+                <td style="width: 350px;">
+                  <div class="d-flex m-t-5 flex-wrap">
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                </td>
+                <td class="text-c">0</td>
                 <td>
                   <label class="switch" for="checkbox2">
                     <input class="reservation-visible" id="checkbox2" type="checkbox"/>
                     <div class="slider switch-red round"></div>
                   </label>
                 </td>
-                <td><a href="#"><i class="material-icons">edit</i></a><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
+                <td><a href="#"><i class="material-icons">edit</i></a></td>
+                <td><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
               </tr>
             </tbody>
           </table>
@@ -138,5 +232,6 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
-  <script src="js/modal/remodal.js"></script>
+  <script src="js/modal/remodal.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script>setTimeout(function(){  tippy('.toolpitruncate')}, 1000); </script>
 </html>

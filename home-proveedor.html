@@ -46,11 +46,11 @@
                   <!--.separator-mobile(style="margin-bottom: 0")-->
                   <div class="content-mobile">
                     <div class="content-mobile-item nav justify-content-start">
-                      <div class="btn-log" data-remodal-target="login">Ingreso</div>
+                      <div class="btn-log" data-remodal-target="login_proveedor">Ingreso</div>
                     </div>
                     <div class="line-nav"></div>
                     <div class="content-mobile-item nav justify-content-start">
-                      <div class="btn-register" data-remodal-target="register">Registro</div>
+                      <div class="btn-register" data-remodal-target="register_proveedor">Registro</div>
                     </div>
                     <div class="line-nav"></div>
                   </div>
@@ -87,11 +87,39 @@
             </div>
           </div>
         </div>
-      </div><div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
-      <div class="hero-image d-ifflex flex-column align-content-center" style="background-image: url(img/proveedor.jpg)">
+      </div>
+      <div class="remodal" data-remodal-id="register_proveedor">
+        <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+        <div class="proveedor-title m-b-25">Ingresa a tu cuenta <br> Proveedor EntreKids</div>
+        <div class="row no-margin">
+          <div class="col-md-6 offset-md-3">             
+            <div class="form m-b-5"><input class="input-register" type="text" placeholder="Ingresa tu mail"></div>
+            <div class="form m-b-5"><input class="input-register" type="text" placeholder="Ingresa tu contraseña"></div>
+            <div class="form m-b-5 d-flex justify-content-center">
+              <div class="control-group form-custom" style="width:241px">
+                <div class="d-flex align-items-center justify-content-center">
+                  <label class="control control-checkbox" style="padding-top: 4.2px;">Recordar cuenta
+                    <input type="checkbox"/>
+                    <div class="control_indicator"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form d-flex align-items-center justify-content-center">
+              <div class="btn-submit-login d-flex align-items-center justify-content-center">ingresa</div>
+            </div>
+            <div class="form m-b-20 d-flex justify-content-start"><a href="" style="width: 241px !important;margin: 0 auto;"> 
+                <p class="lost-pass has-text-centered">Olvidaste tu contraseña? </p></a></div>
+            <div class="form">
+              <p class="register-p">Si no tienes cuenta Entrekids, <a class="link" href="#">regístrate acá.</a></p>
+            </div>
+          </div>
+        </div>
+      </div><div class="alert-success">Entrekids, la primera plataforma transaccional de panoramas y servicios para niños</div>
+      <div class="hero-image filter-opacity d-ifflex flex-column align-content-center" style="background-image: url(img/Home_Proveedor3.jpg)">
         <div class="container">
-          <div class="title-hero" style="text-transform: uppercase">gana nuevos clientes con entrekids</div>
-          <div class="title-hero-sub m-t-20">Da más visibilidad a tu marca y atrae nuevos consumidores a tu negocio. Entrekids te ayudará a gestionar tu negocio con un software simple de usar y que te permitirá gastar menos tiempo administrando y más tiempo haciendo lo que realmente te apasiona</div>
+          <div class="title-hero" style="text-transform: uppercase">Digitaliza tu negocio <br> y atrae nuevos clientes</div>
+          <div class="title-hero-sub m-t-20 sub-content">En la era de la Transformación Digital, Entrekids te entrega herramientas para dar más visibilidad a tu negocio y atraer nuevos consumidores con un software simple de usar y que te permitirá salir de lo físico a lo virtual y de lo virtual a lo transaccional.</div>
         </div>
         <div class="d-flex justify-content-center m-t-45 btn-landing-pages">
           <div class="btn-hero-social is-red m-r-20">REGÍSTRATE GRATIS</div>
@@ -105,46 +133,36 @@
           </div>
           <div class="row no-margin justify-content-center">
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-1.svg" alt=""/>
-              <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
-              <p class="description-proveedor m-t-20">Muestra tus clases, espacios y equipo.Alcanza miles de padres y potenciales clientes siendo miembro de EK Marketplace.</p>
+              <div class="title-provedor-items">Presenta tu negocio y atrae nuevos consumidores </div>
+              <p class="description-proveedor m-t-20">Muestra tus actividades, clases y equipo alcanzando miles de potenciales clientes a través de nuestro marketplace</p>
             </div>
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-20" src="img/pro-2.svg" alt=""/>
               <div class="title-provedor-items">Llena tus espacios vacíos e incrementa tus ingresos</div>
-              <p class="description-proveedor m-t-20">Te ayudamos a utilizar los espacios que no usas. Recibe reservas y pagos con un solo click.</p>
+              <p class="description-proveedor m-t-20">Te ayudamos a utilizar los espacios que no utilizas con una herramienta que te permite modificar precios y cupos de acuerdo a tus necesidades</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-4.svg" alt=""/>
+              <div class="title-provedor-items">Realiza marketing y da visibilidad a tu marca</div>
+              <p class="description-proveedor m-t-20">Tendrás el completo control de tu negocio a un click. Disponibilidad, precios, reglas y todo desde cualquier dispositivo y lugar.</p>
             </div>
             <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-3.svg" alt=""/>
               <div class="title-provedor-items">Administra tu negocio desde cualquier lugar</div>
-              <p class="description-proveedor m-t-20">EK ayuda a miles de padres a encontrar y reservar las mejores actividades para sus hijos.</p>
-            </div>
-            <div class="col-md-3 d-flex flex-column align-items-center"><img class="m-b-15" src="img/pro-4.svg" alt=""/>
-              <div class="title-provedor-items">Presenta Tu Negocio y Atrae Nuevos Consumidores </div>
-              <p class="description-proveedor m-t-20">Tendrás el completo control de tu negocio a un click. Disponibilidad, precios, reglas y todo desde cualquier dispositivo y lugar.</p>
+              <p class="description-proveedor m-t-20">Tendrás el control de tu negocio a un click, teniendo un canal de venta auto-administrable y con acceso desde cualquier lugar.</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="bg-opacity section-secondary placeholder-img" style="background-image: url(img/placeholder.jpg)">
-        <div class="solu">
-          <div class="title-box">soluciones de acuerdo a tus necesidades</div>
-          <div class="text-box">Nuestro equipo trabajará en conjunto a ti para crear tu perfil y las actividades que ofreceremos a través de entrekids.Trabajaremos día a día para que trabajar con entrekids sea un éxito.</div>
+      <section class="bg-opacity section-secondary placeholder-img" style="background-image: url(img/Proveedor_Central.jpg)">
+        <div class="solu d-flex align-items-center">
+          <div class="title-box">soluciones de acuerdo a <br> tus necesidades</div>
+          <div class="text-box">Nuestro equipo trabajará en conjunto a ti para crear tu perfil y las actividades que ofreceremos a través de entrekids. <br> Trabajaremos día a día para que tus resultados sean un éxito.</div>
         </div>
       </section>
       <section class="section-secondary" style="background-color:#fff">
         <div class="container">
           <div class="width-text-04">
-            <div class="title-landing m-b-40" style=" color: #333333;">trabajamos con los principales proveedores de entrenimiento para niños</div>
+            <div class="title-landing m-b-40" style=" color: #333333;">trabajamos con los principales proveedores <br> de entrenimiento para niños</div>
             <div class="categories-proveedor">
               <div class="row no-margin">
-                <!--.col-md-4
-                .content-catego
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                -->
                 <div class="flex-3-column">
                   <div class="content-flex-3"> 
                     <div class="items-3">
@@ -152,13 +170,6 @@
                         <div class="svg-img m-r-15"><img src="img/categorias/acuaticas.svg"/>
                         </div>
                         <div class="categories-text">Actividades acuáticas</div>
-                      </div>
-                    </div>
-                    <div class="items-3">
-                      <div class="d-flex align-items-center m-b-10">
-                        <div class="svg-img m-r-15"><img src="img/categorias/afterschool.svg"/>
-                        </div>
-                        <div class="categories-text">After School</div>
                       </div>
                     </div>
                     <div class="items-3">
@@ -233,7 +244,7 @@
                     </div>
                     <div class="items-3">
                       <div class="d-flex align-items-center m-b-10">
-                        <div class="svg-img m-r-15"><img src="img/categorias/diversion.svg"/>
+                        <div class="svg-img m-r-15"><img src="img/categorias/deporte.svg"/>
                         </div>
                         <div class="categories-text">Entretención y deporte</div>
                       </div>
@@ -309,7 +320,7 @@
       <section class="section-secondary bg-opacity">       
         <div class="container">
           <div class="width-text-03">
-            <div class="title-landing m-b-40" style=" color: #333333;">Aprende más sobre como entrekids puede ayudar a tu negocio</div>
+            <div class="title-landing m-b-40" style=" color: #333333;">Aprende más sobre como entrekids <br> puede ayudar a tu negocio</div>
             <div class="title-form">Completa el formulario y nuestro equipo te contactará en las próximas 24 horas.</div>
             <div class="form-box">
               <input class="input-register m-b-5" style="width:100%;padding:8px" placeholder="Nombre Negocio"/>
@@ -326,7 +337,7 @@
           </div>
         </div>
       </section>
-      <footer class="footer separator-to-body">
+      <footer class="footer">
         <div class="footer-content">
           <div class="container p-l-60 p-r-60">
             <div class="row no-margin">

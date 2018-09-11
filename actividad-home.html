@@ -12,17 +12,133 @@
     <div class="page-wrapper index">
       <div id="main-fixed-nav">
         <nav class="main-nav">
-          <div class="container">
-            <div class="log-header">
-              <ul class="nav">
-                <li>
-                  <div class="nav-title"> <img src="img/Logo.svg" alt="alt"/></div>
+          <nav class="main-nav">
+            <div class="container">
+              <ul class="nav form-log ml-auto-to-md">
+                <li class="logo">
+                  <div class="nav-title"> <img src="img/Logo.svg" alt=""/></div>
+                </li>
+                <li class="ml-auto d-flex ml-auto-none-md">
+                  <li class="m-r-15 d-flex align-items-center btn-hidden">
+                    <div class="btn-log" data-remodal-target="login">Ingreso</div>
+                  </li>
+                  <li class="d-flex align-items-center btn-hidden">
+                    <div class="btn-register" data-remodal-target="register">Registro</div>
+                  </li>
+                </li>
+                <li class="nav-mobile">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
                 </li>
               </ul>
-              <ul class="form-log ml-auto">
-                <div class="btn-log">Ingreso</div>
-                <div class="btn-register">Registro</div>
-              </ul>
+              <div class="menu">
+                <div class="app-menu">
+                  <div class="header-mobile">
+                    <div class="close-btn"><span></span><span></span></div>
+                  </div>
+                  <!--.separator-mobile(style="margin-bottom: 0")-->
+                  <div class="content-mobile">
+                    <div class="content-mobile-item nav justify-content-start">
+                      <div class="btn-log" data-remodal-target="login">Ingreso</div>
+                    </div>
+                    <div class="line-nav"></div>
+                    <div class="content-mobile-item nav justify-content-start">
+                      <div class="btn-register" data-remodal-target="register">Registro</div>
+                    </div>
+                    <div class="line-nav"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="remodal" data-remodal-id="login">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="title-modal">ingresa a entrekids</div>
+            <div class="row no-margin">
+              <div class="col-md-6 offset-md-3">
+                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
+                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
+                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
+                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
+                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
+                <div class="form m-b-5">
+                  <input class="input-modal" type="text" placeholder="entrekids@entrekids.cl"/>
+                </div>
+                <div class="form m-b-5">
+                  <input class="input-modal" type="password" placeholder="*********"/>
+                </div>
+                <div class="form m-b-5 d-flex justify-content-center">
+                  <div class="control-group form-custom" style="width:241px">
+                    <div class="d-flex align-items-center justify-content-center">
+                      <label class="control control-checkbox" style="padding-top: 4.2px;">Recordar cuenta
+                        <input type="checkbox"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form d-flex align-items-center justify-content-center">
+                  <div class="btn-submit-login d-flex align-items-center justify-content-center">ingresa</div>
+                </div>
+                <div class="form m-b-20 d-flex justify-content-start"><a href="" style="width: 241px !important;margin: 0 auto;"> 
+                    <p class="lost-pass has-text-centered">Olvidaste tu contraseña? </p></a></div>
+                <div class="form">
+                  <p class="register-p">Si no tienes cuenta Entrekids, <a class="link" href="#">regístrate acá.</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="remodal" data-remodal-id="register">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="title-modal">Registrate en entrekids</div>
+            <div class="sub-modal m-b-10">Accede a miles de actividades a un click</div>
+            <div class="row no-margin">
+              <div class="col-md-6 offset-md-3">
+                <button class="fb-btn d-flex align-items-center justify-content-start m-b-10">
+                  <i class="ion ion-logo-facebook  icon-fb m-r-10"></i>ingresa con facebook</button>
+                <button class="icon-google google-btn d-flex justify-content-start align-items-center"> 
+                  <div class="icon-google m-r-10"><img src="img/google-logo.svg" alt=""/></div>Ingresar con google
+                </button><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
+                <div class="form m-b-5">
+                  <input class="input-register" type="text" placeholder="Nombre"/>
+                </div>
+                <div class="form m-b-5">
+                  <input class="input-register" type="text" placeholder="Apellido"/>
+                </div>
+                <div class="form m-b-5">
+                  <input class="input-register" type="text" placeholder="Email"/>
+                </div>
+                <div class="form m-b-5">
+                  <input class="input-register" type="text" placeholder="Celular"/>
+                </div>
+                <div class="form m-b-5">
+                  <input class="input-register m-b-10" type="text" placeholder="Contraseña"/>
+                </div>
+                <div class="form d-flex align-items-center justify-content-center m-b-10">
+                  <div class="btn-submit-login d-flex align-items-center justify-content-center">REGÍSTRATE</div>
+                </div>
+                <div class="form">
+                  <p class="register-p" style="    width: 240px;text-align: center; margin: 0 auto;">Haciendo clic en “REGÍSTRATE” estas aceptando nuestros <a class="link" href="#">Términos y Condiciones </a>y nuestra <a class="link" href="#">Política de Privacidad.           </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="remodal" data-remodal-id="contrasena">
+            <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+            <div class="title-modal">Recuperar CONTRASEÑA</div>
+            <p>Ingrese su email para reiniciar su contraseña</p>
+            <div class="row no-margin">
+              <div class="col-md-6 offset-md-3"><h2 style="width: 186px;margin: 20 auto;"><span>o</span></h2> 
+                <div class="form m-b-10">
+                  <input class="input-register" type="text" placeholder="Email"/>
+                </div>
+                <div class="form d-flex align-items-center justify-content-center m-b-10">
+                  <div class="btn-submit-login d-flex align-items-center justify-content-center">Enviar</div>
+                </div>
+              </div>
             </div>
           </div>
         </nav>
@@ -31,6 +147,8 @@
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
 </html>

@@ -569,7 +569,7 @@ $(document).ready(function() {
 
     $('.more-input-date').click(function() {
 
-        $("#omisiones").append(`<div class="d-flex align-items-center">
+        $("#omisiones").append(`<div class="d-flex align-items-center m-r-10">
     <input 
     class="modal-input modal-input m-b-5 m-r-5 datepicker-dinamyc" 
     type="text" name="omisiones[]"
@@ -780,9 +780,23 @@ $('.link-toggle').click(function(e) {
 
 
 $('.visible-event').click(function() {
+    var active_text = false;
+    var text = 'La actividad será visible cuando hagas click en "crear"';
+    var t = "La actividad será visible desde la fecha determinada"
     $('#input-visible').toggle("slow", function() {
-        // Animation complete.
+
+
+
+
+
     });
+    if ($('.visible-event').is(":checked")) {
+        $('#change-text').html(t);
+    } else {
+        $('#change-text').html(text);
+    }
+
+
 })
 
 $('.reservation-visible').click(function() {
@@ -880,17 +894,68 @@ $(".omisiones-control input:radio").click(function() {
         $("#omilabel").prop('disabled', false);
         $('.more-input-date').prop('disabled', true);
         $('#avanzado').val('')
+        $('.omisiontext').css('display', 'none')
+        $('.text-omision').html('')
     }
     if ($(this).val() == "avanzado") {
         $("#avanzado").prop('disabled', false);
         $("#omilabel").prop('disabled', true);
         $('.more-input-date').prop('disabled', false);
         $('#omisiones-text').text('sin omisiones');
+        $('.omisiontext').css('display', 'flex')
+
     }
 
 
 })
+$('#avanzado').change(function() {
+    var inputDate = $(this).val()
+    $('.text-omision').html(inputDate)
+})
 
+
+$(document).ready(function() {
+    (function() {
+        var showChar = 10;
+        var ellipsestext = "<div title>...</div>";
+
+        $(".truncate2").each(function() {
+            var caracter = $(this).attr('data-caracter')
+
+            var content = $(this).html();
+            if (content.length > caracter) {
+                var c = content.substr(0, caracter);
+                var h = content;
+                console.log(content)
+                var html =
+                    '<span class="truncate-text">' +
+                    c + '<span class="toolpitruncate" title="' + content + '" style="cursor: pointer;position:relative">...</span></span>';
+
+                $(this).html(html);
+            }
+        });
+
+        $(".moreless").click(function() {
+            var thisEl = $(this);
+            var cT = thisEl.closest(".truncate-text");
+            var tX = ".truncate-text";
+
+            if (thisEl.hasClass("less")) {
+                cT.prev(tX).toggle();
+                cT.slideToggle();
+            } else {
+                cT.toggle();
+                cT.next(tX).fadeToggle();
+            }
+            return false;
+        });
+        /* end iffe */
+    })();
+
+    /* end ready */
+});
+
+//setTimeout(function(){  tippy('.toolpitruncate-click',  { trigger: 'click' }) }, 1000);
 
 /*=========================================================================
    Truncate text
@@ -952,12 +1017,19 @@ $(document).ready(function() {
 
 
 
+/*=========================================================================
+   New relation
+=========================================================================*/
+//alert($('#id-img').height())
 
 
 
 /*=========================================================================
    Script upload Croppie  1
 =========================================================================*/
+let WCrop = '300px';
+let HCrop = '200px'
+
 
 
 if ($('.item-dash').length) {
@@ -985,8 +1057,8 @@ if ($('.item-dash').length) {
 
         $uploadCrop = $('#upload-demo').croppie({
             viewport: {
-                width: 150,
-                height: 100,
+                width: 300,
+                height: 200,
             },
             enforceBoundary: false,
             enableExif: true
@@ -1011,8 +1083,8 @@ if ($('.item-dash').length) {
                 type: 'base64',
                 format: 'jpeg',
                 size: {
-                    width: 150,
-                    height: 100
+                    width: 750,
+                    height: 500
                 }
             }).then(function(resp) {
                 $('#item-img-output').attr('src', resp);
@@ -1471,3 +1543,67 @@ function delete_photo6() {
     }, 300)
     $('img-val6').val('')
 }
+
+
+
+
+
+/*=========================================================================
+   Tabs
+=========================================================================*/
+
+if ($('.tabgroup').length) {
+    $('.tabgroup > div').hide();
+    $('.tabgroup > div:first-of-type').show();
+    $('.change-tabs li a').click(function(e) {
+        e.preventDefault();
+        $('.change-tabs li').removeClass('active-li');
+        var $this = $(this),
+            tabgroup = '#' + $this.parents('.change-tabs').data('tabgroup'),
+            others = $this.closest('li').siblings().children('a'),
+            target = $this.attr('href');
+
+        //others.removeClass('active-li');
+
+        $this.parent().addClass('active-li');
+
+        $(tabgroup).children('div').hide();
+        $(target).show();
+
+
+    })
+
+}
+
+
+
+/*=========================================================================
+   
+   Promociones toggle content
+=========================================================================*/
+
+$('.checkbox-promociones').click(function() {
+    let parent = $(this).parent().next().toggle("slow", function() {
+
+    });
+})
+var c = 0;
+$('.categories-tags input[type=checkbox]').change(function() {
+
+    $(this).each(function(i) {
+        if ($(this).is(":checked")) {
+            c++;
+            if (c == 1) {
+                $(this).next().css('background-color', '#F56A80')
+                $(this).next().css('border-color', '#F56A80')
+            }
+        } else {
+            c--;
+            if (c == 0) {
+                $(this).next().css('background-color', '')
+                $(this).next().css('border-color', '')
+            }
+        }
+
+    })
+})

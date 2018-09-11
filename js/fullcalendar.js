@@ -106,7 +106,7 @@
 
     events: [
       {
-        title: 'All Day Event', 
+        title: '10:00 PM All Day Event', 
         description: '<div class="d-flex" style="padding: 5px 0 ;"><div class="option-icon m-r-20"><a href="#"><i class="material-icons">settings</i></a></div><div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div></div>',
         start: '2018-08-01',
         constraint: 'availableForMeeting', // defined below

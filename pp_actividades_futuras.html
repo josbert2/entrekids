@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
     <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
     <link rel="stylesheet" href="js/modal/bootstrap.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.min.css"/>
   </head>
   <body class="app-js dash-board">
     <div class="super-fixed">
@@ -73,14 +75,14 @@
       <div class="d-flex flex-column wrapper-dash w100">
         <div class="nav-top d-flex">
           <ul class="d-flex justify-content-start align-items-center w100">
-            <li><i class="material-icons">arrow_back</i></li>
+            <li class="m-r-10"><i class="material-icons">arrow_back</i></li>
             <li class="nav-opcion d-flex align-items-center">
-              <input class="input-nav" type="text" placeholder="Buscar actividad" style=" width: 700px;"/>
+              <input class="input-nav" type="text" placeholder="Buscar actividad" style=" width: 500px;"/>
               <div class="search-input-nav m-r-45"><i class="material-icons">search</i></div>
-              <ul class="group-btn-nav ml-auto m-l-15">
+              <ul class="change-tabs group-btn-nav ml-auto m-l-15" style="    margin-left: 185px !important;" data-tabgroup="first-tab-group">
                 <li><i class="material-icons">save_alt</i></li>
-                <li class="active-li"><i class="material-icons">dehaze</i></li>
-                <li><i class="material-icons">event</i></li>
+                <li><a href="#tab2"><i class="material-icons">dehaze</i></a></li>
+                <li class="active-li"><a href="#tab1"><i class="material-icons">event</i></a></li>
               </ul>
               <ul class="group-btn-nav m-l-5">
                 <li><i class="material-icons">add</i></li>
@@ -89,94 +91,202 @@
           </ul>
         </div>
         <div class="content-dashboard">
-          <div class="d-flex"></div>
-          <div class="nav-tabs-proveedor">
-            <div class="item-tab-bg m-r-10">99 Futuras </div>
-            <div class="item-tab m-r-10">99 Pasadas</div>
-            <div class="item-tab-bg m-r-10">100 </div>
-            <div class="item-tab">Resultado por página</div>
-          </div>
           <div class="row no-margin">
-            <div class="col-md-12 hover-op">
-              <div class="row no-margin"> 
-                <div class="col-md-9 d-actividad d-flex no-padding">
-                  <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
-                    <div class="fecha-date">LUN</div>
-                    <div class="fecha-date">18/6</div>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                    <p>10:00 am - 14:00 pm (4 horas) </p>
-                    <p>Av. Lorem Ipsum 33450, Providencia</p>
-                    <p>Precio Entrekids: $99999</p>
-                  </div>
+            <div class="tabgroup" id="first-tab-group">
+              <div id="tab1">
+                <div id="fullcalendar"></div>
+              </div>
+              <div id="tab2">
+                <div class="d-flex"></div>
+                <div class="nav-tabs-proveedor change-tabs" data-tabgroup="second-tab-group">
+                  <li><a class="item-tab m-r-10" href="#tab3">99 Futuras </a></li>
+                  <li><a class="item-tab m-r-10" href="#tab4">99 Pasadas</a></li>
+                  <div class="item-tab-bg m-r-10">100 </div>
+                  <div class="item-tab">Resultado por página</div>
                 </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                  <div class="option-float" style="width: auto">
-                    <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
-                    <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/less.svg" alt=""/></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/more.svg" alt=""/></a></div>
+                <div class="tabgroup" id="second-tab-group">
+                  <div id="tab3">
+                    <div class="row no-margin">
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">LUN</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon" data-remodal-target="configuracion-fecha"><a href="#"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">LUN</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">LUN</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="available m-l-20">
-                    <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                  <div id="tab4">
+                    <div class="row no-margin">
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">MAR</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon"><a href="#" data-remodal-target="configuracion-fecha"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">LUN</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12 hover-op">
+                        <div class="row no-margin"> 
+                          <div class="col-md-9 d-actividad d-flex no-padding">
+                            <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                              <div class="fecha-date">LUN</div>
+                              <div class="fecha-date">18/6</div>
+                            </div>
+                            <div class="d-flex flex-column">
+                              <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                              <p>10:00 am - 14:00 pm (4 horas) </p>
+                              <p>Av. Lorem Ipsum 33450, Providencia</p>
+                              <p>Precio Entrekids: $99999</p>
+                            </div>
+                          </div>
+                          <div class="col-md-3 d-flex justify-content-center align-items-center">
+                            <div class="option-float" style="width: auto">
+                              <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                              <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                            </div>
+                            <div class="available m-l-20">
+                              <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-12 hover-op">
-              <div class="row no-margin"> 
-                <div class="col-md-9 d-actividad d-flex no-padding">
-                  <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
-                    <div class="fecha-date">LUN</div>
-                    <div class="fecha-date">18/6</div>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                    <p>10:00 am - 14:00 pm (4 horas) </p>
-                    <p>Av. Lorem Ipsum 33450, Providencia</p>
-                    <p>Precio Entrekids: $99999</p>
-                  </div>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                  <div class="option-float" style="width: auto">
-                    <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
-                    <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/less.svg" alt=""/></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/more.svg" alt=""/></a></div>
-                  </div>
-                  <div class="available m-l-20">
-                    <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+        <div class="remodal tags-content-modal" data-remodal-id="configuracion-fecha">
+          <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+          <div class="new-title-modal d-flex justify-content-center m-b-20">Cambiar configuración</div>
+          <div class="row no-magin">
+            <div class="col-md-12 m-t-20">
+              <div class="title-input text-l">Cupos</div>
+              <input class="input-for-modal-text m-b-15" type="text" placeholder="Cupos"/>
             </div>
-            <div class="col-md-12 hover-op">
-              <div class="row no-margin"> 
-                <div class="col-md-9 d-actividad d-flex no-padding">
-                  <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
-                    <div class="fecha-date">LUN</div>
-                    <div class="fecha-date">18/6</div>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
-                    <p>10:00 am - 14:00 pm (4 horas) </p>
-                    <p>Av. Lorem Ipsum 33450, Providencia</p>
-                    <p>Precio Entrekids: $99999</p>
-                  </div>
-                </div>
-                <div class="col-md-3 d-flex justify-content-center align-items-center">
-                  <div class="option-float" style="width: auto">
-                    <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
-                    <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/less.svg" alt=""/></a></div>
-                    <div class="option-icon"><a href="#"><img src="img/more.svg" alt=""/></a></div>
-                  </div>
-                  <div class="available m-l-20">
-                    <div class="available-total">33 / 99</div><small>Cupos disponibles</small>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-12 m-t-15">
+              <div class="title-input text-l">Precios</div>
+              <input class="input-for-modal-text m-b-15" type="text" placeholder="Precios"/>
+            </div>
+            <div class="col-md-12 m-t-15">
+              <div class="title-input text-l">Descuentos</div>
+              <input class="input-for-modal-text m-b-15" type="text" placeholder="Descuentos"/>
+            </div>
+            <div class="col-md-12"></div>
+            <div class="col-md-12 d-flex justify-content-center m-t-20">
+              <button class="make-crear">Guardar</button>
             </div>
           </div>
         </div>
@@ -189,4 +299,12 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="js/fullcalendar.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/modal/remodal.js"></script>
 </html>
