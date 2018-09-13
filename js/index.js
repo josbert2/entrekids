@@ -1607,3 +1607,63 @@ $('.categories-tags input[type=checkbox]').change(function() {
 
     })
 })
+/*=========================================================================
+   Var
+=========================================================================*/
+//alert($(window).width())
+
+
+
+$(document).ready(function() {
+    if ($(window).width() < 1200 && $(window).width() > 990) {
+        $('.items-content').css('maxWidth', '73%')
+
+    } else if ($(window).width() < 990 && $(window).width() > 768) {
+        $('.items-content').css('maxWidth', '67%')
+    } else if ($(window).width() == 768) {
+        $('.items-content').css('maxWidth', '66%')
+    } else {
+        $('.items-content').css('maxWidth', '')
+    }
+
+    let w = $('.img-div').width();
+    let h = $('.img-div').height();
+    let d = w / 1.5;
+    d = parseInt(d)
+    $('.img-div').css('height', d + 'px ')
+    $('.img-div img').css('height', d + 'px ')
+    $('.aspect-ratio').css('height', d + 'px ')
+})
+
+window.addEventListener("resize", function() {
+    let w = $('.img-div').width();
+    let h = $('.img-div').height();
+    let d = w / 1.5;
+    d = parseInt(d)
+    $('.img-div').css('height', d + 'px ')
+    $('.img-div img').css('height', d + 'px ')
+    $('.aspect-ratio').css('height', d + 'px ')
+    if ($(window).width() < 1200 && $(window).width() > 990) {
+        $('.items-content').css('maxWidth', '73%')
+
+    } else if ($(window).width() < 990 && $(window).width() > 768) {
+        $('.items-content').css('maxWidth', '67%')
+    } else if ($(window).width() == 768) {
+        $('.items-content').css('maxWidth', '66%')
+    } else {
+        $('.items-content').css('maxWidth', '')
+    }
+
+}, false);
+window.addEventListener("orientationchange", function() {
+    setTimeout(function() {
+        let w3 = $('.img-div').width();
+        let h3 = $('.img-div').height();
+
+        let d3 = w3 / 1.5;
+        d3 = parseInt(d3)
+        $('.img-div').css('height', d3 + 'px ')
+        $('.img-div img').css('height', d3 + 'px ')
+        $('.aspect-ratio').css('height', d3 + 'px ')
+    }, 400)
+}, false);

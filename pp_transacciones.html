@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
     <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
     <link rel="stylesheet" href="js/modal/bootstrap.css"/>
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="css/datatables.css"/>
   </head>
   <body class="app-js dash-board">
     <div class="index d-flex">
@@ -55,190 +55,198 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex flex-column wrapper-dash">
+      <div class="d-flex flex-column wrapper-dash w100">
         <div class="nav-top d-flex">
           <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
             <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
             <li class="nav-opcion d-flex align-items-center w100">
-              <input class="input-nav" type="text" placeholder="Buscar actividad" style=" width: 100%;"/>
-              <div class="search-input-nav m-r-35"><i class="material-icons">search</i></div>
+              <input class="input-nav" type="text" placeholder="Buscar transacciones, compradores o palabra clave" style=" width: 100%;" id="input-search-trans"/>
+              <div class="search-input-nav"><i class="material-icons">search</i></div>
             </li>
           </ul>
         </div>
-        <div class="content-dashboard">
+        <div class="content-dashboard" style="width: 97%;">
           <div class="row no-margin">
             <div class="col-md-12"></div>
             <div class="col-md-12">
-              <div class="page-section" id="descripcion">
-                <div class="row no-margin item-dash">
-                  <div class="col-md-12 d-flex align-items-end justify-content-center">
-                    <div class="row justify-content-center">
-                      <div class="col-md-12 d-flex justify-content-center m-b-40 m-t-45">
-                        <table class="display" id="table" cellspacing="0" width="100%">
+              <div class="page-section">
+                <div class="row no-margin">
+                  <div class="col-md-4"><p id="date_filter" class="d-flex">
+<input class="date_range_filter date date-range-tables m-r-15" type="text" id="datepicker_from" placeholder="Fecha inicio"/>
+<input class="date_range_filter date date-range-tables" placeholder="Fecha Fin" type="text" id="datepicker_to" />
+</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="select-dash dataselect">
+                      <select id="table-filter-trans-pago">
+                        <option value="">Filtrar por estado de pago</option>
+                        <option>reembolsado</option>
+                        <option>Aprobado</option>
+                      </select>
+                      <div class="select_arrow-dash"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="select-dash dataselect">
+                      <select id="table-filter-trans">
+                        <option value="">Filtrar por tipo de transacción</option>
+                        <option>Webpay</option>
+                        <option>OneClick</option>
+                      </select>
+                      <div class="select_arrow-dash"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-margin">
+                  <div class="col-md-12 d-flex align-items-end">
+                    <div class="row justify-content-center w100">
+                      <div class="col-md-12 d-flex m-b-40 m-t-40">
+                        <table class="display" id="table-transacciones" cellspacing="0" width="100%">
                           <thead>
                             <tr>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <th>Age</th>
-                              <th>Start date</th>
-                              <th>Salary</th>
+                              <th>Proveedor</th>
+                              <th>Fecha</th>
+                              <th>Hora</th>
+                              <th>Nº de operación</th>
+                              <th>Usuario</th>
+                              <th>Nº tickets</th>
+                              <th>Estado del ticket</th>
+                              <th>Tipo de transacción</th>
+                              <th>Monto</th>
                             </tr>
                           </thead>
-                          <tfoot>
-                            <tr>
-                              <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <th>Age</th>
-                              <th>Start date</th>
-                              <th>Salary</th>
-                            </tr>
-                          </tfoot>
                           <tbody>
                             <tr>
-                              <td>Tiger Nixon</td>
-                              <td>System Architect</td>
-                              <td>Edinburgh</td>
-                              <td>61</td>
-                              <td>2011/04/25</td>
-                              <td>$320,800</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Garrett Winters</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>63</td>
-                              <td>2011/07/25</td>
-                              <td>$170,750</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2019</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>Aprobado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Ashton Cox</td>
-                              <td>Junior Technical Author</td>
-                              <td>San Francisco</td>
-                              <td>66</td>
-                              <td>2009/01/12</td>
-                              <td>$86,000</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Cedric Kelly</td>
-                              <td>Senior Javascript Developer</td>
-                              <td>Edinburgh</td>
-                              <td>22</td>
-                              <td>2012/03/29</td>
-                              <td>$433,060</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Airi Satou</td>
-                              <td>Accountant</td>
-                              <td>Tokyo</td>
-                              <td>33</td>
-                              <td>2008/11/28</td>
-                              <td>$162,700</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Brielle Williamson</td>
-                              <td>Integration Specialist</td>
-                              <td>New York</td>
-                              <td>61</td>
-                              <td>2012/12/02</td>
-                              <td>$372,000</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Herrod Chandler</td>
-                              <td>Sales Assistant</td>
-                              <td>San Francisco</td>
-                              <td>59</td>
-                              <td>2012/08/06</td>
-                              <td>$137,500</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Rhona Davidson</td>
-                              <td>Integration Specialist</td>
-                              <td>Tokyo</td>
-                              <td>55</td>
-                              <td>2010/10/14</td>
-                              <td>$327,900</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Colleen Hurst</td>
-                              <td>Javascript Developer</td>
-                              <td>San Francisco</td>
-                              <td>39</td>
-                              <td>2009/09/15</td>
-                              <td>$205,500</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Sonya Frost</td>
-                              <td>Software Engineer</td>
-                              <td>Edinburgh</td>
-                              <td>23</td>
-                              <td>2008/12/13</td>
-                              <td>$103,600</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Jena Gaines</td>
-                              <td>Office Manager</td>
-                              <td>London</td>
-                              <td>30</td>
-                              <td>2008/12/19</td>
-                              <td>$90,560</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                             <tr>
-                              <td>Quinn Flynn</td>
-                              <td>Support Lead</td>
-                              <td>Edinburgh</td>
-                              <td>22</td>
-                              <td>2013/03/03</td>
-                              <td>$342,000</td>
-                            </tr>
-                            <tr>
-                              <td>Charde Marshall</td>
-                              <td>Regional Director</td>
-                              <td>San Francisco</td>
-                              <td>36</td>
-                              <td>2008/10/16</td>
-                              <td>$470,600</td>
-                            </tr>
-                            <tr>
-                              <td>Haley Kennedy</td>
-                              <td>Senior Marketing Designer</td>
-                              <td>London</td>
-                              <td>43</td>
-                              <td>2012/12/18</td>
-                              <td>$313,500</td>
-                            </tr>
-                            <tr>
-                              <td>Tatyana Fitzpatrick</td>
-                              <td>Regional Director</td>
-                              <td>London</td>
-                              <td>19</td>
-                              <td>2010/03/17</td>
-                              <td>$385,750</td>
-                            </tr>
-                            <tr>
-                              <td>Michael Silva</td>
-                              <td>Marketing Designer</td>
-                              <td>London</td>
-                              <td>66</td>
-                              <td>2012/11/27</td>
-                              <td>$198,500</td>
-                            </tr>
-                            <tr>
-                              <td>Paul Byrd</td>
-                              <td>Chief Financial Officer (CFO)</td>
-                              <td>New York</td>
-                              <td>64</td>
-                              <td>2010/06/09</td>
-                              <td>$725,000</td>
-                            </tr>
-                            <tr>
-                              <td>Gloria Little</td>
-                              <td>Systems Administrator</td>
-                              <td>New York</td>
-                              <td>59</td>
-                              <td>2009/04/10</td>
-                              <td>$237,500</td>
+                              <td>Nombre Proveedor</td>
+                              <td> 05/05/2018</td>
+                              <td>Hora</td>
+                              <td>4534363</td>
+                              <td>María Jose Santibañez</td>
+                              <td>20</td>
+                              <td>reembolsado</td>
+                              <td>Webpay</td>
+                              <td>100.000</td>
                             </tr>
                           </tbody>
                         </table>
@@ -262,28 +270,102 @@
   <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
   <script>
     $(document).ready(function() {
-    $('#table').DataTable( {
-        initComplete: function () {
-            this.api().columns().every( function () {
-                var column = this;
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(column.footer()).empty() )
-                    .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        );
-    
-                        column
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            .draw();
-                    } );
-    
-                column.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                } );
-            } );
+    var tabledates = $('#table-transacciones').DataTable( {
+       dom: 'lrtip',
+       "pageLength": 5,
+       language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
         }
+    },
+       
     } );
+       $('#input-search-trans').keyup(function(){
+          tabledates.search($(this).val()).draw() ; 
+        })
+    
+        $('#table-filter-trans').on('change', function(){
+           tabledates.search(this.value).draw();   
+        });
+    
+         $('#table-filter-trans-pago').on('change', function(){
+           tabledates.search(this.value).draw();   
+        });
+    
+    
+        $("#datepicker_from").datepicker({
+        
+        "onSelect": function(date) {
+          minDateFilter = new Date(date).getTime();
+          tabledates.draw();
+        }
+      }).keyup(function() {
+          minDateFilter = new Date(this.value).getTime();
+          tabledates.draw();
+        });
+    
+      $("#datepicker_to").datepicker({
+        "onSelect": function(date) {
+          maxDateFilter = new Date(date).getTime();
+          tabledates.draw();
+        }
+      }).keyup(function() {
+          maxDateFilter = new Date(this.value).getTime();
+          tabledates.draw();
+        });
+    
+    
+    
+    // Date range filter
+    minDateFilter = "";
+    maxDateFilter = "";
+    
+    $.fn.dataTableExt.afnFiltering.push(
+      function(oSettings, aData, iDataIndex) {
+        if (typeof aData._date == 'undefined') {
+          aData._date = new Date(aData[1]).getTime();
+        }
+    
+        if (minDateFilter && !isNaN(minDateFilter)) {
+          if (aData._date < minDateFilter) {
+            return false;
+          }
+        }
+    
+        if (maxDateFilter && !isNaN(maxDateFilter)) {
+          if (aData._date > maxDateFilter) {
+            return false;
+          }
+        }
+    
+        return true;
+      }
+    );
+    
+    
+    
+    
+    
+    
+    
     } );
+    
+    
+     
   </script>
 </html>
