@@ -50,7 +50,7 @@
           </ul>
           <div class="title-line m-b-20">General</div>
           <ul>
-            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
             <li><i class="material-icons">local_offer</i><span>Tags</span></li>
           </ul>
         </div>
@@ -72,26 +72,18 @@
               <div class="page-section">
                 <div class="row no-margin">
                   <div class="col-md-4"><p id="date_filter" class="d-flex">
-<input class="date_range_filter date date-range-tables m-r-15" type="text" id="datepicker_from" placeholder="Fecha inicio"/>
-<input class="date_range_filter date date-range-tables" placeholder="Fecha Fin" type="text" id="datepicker_to" />
+<input class="date_range_filter date date-range-tables m-r-15 placeholder-14" type="text" id="datepicker_from" placeholder="Fecha inicio" style="padding: 20px 18px !important"/>
+<input class="date_range_filter date date-range-tables placeholder-14" placeholder="Fecha Fin" type="text" id="datepicker_to"  style="padding: 20px 18px !important"/>
 </p>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-8">
                     <div class="select-dash dataselect">
                       <select id="table-filter-trans-pago">
                         <option value="">Filtrar por estado de pago</option>
-                        <option>reembolsado</option>
-                        <option>Aprobado</option>
-                      </select>
-                      <div class="select_arrow-dash"></div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="select-dash dataselect">
-                      <select id="table-filter-trans">
-                        <option value="">Filtrar por tipo de transacción</option>
-                        <option>Webpay</option>
-                        <option>OneClick</option>
+                        <option>Pagado</option>
+                        <option>Cancelado</option>
+                        <option>Utilizado</option>
+                        <option>Perdido</option>
                       </select>
                       <div class="select_arrow-dash"></div>
                     </div>
@@ -100,153 +92,74 @@
                 <div class="row no-margin">
                   <div class="col-md-12 d-flex align-items-end">
                     <div class="row justify-content-center w100">
-                      <div class="col-md-12 d-flex m-b-40 m-t-40">
+                      <div class="col-md-12 d-flex m-b-40">
                         <table class="display" id="table-transacciones" cellspacing="0" width="100%">
                           <thead>
                             <tr>
-                              <th>Proveedor</th>
-                              <th>Fecha</th>
-                              <th>Hora</th>
-                              <th>Nº de operación</th>
+                              <th>Fecha / Hora</th>
+                              <th>Id operación</th>
+                              <th>Actividad</th>
                               <th>Usuario</th>
-                              <th>Nº tickets</th>
-                              <th>Estado del ticket</th>
-                              <th>Tipo de transacción</th>
-                              <th>Monto</th>
+                              <th># tickets</th>
+                              <th>Monto ($)</th>
+                              <th>Estado ticket</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
+                              <td>22-10-2018 20:18</td>
+                              <td> 
+                                <div class="truncate2" data-caracter="5">7564759</div>
+                              </td>
+                              <td>Actividad</td>
+                              <td>María Jose Santibañez </td>
                               <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
+                              <td>1000</td>
+                              <td>Pagado</td>
                             </tr>
                             <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2019</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
+                              <td>22-10-2018 20:18</td>
+                              <td> 
+                                <div class="truncate2" data-caracter="5">7564759</div>
+                              </td>
+                              <td>Actividad</td>
+                              <td>María Jose Santibañez </td>
                               <td>20</td>
-                              <td>Aprobado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
+                              <td>1000</td>
+                              <td>Pagado</td>
                             </tr>
                             <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
+                              <td>22-10-2018 20:18</td>
+                              <td> 
+                                <div class="truncate2" data-caracter="5">7564759</div>
+                              </td>
+                              <td>Actividad</td>
+                              <td>María Jose Santibañez </td>
                               <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
+                              <td>1000</td>
+                              <td>Cancelado</td>
                             </tr>
                             <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
+                              <td>22-10-2018 20:18</td>
+                              <td> 
+                                <div class="truncate2" data-caracter="5">7564759</div>
+                              </td>
+                              <td>Actividad</td>
+                              <td>María Jose Santibañez </td>
                               <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
+                              <td>1000</td>
+                              <td>Utilizado</td>
                             </tr>
                             <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
+                              <td>22-10-2018 20:18</td>
+                              <td> 
+                                <div class="truncate2" data-caracter="5">7564759</div>
+                              </td>
+                              <td>Actividad</td>
+                              <td>María Jose Santibañez </td>
                               <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
-                            </tr>
-                            <tr>
-                              <td>Nombre Proveedor</td>
-                              <td> 05/05/2018</td>
-                              <td>Hora</td>
-                              <td>4534363</td>
-                              <td>María Jose Santibañez</td>
-                              <td>20</td>
-                              <td>reembolsado</td>
-                              <td>Webpay</td>
-                              <td>100.000</td>
+                              <td>1000</td>
+                              <td>Perdido</td>
                             </tr>
                           </tbody>
                         </table>

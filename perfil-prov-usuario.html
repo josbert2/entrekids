@@ -1,0 +1,575 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/start.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  </head>
+  <body class="app-js"> 
+    <div class="page-wrapper index actividad-view">
+      <div class="main-nav-sub fixered-nav" id="main-fixed-nav-nav">
+        <nav class="main-nav">
+          <nav class="main-nav">
+            <div class="container">
+              <ul class="nav">
+                <li class="logo">
+                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
+                </li>
+                <li class="d-flex btn-hidden">
+                  <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
+                  <input class="inner-input f-6" type="text" placeholder="Ubicación"/>
+                  <button class="search"> <i class="ion ion-md-search"></i></button>
+                </li>
+                <li class="ml-auto d-flex btn-hidden">
+                  <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
+                  <li class="d-flex align-items-center btn-hidden btn-cart"><a class="cart-dropdowm" href="#">
+                      <div class="center-flex" style="position: relative;"><img src="img/cart.svg" alt=""/>
+                        <div class="pointer-active-cart"></div>
+                      </div></a></li><div id="myCart" class="dropdown-content cart-content-drop right-drop">
+                  <ul>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                    <li class="list-cart"><a href="#">
+                        <div class="d-flex">
+                          <div class="cart-imagen"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="texting-cart">
+                            <div class="cart-activity">Curabitur Cobortis convallis </div>
+                          </div>
+                        </div></a></li>
+                  </ul></div>
+                  <div class="user btn-hidden">
+                    <ul class="d-flex" style="position: relative">
+                      <li class="badge d-flex align-items-center">(3)</li>
+                      <li class="name d-flex align-items-center dropbtn">María José<span>
+                           <i class="material-icons">keyboard_arrow_down</i></span></li><div id="myDropdown" class="dropdown-content">
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <div class="coin-points">999999</div>
+                            <div class="thumb-point justify-content-end d-flex">puntos</div>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">shopping_basket</i></a><span>Mis compras</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></li>
+                      <li class="d-flex align-items-center"><a class="m-r-15 items-normal" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></li></div>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-mobile">
+                  <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="40" onclick="this.classList.toggle('active')">
+                    <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+                    <path class="line middle" d="m 30,50 h 40"></path>
+                    <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+                  </svg>
+                </li>
+                <div class="menu">
+                  <div class="app-menu">
+                    <div class="header-mobile">
+                      <div class="name-usuario">
+                        <li class="profile-mobile m-r-15" style="background-image: url(https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940)"></li><li class="badge d-flex align-items-center">(3)</li>
+<li class="name d-flex align-items-center ">María José
+</li>
+                      </div>
+                      <div class="close-btn"><span></span><span></span></div>
+                    </div>
+                    <!--.separator-mobile(style="margin-bottom: 0")-->
+                    <div class="content-mobile">
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/coin-01.svg" alt=""/></a>
+                        <div class="coin">
+                          <ul class="d-flex align-items-start puntos d-flex flex-column">
+                            <li class="coin-points">999999</li>
+                            <li class="thumb-point justify-content-end d-flex">puntos</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/regalo.svg" alt=""/></a><span>Referidos, Gana $$ </span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><img src="img/cart.svg" alt=""/></a><span>Mis compras</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">settings</i></a><span>Ajustes</span></div>
+                      <div class="line-nav"></div>
+                      <div class="content-mobile-item nav justify-content-start"><a class="m-r-15 items-wi" href="#"><i class="material-icons">exit_to_app</i></a><span>Salir</span></div>
+                      <div class="line-nav"></div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </div>
+          </nav>
+        </nav>
+        <div class="filter-section">
+          <div class="btn-button-filter">
+            <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
+          </div>
+          <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
+        </div>
+      </div>
+      <div class="alert-success">Curabitur lobortis id lorem id bibendum. Ut id consectetur.</div>
+      <div class="wrapper-content-m-t-30">
+        <div class="container m-t-40">
+          <div class="row no-margin">
+            <div class="col-md-12 no-padding">
+              <div class="alert-danger">Nombre del proovedor</div>
+            </div>
+            <div class="content-view bg-fff">
+              <div class="providir review-content">
+                <div class="row no-margin b-b p-t-25 p-b-25">
+                  <div class="col-md-3 no-padding">
+                    <div class="textdanger m-b-5-md">información de la empresa</div>
+                  </div>
+                  <div class="col-md-6 no-padding">
+                    <div class="d-flex align-items-center">
+                      <div class="big-title m-r-20 m-b-15-md">SUBAQUATIC PARKS</div><i class="ion ion-md-heart f-2"></i>
+                    </div>
+                    <div class="d-flex m-t-10-md"><select class="start">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                      <div class="date-comment m-t-10-l-0-md">99 Comentarios por 1 actividad</div>
+                    </div>
+                    <div class="comment-data no-margin-md">Av. Lorem Ipsum 99, La Florida, RM.</div>
+                    <div class="comment-data m-t-5-md">+562 2 334 455</div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="logo-proveedor m-t-5-md"></div>
+                  </div>
+                </div>
+                <div class="row no-margin b-b p-t-25 p-b-25">
+                  <div class="col-md-3 no-padding">
+                    <div class="textdanger m-b-5-md">tips</div>
+                  </div>
+                  <div class="col-md-6 no-padding"> 
+                    <p>Fixie tote bag ethnic keytar. Neutra vinyl American Apparel kale chips tofu art party, </p>
+                  </div>
+                </div>
+                <div class="row no-margin b-b p-t-25 p-b-25">
+                  <div class="col-md-5 no-padding">
+                    <div class="textdanger m-b-5-md m-b-30">sobre la empresa</div>
+                    <p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque eveniet facilis fugit, molestiae perferendis architecto officia nam laboriosam beatae magnam molestias deserunt minima, modi magni. Tenetur maxime, quos ipsam qui?</p>
+                  </div>
+                  <div class="col-md-7 no-padding"> 
+                    <div class="mask-proveedor"><img src="https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                  </div>
+                </div>
+              </div>
+              <div class="retriew-info" style=" border-top: 1px solid #DADADA;  border-bottom: 1px solid #DADADA;padding: 25px 0">
+                <div class="col-md-6">
+                  <div class="border-dashed">
+                    <div class="title-table">Próximas fechas</div>
+                    <div class="line-solid m-b-10"></div>
+                    <ul class="table-ghost">
+                      <li>
+                        <div class="primary-td">
+                          <div class="table-title primary-color">Lorem ipsum dolor sit amet, con</div>
+                          <div class="table-title f-6">Lunes 9 de julio</div>
+                          <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="primary-td">
+                          <div class="table-title primary-color">Lorem ipsum dolor sit amet, con</div>
+                          <div class="table-title f-6">Lunes 9 de julio</div>
+                          <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="primary-td">
+                          <div class="table-title primary-color">Lorem ipsum dolor sit amet, con</div>
+                          <div class="table-title f-6">Lunes 9 de julio</div>
+                          <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="primary-td">
+                          <div class="table-title primary-color">Lorem ipsum dolor sit amet, con</div>
+                          <div class="table-title f-6">Lunes 9 de julio</div>
+                          <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="primary-td">
+                          <div class="table-title primary-color">Lorem ipsum dolor sit amet, con</div>
+                          <div class="table-title f-6">Lunes 9 de julio</div>
+                          <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="title-table">Contacto</div>
+                  <p>Sitio web</p><a href="#"></a>
+                </div>
+              </div>
+            </div>
+            <div class="content-view bg-fff" style="border-radius: 0 0 6px 6px">
+              <div class="row no-margin">
+                <div class="col-md-6 separacion-15 no-padding"><div class="owl-carousel">
+<div><img class="product-view" src="https://images.pexels.com/photos/159848/child-girl-young-caucasian-159848.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+<div><img class="product-view" src="https://images.pexels.com/photos/225017/pexels-photo-225017.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+<div><img class="product-view" src="https://images.pexels.com/photos/129426/pexels-photo-129426.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+<div><img class="product-view" src="https://images.pexels.com/photos/225017/pexels-photo-225017.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+<div><img class="product-view" src="https://images.pexels.com/photos/225017/pexels-photo-225017.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+<div><img class="product-view" src="https://images.pexels.com/photos/69896/pexels-photo-69896.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+</div>
+                </div>
+                <div class="col-md-6 separacion-15">
+                  <div class="content-info no-padding-md">
+                    <div class="row">
+                      <div class="col-md-6 no-padding-md">
+                        <div class="title-view">Viernes, 22 de Junio, 2018</div>
+                        <div class="title-view m-b-5">9:00 AM - 9:45 AM</div>
+                        <div class="d-flex-md align-items-center-md">
+                          <div class="price-big no-margin-md m-r-5-md">$99999</div>
+                          <p class="f-6 price-none">$99999</p>
+                        </div>
+                        <p class="f-6 m-b-15">Ahorras 99% </p>
+                        <div class="atribute">
+                          <p class="f-6">Edad: 5 -10 años</p>
+                          <p class="f-6">Categoría(s): Natación, Entretención.</p>
+                        </div>
+                        <div class="rectangle-content m-b-20">
+                          <div class="rectangle celeste"></div>
+                          <div class="rectangle green"></div>
+                        </div>
+                        <div class="content-btn">
+                          <div class="d-flex">
+                            <div class="btn-simple m-t-30">INSCRIBIRSE</div>
+                          </div>
+                          <div class="d-flex">
+                            <div class="bg-reservation reservation-md">Reservaciones cerradas <br> el 17/6 a las 8:00 AM</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 no-padding-md">
+                        <div class="border-dashed">
+                          <div class="title-table has-text-centered">Próximas fechas</div>
+                          <div class="line-solid m-b-10"></div>
+                          <ul class="table-ghost">
+                            <li class="active-discount">
+                              <div class="primary-td">
+                                <div class="table-title primary-color">Sábado, 23/6 </div>
+                                <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                              </div>
+                              <div class="second-td ml-auto d-flex flex-column justify-content-center">
+                                <div class="descount">30%</div>
+                                <div class="descount">dcto</div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="primary-td">
+                                <div class="table-title primary-color">Sábado, 23/6 </div>
+                                <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                              </div>
+                              <div class="second-td ml-auto d-flex flex-column justify-content-center"></div>
+                            </li>
+                            <li class="active-discount">
+                              <div class="primary-td">
+                                <div class="table-title primary-color">Sábado, 23/6 </div>
+                                <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                              </div>
+                              <div class="second-td ml-auto d-flex flex-column justify-content-center">
+                                <div class="descount">30%</div>
+                                <div class="descount">dcto</div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="primary-td">
+                                <div class="table-title primary-color">Sábado, 23/6 </div>
+                                <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                              </div>
+                              <div class="second-td ml-auto d-flex flex-column justify-content-center"></div>
+                            </li>
+                            <li>
+                              <div class="primary-td">
+                                <div class="table-title primary-color">Sábado, 23/6 </div>
+                                <div class="table-title f-6">9:00 AM - 9:45 AM</div>
+                              </div>
+                              <div class="second-td ml-auto d-flex flex-column justify-content-center"></div>
+                            </li>
+                          </ul>
+                        </div>
+                        <button class="comprar-btn">Comprar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 no-padding">
+                  <div class="content-oferta">
+                    <div class="float-porcentaje"><span>20 %</span></div>
+                    <div class="oferta-actividad">
+                      <div class="row no-margin">
+                        <div class="col-md-6 d-flex align-items-center no-m-l-md">
+                          <div class="title-ofert">Clases de Natación (Niños y Adultos)</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex">
+                          <div class="cupos-big has-text-centered margin-right-42-">33</div>
+                          <div class="disponibilidad has-text-centered">Cupos disponibles</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex m-t-5-md"><div class="number d-flex align-items-center">
+<span class="minus">-</span>
+<input type="text" value="0"/>
+<span class="plus">+</span>
+</div>
+                        </div>
+                        <div class="col-md-2 no-padding-md">
+                          <div class="price-big no-padding-md price-list-md">$19.999</div>
+                          <div class="price-none price-none-list-md">$19.999</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-oferta">
+                    <div class="float-porcentaje"><span>20 %</span></div>
+                    <div class="oferta-actividad">
+                      <div class="row no-margin">
+                        <div class="col-md-6 d-flex align-items-center no-m-l-md">
+                          <div class="title-ofert">Clases de Natación (Niños y Adultos)</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex">
+                          <div class="cupos-big has-text-centered margin-right-42-">33</div>
+                          <div class="disponibilidad has-text-centered">Cupos disponibles</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex m-t-5-md"><div class="number d-flex align-items-center">
+<span class="minus">-</span>
+<input type="text" value="0"/>
+<span class="plus">+</span>
+</div>
+                        </div>
+                        <div class="col-md-2 no-padding-md">
+                          <div class="price-big no-padding-md price-list-md">$19.999</div>
+                          <div class="price-none price-none-list-md">$19.999</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content-oferta">
+                    <div class="float-porcentaje"><span>20 %</span></div>
+                    <div class="oferta-actividad">
+                      <div class="row no-margin">
+                        <div class="col-md-6 d-flex align-items-center no-m-l-md">
+                          <div class="title-ofert">Clases de Natación (Niños y Adultos)</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex">
+                          <div class="cupos-big has-text-centered margin-right-42-">33</div>
+                          <div class="disponibilidad has-text-centered">Cupos disponibles</div>
+                        </div>
+                        <div class="col-md-2 right-column-center-flex m-t-5-md"><div class="number d-flex align-items-center">
+<span class="minus">-</span>
+<input type="text" value="0"/>
+<span class="plus">+</span>
+</div>
+                        </div>
+                        <div class="col-md-2 no-padding-md">
+                          <div class="price-big no-padding-md price-list-md">$19.999</div>
+                          <div class="price-none price-none-list-md">$19.999</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 no-padding-md">
+                  <div class="review-content">
+                    <div class="d-flex m-b-15 m-t-15 justify-content-center align-items-center flex-column">
+                      <div class="more-option">Ver más</div><i class="material-icons arrow-blue">expand_more</i>
+                    </div>
+                    <div class="textdanger m-b-10">Detalles de la actividad</div>
+                    <p class="m-b-20"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.<a class="link" href="http://www.entrekids.cl/consecteturadipiscing">http://www.entrekids.cl/consecteturadipiscing</a></p>
+                    <p class="m-b-20"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="m-b-20"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit facilis, illum commodi voluptatum. In, nulla. Ea, quae dolore odit et quod delectus error culpa. Dolore, beatae corrupti ipsam eius sint.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="row no-margin">
+                      <div class="col-md-3 no-padding">
+                        <div class="textdanger m-b-10">detalles adicionales:</div>
+                      </div>
+                      <div class="col-md-9 no-padding m-b-25">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste molestias et dignissimos pariatur laborum neque, deleniti consequatur reprehenderit reiciendis impedit nesciunt? Error explicabo eligendi odio placeat, reprehenderit nobis facere! Vero. </p>
+                      </div>
+                      <div class="col-md-3 no-padding">
+                        <div class="textdanger m-b-10">politica de cancelación:</div>
+                      </div>
+                      <div class="col-md-9 no-padding m-b-25">
+                        <p>1 hora por adelantado.</p>
+                      </div>
+                    </div>
+                    <div class="row no-margin m-b-15">   
+                      <div class="col-md-3 no-padding">
+                        <div class="textdanger m-b-10">Cuidador Requerido:</div>
+                      </div>
+                      <div class="col-md-9 no-padding m-b-25">
+                        <p>Si</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="review-content comment comment-container">
+                    <div class="comment-content">
+                      <div class="d-flex flex-column-md">
+                        <div class="textdanger m-r-30 m-b-5-md">evaluación</div><select class="start p-r-a-md">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                        <div class="total-comment m-r-30 m-b-5-md">99 Comentarios</div>
+                        <div class="rati m-l-30 no-margin-md">4.5 Excelente</div>
+                      </div>
+                      <div class="comment-scroll scroll">
+                        <div class="comment-blocking">
+                          <div class="d-flex j-c-b-md">
+                            <div class="total-comment m-r-10">Macarena Z.</div><select class="start ">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                            <div class="date-comment m-l-15 no-margin-md">22 de Mayo, 2018</div>
+                          </div>
+                          <div class="d-flex comment-texting">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bi.</div>
+                        </div>
+                        <div class="comment-blocking">
+                          <div class="d-flex j-c-b-md">
+                            <div class="total-comment m-r-10">Macarena Z.</div><select class="start ">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                            <div class="date-comment m-l-15 no-margin-md">22 de Mayo, 2018</div>
+                          </div>
+                          <div class="d-flex comment-texting">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bi.</div>
+                        </div>
+                        <div class="comment-blocking">
+                          <div class="d-flex j-c-b-md">
+                            <div class="total-comment m-r-10">Macarena Z.</div><select class="start ">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                            <div class="date-comment m-l-15 no-margin-md">22 de Mayo, 2018</div>
+                          </div>
+                          <div class="d-flex comment-texting">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bi.</div>
+                        </div>
+                        <div class="comment-blocking">
+                          <div class="d-flex j-c-b-md">
+                            <div class="total-comment m-r-10">Macarena Z.</div><select class="start ">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+                            <div class="date-comment m-l-15 no-margin-md">22 de Mayo, 2018</div>
+                          </div>
+                          <div class="d-flex comment-texting">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bi.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-view bg-fff"><div id="gmap" style="width:100%;height:550px;"></div></div>
+          </div>
+        </div>
+        <footer class="footer separator-to-body">
+          <div class="footer-content">
+            <div class="container p-l-60 p-r-60">
+              <div class="row no-margin">
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer">
+                  <div class="text-footer">Entrekids</div>
+                  <ul>
+                    <li>Sobre Nosotros</li>
+                    <li>Nuestro Equipo</li>
+                    <li>Mapa del Sitio</li>
+                    <li>Preguntas Frecuentes</li>
+                    <li>Privacidad</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Proveedores</div>
+                  <ul>
+                    <li>Ser Proveedor</li>
+                    <li>Ayuda Proveedores</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Contacto</div>
+                  <ul>
+                    <li>contacto@entrekids.cl</li>
+                    <li>Formulario de Contacto</li>
+                  </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 d-flex justify-content-start flex-column text-content-footer maxi-margin">
+                  <div class="text-footer">Síguenos</div>
+                  <ul class="d-flex icon-social">
+                    <li> <i class="ion ion-logo-facebook"></i></li>
+                    <li> <i class="ion ion-logo-twitter"></i></li>
+                    <li> <i class="ion ion-logo-instagram"></i></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-footer">
+            <div class="container p-l-60 p-r-60">
+              <div class="content-sub">2018 ENTREKIDS ® TODOS LOS DERECHOS RESERVADOS</div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="js/rating/rating.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSY7p-B5a1oKXNwSp70kNnYM3TSnymTNY&amp;libraries=places" type="text/javascript"></script>
+  <script src="https://maplacejs.com/dist/maplace.min.js"></script>
+  <script src="js/maplace.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+      items: 1,
+      mouseDrag: true,
+      touchDrag: true,
+      nav:true,
+      navText:['<img src=img/back-1.png>','<img src=img/next-1.png>']
+      });
+    
+      $('.start').barrating({
+      theme: 'fontawesome-stars',
+      initialRating: '2',
+      allowEmpty: null,
+      onSelect: function(value, text) {
+                alert('Selected rating: ' + value);
+            }
+      });
+    
+      
+    });
+  </script>
+</html>

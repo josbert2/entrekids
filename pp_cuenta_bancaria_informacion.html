@@ -1,0 +1,226 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/start.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul class="navigation">
+            <li><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul>
+            <li><i class="material-icons">store_mall_directory</i><span>Información</span></li>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li class="active-dash"><i class="material-icons">local_play</i><span>Promociones</span></li>
+            <li><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
+            <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center w100 m-r-25">
+              <input class="input-nav" type="text" placeholder="Buscar reseña" style=" width: 100%;"/>
+              <div class="search-input-nav"><i class="material-icons">search</i></div>
+            </li>
+          </ul>
+        </div>
+        <div class="row no-margin">
+          <div class="col-md-12 d-flex justify-content-center align-items-center"><a class="entry-tables m-t-10 m-b-10 m-r-1" href="#">Cuentas bancarias</a></div>
+        </div>
+        <div class="fix-content-dash-no-mg" style="padding:25px">
+          <div class="row no-margin">
+            <div class="col-md-5">
+              <div class="title-block">Cuenta bancaria</div>
+              <p>Esta es la cuenta donde te transferiremos el dinero que ganes a través de Entrekids.</p>
+              <p>Para negocios probablemente será la cuenta de la empresa y para personas naturales probablemente su cuenta personal.</p>
+              <p>La confirmación de transferencia te llegará al correo inserto en este formulario.</p>
+            </div>
+            <div class="col-md-7 off btn-user-editar">
+              <button class="btn-edit right-p" data-remodal-target="editar-cuenta">Editar</button>
+              <button class="btn-edit right-p eliminar-cuenta" style="right: 108px;">Eliminar</button>
+              <div class="title-user m-t-15 title-main-user">Información cuenta bancaria</div>
+              <div class="form-user">
+                <div class="datos">
+                  <div class="row no-margin">
+                    <div class="col-md-4 no-padding line-element">
+                      <div class="title-user">Titular</div>
+                      <div class="data-user">María José Francisca</div>
+                    </div>
+                    <div class="col-md-4 no-padding line-element">
+                      <div class="title-user">Rut</div>
+                      <div class="data-user">Rut del titular </div>
+                    </div>
+                    <div class="col-md-4 no-padding line-element">
+                      <div class="title-user">Banco</div>
+                      <div class="data-user">Banco </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="datos">
+                  <div class="row no-margin">
+                    <div class="col-md-6 no-padding line-element">
+                      <div class="title-user"># Cuenta</div>
+                      <div class="data-user">1234 1234 1234 1234</div>
+                    </div>
+                    <div class="col-md-6 no-padding line-element">
+                      <div class="title-user">Email</div>
+                      <div class="data-user">Email de notification </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="remodal" data-remodal-id="editar-cuenta">
+          <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+          <div class="new-title-modal d-flex justify-content-center m-b-20">Editar cuenta</div>
+          <div class="row no-margin">
+            <div class="col-md-6 offset-md-3">
+              <div class="row no-margin"></div>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Titular de la cuenta</div>
+              <input class="input-for-modal-text" type="text" placeholder="Titular de la cuenta"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Rut</div>
+              <input class="input-for-modal-text" type="text" placeholder="Rut"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Banco</div>
+              <input class="input-for-modal-text" type="text" placeholder="Banco"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Tipo de cuenta</div>
+              <div class="select-dash"> 
+                <select>
+                  <option>Cuenta corriente</option>
+                  <option>Cuenta vista</option>
+                  <option>Cuenta de ahorro</option>
+                </select>
+                <div class="select_arrow-dash"></div>
+              </div>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Nº Cuenta</div>
+              <input class="input-for-modal-text" type="text" placeholder="Nº Cuenta"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Email notificación</div>
+              <input class="input-for-modal-text" type="text" placeholder="Email"/>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-t-20">
+              <button class="make-crear">Guardar</button>
+            </div>
+          </div>
+        </div>
+        <div class="remodal" data-remodal-id="agregar-cuenta">
+          <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+          <div class="new-title-modal d-flex justify-content-center m-b-20">Agregar una nueva cuenta</div>
+          <div class="row no-margin">
+            <div class="col-md-6 offset-md-3">
+              <div class="row no-margin"></div>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Titular de la cuenta</div>
+              <input class="input-for-modal-text" type="text" placeholder="Titular de la cuenta"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Rut</div>
+              <input class="input-for-modal-text" type="text" placeholder="Rut"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Banco</div>
+              <input class="input-for-modal-text" type="text" placeholder="Banco"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Tipo de cuenta</div>
+              <div class="select-dash"> 
+                <select>
+                  <option>Cuenta corriente</option>
+                  <option>Cuenta vista</option>
+                  <option>Cuenta de ahorro</option>
+                </select>
+                <div class="select_arrow-dash"></div>
+              </div>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Nº Cuenta</div>
+              <input class="input-for-modal-text" type="text" placeholder="Nº Cuenta"/>
+            </div>
+            <div class="col-md-6 m-b-10">
+              <div class="title-input text-l">Email notificación</div>
+              <input class="input-for-modal-text" type="text" placeholder="Email"/>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-t-20">
+              <button class="make-crear">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+  <script>
+    $('.eliminar-cuenta').click(function(){
+       swal({
+        title: "Seguro que deseas eliminar esta cuenta?",
+        text: "",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal("Se ha eliminado con éxito", {
+            icon: "success",
+          });
+        } else {
+          swal("Tu información no se ha enviado");
+          $('.aceptar-actividad-1').click();
+        }
+      });
+    })
+  </script>
+</html>

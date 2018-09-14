@@ -59,7 +59,7 @@
               <div class="search-input-nav"><i class="material-icons">search</i></div>
             </li>
             <li>
-              <div class="top-btn">Creación de tags</div>
+              <button class="top-btn" data-remodal-target="agregar-tag">Creación de tags</button>
             </li>
           </ul>
         </div>
@@ -69,7 +69,7 @@
               <th>Nombre</th>
               <th>Actividades</th>
               <th>Descripción</th>
-              <th class="text-c">N° de usos </th>
+              <th class="text-c"># usos </th>
               <th>Visible</th>
               <th>Editar</th>
               <th>Elimiminar</th>
@@ -97,7 +97,41 @@
                   </div>
                 </td>
                 <td>
-                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                  <div class="truncate2" data-caracter="60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                </td>
+                <td class="text-c">0</td>
+                <td>
+                  <label class="switch" for="checkbox2">
+                    <input class="reservation-visible" id="checkbox2" type="checkbox"/>
+                    <div class="slider switch-red round"></div>
+                  </label>
+                </td>
+                <td><a href="#" data-remodal-target="editar-tag"><i class="material-icons">edit</i></a></td>
+                <td><a class="eliminar-tag m-l-10" href="#"><i class="material-icons">delete</i></a></td>
+              </tr>
+              <tr>
+                <td>Casa</td>
+                <td style="width: 350px;">
+                  <div class="d-flex m-t-5 flex-wrap">
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                    <div class="bg-checkmark m-r-5 m-b-10">
+                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
+                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
+                      </label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="truncate2" data-caracter="60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
                 </td>
                 <td class="text-c">0</td>
                 <td>
@@ -131,7 +165,7 @@
                   </div>
                 </td>
                 <td>
-                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                  <div class="truncate2" data-caracter="60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
                 </td>
                 <td class="text-c">0</td>
                 <td>
@@ -165,41 +199,7 @@
                   </div>
                 </td>
                 <td>
-                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
-                </td>
-                <td class="text-c">0</td>
-                <td>
-                  <label class="switch" for="checkbox2">
-                    <input class="reservation-visible" id="checkbox2" type="checkbox"/>
-                    <div class="slider switch-red round"></div>
-                  </label>
-                </td>
-                <td><a href="#"><i class="material-icons">edit</i></a></td>
-                <td><a class="m-l-10" href="#"><i class="material-icons">delete</i></a></td>
-              </tr>
-              <tr>
-                <td>Casa</td>
-                <td style="width: 350px;">
-                  <div class="d-flex m-t-5 flex-wrap">
-                    <div class="bg-checkmark m-r-5 m-b-10">
-                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 1
-                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
-                      </label>
-                    </div>
-                    <div class="bg-checkmark m-r-5 m-b-10">
-                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
-                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
-                      </label>
-                    </div>
-                    <div class="bg-checkmark m-r-5 m-b-10">
-                      <label class="checkbox-container" style="margin-bottom: 0;padding-left: 0 !important;padding-right: 1.25rem;">Actividad 2
-                        <input class="group1" type="checkbox"/><span class="checkmark" style="left:auto !important; right: 0 !important"></span>
-                      </label>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="truncate2" data-caracter="120">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
+                  <div class="truncate2" data-caracter="60">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum voluptate quo cumque assumenda debitis. Blanditiis sit, maiores alias, quis maxime id, illum vero facere natus suscipit non, incidunt architecto laudantium?</div>
                 </td>
                 <td class="text-c">0</td>
                 <td>
@@ -225,6 +225,40 @@
         </div>
       </div>
     </div>
+    <div class="remodal tags-content-modal" data-remodal-id="agregar-tag">
+      <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+      <div class="new-title-modal d-flex justify-content-center m-b-20">Agrega un nuevo tag</div>
+      <div class="row no-magin">
+        <div class="col-md-12 m-t-20">
+          <div class="title-input text-l">título</div>
+          <input class="input-for-modal-text m-b-15" type="text" placeholder="Nombre del tag"/>
+        </div>
+        <div class="col-md-12">
+          <div class="title-input text-l">descripción</div>
+          <textarea class="w100 input-for-modal" placeholder="Una breve descripción de tu etiqueta"></textarea>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center m-t-20">
+          <button class="btn-danger-tags">Crear</button>
+        </div>
+      </div>
+    </div>
+    <div class="remodal tags-content-modal" data-remodal-id="editar-tag">
+      <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+      <div class="new-title-modal d-flex justify-content-center m-b-20">Editar un nuevo tag</div>
+      <div class="row no-magin">
+        <div class="col-md-12 m-t-20">
+          <div class="title-input text-l">título</div>
+          <input class="input-for-modal-text m-b-15" type="text" placeholder="Nombre del tag"/>
+        </div>
+        <div class="col-md-12">
+          <div class="title-input text-l">descripción</div>
+          <textarea class="w100 input-for-modal" placeholder="Una breve descripción de tu etiqueta" style="    padding: 12px 18px !important;"></textarea>
+        </div>
+        <div class="col-md-12 d-flex justify-content-center m-t-20">
+          <button class="btn-danger-tags">Crear</button>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -233,5 +267,26 @@
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
   <script src="js/modal/remodal.js"></script><script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <script>setTimeout(function(){  tippy('.toolpitruncate')}, 1000); </script>
+  <script>
+     setTimeout(function(){  tippy('.toolpitruncate')}, 1000); 
+      $('.eliminar-tag').click(function(){
+           swal({
+            title: "Esta seguro que desea aceptar",
+            text: "",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          })
+          .then((willDelete) => {
+            if (willDelete) {
+              swal("Los cambios se han guardado correctamente", {
+                icon: "success",
+              });
+            } else {
+              swal("Tu información no se ha enviado");
+              $('.aceptar-actividad-1').click();
+            }
+          });
+    })
+  </script>
 </html>

@@ -1667,3 +1667,135 @@ window.addEventListener("orientationchange", function() {
         $('.aspect-ratio').css('height', d3 + 'px ')
     }, 400)
 }, false);
+
+
+
+$('.promociones-collapse').click(function(e) {
+    e.preventDefault()
+    $(this).parent().parent().next().toggle("slow", function() {
+
+    });
+})
+
+
+
+/*=========================================================================
+   Chart
+=========================================================================*/
+$(document).ready(function() {
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["20/20", "59/3", "5/5", "3/56", "58/58", "20/20", "20/20", "20/20", "20/20", ],
+            datasets: [{
+                label: 'Vendidas',
+                backgroundColor: "#19C6B7",
+                data: [20, 17, 5, 3, 18, 20, 4, 2, 4, ],
+            }, {
+                label: 'Publicado',
+                backgroundColor: "#4A4A4A",
+                data: [20, 3, 5, 12, 13, 20, 4, 2, 4, ],
+            }],
+        },
+        options: {
+            tooltips: {
+                mode: 'index',
+                position: 'nearest',
+
+            },
+
+            title: {
+                display: true,
+
+                position: 'top'
+            },
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    },
+
+                }],
+                yAxes: [{
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                    ticks: {
+
+                        min: 0,
+                        max: 100,
+                        callback: function(value) {
+                            if (value == 0 || value == 20 || value == 40 || value == 20 || value == 60 || value == 80 || value == 100)
+                                return value + "%"
+                        }
+                    },
+                    type: 'linear',
+                }]
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: 'bottom'
+            },
+
+        }
+    });
+    var canvas = document.getElementById("barChart");
+    var ctx = canvas.getContext('2d');
+
+    var data = {
+        labels: ["Actividad 1 / 75%", "Actividad 2 / 5%", "Actividad 3 / 20%"],
+        datasets: [{
+            fill: true,
+            backgroundColor: [
+                '#F56A80',
+                '#B1B0B2',
+                '#50E3C2'
+            ],
+            data: [75, 5, 20],
+        }]
+    };
+
+    // Notice the rotation from the documentation.
+
+    var options = {
+        title: {
+            display: true,
+
+            position: 'top'
+        },
+        rotation: -0.7 * Math.PI,
+        legend: {
+            position: 'bottom'
+        },
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    var dataset = data.datasets[tooltipItem.datasetIndex];
+                    var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                        return previousValue + currentValue;
+                    });
+                    var currentValue = dataset.data[tooltipItem.index];
+                    var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+                    return percentage + "%";
+                }
+            },
+        },
+    };
+
+
+    // Chart declaration:
+    var myBarChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: options
+    });
+
+    // Fun Fact: I've lost exactly 3 of my favorite T-shirts and 2 hoodies this way :|
+
+
+})
