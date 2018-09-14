@@ -166,10 +166,7 @@ table.dataTable.order-column.stripe tbody tr.odd.selected>.sorting_3 {
     background-color: #a9b7d1
 }
 
-table.dataTable.display tbody tr.even>.sorting_1,
-table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
-    background-color: #fafafa
-}
+
 
 table.dataTable.display tbody tr.even>.sorting_2,
 table.dataTable.order-column.stripe tbody tr.even>.sorting_2 {

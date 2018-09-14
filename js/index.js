@@ -778,6 +778,12 @@ $('.link-toggle').click(function(e) {
     });
 })
 
+$('.staff-cpmt').click(function(e) {
+    e.preventDefault();
+    $(this).parent().next().toggle("slow", function() {
+        // Animation complete.
+    });
+})
 
 $('.visible-event').click(function() {
     var active_text = false;
@@ -1683,119 +1689,193 @@ $('.promociones-collapse').click(function(e) {
    Chart
 =========================================================================*/
 $(document).ready(function() {
-
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["20/20", "59/3", "5/5", "3/56", "58/58", "20/20", "20/20", "20/20", "20/20", ],
-            datasets: [{
-                label: 'Vendidas',
-                backgroundColor: "#19C6B7",
-                data: [20, 17, 5, 3, 18, 20, 4, 2, 4, ],
-            }, {
-                label: 'Publicado',
-                backgroundColor: "#4A4A4A",
-                data: [20, 3, 5, 12, 13, 20, 4, 2, 4, ],
-            }],
-        },
-        options: {
-            tooltips: {
-                mode: 'index',
-                position: 'nearest',
-
+    if (document.getElementById("myChart")) {
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["20/20", "59/3", "5/5", "3/56", "58/58", "20/20", "20/20", "20/20", "20/20", ],
+                datasets: [{
+                    label: 'Vendidas',
+                    backgroundColor: "#19C6B7",
+                    data: [20, 17, 5, 3, 18, 20, 4, 2, 4, ],
+                }, {
+                    label: 'Publicado',
+                    backgroundColor: "#4A4A4A",
+                    data: [20, 3, 5, 12, 13, 20, 4, 2, 4, ],
+                }],
             },
+            options: {
+                tooltips: {
+                    mode: 'index',
+                    position: 'nearest',
 
+                },
+
+                title: {
+                    display: true,
+
+                    position: 'top'
+                },
+                scales: {
+                    xAxes: [{
+                        barPercentage: 0.5, // Tamaño de las barras
+                        stacked: true,
+                        gridLines: {
+                            display: false,
+                        },
+
+                    }],
+                    yAxes: [{
+                        stacked: true,
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                        ticks: {
+
+                            min: 0,
+                            max: 100,
+                            callback: function(value) {
+                                if (value == 0 || value == 20 || value == 40 || value == 20 || value == 60 || value == 80 || value == 100)
+                                    return value + "%"
+                            }
+                        },
+                        type: 'linear',
+                    }]
+                },
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        padding: 20
+                    }
+                },
+
+            }
+        });
+        var canvas = document.getElementById("barChart");
+        var ctx = canvas.getContext('2d');
+
+        var data = {
+            labels: ["Actividad 1 / 75%", "Actividad 2 / 5%", "Actividad 3 / 20%"],
+            datasets: [{
+                fill: true,
+                backgroundColor: [
+                    '#F56A80',
+                    '#B1B0B2',
+                    '#50E3C2'
+                ],
+                data: [75, 5, 20],
+            }]
+        };
+
+        // Notice the rotation from the documentation.
+
+        var options = {
             title: {
                 display: true,
 
                 position: 'top'
             },
-            scales: {
-                xAxes: [{
-                    stacked: true,
-                    gridLines: {
-                        display: false,
-                    },
-
-                }],
-                yAxes: [{
-                    stacked: true,
-                    ticks: {
-                        beginAtZero: true,
-                    },
-                    ticks: {
-
-                        min: 0,
-                        max: 100,
-                        callback: function(value) {
-                            if (value == 0 || value == 20 || value == 40 || value == 20 || value == 60 || value == 80 || value == 100)
-                                return value + "%"
-                        }
-                    },
-                    type: 'linear',
-                }]
-            },
-            responsive: true,
-            maintainAspectRatio: false,
+            rotation: -0.7 * Math.PI,
             legend: {
                 position: 'bottom'
             },
-
-        }
-    });
-    var canvas = document.getElementById("barChart");
-    var ctx = canvas.getContext('2d');
-
-    var data = {
-        labels: ["Actividad 1 / 75%", "Actividad 2 / 5%", "Actividad 3 / 20%"],
-        datasets: [{
-            fill: true,
-            backgroundColor: [
-                '#F56A80',
-                '#B1B0B2',
-                '#50E3C2'
-            ],
-            data: [75, 5, 20],
-        }]
-    };
-
-    // Notice the rotation from the documentation.
-
-    var options = {
-        title: {
-            display: true,
-
-            position: 'top'
-        },
-        rotation: -0.7 * Math.PI,
-        legend: {
-            position: 'bottom'
-        },
-        tooltips: {
-            callbacks: {
-                label: function(tooltipItem, data) {
-                    var dataset = data.datasets[tooltipItem.datasetIndex];
-                    var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
-                        return previousValue + currentValue;
-                    });
-                    var currentValue = dataset.data[tooltipItem.index];
-                    var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
-                    return percentage + "%";
+            tooltips: {
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                        var total = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                            return previousValue + currentValue;
+                        });
+                        var currentValue = dataset.data[tooltipItem.index];
+                        var percentage = Math.floor(((currentValue / total) * 100) + 0.5);
+                        return percentage + "%";
+                    }
+                },
+            },
+            legend: {
+                position: 'bottom',
+                labels: {
+                    boxWidth: 10,
+                    padding: 20
                 }
             },
-        },
-    };
+        };
 
 
-    // Chart declaration:
-    var myBarChart = new Chart(ctx, {
-        type: 'pie',
-        data: data,
-        options: options
-    });
+        // Chart declaration:
+        var myBarChart = new Chart(ctx, {
+            type: 'pie',
+            data: data,
+            options: options
+        });
 
-    // Fun Fact: I've lost exactly 3 of my favorite T-shirts and 2 hoodies this way :|
-
+        // Fun Fact: I've lost exactly 3 of my favorite T-shirts and 2 hoodies this way :|
+    }
 
 })
+
+/*=========================================================================
+   Checkboxes
+=========================================================================*/
+var expanded = false;
+
+function showCheckboxes() {
+    var checkboxes = document.getElementById("checkboxes");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}
+
+var expanded2 = false;
+
+function showCheckboxes2() {
+    var checkboxes = document.getElementById("checkboxes2");
+    if (!expanded) {
+        checkboxes.style.display = "block";
+        expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        expanded = false;
+    }
+}
+
+$(function() {
+    var Accordion2 = function(el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+
+        var links = this.el.find('.item-collapse-pre');
+        links.click(function() {
+            $(this).toggleClass('rotate-icon-collapse');
+            $(this).toggleClass('older');
+        })
+        links.on('click', {
+
+            el: this.el,
+            multiple: this.multiple
+        }, this.dropdown)
+    }
+
+    Accordion2.prototype.dropdown = function(e) {
+        var $el = e.data.el;
+        let $this = $(this);
+        let $next = $this.next();
+
+        $next.slideToggle();
+        $this.parent().toggleClass('open');
+
+        if (!e.data.multiple) {
+            $el.find('.collapse-content-pre').not($next).slideUp().parent().removeClass('open');
+        };
+    }
+    var accordion2 = new Accordion2($('.collapse-wrap'), true);
+
+});
