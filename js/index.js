@@ -1879,3 +1879,14 @@ $(function() {
     var accordion2 = new Accordion2($('.collapse-wrap'), true);
 
 });
+
+
+/*=========================================================================
+   Change Contraseña
+=========================================================================*/
+
+$('.btn-collapse').click(function() {
+    $(this).parent().next().toggle("slow", function() {
+
+    });
+})

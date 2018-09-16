@@ -1,0 +1,383 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="js/croppie/iEdit.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="super-fixed">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul>
+            <li><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">store_mall_directory</i><span>Informacion</span></li>
+            <ul class="expand-dash">
+              <li class="expand-active"><a href="#1">Perfil</a></li>
+              <li class="item-li"><a href="#2">Cuentas</a></li>
+              <li class="item-li"><a href="#3">Staff</a></li>
+              <li>Permisiones</li>
+              <li>Configuración</li>
+            </ul>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash">
+        <div class="nav-top">
+          <ul class="center-right-nav">
+            <li>Completa tu perfil de Proveedor</li>
+            <li><i class="material-icons">arrow_back</i></li>
+          </ul>
+        </div>
+        <div class="content-dashboard">
+          <div class="row no-margin">
+            <div class="col-md-12">
+              <p class="m-b-35" style="padding:10px;text-align: center;display:block;background:rgba(238,241,244,0.75)">Para poder comenzar a vender actividades/ servicios y experiencias en Entrekids es necesario tener la totalidad de los datos de esta página correctamente cargados. Te pedimos que seas preciso ya que verificaremos la información establecida en estos formularios. Te deseamos éxito en este nuevo proyecto en conjunto a Entrekids   </p>
+            </div>
+            <div class="col-md-12">
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Qué tipo de proveedor eres?</div>
+                  <!--p Are you the sole representative of the business or is this on behalf of a larger organization?-->
+                </div>
+                <div class="col-md-8 d-flex align-items-end">
+                  <div class="d-flex m-r-25">
+                    <div class="control-group">
+<label class="control control-radio">Persona Jurídica<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="control-group">
+<label class="control control-radio">Persona Natural<input type="radio" name="radio" checked="checked" />
+<div class="control_indicator"></div>
+</label>
+</div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Detalles del Negocio</div>
+                  <p>Danos más información de tu negocio para poder completar el perfil y que los usuarios te conozcan más.-</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Nombre de fantasía</div>
+                      <input type="text" placeholder="Nombre de fantasía"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Razón social</div>
+                      <input type="text" placeholder="Razón social"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">rut</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Sitio web</div>
+                      <input type="text" placeholder="Sitio web"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Email</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Teléfono</div>
+                      <input type="text" placeholder="Teléfono"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-12">
+                      <div class="title-input">Descripción</div>
+                      <textarea class="texting" placeholder="Being the savage's bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-sc"></textarea>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-4">
+                      <div class="title-input">FACEBOOK</div>
+                      <input type="text" placeholder="web.facebook.com/perfil"/>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="title-input">TWITTER</div>
+                      <input type="text" placeholder="twitter.com/perfil"/>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="title-input">INSTAGRAM</div>
+                      <input type="text" placeholder="www.instagram.com/perfil"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Dirección del Negocio </div>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Dirección</div>
+                      <input type="text" placeholder="Dirección"/>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="title-input">Número</div>
+                      <input type="text" placeholder="Número"/>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="title-input">Oficina</div>
+                      <input type="text" placeholder="Oficina"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Comuna</div>
+                      <input type="text" placeholder="Comuna"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Región</div>
+                      <input type="text" placeholder="Región"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Logo</div>
+                  <p>Los logos deben ser idealmente en formato PNG con fondo transparente.</p>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files2" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results2" for="files2" style="b background-size: cover;background-position: center;background-repeat: no-repeat;    height: 140.15px;width: 228.15px;  background-size: cover; cursor: pointer;">
+                      <div class="div-content2"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo2" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                      <input type="hidden" name="photo-img[]" id="photo-2"/>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Administrador de cuenta</div>
+                  <p>This should be the info for a person authorized on the bank account below. Note that we do not store your social security number.</p>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Nombre</div>
+                      <input type="text" placeholder="Nombre"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Apellido</div>
+                      <input type="text" placeholder="Apellido"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Email</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Rut</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-12">
+                      <div class="title-input">Fecha de nacimiento</div>
+                      <input type="text" placeholder="Fecha de nacimiento" data-toggle="datepicker"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Teléfono fijo</div>
+                      <input type="text" placeholder="Teléfono fijo"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Teléfono celular</div>
+                      <input type="text" placeholder="Teléfono celular"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Dirección administrador</div>
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-7">
+                      <div class="title-input">Dirección</div>
+                      <input type="text" placeholder="Dirección"/>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="title-input">Número</div>
+                      <input type="text" placeholder="Número"/>
+                    </div>
+                  </div>
+                  <div class="row no-margin m-b-10">
+                    <div class="col-md-6">
+                      <div class="title-input">Comuna</div>
+                      <input type="text" placeholder="Email"/>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="title-input">Región</div>
+                      <input type="text" placeholder="Rut"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Fotografía de identidad</div>
+                  <p>Por favor subir una foto de la licencia de conducir o CI. Utilizaremos esta foto solo para verificar su identidad.</p>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center">
+                  <div class="avatar-user d-flex m-r-15">
+                    <input id="files" type="file" name="photo"/>
+                    <label class="img-content null-img oval" id="results" for="files" style="b background-size: cover;background-position: center;background-repeat: no-repeat;     height: 140.15px;width: 228.15px;  background-size: cover; cursor: pointer;">
+                      <div class="div-content1"><i class="ion ion-md-camera"></i>subir</div><button class="delete-photo1" style="display: none;    position: absolute;right: -5px;top: -1px;background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>
+                      <input type="hidden" name="photo-img[]" id="photo-1"/>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin item-dash">
+                <div class="col-md-4">
+                  <div class="title-block">Cambiar contraseña</div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center justify-content-center flex-column">
+                  <button class="btn-white" id="change-contrasena">Cambiar contraseña</button>
+                  <div class="form" id="hide-contrasena">
+                    <input class="m-b-10 m-t-20" type="password" placeholder="Contraseña actual"/>
+                    <input class="m-b-10 m-t-20" type="password" placeholder="Nueva contraseña"/>
+                    <input type="password" placeholder="Repetir contraseña"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row no-margin w100 m-t-35 d-flex justify-content-center">
+                <button class="make-activity save-perfil">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <!-- Contador de caracteres-->
+  <script src="js/inputMax/maxinput.js"></script>
+  <script src="js/inputMax/jquery.spinner.js"></script>
+  <script src="js/inputMax/jQuery.tagify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/i18n/datepicker.ca-ES.js"></script>
+  <script src="js/modal/remodal.js"></script><script src="js/croppie/iEdit.js"></script>
+  <script>
+    $('.save-perfil').click(function(){
+      $('.super-fixed').toggleClass('show-opa');
+    })
+    
+    $( function(){
+      $('[data-toggle="datepicker"]').datepicker();
+    })
+    $("#files").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results").css("background-image", "url(" + res + ")" ); 
+        $('.div-content1').css('display', 'none'); 
+        $('.delete-photo1').css('display', 'block');
+        $('#photo-1').val(res)
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+    $('.delete-photo1').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results").css("background-image", "url('')"); 
+      $('#photo-1').val("")
+    })
+    $('.delete-photo2').click(function(){
+      $(this).prev().css('display', 'block');
+      $(this).css('display', 'none');
+      $("#results2").css("background-image", "url('')"); 
+      $('#photo-2').val("")
+    })
+    
+    $("#files2").change(function(e){
+      var img = e.target.files[0];
+    
+      if(!iEdit.open(img, true, function(res){
+        $("#results2").css("background-image", "url(" + res + ")" ); 
+        $('.div-content2').css('display', 'none'); 
+        $('.delete-photo2').css('display', 'block');
+        $('#photo-2').val(res)    
+      })){
+        alert("Whoops! That is not an image!");
+      }
+    
+    });
+  </script>
+</html>

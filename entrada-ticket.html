@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/datatables.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
   </head>
   <body class="app-js">
     <div class="page-wrapper">
@@ -19,13 +22,9 @@
           <nav class="main-nav">
             <div class="container">
               <ul class="nav">
-                <li class="logo">
-                  <div class="nav-title"> <img src="img/Logo.png" alt=""/></div>
-                </li>
-                <li class="d-flex btn-hidden">
-                  <input class="f-6" type="text" placeholder="Buscar actividades" style="width: 43%;"/>
-                  <input class="inner-input f-6" type="text" placeholder="Ubicación"/>
-                  <button class="search"> <i class="ion ion-md-search"></i></button>
+                <li class="logo fixed-head d-flex align-items-center">
+                  <div class="nav-title m-r-15" style="margin-right: 0px"><img src="img/Logo.png" alt=""/></div>
+                  <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
                   <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
@@ -112,75 +111,19 @@
             </div>
           </nav>
         </nav>
-        <div class="filter-section">
-          <div class="btn-button-filter">
-            <div class="point-filter"></div><i class="material-icons">filter_list</i>Filters
-          </div>
-          <div class="input-search"><input class=" ghost-input" type="text" placeholder="Buscar"></div>
-        </div>
       </div>
-      <div class="alert-success">Regístrate y obtén un 10% de descuento en tu primera compra</div>
-      <div class="wrapper-content">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card-content">
-                <div class="panel-ayuda">
-                  <div class="row no-margin">
-                    <div class="col-md-6">
-                      <div class="title-help">Bienvenido al centro de ayuda de Entrekids</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="m-b-10" style="padding:7px 7px">Busca tu respuesta</label>
-                      <div style="background-color: #C5F6FF;padding:7px 7px">
-                        <input class="keysecret" type="text" placeholder="Ingresa palabras claves" style="width: 100%"/>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="popular-pre m-t-30">
-                        <div class="title-pre m-b-15">Preguntas más populares</div><a class="question m-b-15" href="#">¿So strongly and metaphysically did I conceive of my situation then, that while ?</a><a class="question m-b-15" href="#">It was a humorously perilous business for both of us. </a><a class="question" href="#">¿So strongly and metaphysically did I conceive of my situation then, that while ?</a>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="collapse-wrap">
-                        <div class="sub-wrap">
-                          <ul class="nav-terminos collapse-pre">
-                            <li class="item-collapse-pre"><i class="material-icons m-r-10">add</i><span class="color-app">Portland ugh fashion                               </span></li>
-                            <div class="collapse-content-pre"> 
-                              <div class="wrapper-collapse-pre">
-                                <p class="m-b-10">Será automáticamente socio del ScotiaClubAzul todo cliente Scotiabank Azul que, siendo una persona natural,  cuente con al menos una Tarjeta de Crédito Visa o Tarjeta de Crédito Mastercard.</p>
-                                <p class="m-b-10">Las tarjetas empresariales, corporativas, Visa Enjoy, Visa Movistar, Visa Forum, Visa Congelada, Visa Crédito Express, Visa Bex y Tarjeta Universal están expresamente excluidas de este programa</p><a class="link-h m-b-10" href="#">Link externo</a><a class="link-h m-b-10" href="#">Ver todas las preguntas</a>
-                              </div>
-                            </div>
-                            <li class="item-collapse-pre"><i class="material-icons m-r-10">add</i><span class="color-app">Hella narwhal Cosby sweater McSweeney' fashion                               </span></li>
-                            <div class="collapse-content-pre"> 
-                              <div class="wrapper-collapse-pre">
-                                <p class="m-b-10">Será automáticamente socio del ScotiaClubAzul todo cliente Scotiabank Azul que, siendo una persona natural,  cuente con al menos una Tarjeta de Crédito Visa o Tarjeta de Crédito Mastercard.</p>
-                                <p>Las tarjetas empresariales, corporativas, Visa Enjoy, Visa Movistar, Visa Forum, Visa Congelada, Visa Crédito Express, Visa Bex y Tarjeta Universal están expresamente excluidas de este programa</p><a class="link-p" href="#">Link externo</a><a class="link-p" href="#">Ver todas las preguntas</a>
-                              </div>
-                            </div>
-                            <li class="item-collapse-pre"><i class="material-icons m-r-10">add</i><span class="color-app">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.                        </span></li>
-                            <div class="collapse-content-pre"> 
-                              <div class="wrapper-collapse-pre">
-                                <p class="m-b-10">Será automáticamente socio del ScotiaClubAzul todo cliente Scotiabank Azul que, siendo una persona natural,  cuente con al menos una Tarjeta de Crédito Visa o Tarjeta de Crédito Mastercard.</p>
-                                <p>Las tarjetas empresariales, corporativas, Visa Enjoy, Visa Movistar, Visa Forum, Visa Congelada, Visa Crédito Express, Visa Bex y Tarjeta Universal están expresamente excluidas de este programa</p><a class="link-p" href="#">Link externo</a><a class="link-p" href="#">Ver todas las preguntas</a>
-                              </div>
-                            </div>
-                            <li class="item-collapse-pre"><i class="material-icons m-r-10">add</i><span class="color-app"> fashion axe you probably haven't heard of them stumptown tousled food truck post-ironic quinoa bicycle rights aesthetic keytar Pitchfork.                             </span></li>
-                            <div class="collapse-content-pre"> 
-                              <div class="wrapper-collapse-pre">
-                                <p class="m-b-10">Será automáticamente socio del ScotiaClubAzul todo cliente Scotiabank Azul que, siendo una persona natural,  cuente con al menos una Tarjeta de Crédito Visa o Tarjeta de Crédito Mastercard.</p>
-                                <p>Las tarjetas empresariales, corporativas, Visa Enjoy, Visa Movistar, Visa Forum, Visa Congelada, Visa Crédito Express, Visa Bex y Tarjeta Universal están expresamente excluidas de este programa</p><a class="link-p" href="#">Link externo</a><a class="link-p" href="#">Ver todas las preguntas</a>
-                              </div>
-                            </div>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 d-flex justify-content-center">
-                      <div class="not-fount m-t-20 d-flex align-items-center m-r-10">¿No encontraste lo que buscas? <a class="question" href="#">Ver todas las dudas.</a></div>
-                    </div>
-                  </div>
+      <div class="wrapper-content out-wrapper">
+        <div class="hero-ticket" style="background-image: url(img/stock.jpg);">
+          <div class="container">
+            <div class="d-flex align-items-center justify-content-center flex-column m-t-30">
+              <div class="content-center bg-fff" style="border-radius: 4px;">
+                <div class="width-proveedor d-flex justify-content-center align-items-center flex-column"><div class="title-modal m-t-25">Ingresa a entrekids</div>
+                  <div class="text-entrada m-b-35">Bienvenido(a) al centro de tickets <br> Entrekids. Aquí pdrás hacer la gestión de <br> ingreso de tus entradas.</div><div class="form m-b-15">
+<input class="input-modal width-entrada" type="text" placeholder="Ingresa tu mail ">
+</div>
+<div class="form m-b-35">
+<input class="input-modal width-entrada" type="text" placeholder="Ingresa tu contraseña"><a class="loss-pass m-t-5" href="#">¿Olvidaste tu contraseña?</a></div>
+                  <button class="entrada-btn m-b-35">INGRESA</button>
                 </div>
               </div>
             </div>

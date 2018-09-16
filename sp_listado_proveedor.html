@@ -1,0 +1,153 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css"/>
+    <!--link(rel="stylesheet", href="js/croppie/iEdit.css")-->
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
+    <link rel="stylesheet" href="js/modal/bootstrap.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="super-fixed">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Administrador</p>
+          <p>EntreKids</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">event</i><span>Actividades</span></li>
+            <li><i class="material-icons">lock_open</i><span>Autorizaciones</span></li>
+          </ul>
+          <ul class="navigation">
+            <ul class="expand-dash">
+              <li class="item-li"><a href="#descripcion">Proveedor</a></li>
+              <li class="item-li"><a href="#configuracion">Actividad</a></li>
+              <li class="item-li"><a href="#direccion">Tags</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li><i class="material-icons">person</i><span>Usuario</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a class="expand-active" href="#">Proveedores</a></li>
+            <li class="item-li"><a href="#">Usuario</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balances</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a href="#">Balances EK</a></li>
+            <li class="item-li"><a href="#">Transacciones</a></li>
+            <li class="item-li"><a href="#">Nomina de pago</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">group</i><span>Staff</span></li>
+            <li><i class="material-icons">how_to_reg</i><span>Permisiones</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top">
+          <ul class="d-flex justify-content-end align-items-center">
+            <li class="mr-auto"><i class="material-icons">arrow_back</i></li>
+            <li class="title-dashboard m-r-20 fix-center">Proveedores</li>
+            <li class="nav-opcion d-flex align-items-center">
+              <input class="input-nav" type="text" placeholder="Buscar Proveedor"/>
+              <div class="search-input-nav"><i class="material-icons">search</i></div>
+              <ul class="group-btn-nav m-l-10">
+                <li><i class="material-icons">store_mall_directory</i></li>
+                <li class="active-li"><i class="material-icons">person</i></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="fix-content-dash-no-mg item-promociones" style="display: block"> 
+          <table class="pp-resena-table">
+            <thead>
+              <th class="text-l">ID</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th class="text-center">Ver</th>
+              <th class="text-center">Editar</th>
+              <th class="text-center">Eliminar</th>
+              <th class="text-center">Contraseña</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-l">55555555</td>
+                <td>RODRIGO ANTONIO</td>
+                <td>SEPULVEDA MARTINEZ</td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
+              </tr>
+              <tr>
+                <td class="text-l">55555555</td>
+                <td>RODRIGO ANTONIO</td>
+                <td>SEPULVEDA MARTINEZ</td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
+              </tr>
+              <tr>
+                <td class="text-l">55555555</td>
+                <td>RODRIGO ANTONIO</td>
+                <td>SEPULVEDA MARTINEZ</td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
+              </tr>
+            </tbody>
+          </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
+<li>
+<div class="road-to-back">&lt;</div>
+</li>
+<li class="pagi">Página 1 de 10</li>
+<li>
+<div class="road-to-next"> &gt;</div>
+</li>
+</ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+</html>
