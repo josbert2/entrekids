@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="css/datatables.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css"/>
   </head>
   <body class="app-js">
     <div class="page-wrapper">
@@ -20,9 +21,11 @@
           <nav class="main-nav">
             <div class="container">
               <ul class="nav">
-                <li class="logo fixed-head d-flex align-items-center">
+                <li class="logo fixed-head d-flex align-items-center entrada-flex">
                   <div class="nav-title m-r-15" style="margin-right: 0px"><img src="img/Logo.png" alt=""/></div>
-                  <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+                  <div class="maybe-fixed">
+                    <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+                  </div>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
                   <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
@@ -109,6 +112,9 @@
             </div>
           </nav>
         </nav>
+        <div class="active-mobile">
+          <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+        </div>
       </div>
       <div class="wrapper-content out-wrapper">
         <div class="hero-ticket">
@@ -117,8 +123,8 @@
             <div class="d-flex align-items-center justify-content-center flex-column m-t-30">
               <div class="content-center">
                 <div class="width-proveedor d-flex justify-content-center align-items-center flex-column">
-                  <div class="logo-empresa"></div>
-                  <div class="title-event has-text-centered">Nombre del evento lorem ipsun dolor est</div>
+                  <div class="logo-empresa d-flex justify-content-center align-items-center">Logo de la empresa</div>
+                  <div class="title-event has-text-centered">Ingrese código de ticket</div>
                   <input class="mega-input m-t-15" type="text" placeholder="Ingresa el código del ticket"/>
                   <div class="mega-btn m-t-35">registrar entrada</div>
                 </div>
@@ -129,10 +135,15 @@
         <div class="content-wrap-ticket">
           <div class="container" style="  position: relative;">
             <div class="w100 today"> 
-              <div class="history m-t-30 m-b-30 has-text-centered">Historial de tickes</div>
-              <div class="input-search input-today ticketinput"><input class="provider ml-auto " type="text" placeholder="Buscar por nùmero de ticket"></div>
+              <div class="flex-right m-t-30 m-b-30"><ul>
+<li>
+                <div class="history has-text-centered">Historial de tickes</div></li>
+<li>
+                <div class="input-search"><input class=" ml-auto ticket-input" type="text" placeholder="Buscar por nùmero de ticket"></div></li>
+</ul>
+              </div>
             </div>
-            <table class="pp-resena-table bordered" id="table-ticket">
+            <table class="pp-resena-table bordered table-responsive dt-responsive display nowrap" id="table-ticket">
               <thead>
                 <th class="text-center">Nºde Ticket</th>
                 <th class="text-l">Evento</th>
@@ -142,63 +153,63 @@
               </thead>
               <tbody>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
                      Utilizado
-                    <div class="spell used m-l-5"></div>
+                    <div class="spell used m-l-5 m-r-30"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     No utilizado
-                    <div class="spell no-used m-l-5"></div>
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
+                       No utilizado
+                    <div class="spell no-used m-l-5 m-r-30"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Devolución
-                    <div class="spell return m-l-5"></div>
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
+                      Devolución
+                    <div class="spell return m-l-5 m-r-30"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Utilizado
-                    <div class="spell used m-l-5"></div>
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
+                        Utilizado
+                    <div class="spell used m-l-5 m-r-30"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     No utilizado
-                    <div class="spell no-used m-l-5"></div>
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
+                       No utilizado
+                    <div class="spell no-used m-l-5 m-r-30"></div>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-center">2342323</td>
+                  <td class="text-center" style="width: 200px">2342323</td>
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Devolución
-                    <div class="spell return m-l-5"></div>
+                  <td class="text-center dfaicjcb-md" style="width: 140px">
+                         Devolución
+                    <div class="spell return m-l-5 m-r-30"></div>
                   </td>
                 </tr>
               </tbody>
@@ -216,10 +227,13 @@
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
   <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
   <script>
     var tabledates = $('#table-ticket').DataTable( {
+        responsive: true,
        dom: 'lrtip',
        "pageLength": 5,
+    
        language: {
         "decimal": "",
         "emptyTable": "No hay información",

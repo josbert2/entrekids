@@ -1,0 +1,560 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="css/start.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/><link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Administrador</p>
+          <p>EntreKids</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li class="active-dash"><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">event</i><span>Actividades</span></li>
+            <li><i class="material-icons">lock_open</i><span>Autorizaciones</span></li>
+          </ul>
+          <ul class="navigation">
+            <ul class="expand-dash">
+              <li class="item-li"><a href="#descripcion">Proveedor</a></li>
+              <li class="item-li"><a href="#configuracion">Actividad</a></li>
+              <li class="item-li"><a href="#direccion">Tags</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li><i class="material-icons">person</i><span>Usuario</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a href="#">Proveedores</a></li>
+            <li class="item-li"><a href="#">Usuario</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balances</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a href="#">Balances EK</a></li>
+            <li class="item-li"><a href="#">Transacciones</a></li>
+            <li class="item-li"><a href="#">Nomina de pago</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">group</i><span>Staff</span></li>
+            <li><i class="material-icons">how_to_reg</i><span>Permisiones</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100" style="    margin-left: 210px;">
+        <div class="nav-top" style="padding: 17px 0;">
+          <ul class="d-flex justify-content-end align-items-center">
+            <li class="mr-auto"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center">
+              <div style="position:relative">
+                <input class="input-nav" type="text" placeholder="Buscar Proveedor" id="input-focuss"/>
+                <ul class="input-drop">
+                  <li> 
+                    <div class="content-check"><label class="container-che">Actividad 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="content-check"><label class="container-che">Actividad 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="content-check"><label class="container-che">Actividad 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="content-check"><label class="container-che">Actividad 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="search-input-nav"><i class="material-icons">search</i></div>
+              <ul class="group-btn-nav m-l-10">
+                <li><i class="material-icons">store_mall_directory</i></li>
+                <li class="active-li"><i class="material-icons">person</i></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="content-dash-proveedor m-t-10">
+            <div class="widget">
+              <div class="panel-widget">
+                <div class="titlewi">Publicaciones</div><small>próximos  7 días</small>
+                <div class="widget-content m-t-10">
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><i class="material-icons m-r-10">person</i>
+                      <p>cupos</p>
+                    </div>
+                    <div class="secondary-widget">000</div>
+                  </div>
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><img class="m-r-10" src="img/descuento.svg" alt=""/>
+                      <p>descuentos</p>
+                    </div>
+                    <div class="secondary-widget">99</div>
+                  </div>
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><i class="material-icons m-r-10">local_atm</i>
+                      <p>totales</p>
+                    </div>
+                    <div class="secondary-widget">3.888.888</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-widget">
+                <div class="titlewi">Reservas</div><small>próximos  7 días</small>
+                <div class="widget-content m-t-10">
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><i class="material-icons m-r-10">person</i>
+                      <p>cupos</p>
+                    </div>
+                    <div class="secondary-widget">000</div>
+                  </div>
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><img class="m-r-10" src="img/descuento.svg" alt=""/>
+                      <p>descuentos</p>
+                    </div>
+                    <div class="secondary-widget">99</div>
+                  </div>
+                  <div class="row-items d-flex">
+                    <div class="primary-widget"><i class="material-icons m-r-10">local_atm</i>
+                      <p>totales</p>
+                    </div>
+                    <div class="secondary-widget">3.888.888</div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-widget" style="grid-area: span 1 / span 2;position:relative">
+                <div class="titlewi">Cuentas por cobrar</div>
+                <div class="cob m-t-10">23/8</div>
+                <div class="cob-2">$ 8.888.888</div>
+                <div class="cob m-t-5">23/8</div>
+                <div class="cob-2">$ 8.888.888</div>
+                <div class="panel-lateral-widget"><span class="m-b-10">cuenta total</span><span>$ 88.888.888</span></div>
+              </div>
+              <div class="panel-widget">
+                <div class="d-flex align-items-start justify-content-center m-t-30">
+                  <div class="d-flex align-items-start flex-column">
+                    <div class="nota">Nota</div><small>reseñas</small><small>entrekids</small>
+                  </div>
+                  <div>
+                    <div class="big-punto" style="position: relative;top: -9px;">4.7</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin m-b-15">
+              <div class="col-md-6">
+                <div class="panel-chart" style="background-color:#fff;padding:30px;">
+                  <div class="d-flex align-items-center">
+                    <h5 class="title-chart">Proyección de flujos</h5>
+                    <div class="area-checkbox ml-auto"><form>
+<div class="multiselect">
+<div class="selectBox" onclick="showCheckboxes()">
+<select class="customSelect">
+<option>Filtra actividad</option>
+</select>
+<div class="overSelect"></div>
+</div>
+<div id="checkboxes">
+<label class="container-che">Actividad 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Actividad 2
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Actividad 3
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+</div>
+</div>
+</form>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="control-group m-r-15">
+                      <label class="control control-radio" style="font-size: 12px">$
+                        <input type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                    <div class="control-group m-r-15">
+                      <label class="control control-radio" style="font-size: 12px">Cupos
+                        <input type="radio" name="radio2" checked="checked"/>
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row no-margin">
+                    <div class="col-md-12"><canvas id="myChart" width="400" height="400"></canvas></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel-chart" style="background-color:#fff;padding:30px;">                                                                                              
+                  <div class="row no-margin">
+                    <div class="d-flex align-items-center w100">
+                      <h5 class="title-chart">Venta por actividad</h5>
+                      <div class="area-checkbox ml-auto"><form>
+<div class="multiselect">
+<div class="selectBox" onclick="showCheckboxes2()">
+<select class="customSelect">
+<option>Filtra por fecha</option>
+</select>
+<div class="overSelect"></div>
+</div>
+<div id="checkboxes2">
+<label class="container-che">Rango de tiempo 1
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Rango de tiempo 2
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Rango de tiempo 3
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Rango de tiempo 4
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+<label class="container-che"> Rango de tiempo 5
+<input type="checkbox" checked="checked">
+<span class="checkmark-select"></span>
+</label>
+</div>
+</div>
+</form>
+                      </div>
+                    </div>
+                    <div class="col-md-12"><canvas id="barChart" width="400" height="375"></canvas></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin m-b-15">
+              <div class="col-md-6">
+                <div class="panel-chart" style="background-color:#fff;padding:30px;height:400px;overflow: auto;">
+                  <h5 class="title-chart">NOTIFICACIONES</h5>
+                  <div class="panel-noti-proveedor">
+                    <div class="item--proveedor">
+                      <p>Tienes 3 reservas para la actividad</p>
+                      <p style="color: #1EB2E8;font-size: 13px;  font-style: italic;">Título de la Actividad (19/6 9:00 AM) </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center"><i class="material-icons m-r-5">visibility</i>
+                      <p> El 10/6 a las 22:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="panel-noti-mensaje">
+                    <div class="item--proveedor d-flex align-items-center">
+                      <div class="square square-blue"></div>
+                      <p class="m-r-5" style="color: #1EB2E8;font-size: 13px;  font-style: italic;"> @Usuario2 </p>
+                      <p>ha respondido tu mensaje </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center"><i class="material-icons m-r-5">visibility</i>
+                      <p> El 9/6 a las 18:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="panel-noti-mensaje">
+                    <div class="item--proveedor d-flex align-items-center">
+                      <div class="square square-red"></div>
+                      <p class="m-r-5" style="color: #1EB2E8;font-size: 13px;  font-style: italic;"> @Usuario2 </p>
+                      <p>ha respondido tu mensaje </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center"><i class="material-icons m-r-5">visibility</i>
+                      <p> El 9/6 a las 18:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="panel-noti-mensaje">
+                    <div class="item--proveedor d-flex align-items-center">
+                      <div class="square square-red"></div>
+                      <p class="m-r-5" style="color: #1EB2E8;font-size: 13px;  font-style: italic;"> @Usuario2 </p>
+                      <p>ha respondido tu mensaje </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center"><i class="material-icons m-r-5">visibility</i>
+                      <p> El 9/6 a las 18:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="panel-noti-proveedor">
+                    <div class="item--proveedor">
+                      <p>Tienes 3 reservas para la actividad</p>
+                      <p style="color: #1EB2E8;font-size: 13px;  font-style: italic;">Título de la Actividad (19/6 9:00 AM) </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center">
+                      <p> El 10/6 a las 22:30 PM</p>
+                    </div>
+                  </div>
+                  <div class="panel-noti-proveedor">
+                    <div class="item--proveedor">
+                      <p>Tienes 3 reservas para la actividad</p>
+                      <p style="color: #1EB2E8;font-size: 13px;  font-style: italic;">Título de la Actividad (19/6 9:00 AM) </p>
+                    </div>
+                    <div class="item-date-prove d-flex align-items-center"><i class="material-icons m-r-5">visibility</i>
+                      <p> El 10/6 a las 22:30 PM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="panel-chart" style="background-color:#fff;padding:30px;height:400px;overflow: auto;">
+                  <h5 class="title-chart">MIS ACTIVIDADES</h5>
+                  <div class="row no-margin">
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-9 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="d-flex flex-column">
+                            <div class="title-activity m-b-5">Titulo de Actividad 1</div>
+                            <p>10 al 25 de Agosto</p>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">person</i>
+                              <p>33 / 99</p>
+                            </div>
+                            <div class="d-flex align-items-center"><img class="m-r-10" src="img/descuento.svg" alt="" style="width: 20px;"/>
+                              <p>20% / 50%</p>
+                            </div>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">local_atm</i>
+                              <p>$ 9.000 / $ 17.000</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                          <div class="option-float">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-9 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="d-flex flex-column">
+                            <div class="title-activity m-b-5">Titulo de Actividad 1</div>
+                            <p>10 al 25 de Agosto</p>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">person</i>
+                              <p>33 / 99</p>
+                            </div>
+                            <div class="d-flex align-items-center"><img class="m-r-10" src="img/descuento.svg" alt="" style="width: 20px;"/>
+                              <p>20% / 50%</p>
+                            </div>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">local_atm</i>
+                              <p>$ 9.000 / $ 17.000</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                          <div class="option-float">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-9 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center"><img src="https://images.pexels.com/photos/1149022/pexels-photo-1149022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt=""/></div>
+                          <div class="d-flex flex-column">
+                            <div class="title-activity m-b-5">Titulo de Actividad 1</div>
+                            <p>10 al 25 de Agosto</p>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">person</i>
+                              <p>33 / 99</p>
+                            </div>
+                            <div class="d-flex align-items-center"><img class="m-r-10" src="img/descuento.svg" alt="" style="width: 20px;"/>
+                              <p>20% / 50%</p>
+                            </div>
+                            <div class="d-flex align-items-center"><i class="material-icons m-r-10 " style="font-size: 19px;">local_atm</i>
+                              <p>$ 9.000 / $ 17.000</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 d-flex justify-content-center align-items-center">
+                          <div class="option-float">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin m-b-15">
+              <div class="col-md-12">
+                <div class="panel-chart" style="background-color:#fff;padding:30px;height:400px;overflow: auto;">
+                  <h5 class="title-chart">Próximas actividades</h5>
+                  <div class="row no-margin">
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-5 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                            <div class="fecha-date">LUN</div>
+                            <div class="fecha-date">18/6</div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                            <p>10:00 am - 14:00 pm (4 horas) </p>
+                            <p>Av. Lorem Ipsum 33450, Providencia</p>
+                            <p>Precio Entrekids: $99999</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7 d-flex justify-content-center align-items-center">
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">33 / 99
+                              <p style="font-size:10px">Cupos</p>
+                            </div>
+                          </div>
+                          <div class="align-items-center m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">20% / 40%
+                              <p style="font-size:10px">Descuento promedio</p>
+                            </div>
+                          </div>
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">$1.000 / $5.000
+                              <p style="font-size:10px">Ventas</p>
+                            </div>
+                          </div>
+                          <div class="option-float" style="width: auto">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i>       </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-5 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                            <div class="fecha-date">LUN</div>
+                            <div class="fecha-date">18/6</div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                            <p>10:00 am - 14:00 pm (4 horas) </p>
+                            <p>Av. Lorem Ipsum 33450, Providencia</p>
+                            <p>Precio Entrekids: $99999</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7 d-flex justify-content-center align-items-center">
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">33 / 99
+                              <p style="font-size:10px">Cupos</p>
+                            </div>
+                          </div>
+                          <div class="align-items-center m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">20% / 40%
+                              <p style="font-size:10px">Descuento promedio</p>
+                            </div>
+                          </div>
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">$1.000 / $5.000
+                              <p style="font-size:10px">Ventas</p>
+                            </div>
+                          </div>
+                          <div class="option-float" style="width: auto">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i>       </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 hover-op">
+                      <div class="row no-margin"> 
+                        <div class="col-md-5 d-actividad d-flex no-padding">
+                          <div class="img-content-actividad m-r-25 align-items-center d-flex justify-content-center flex-column">
+                            <div class="fecha-date">LUN</div>
+                            <div class="fecha-date">18/6</div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <div class="activity-futuras m-b-5">Vestibulum rutrum quam vitae fringilla ti</div>
+                            <p>10:00 am - 14:00 pm (4 horas) </p>
+                            <p>Av. Lorem Ipsum 33450, Providencia</p>
+                            <p>Precio Entrekids: $99999</p>
+                          </div>
+                        </div>
+                        <div class="col-md-7 d-flex justify-content-center align-items-center">
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">33 / 99
+                              <p style="font-size:10px">Cupos</p>
+                            </div>
+                          </div>
+                          <div class="align-items-center m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">20% / 40%
+                              <p style="font-size:10px">Descuento promedio</p>
+                            </div>
+                          </div>
+                          <div class="available m-r-30 d-flex justify-content-center flex-column align-items-center">
+                            <div class="available-total text-center f-6">$1.000 / $5.000
+                              <p style="font-size:10px">Ventas</p>
+                            </div>
+                          </div>
+                          <div class="option-float" style="width: auto">
+                            <div class="option-icon"><a href="#"><i class="material-icons">settings</i></a></div>
+                            <div class="option-icon"><a href="#"><i class="material-icons">visibility</i>       </a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-margin"></div>
+        <div class="fix-content-dash-no-mg item-promociones"> </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".dropdown-item").click(function(){
+        var valor = $(this).text();
+        
+        $(".dropdown-toggle").html(valor + '&nbsp;<span class="caret"></span>')
+      })
+    })
+  </script>
+</html>

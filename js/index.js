@@ -1066,7 +1066,7 @@ if ($('.item-dash').length) {
                 width: 300,
                 height: 200,
             },
-            enforceBoundary: false,
+            enforceBoundary: true,
             enableExif: true
         });
         $('#cropImagePop').on('shown.bs.modal', function() {
@@ -1074,6 +1074,8 @@ if ($('.item-dash').length) {
             $uploadCrop.croppie('bind', {
                 url: rawImg
             }).then(function() {
+
+                $uploadCrop.croppie('setZoom', 0)
                 console.log('jQuery bind complete');
             });
         });
@@ -1889,4 +1891,25 @@ $('.btn-collapse').click(function() {
     $(this).parent().next().toggle("slow", function() {
 
     });
+})
+
+
+$('#input-focuss').click(function() {
+    $(this).next().toggleClass('open-input')
+})
+
+$('.acti-fa').click(function() {
+    $(this).parent().toggleClass('active-fabs')
+})
+var text = false;
+$('.favorite').click(function() {
+
+    if (text) {
+        $(this).find('i').html('favorite_border');
+        text = false;
+    } else {
+        $(this).find('i').html('favorite');
+        text = true;
+    }
+
 })

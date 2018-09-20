@@ -49,7 +49,7 @@
           </ul>
           <ul class="navigation">
             <ul class="expand-dash">
-              <li class="item-li"><a href="#descripcion">Proveedor</a></li>
+              <li class="item-li"><a class="expand-active" href="#descripcion">Proveedor</a></li>
               <li class="item-li"><a href="#configuracion">Actividad</a></li>
               <li class="item-li"><a href="#direccion">Tags</a></li>
             </ul>
@@ -80,13 +80,14 @@
         <div class="nav-top">
           <ul class="d-flex justify-content-end align-items-center">
             <li class="mr-auto"><i class="material-icons">arrow_back</i></li>
-            <li class="title-dashboard m-r-20 fix-center">Proveedores</li>
+            <li class="title-dashboard m-r-20 fix-center">Usuarios</li>
             <li class="nav-opcion d-flex align-items-center">
               <input class="input-nav" type="text" placeholder="Buscar Proveedor"/>
               <div class="search-input-nav"><i class="material-icons">search</i></div>
               <ul class="group-btn-nav m-l-10">
                 <li><i class="material-icons">store_mall_directory</i></li>
-                <li class="active-li"><i class="material-icons">person</i></li>
+                <li class="active-li"><i class="material-icons">event</i></li>
+                <li><i class="material-icons">local_offer</i></li>
               </ul>
             </li>
           </ul>
@@ -108,76 +109,55 @@
                 <td>RODRIGO ANTONIO</td>
                 <td>SEPULVEDA MARTINEZ</td>
                 <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
               </tr>
               <tr>
                 <td class="text-l">55555555</td>
                 <td>RODRIGO ANTONIO</td>
                 <td>SEPULVEDA MARTINEZ</td>
                 <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
               </tr>
               <tr>
                 <td class="text-l">55555555</td>
                 <td>RODRIGO ANTONIO</td>
                 <td>SEPULVEDA MARTINEZ</td>
                 <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">edit</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">delete</i></a></td>
+                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">lock</i>       </a></td>
               </tr>
             </tbody>
-          </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
-<li>
-<div class="road-to-back">&lt;</div>
-</li>
-<li class="pagi">Página 1 de 10</li>
-<li>
-<div class="road-to-next"> &gt;</div>
-</li>
-</ul>
+          </table>
+        </div>
+        <div class="remodal tags-content-modal" data-remodal-id="cambiar-contr-sp">
+          <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+          <div class="new-title-modal d-flex justify-content-center m-b-20">Cambiar contraseña</div>
+          <div class="row no-magin">
+            <div class="col-md-12 m-t-20">
+              <div class="title-input text-l">Contraseña actual</div>
+              <input class="input-for-modal-text m-b-15" type="password" placeholder="Contraseña actual"/>
+            </div>
+            <div class="col-md-12 m-t-20">
+              <div class="title-input text-l">Nueva contraseña</div>
+              <input class="input-for-modal-text m-b-15" type="password" placeholder="Nueva contraseña"/>
+            </div>
+            <div class="col-md-12 m-t-20">
+              <div class="title-input text-l">Confirmar contraseña</div>
+              <input class="input-for-modal-text m-b-15" type="password" placeholder="Nombre del tag"/>
+            </div>
+            <div class="col-md-12 d-flex justify-content-center m-t-20">
+              <button class="save-btn">Guardar</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </body>
-  <div class="remodal tags-content-modal" data-remodal-id="editar-listado">
-    <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-    <div class="new-title-modal d-flex justify-content-center m-b-20">Editar proveedor</div>
-    <div class="row no-magin">
-      <div class="col-md-12 m-t-20">
-        <div class="title-input text-l">Nombre</div>
-        <input class="input-for-modal-text m-b-15" type="text" placeholder="Nombre"/>
-      </div>
-      <div class="col-md-12 m-t-20">
-        <div class="title-input text-l">Apellido</div>
-        <input class="input-for-modal-text m-b-15" type="text" placeholder="Apellido"/>
-      </div>
-      <div class="col-md-12 d-flex justify-content-center m-t-20">
-        <button class="save-btn">Guardar</button>
-      </div>
-    </div>
-  </div>
-  <div class="remodal tags-content-modal" data-remodal-id="contraseña-listado">
-    <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
-    <div class="new-title-modal d-flex justify-content-center m-b-20">Cambiar contraseña proveedor</div>
-    <div class="row no-magin">
-      <div class="col-md-12 m-t-20">
-        <div class="title-input text-l">Nueva contraseña</div>
-        <input class="input-for-modal-text m-b-15" type="text" placeholder="Nueva contraseña"/>
-      </div>
-      <div class="col-md-12 m-t-20">
-        <div class="title-input text-l">Repita contraseña</div>
-        <input class="input-for-modal-text m-b-15" type="text" placeholder="Repita contraseña"/>
-      </div>
-      <div class="col-md-12 d-flex justify-content-center m-t-20">
-        <button class="save-btn">Guardar</button>
-      </div>
-    </div>
-  </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
@@ -185,25 +165,4 @@
   <script src="js/texttruncate.js"></script>
   <script src="js/index.js"></script>
   <script src="js/modal/remodal.js"></script>
-  <script>
-    $('.eliminar-proveddor').click(function(){
-           swal({
-            title: "Esta seguro que desea eliminarlo",
-            text: "",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-              swal("Se ha eliminado exitosamente este proveedor", {
-                icon: "success",
-              });
-            } else {
-              swal("Tu información no se ha enviado");
-              $('.aceptar-actividad-1').click();
-            }
-          });
-    })
-  </script>
 </html>

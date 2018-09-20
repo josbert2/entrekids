@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/datatables.css"/>
     <link rel="stylesheet" href="js/modal/remodal.css"/>
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.0/css/responsive.dataTables.min.css"/>
   </head>
   <body class="app-js">
     <div class="page-wrapper">
@@ -22,9 +23,11 @@
           <nav class="main-nav">
             <div class="container">
               <ul class="nav">
-                <li class="logo fixed-head d-flex align-items-center">
+                <li class="logo fixed-head d-flex align-items-center entrada-flex">
                   <div class="nav-title m-r-15" style="margin-right: 0px"><img src="img/Logo.png" alt=""/></div>
-                  <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+                  <div class="maybe-fixed">
+                    <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+                  </div>
                 </li>
                 <li class="ml-auto d-flex btn-hidden">
                   <li class="m-r-15 d-flex align-items-center btn-hidden"></li>
@@ -111,6 +114,9 @@
             </div>
           </nav>
         </nav>
+        <div class="active-mobile">
+          <div class="entradas m-r-15">Centro de entradas</div><img src="img/ticket_v.svg" alt=""/>
+        </div>
       </div>
       <div class="wrapper-content out-wrapper">
         <div class="hero-ticket">
@@ -131,10 +137,15 @@
         <div class="content-wrap-ticket">
           <div class="container" style="  position: relative;">
             <div class="w100 today"> 
-              <div class="history m-t-30 m-b-30 has-text-centered">Historial de tickes</div>
-              <div class="input-search input-today ticketinput"><input class="provider ml-auto " type="text" placeholder="Buscar por nùmero de ticket"></div>
+              <div class="flex-right m-t-30 m-b-30"><ul>
+<li>
+                <div class="history has-text-centered">Historial de tickes</div></li>
+<li>
+                <div class="input-search"><input class=" ml-auto ticket-input" type="text" placeholder="Buscar por nùmero de ticket"></div></li>
+</ul>
+              </div>
             </div>
-            <table class="pp-resena-table bordered" id="table-ticket">
+            <table class="pp-resena-table bordered table-responsive dt-responsive display nowrap" id="table-ticket">
               <thead>
                 <th class="text-center">Nºde Ticket</th>
                 <th class="text-l">Evento</th>
@@ -148,8 +159,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Utilizado
+                  <td class="text-center dfaicjcb-md">
+                       Utilizado
                     <div class="spell used m-l-5"></div>
                   </td>
                 </tr>
@@ -158,8 +169,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     No utilizado
+                  <td class="text-center dfaicjcb-md">
+                       No utilizado
                     <div class="spell no-used m-l-5"></div>
                   </td>
                 </tr>
@@ -168,8 +179,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Devolución
+                  <td class="text-center dfaicjcb-md">
+                      Devolución
                     <div class="spell return m-l-5"></div>
                   </td>
                 </tr>
@@ -178,8 +189,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Utilizado
+                  <td class="text-center dfaicjcb-md">
+                       Utilizado
                     <div class="spell used m-l-5"></div>
                   </td>
                 </tr>
@@ -188,8 +199,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     No utilizado
+                  <td class="text-center dfaicjcb-md">
+                       No utilizado
                     <div class="spell no-used m-l-5"></div>
                   </td>
                 </tr>
@@ -198,8 +209,8 @@
                   <td class="text-l truncate2" data-caracter="90">Mauris non tempor quam, et lacinia sapien. Mauris accumsan eros eget libero posuere…</td>
                   <td class="text-center">2342323</td>
                   <td class="text-center">2342323</td>
-                  <td class="text-center d-flex align-items-center justify-content-between">
-                     Devolución
+                  <td class="text-center dfaicjcb-md">
+                      Devolución
                     <div class="spell return m-l-5"></div>
                   </td>
                 </tr>
@@ -208,7 +219,7 @@
           </div>
         </div>
       </div>
-      <div class="remodal ticket-modal content-dashboard" data-remodal-id="confirmacion-ticket">
+      <div class="remodal ticket-modal" data-remodal-id="confirmacion-ticket">
         <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
         <div class="row no-margin">
           <div class="d-flex flex-column align-items-center justify-content-center w100"><img class="m-b-10" src="img/ticket_b.svg" alt=""/>
@@ -229,9 +240,11 @@
   <script src="js/index.js"></script>
   <script src="js/modal/remodal.js"></script>
   <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
+  <script src="//cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
   <script>
     var tabledates = $('#table-ticket').DataTable( {
        dom: 'lrtip',
+       responsive: true,
        "pageLength": 5,
        language: {
         "decimal": "",

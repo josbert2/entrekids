@@ -1,0 +1,346 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css"/>
+    <!--link(rel="stylesheet", href="js/croppie/iEdit.css")-->
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
+    <link rel="stylesheet" href="js/modal/bootstrap.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Administrador</p>
+          <p>EntreKids</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">event</i><span>Actividades</span></li>
+            <li><i class="material-icons">lock_open</i><span>Autorizaciones</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">person</i><span>Usuario</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balances</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">group</i><span>Staff</span></li>
+            <li class="active-dash"><i class="material-icons">how_to_reg</i><span>Permisiones</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
+            <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center title-dashboard" style="    margin: 0 auto;">Permisiones</li>
+          </ul>
+        </div>
+        <div class="content-dashboard fix-bottom">
+          <div class="row no-margin pg-40" style="padding: 60px 0px;">
+            <div class="col-md-12">
+              <div class="page-section">
+                <div class="row no-margin"><div class="col-md-3">
+<div class="title-block">Usuarios en tu cuenta</div>
+<p>Selecciona las secciones que quieres que tu personal tenga acceso.Al dar acceso a una sección el podrá ver y editar todo el contenido de ésta </p>
+</div>
+                  <div class="col-md-9">
+                    <table class="table-permisiones">
+                      <thead style="position:absolute">
+                        <th class="text-center" style="    position: absolute;left: 22px;">Nombre</th>
+                        <th class="rotate-th" style="    position: absolute;    left: 144px;top: -13px;">Panel</th>
+                        <th class="rotate-th" style="    position: absolute;left: 220px;top: -26px;">Actividades </th>
+                        <th class="rotate-th" style="    position: absolute;    left: 293px;top: -37px;">Autorizaciones</th>
+                        <th class="rotate-th" style="    position: absolute;left: 383px;top: -26px;">Usuarios</th>
+                        <th class="rotate-th" style="    position: absolute;left: 463px;top: -26px;">Balance</th>
+                        <th class="rotate-th" style="    position: absolute;left: 543px;top: -18px;">Staff</th>
+                        <th class="rotate-th" style="text-align: center;    position: absolute;left: 618px;top: -30px;">Permisiones</th>
+                        <th class="rotate-th" style="text-align: center;    position: absolute;left: 697px;top: -34px;">Promociones</th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                             Pedro Segovia<small>predop@gmail.com</small></td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                             Pedro Segovia<small>predop@gmail.com</small></td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                             Pedro Segovia<small>predop@gmail.com</small></td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td width="20%">
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="d-flex justify-content-center">
+                              <div class="control-group">
+                                <label class="control control-radio">
+                                  <input type="checkbox" name="radio" checked="checked"/>
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/modal/remodal.js"></script>
+</html>

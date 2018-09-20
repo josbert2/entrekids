@@ -1,0 +1,210 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="js/inputMax/tagify.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.11.12/jquery.timepicker.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css"/>
+    <link rel="stylesheet" href="https://foliotek.github.io/Croppie/croppie.css"/>
+    <!--link(rel="stylesheet", href="js/croppie/iEdit.css")-->
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+    <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
+    <link rel="stylesheet" href="js/modal/bootstrap.css"/>
+    <link rel="stylesheet" href="css/datatables.css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/tag-editor/1.0.20/jquery.tag-editor.min.css" rel="stylesheet"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Administrador</p>
+          <p>EntreKids</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">event</i><span>Actividades</span></li>
+            <li><i class="material-icons">lock_open</i><span>Autorizaciones</span></li>
+          </ul>
+          <ul class="navigation">
+            <ul class="expand-dash">
+              <li class="item-li"><a href="#descripcion">Proveedor</a></li>
+              <li class="item-li"><a href="#configuracion">Actividad</a></li>
+              <li class="item-li"><a href="#direccion">Tags</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li><i class="material-icons">person</i><span>Usuario</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a href="#">Proveedores</a></li>
+            <li class="item-li"><a href="#">Usuario</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balances</span></li>
+          </ul>
+          <ul class="expand-dash">
+            <li class="item-li"><a href="#">Balances EK</a></li>
+            <li class="item-li"><a href="#">Transacciones</a></li>
+            <li class="item-li expand-active"><a href="#">Nomina de pago</a></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">group</i><span>Staff</span></li>
+            <li><i class="material-icons">how_to_reg</i><span>Permisiones</span></li>
+            <li><i class="material-icons">local_play</i><span>Promociones</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-staart align-items-center w100 mr-auto">
+            <li class="m-r-15"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center title-dashboard" style="    margin: 0 auto;">Nomina pago</li>
+          </ul>
+        </div>
+        <div id="response"></div>
+        <div class="position-icon"><i class="ion ion-md-search"></i></div>
+        <div class="content-dashboard" style="width: 97%;">
+          <div class="row no-margin">
+            <div class="col-md-12"></div>
+            <div class="col-md-12">
+              <div class="page-section">
+                <div class="row no-margin">
+                  <div class="col-md-12 d-flex align-items-end">
+                    <div class="row justify-content-center w100">
+                      <div class="col-md-12 d-flex m-b-40 m-t-45">
+                        <table class="display m-t-20" id="table-transacciones" cellspacing="0" width="100%">
+                          <thead>
+                            <tr>
+                              <th class="text-l">Proveedor</th>
+                              <th class="text-center">Titular Cuenta</th>
+                              <th class="text-center">RUT</th>
+                              <th class="text-center">Nº Cuenta</th>
+                              <th class="text-center">Banco</th>
+                              <th class="text-center">Email</th>
+                              <th class="text-center">% EK</th>
+                              <th class="text-center">Neto Proveedor</th>
+                              <th class="text-center">A Pago</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-l">Nombre Proveedor</td>
+                              <td class="text-center">Juan Gonzaléz S.</td>
+                              <td class="text-center">13.333.333-K</td>
+                              <td class="text-center">545346 </td>
+                              <td class="text-center">Santander</td>
+                              <td class="text-center">mail@gmail.cm</td>
+                              <td class="text-center">88%</td>
+                              <td class="text-center">16.123</td>
+                              <td class="text-center">00000</td>
+                            </tr>
+                            <tr>
+                              <td class="text-l">Nombre Proveedor</td>
+                              <td class="text-center">Juan Gonzaléz S.</td>
+                              <td class="text-center">13.333.333-K</td>
+                              <td class="text-center">545346 </td>
+                              <td class="text-center">Santander</td>
+                              <td class="text-center">mail@gmail.cm</td>
+                              <td class="text-center">88%</td>
+                              <td class="text-center">16.123</td>
+                              <td class="text-center">00000</td>
+                            </tr>
+                            <tr>
+                              <td class="text-l">Nombre Proveedor</td>
+                              <td class="text-center">Juan Gonzaléz S.</td>
+                              <td class="text-center">13.333.333-K</td>
+                              <td class="text-center">545346 </td>
+                              <td class="text-center">Santander</td>
+                              <td class="text-center">mail@gmail.cm</td>
+                              <td class="text-center">88%</td>
+                              <td class="text-center">16.123</td>
+                              <td class="text-center">00000</td>
+                            </tr>
+                            <tr>
+                              <td class="text-l">Nombre Proveedor</td>
+                              <td class="text-center">Juan Gonzaléz S.</td>
+                              <td class="text-center">13.333.333-K</td>
+                              <td class="text-center">545346 </td>
+                              <td class="text-center">Santander</td>
+                              <td class="text-center">mail@gmail.cm</td>
+                              <td class="text-center">88%</td>
+                              <td class="text-center">16.123</td>
+                              <td class="text-center">00000</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/caret/1.0.0/jquery.caret.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tag-editor/1.0.20/jquery.tag-editor.min.js"></script>
+  <script>
+     $(document).ready(function() {
+    
+    
+     $table = $("#table-transacciones")
+       .on("preInit.dt", function( e, settings) {
+    
+      
+     })
+       .on("init.dt", function( e, settings ) {
+       $('#response').tagEditor({
+         delimiter: ', ',
+         placeholder: 'Buscar proveedor',
+         onChange: function(field, editor, tags) {
+    
+           if ( tags.length ) {
+             if( tags.length > 1 ) {
+               $table.search(tags.join('|'), true, false).draw();
+             } else {
+               $table.search( tags[0] ).draw();
+             }
+           }
+           else {
+             $table.search('').draw(true);
+           }
+         },
+         
+       });
+     })
+       .DataTable({
+       "dom": '<l<"dataTables_tags "><t>ip>'
+     });
+       
+    
+    
+    
+     function click(){
+       $('.tag-editor').click();
+     }
+    //setInterval(click, 3000);
+    
+    
+    
+     } );
+    
+    
+      
+  </script>
+</html>
