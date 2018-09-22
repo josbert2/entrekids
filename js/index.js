@@ -1913,3 +1913,27 @@ $('.favorite').click(function() {
     }
 
 })
+
+
+/*=========================================================================
+   Fix aspect
+=========================================================================*/
+$(document).ready(function() {
+
+
+    let w2 = $('.logo-proveedor').width();
+    let h2 = $('.logo-proveedor').height();
+    let d2 = w2 / 1.5;
+    d2 = parseInt(d2)
+    $('.logo-proveedor').css('height', d2 + 'px ')
+
+    let w = $('.mask-proveedor').width();
+    let h = $('.mask-proveedor').height();
+    let d = w / 1.5;
+    d = parseInt(d)
+    $('.mask-proveedor').css('height', d + 'px ')
+
+
+
+
+})
