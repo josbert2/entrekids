@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="js/modal/remodal.css"/>
     <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
     <link rel="stylesheet" href="https://taitems.github.io/Aristo-jQuery-UI-Theme/css/Aristo/Aristo.css"/>
-    <link rel="stylesheet" href="js/modal/bootstrap.css"/>
+    <link rel="stylesheet" href="js/modal/bootstrap.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css"> //Marca de agua 
   </head>
   <body class="app-js dash-board">
     <div class="super-fixed">
@@ -1061,7 +1061,109 @@
   <script src="https://foliotek.github.io/Croppie/croppie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--<script src="js/croppie/iEdit.js"></script>--><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/watermark.js">//Marca de agua </script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
   <script>
+    //Marca de agua
+     $(document).ready(function(){
+     hljs.initHighlightingOnLoad();
+      $(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
+          var $uploadCrop,
+          tempFilename,
+          rawImg,
+          imageId;
+          function readFile(input) {
+            if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                $('.upload-demo').addClass('ready');
+                $('#cropImagePop').modal('show');
+                      rawImg = e.target.result;
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+                else {
+                  swal("Sorry - you're browser doesn't support the FileReader API");
+              }
+          }
+    
+          $uploadCrop = $('#upload-demo').croppie({
+            viewport: {
+              width: 300,
+              height: 200,
+            },
+            enforceBoundary: true,
+            enableExif: true
+          });
+          $('#cropImagePop').on('shown.bs.modal', function(){
+            // alert('Shown pop');
+            $uploadCrop.croppie('bind', {
+                  url: rawImg
+                }).then(function(){
+    
+                  $uploadCrop.croppie('setZoom', 0)
+                  console.log('jQuery bind complete');
+                });
+          });
+    
+          $('.item-img').on('change', function () { imageId = $(this).data('id'); tempFilename = $(this).val();
+                                                   $('#cancelCropBtn').data('id', imageId); readFile(this); });
+          $('#cropImageBtn').on('click', function (ev) {
+            $uploadCrop.croppie('result', {
+              type: 'base64',
+              format: 'jpeg',
+              size: {
+                width: 750, 
+                height: 500
+              }
+            }).then(function (resp) {
+            //Marca de agua 
+              watermark([resp])
+              .dataUrl(watermark.text.lowerRight('entrekids', '28px Avenir', '#fff', 0.5))
+              .then(function (url) {
+                console.log(url)
+                  $('#item-img-output').attr('src', url);
+                  
+                  $('.img-val').val(url)
+              });
+            //Marca de agua 
+    
+              $('#cropImagePop').modal('hide');
+              $('.div-content1').css('display', 'none'); 
+              
+              $('.carabin1').append('<button class="del1" onclick="delete_photo1()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
+            });
+    
+            
+          });
+      
+        })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     $('.make-activity').click( function() {
        $('tag').each(function(){
           alert($(this).val())

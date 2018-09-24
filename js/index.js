@@ -1040,71 +1040,7 @@ let HCrop = '200px'
 
 if ($('.item-dash').length) {
 
-    $(document).ready(function() {
-        $(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
-        var $uploadCrop,
-            tempFilename,
-            rawImg,
-            imageId;
 
-        function readFile(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function(e) {
-                    $('.upload-demo').addClass('ready');
-                    $('#cropImagePop').modal('show');
-                    rawImg = e.target.result;
-                }
-                reader.readAsDataURL(input.files[0]);
-            } else {
-                swal("Sorry - you're browser doesn't support the FileReader API");
-            }
-        }
-
-        $uploadCrop = $('#upload-demo').croppie({
-            viewport: {
-                width: 300,
-                height: 200,
-            },
-            enforceBoundary: true,
-            enableExif: true
-        });
-        $('#cropImagePop').on('shown.bs.modal', function() {
-            // alert('Shown pop');
-            $uploadCrop.croppie('bind', {
-                url: rawImg
-            }).then(function() {
-
-                $uploadCrop.croppie('setZoom', 0)
-                console.log('jQuery bind complete');
-            });
-        });
-
-        $('.item-img').on('change', function() {
-            imageId = $(this).data('id');
-            tempFilename = $(this).val();
-            $('#cancelCropBtn').data('id', imageId);
-            readFile(this);
-        });
-        $('#cropImageBtn').on('click', function(ev) {
-            $uploadCrop.croppie('result', {
-                type: 'base64',
-                format: 'jpeg',
-                size: {
-                    width: 750,
-                    height: 500
-                }
-            }).then(function(resp) {
-                $('#item-img-output').attr('src', resp);
-                //$('#item-img-output').css("background-image", "url(" + resp + ")" ); 
-                $('#cropImagePop').modal('hide');
-                $('.div-content1').css('display', 'none');
-                $('.img-val').val(resp)
-                $('.carabin1').append('<button class="del1" onclick="delete_photo1()" style="display: block; position: absolute; right: -5px; top: -1px; background: no-repeat;"> <img src="img/close-svg.svg" alt=""> </button>')
-            });
-        });
-
-    })
 
 
     /*=========================================================================
