@@ -1043,7 +1043,7 @@
         </div>
       </div>
     </div>
-  </body>
+  </body><input type="file" id="file_2" accept="image/*">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
@@ -1061,11 +1061,22 @@
   <script src="https://foliotek.github.io/Croppie/croppie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--<script src="js/croppie/iEdit.js"></script>--><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/watermark.js">//Marca de agua </script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
+  <script src="js/watermark.js">//Marca de agua 
+    <script src="js/image-compressor.min.js"></script>
+  </script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
   <script>
     //Marca de agua
      $(document).ready(function(){
      hljs.initHighlightingOnLoad();
+     const imageCompressor = new ImageCompressor();
+    
+      imageCompressor.compress("http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg", options)
+        .then((result) => {
+          // Handle the compressed image file.
+        })
+        .catch((err) => {
+          // Handle the error
+        })
       $(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
           var $uploadCrop,
           tempFilename,
@@ -1120,10 +1131,11 @@
               watermark([resp])
               .dataUrl(watermark.text.lowerRight('entrekids', '28px Avenir', '#fff', 0.5))
               .then(function (url) {
-                console.log(url)
+               
                   $('#item-img-output').attr('src', url);
                   
                   $('.img-val').val(url)
+                  
               });
             //Marca de agua 
     

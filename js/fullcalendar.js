@@ -97,10 +97,10 @@
       $el.popover({
         html: true,
         title: eventObj.description,
-        trigger: 'hover',
+        trigger: 'click',
         placement: 'top',
-        container: 'body',
-        delay: {show: 50, hide: 4000}
+        container: 'body'
+ 
       });
     },
 

@@ -17,6 +17,43 @@
     <link rel="stylesheet" href="js/modal/bootstrap.css"/>
   </head>
   <body class="app-js dash-board">
+    <style type="text/css">
+      .width-prove{
+      width: 200px;
+      }
+      .width-prove span{
+        width: auto;
+      }
+      .item-plan{
+          display: none
+      }
+      .pagination li.disabled {
+        background: none !important;
+      }
+      
+      .pagination li {
+          display: inline-block;
+          font-size: .875rem;
+          padding: 0 .75rem;
+          margin: 0 .25rem;
+          line-height: 30px;
+          border-radius: 2px;
+          text-align: center;
+          -webkit-transition: background .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+          -o-transition: background .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+          transition: background .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      
+      .pagination li.active {
+          background: rgba(141,141,141,0.2);
+      }
+      .pagination li:not(.disabled) {
+          cursor: pointer;
+      }
+      .pagination li:hover {
+          background: rgba(77,84,93,0.1);
+      }
+    </style>
     <div class="super-fixed">
       <div class="lds-spinner">
         <div></div>
@@ -49,7 +86,7 @@
           </ul>
           <ul class="navigation">
             <ul class="expand-dash">
-              <li class="item-li"><a class="expand-active" href="#descripcion">Proveedor</a></li>
+              <li class="item-li"><a href="#descripcion">Proveedor</a></li>
               <li class="item-li"><a href="#configuracion">Actividad</a></li>
               <li class="item-li"><a href="#direccion">Tags</a></li>
             </ul>
@@ -58,8 +95,8 @@
             <li><i class="material-icons">person</i><span>Usuario</span></li>
           </ul>
           <ul class="expand-dash">
-            <li class="item-li"><a class="expand-active" href="#">Proveedores</a></li>
-            <li class="item-li"><a href="#">Usuario</a></li>
+            <li class="item-li"><a href="#">Proveedores</a></li>
+            <li class="item-li"><a class="expand-active" href="#">Usuario</a></li>
           </ul>
           <ul>
             <li><i class="material-icons">account_balance</i><span>Balances</span></li>
@@ -95,56 +132,60 @@
         <div class="fix-content-dash-no-mg item-promociones" style="display: block"> 
           <table class="pp-resena-table">
             <thead>
-              <th class="text-l">ID</th>
-              <th>Nombres</th>
-              <th>Apellidos</th>
-              <th class="text-center">Ver</th>
-              <th class="text-center">Editar</th>
-              <th class="text-center">Eliminar</th>
-              <th class="text-center">Contraseña</th>
+              <th class="text-l text-center">Fecha de registro</th>
+              <th class="d-flex text-c justify-content-center">Nombre Apellido</th>
+              <th class="text-center">Puntos EK</th>
+              <th class="text-center">Configuración</th>
+              <th class="text-center">Mensaje</th>
             </thead>
             <tbody>
               <tr>
-                <td class="text-l">55555555</td>
-                <td>RODRIGO ANTONIO</td>
-                <td>SEPULVEDA MARTINEZ</td>
-                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
-              </tr>
-              <tr>
-                <td class="text-l">55555555</td>
-                <td>RODRIGO ANTONIO</td>
-                <td>SEPULVEDA MARTINEZ</td>
-                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
-              </tr>
-              <tr>
-                <td class="text-l">55555555</td>
-                <td>RODRIGO ANTONIO</td>
-                <td>SEPULVEDA MARTINEZ</td>
-                <td class="text-center" style="width:5%"><a href="#"><i class="material-icons">visibility</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="editar-listado"><i class="material-icons">edit</i></a></td>
-                <td class="text-center" style="width:5%"><a class="eliminar-proveddor" href="#"><i class="material-icons">delete</i></a></td>
-                <td class="text-center" style="width:5%"><a href="#" data-remodal-target="contraseña-listado"><i class="material-icons">lock</i>       </a></td>
+                <td class="text-center">25/05/2018</td>
+                <td class="text-c">Felipe Morande</td>
+                <td class="text-center">
+                  <div class="d-flex align-items-center justify-content-center">
+                    <div class="val">99</div>
+                    <input type="text" style="margin:0 10px" id="valor"/>
+                    <div class="btn-op" style="cursor:pointer"><i class="material-icons">check_circle</i></div>
+                  </div>
+                </td>
+                <td class="text-center" style="width:15%"><a href="#" data-remodal-target="configuracion-user"><i class="material-icons">settings</i></a></td>
+                <td class="text-center" style="width:15%"><a href="mailto:joheandroid@gmail.com"><i class="material-icons">mail_outline</i></a></td>
               </tr>
             </tbody>
-          </table><ul class="pagination-notify d-flex justify-content-center align-items-center">
-<li>
-<div class="road-to-back">&lt;</div>
-</li>
-<li class="pagi">Página 1 de 10</li>
-<li>
-<div class="road-to-next"> &gt;</div>
-</li>
-</ul>
+          </table>
+          <nav classs="d-flex w100 justify-content-center">
+            <ul class="pagination d-flex w100 justify-content-center m-t-10 m-b-10">
+              <li class="page-item disabled d-flex align-items-center"><span class="page-link"><i class="material-icons">keyboard_arrow_left</i></span></li>
+              <li class="page-item active"><span class="page-link">1</span></li>
+              <li class="page-item"><a class="page-link" data-page="2" href="">2</a></li>
+              <li class="page-item"><a class="page-link" data-page="3" href="">3</a></li>
+              <li class="page-item"><a class="page-link" data-page="4" href="">4</a></li>
+              <li class="page-item"><a class="page-link" data-page="5" href="">5</a></li>
+              <li class="page-item d-flex align-items-center"><a class="page-link" data-page="2" rel="next" href=""><i class="material-icons">keyboard_arrow_right</i></a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </body>
+  <div class="remodal tags-content-modal" data-remodal-id="configuracion-user">
+    <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
+    <div class="new-title-modal d-flex justify-content-center m-b-20">Configuración de usuario</div>
+    <div class="row no-margin"><a class="col-md-3" href="#">
+        <div class="d-flex flex-column"><i class="material-icons f-1 m-b-15">visibility</i>
+          <div>Ver</div>
+        </div></a><a class="col-md-3" href="#" data-remodal-target="editar-listado">
+        <div class="d-flex flex-column"><i class="material-icons f-1 m-b-15">edit</i>
+          <div>Editar</div>
+        </div></a><a class="col-md-3 eliminar-proveddor" href="#">
+        <div class="d-flex flex-column"><i class="material-icons f-1 m-b-15">delete</i>
+          <div>Eliminar</div>
+        </div></a><a class="col-md-3" href="#" data-remodal-target="contraseña-listado">
+        <div class="d-flex flex-column"><i class="material-icons f-1 m-b-15">lock</i>
+          <div>Contraseña</div>
+        </div></a></div>
+  </div>
   <div class="remodal tags-content-modal" data-remodal-id="editar-listado">
     <button class="fill" data-remodal-action="close"> <img src="img/close-svg.svg" alt=""/></button>
     <div class="new-title-modal d-flex justify-content-center m-b-20">Editar Usuario</div>
@@ -187,6 +228,62 @@
   <script src="js/index.js"></script>
   <script src="js/modal/remodal.js"></script>
   <script>
+    let btn =  $('.btn-op');
+    var totality = $('.val').text();
+    btn .on('click', function () {
+    
+      let val = $('.val');
+      let input = $('#valor').val();
+      var len = input.length - 1;
+      var OldVal = val.text();
+      var resetCaracter = input.substr(0, input.length - len);
+      var noneInput = input.substr(1, input.length );
+      
+     
+        if (resetCaracter === "-"){
+            var NewVal = OldVal - noneInput;
+    
+            if (NewVal < 0){
+              
+            }else{
+              val.html(NewVal)
+              totality = NewVal;
+            }
+            
+        }else if (resetCaracter === "%"){
+          var NewVal = OldVal % noneInput;
+          val.html(NewVal)
+          totality = NewVal;
+        }else if (resetCaracter === "/"){
+          var NewVal = OldVal / noneInput;
+          val.html(parseFloat(NewVal))
+          totality = NewVal;
+        }else if (resetCaracter === "*"){
+          var NewVal = OldVal * noneInput;
+          val.html(NewVal)
+          totality = NewVal;
+        }else if (resetCaracter === "+"){
+          var sum = parseFloat(noneInput);
+          totality = (parseInt(sum) + parseInt(totality))
+          //totality += sum;
+          val.html(totality);
+        }
+    
+    
+      
+    
+    })
+    
+    
+    
+    function compute() {
+        if ( $('input[name=puntos_EK]:checked').val() != undefined ) {
+            var a = parseInt($('input[name=service_price]').val());
+            var b = parseInt($('input[name=modem_price]').val());
+            var total = a+b;
+            $('#total_price').val(a+b);
+        }
+    }
     $('.eliminar-proveddor').click(function(){
            swal({
             title: "Esta seguro que desea eliminarlo",

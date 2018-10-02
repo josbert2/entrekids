@@ -72,77 +72,93 @@
         <div class="position-icon"><i class="ion ion-md-search"></i></div>
         <div class="content-dashboard" style="width: 97%;">
           <div class="row no-margin">
-            <div class="col-md-12"></div>
-            <div class="col-md-12">
-              <div class="page-section">
-                <div class="row no-margin">
-                  <div class="col-md-12 d-flex align-items-end">
-                    <div class="row justify-content-center w100">
-                      <div class="col-md-12 d-flex m-b-40 m-t-45">
-                        <table class="display m-t-20" id="table-transacciones" cellspacing="0" width="100%">
-                          <thead>
-                            <tr>
-                              <th class="text-l">Proveedor</th>
-                              <th class="text-center">Titular Cuenta</th>
-                              <th class="text-center">RUT</th>
-                              <th class="text-center">Nº Cuenta</th>
-                              <th class="text-center">Banco</th>
-                              <th class="text-center">Email</th>
-                              <th class="text-center">% EK</th>
-                              <th class="text-center">Neto Proveedor</th>
-                              <th class="text-center">A Pago</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="text-l">Nombre Proveedor</td>
-                              <td class="text-center">Juan Gonzaléz S.</td>
-                              <td class="text-center">13.333.333-K</td>
-                              <td class="text-center">545346 </td>
-                              <td class="text-center">Santander</td>
-                              <td class="text-center">mail@gmail.cm</td>
-                              <td class="text-center">88%</td>
-                              <td class="text-center">16.123</td>
-                              <td class="text-center">00000</td>
-                            </tr>
-                            <tr>
-                              <td class="text-l">Nombre Proveedor</td>
-                              <td class="text-center">Juan Gonzaléz S.</td>
-                              <td class="text-center">13.333.333-K</td>
-                              <td class="text-center">545346 </td>
-                              <td class="text-center">Santander</td>
-                              <td class="text-center">mail@gmail.cm</td>
-                              <td class="text-center">88%</td>
-                              <td class="text-center">16.123</td>
-                              <td class="text-center">00000</td>
-                            </tr>
-                            <tr>
-                              <td class="text-l">Nombre Proveedor</td>
-                              <td class="text-center">Juan Gonzaléz S.</td>
-                              <td class="text-center">13.333.333-K</td>
-                              <td class="text-center">545346 </td>
-                              <td class="text-center">Santander</td>
-                              <td class="text-center">mail@gmail.cm</td>
-                              <td class="text-center">88%</td>
-                              <td class="text-center">16.123</td>
-                              <td class="text-center">00000</td>
-                            </tr>
-                            <tr>
-                              <td class="text-l">Nombre Proveedor</td>
-                              <td class="text-center">Juan Gonzaléz S.</td>
-                              <td class="text-center">13.333.333-K</td>
-                              <td class="text-center">545346 </td>
-                              <td class="text-center">Santander</td>
-                              <td class="text-center">mail@gmail.cm</td>
-                              <td class="text-center">88%</td>
-                              <td class="text-center">16.123</td>
-                              <td class="text-center">00000</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
+            <div class="col-md-12 no-padding">
+              <div class="row justify-content-center">
+                <div class="col-md-12 d-flex m-b-40 m-t-45">
+                  <table class="display m-t-20" id="table-transacciones" cellspacing="0" width="100%">
+                    <thead>
+                      <tr>
+                        <th class="text-l">Proveedor</th>
+                        <th class="text-center">Titular Cuenta</th>
+                        <th class="text-center">Fecha pago</th>
+                        <th class="text-center">RUT</th>
+                        <th class="text-center">Nº Cuenta</th>
+                        <th class="text-center">Banco</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">% EK</th>
+                        <th class="text-center">Nat / Jur</th>
+                        <th class="text-center">A Pago</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-l">Nombre Proveedor</td>
+                        <td class="text-center">Juan Gonzaléz S.</td>
+                        <td class="text-center">29-10-08</td>
+                        <td class="text-center">13.333.333-K</td>
+                        <td class="text-center">545346 </td>
+                        <td class="text-center">Santander</td>
+                        <td class="text-center">mail@gmail.cm</td>
+                        <td class="text-center">88%</td>
+                        <td>
+                          <div class="d-flex align-items-center justify-content-center">
+                            <div class="d-flex m-r-5">N</div>
+                            <div class="d-flex align-items-center"><label class="switch  " for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                            </div>
+                            <div class="d-flex m-l-5">J  </div>
+                          </div>
+                        </td>
+                        <td class="text-center">00000</td>
+                      </tr>
+                      <tr>
+                        <td class="text-l">Nombre Proveedor</td>
+                        <td class="text-center">Juan Gonzaléz S.</td>
+                        <td class="text-center">29-10-08</td>
+                        <td class="text-center">13.333.333-K</td>
+                        <td class="text-center">545346 </td>
+                        <td class="text-center">Santander</td>
+                        <td class="text-center">mail@gmail.cm</td>
+                        <td class="text-center">88%</td>
+                        <td>
+                          <div class="d-flex align-items-center justify-content-center">
+                            <div class="d-flex m-r-5">N</div>
+                            <div class="d-flex align-items-center"><label class="switch  " for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                            </div>
+                            <div class="d-flex m-l-5">J  </div>
+                          </div>
+                        </td>
+                        <td class="text-center">00000</td>
+                      </tr>
+                      <tr>
+                        <td class="text-l">Nombre Proveedor</td>
+                        <td class="text-center">Juan Gonzaléz S.</td>
+                        <td class="text-center">29-10-08</td>
+                        <td class="text-center">13.333.333-K</td>
+                        <td class="text-center">545346 </td>
+                        <td class="text-center">Santander</td>
+                        <td class="text-center">mail@gmail.cm</td>
+                        <td class="text-center">88%</td>
+                        <td>
+                          <div class="d-flex align-items-center justify-content-center">
+                            <div class="d-flex m-r-5">N</div>
+                            <div class="d-flex align-items-center"><label class="switch  " for="checkbox1" >
+<input type="checkbox" id="checkbox1" class="visible-event">
+<div class="slider switch-red round"></div>
+</label>
+                            </div>
+                            <div class="d-flex m-l-5">J  </div>
+                          </div>
+                        </td>
+                        <td class="text-center">00000</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

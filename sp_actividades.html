@@ -1,0 +1,133 @@
+
+<html lang="es">
+  <head> 
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.0/fullcalendar.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.min.css"/>
+    <link rel="stylesheet" href="js/modal/remodal.css"/>
+    <link rel="stylesheet" href="js/modal/remodal-default-theme.css"/>
+  </head>
+  <body class="app-js dash-board">
+    <div class="index d-flex">
+      <div class="sidebar">
+        <div class="app-name">
+          <p>Nombre Usuario</p>
+          <p>Emprea</p>
+        </div>
+        <div class="icon-toggle"><i class="material-icons">expand_more</i></div>
+        <div class="hr-dash"></div>
+        <div class="aside">
+          <ul>
+            <li><i class="material-icons">dashboard</i><span>Panel</span></li>
+            <li><i class="material-icons">date_range</i><span>Calendario</span></li>
+            <li><i class="material-icons">assignment</i><span>Actividades</span></li>
+          </ul>
+          <div class="title-line m-b-20">Actividades</div>
+          <ul class="navigation">
+            <li class="active-dash"><i class="material-icons">insert_invitation</i><span>Crear Actividad</span></li>
+          </ul>
+          <ul>
+            <li><i class="material-icons">thumbs_up_down</i><span>Reseñas</span></li>
+          </ul>
+          <div class="title-line m-b-20">Finanzas</div>
+          <ul>
+            <li><i class="material-icons">account_balance</i><span>Balance</span></li>
+            <li><i class="material-icons">swap_horiz</i><span>Transaccione</span></li>
+          </ul>
+          <div class="title-line m-b-20">Proveedor</div>
+          <ul>
+            <li><i class="material-icons">store_mall_directory</i><span>Información</span></li>
+          </ul>
+          <div class="title-line m-b-20">General</div>
+          <ul>
+            <li><i class="material-icons">local_play</i><span>Balance</span></li>
+            <li><i class="material-icons">local_offer</i><span>Tags</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="d-flex flex-column wrapper-dash w100">
+        <div class="nav-top d-flex">
+          <ul class="d-flex justify-content-start align-items-center w100">
+            <li class="m-r-10"><i class="material-icons">arrow_back</i></li>
+            <li class="nav-opcion d-flex align-items-center">
+              <input class="input-nav" type="text" placeholder="Buscar actividad / Proveedor" style=" width: 500px;"/>
+              <div class="search-input-nav m-r-45"><i class="material-icons">search</i></div>
+              <ul class="change-tabs group-btn-nav ml-auto m-l-15" style="    margin-left: 185px !important;" data-tabgroup="first-tab-group">
+                <li><i class="material-icons">save_alt</i></li>
+                <li><a href="#tab2"><i class="material-icons">dehaze</i></a></li>
+                <li class="active-li"><a href="#tab1"><i class="material-icons">event</i></a></li>
+              </ul>
+              <ul class="group-btn-nav m-l-5">
+                <li><i class="material-icons">add</i></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="content-dashboard">
+          <div class="row no-margin">
+            <div class="col-md-12 hover-op">
+              <div class="row no-margin">
+                <div class="col-md-5 d-actividad d-flex no-padding">
+                  <div class="img-content-actividad m-r-25 align-items-center"><img src="https://localhost/Proyectos/entrekids/web/app_dev.php/media/cache/resolve/thumb_120_80/actividadfoto/5ba3f0ea3c3cc350450010.png" alt=""/></div>
+                  <div class="d-flex">
+                    <div class="d-flex m-r-35 flex-column">
+                      <div class="title-activity">Fantasilandia Test 1</div>
+                      <p>Proveedor</p>
+                      <p>20 al 14 de Junio</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 d-flex">
+                  <div class="d-flex m-r-15 option-details">
+                    <div class="icon-content m-r-10"><i class="material-icons">perm_identity</i></div>
+                    <div class="option-font d-flex flex-column">
+                      <p>Cupos</p>
+                      <p>47190</p><small>Total: 47190</small>
+                    </div>
+                  </div>
+                  <div class="d-flex m-r-15 option-details">
+                    <div class="icon-content m-r-10"><i class="material-icons">local_offer</i></div>
+                    <div class="option-font d-flex flex-column">
+                      <p>Dcto Real</p>
+                      <p>0%</p><small>Esp: 25%</small>
+                    </div>
+                  </div>
+                  <div class="d-flex m-r-15 option-details">
+                    <div class="icon-content m-r-10"><i class="material-icons">shopping_cart</i></div>
+                    <div class="option-font d-flex flex-column">
+                      <p>Venta real</p>
+                      <p>$0</p><small>Esp: $873.015.000</small>
+                    </div>
+                  </div>
+                  <div class="option-float">
+                    <div class="option-icon"><a href="/Proyectos/entrekids/web/app_dev.php/actividad/proveedor/11/editar"><i class="material-icons">settings</i></a></div>
+                    <div class="option-icon"><a href="/Proyectos/entrekids/web/app_dev.php/actividad/11/evento-redirect"><i class="material-icons">visibility</i></a></div>
+                    <div class="option-icon"><a href="/Proyectos/entrekids/web/app_dev.php/actividad/11/evento-redirect"><i class="material-icons">delete</i></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/texttruncate.js"></script>
+  <script src="js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/basic/jquery.qtip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="js/fullcalendar.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="js/modal/remodal.js"></script>
+</html>
