@@ -80,7 +80,9 @@
         </div>
       </div>
       <div class="d-flex flex-column wrapper-dash">
-        <div class="nav-top">asd</div>
+        <div class="nav-top"><input type="file" id="file_2" accept="image/*">
+<div class="asd"></div><img alt="" id="img"/>
+        </div>
         <div class="content-dashboard">
           <div class="row no-margin">
             <div class="col-md-12">
@@ -1043,7 +1045,7 @@
         </div>
       </div>
     </div>
-  </body><input type="file" id="file_2" accept="image/*">
+  </body>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script><script src="https://unpkg.com/tippy.js@2.5.4/dist/tippy.all.min.js"></script>
@@ -1061,22 +1063,19 @@
   <script src="https://foliotek.github.io/Croppie/croppie.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!--<script src="js/croppie/iEdit.js"></script>--><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/watermark.js">//Marca de agua 
-    <script src="js/image-compressor.min.js"></script>
-  </script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
+  <script src="js/watermark.js"> </script>
+  <!-- Plugin compress--><script src="https://unpkg.com/vue@2.5.16/dist/vue.min.js"></script>
+<script src="js/image-compressor.js"></script>
+<script src="js/img.js"></script>
+  <!-- </Plugin compress--><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
   <script>
     //Marca de agua
      $(document).ready(function(){
      hljs.initHighlightingOnLoad();
-     const imageCompressor = new ImageCompressor();
+      var URL = window.URL || window.webkitURL; // Plugin compress
+      var ImageCompressor = window.ImageCompressor; // Plugin compress
+     
     
-      imageCompressor.compress("http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg", options)
-        .then((result) => {
-          // Handle the compressed image file.
-        })
-        .catch((err) => {
-          // Handle the error
-        })
       $(".gambar").attr("src", "http://www.centroluziluminacion.com/media/catalog/product/cache/1/image/850x/040ec09b1e35df139433887a97daa66f/placeholder/default/placeholder.jpg");
           var $uploadCrop,
           tempFilename,
@@ -1132,9 +1131,68 @@
               .dataUrl(watermark.text.lowerRight('entrekids', '28px Avenir', '#fff', 0.5))
               .then(function (url) {
                
-                  $('#item-img-output').attr('src', url);
                   
-                  $('.img-val').val(url)
+                // Plugin compress
+                 function b64toBlob(b64, onsuccess, onerror) {
+                        var img = new Image();
+    
+                        img.onerror = onerror;
+    
+                        img.onload = function onload() {
+                            var canvas = document.createElement('canvas');
+                            canvas.width = img.width;
+                            canvas.height = img.height;
+    
+                            var ctx = canvas.getContext('2d');
+                            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    
+                            canvas.toBlob(onsuccess);
+                        };
+    
+                        img.src = b64;
+                    }
+    
+                    var base64Data = url;
+                    b64toBlob(base64Data,
+                        function(blob) {
+                            var url1 = window.URL.createObjectURL(blob);
+                             new ImageCompressor(blob, {
+                                checkOrientation: true,
+                                maxWidth: undefined,
+                                maxHeight: undefined,
+                                minWidth: 0,
+                                minHeight: 0,
+                                width: undefined,
+                                height: undefined,
+                                quality: 0.6,
+                                mimeType: '',
+                                convertSize: 300000,
+                                success(result){
+                                    var id = URL.createObjectURL(result);
+                                  
+    
+                                     var reader = new FileReader();
+                                          reader.readAsDataURL(result); 
+                                          reader.onloadend = function() {
+                                              base64data = reader.result;                
+                                               alert(base64data)
+                                               $('#item-img-output').attr('src', url);
+                                               $('.img-val').val(url)
+                                          }
+                                                                              
+                                    
+                                }
+                            })
+                        }, function(error) {
+                          
+                        });
+                        // Plugin compress
+    
+                   
+                       
+                                
+                      
+                  
                   
               });
             //Marca de agua 
@@ -1149,6 +1207,9 @@
           });
       
         })
+    
+    
+    
     
     
     
