@@ -3,7 +3,7 @@
   <head> 
     <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="css/app.css"/>
+    
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons"/>
     <link rel="stylesheet" href="js/modal/remodal.css"/>
@@ -12,6 +12,206 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
   </head>
+  <style>
+  *, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+    body {
+        overflow: auto !important;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        color: #f7f7f7;
+        height: 100%;
+        background-color: #f7f7f7;
+        font-size: 12;
+    }
+    .ticket-border {
+    border: 1.8px solid #08cac5 ;
+    padding: 10px;
+}
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.img-content-ticket {
+    width: 234px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, section, menu, nav, section, summary, div {
+    display: block;
+}
+.img-content-ticket img {
+    padding-right: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    outline: none;
+    border: none;
+}
+img {
+    border-style: none;
+}
+.m-l-15 {
+    margin-left: 15px !important;
+}
+
+.align-items-start {
+    -webkit-box-align: start !important;
+    -ms-flex-align: start !important;
+    align-items: flex-start !important;
+}
+.justify-content-center {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.flex-column {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+}
+.text-ticket {
+    font-size: 14px;
+    color:#08cac5 ;
+}
+.dashed-b {
+    border-bottom: 1.8px dashed #08cac5 ;
+    padding-bottom: 10px;
+}
+.img-placeholder-blue {
+    width: 180px;
+    height: 120px;
+}
+.img-placeholder-blue img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.link {
+    color: #1EB2E8;
+}
+.m-b-5 {
+    margin-bottom: 5px !important;
+}
+
+h6, .h6 {
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0.875rem;
+    color: #41494f;
+}
+.code-qr {
+    width: 85px;
+    height: 85px;
+}
+
+.m-r-20 {
+    margin-right: 20px !important;
+}
+.ml-auto {
+    margin-left: auto;
+}
+.has-text-centered {
+    text-align: center !important;
+}
+
+h4, .h4 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #41494f;
+}
+.same-height {
+    min-height: 300px;
+}
+
+.m-t-10 {
+    margin-top: 10px !important;
+}
+p {
+    color: #777777;
+    margin: 0;
+    font-weight: normal;
+}
+.justify-content-center {
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.br-solid {
+    border-right: 1px solid #08cac5;
+    padding-right: 10px;
+}
+.link {
+    color: #1EB2E8;
+}
+.m-r-10 {
+    margin-right: 10px !important;
+}
+.f-4 {
+    font-size: 1rem !important;
+}
+a {
+    color: #8d8d8d;
+}
+a {
+    background-color: transparent;
+}
+a {
+    text-decoration: none;
+}
+.m-r-10 {
+    margin-right: 10px !important;
+}
+
+.f-3 {
+    font-size: 1.25rem !important;
+}
+.m-t-35 {
+    margin-top: 35px !important;
+}
+.m-r-15 {
+    margin-right: 15px !important;
+}
+.m-t-10 {
+    margin-top: 10px !important;
+}
+
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+html {
+    font-family: Lato;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    line-height: 1.5;
+    moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    height: 100%;
+}
+i{
+  color: #8d8d8d;
+}
+  </style>
   <body class="app-js">
     <div class="container-a4" style="width:731px;margin: 0 auto;padding: 20px;">
       <div class="ticket-border">
