@@ -1067,7 +1067,8 @@
   <!-- Plugin compress--><script src="https://unpkg.com/vue@2.5.16/dist/vue.min.js"></script>
 <script src="js/image-compressor.js"></script>
 <script src="js/img.js"></script>
-  <!-- </Plugin compress--><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> //Marca de agua 
+  <!-- </Plugin compress--><script src="https://cdn.jsdelivr.net/npm/exif-js"></script> //Marca de agua 
+  <script src="https://cdn.jsdelivr.net/npm/exif-js">// Fix Orientacion</script>
   <script>
     //Marca de agua
      $(document).ready(function(){
@@ -1107,7 +1108,9 @@
           $('#cropImagePop').on('shown.bs.modal', function(){
             // alert('Shown pop');
             $uploadCrop.croppie('bind', {
-                  url: rawImg
+                  url: rawImg,
+                  enableOrientation: true, // Fix Orientacion
+                  enableExif: true, // Fix Orientacion
                 }).then(function(){
     
                   $uploadCrop.croppie('setZoom', 0)
